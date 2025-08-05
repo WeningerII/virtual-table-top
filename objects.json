@@ -1,0 +1,197 @@
+
+[
+    {
+      "id": "pine_tree", "name": "Pine Tree", "icon": "🌲", "tags": ["tree", "pine", "forest", "natural", "common"],
+      "components": [
+        { "geometry": { "type": "cone", "radius": 40, "height": 100, "radialSegments": 8 }, "material": { "color": "#228B22" }, "position": [0, 0, 60] },
+        { "geometry": { "type": "cylinder", "radiusTop": 8, "radiusBottom": 8, "height": 40 }, "material": { "color": "#8B4513" }, "position": [0, 0, 20] }
+      ],
+      "interactable": true,
+      "integrity": 60,
+      "ac": 15,
+      "flammable": true
+    },
+    {
+      "id": "oak_tree", "name": "Oak Tree", "icon": "🌳", "tags": ["tree", "oak", "forest", "natural", "common"],
+      "components": [
+        { "geometry": { "type": "icosahedron", "radius": 40, "detail": 1 }, "material": { "color": "#006400" }, "position": [0, 0, 60] },
+        { "geometry": { "type": "cylinder", "radiusTop": 10, "radiusBottom": 10, "height": 50 }, "material": { "color": "#8B4513" }, "position": [0, 0, 25] }
+      ],
+      "interactable": true,
+      "integrity": 80,
+      "ac": 15,
+      "flammable": true
+    },
+    {
+      "id": "boulder_large", "name": "Large Boulder", "icon": "🪨", "tags": ["boulder", "rock", "cover", "natural", "common", "cave", "mountain"],
+      "components": [
+        { "geometry": { "type": "icosahedron", "radius": 35, "detail": 0 }, "material": { "color": "#808080" } }
+      ],
+       "integrity": 100,
+       "ac": 17
+    },
+    {
+      "id": "ruined_pillar", "name": "Ruined Pillar", "icon": "🏛️", "tags": ["ruin", "pillar", "cover", "man-made", "common"],
+       "components": [
+        { "geometry": { "type": "cylinder", "radiusTop": 15, "radiusBottom": 15, "height": 80 }, "material": { "color": "#A9A9A9" } }
+      ],
+      "interactable": true,
+      "integrity": 50,
+      "ac": 17,
+      "strengthCheckDC": 18,
+      "onDestruction": {
+          "type": "create_terrain",
+          "terrainType": "difficult",
+          "radius": 1
+      }
+    },
+    {
+      "id": "wooden_crate", "name": "Wooden Crate", "icon": "📦", "tags": ["crate", "box", "cover", "man-made", "common", "dungeon", "urban"],
+       "components": [
+        { "geometry": { "type": "box", "size": [40, 40, 40] }, "material": { "color": "#A0522D" } }
+      ],
+      "interactable": true,
+      "integrity": 15,
+      "ac": 15,
+      "flammable": true,
+      "fragile": true,
+      "onDestruction": { "type": "create_obscurement", "radius": 1 }
+    },
+    {
+      "id": "barrel", "name": "Barrel", "icon": "🛢️", "tags": ["barrel", "container", "cover", "man-made", "common", "dungeon", "urban"],
+       "components": [
+        { "geometry": { "type": "cylinder", "radiusTop": 20, "radiusBottom": 20, "height": 30 }, "material": { "color": "#8B4513" } }
+      ],
+      "interactable": true,
+      "integrity": 15,
+      "ac": 15,
+       "flammable": true
+    },
+    {
+      "id": "altar", "name": "Altar", "icon": "🏛️", "tags": ["religious", "dungeon", "man-made", "cover"],
+       "components": [
+        { "geometry": { "type": "box", "size": [80, 40, 30] }, "material": { "color": "#A9A9A9", "roughness": 0.7 } }
+      ],
+      "interactable": true,
+      "integrity": 40,
+      "ac": 17
+    },
+    {
+      "id": "magic_orb_pedestal", "name": "Orb Pedestal", "icon": "🔮", "tags": ["magic", "dungeon", "man-made"],
+       "components": [
+        { "geometry": { "type": "cylinder", "radiusTop": 15, "radiusBottom": 20, "height": 50 }, "material": { "color": "#696969" }, "position": [0, 0, 25]},
+        { "geometry": { "type": "sphere", "radius": 10 }, "material": { "color": "#DA70D6", "emissive": "#8A2BE2", "roughness": 0.2, "metalness": 0.3 }, "position": [0, 0, 65] }
+      ],
+       "integrity": 20,
+       "ac": 12
+    },
+    {
+        "id": "campfire", "name": "Campfire", "icon": "🔥", "tags": ["light", "fire", "camp", "common", "natural", "hazard"],
+        "components": [
+            { "geometry": { "type": "cone", "radius": 20, "height": 10 }, "material": { "color": "#FF4500", "emissive": "#FF8C00", "transparent": true, "opacity": 0.7 }, "position": [0, 0, 5] },
+            { "geometry": { "type": "cylinder", "radiusTop": 3, "radiusBottom": 3, "height": 25 }, "material": { "color": "#8B4513" }, "position": [0, 5, 5], "rotation": [0, 0.5, 1.57] },
+            { "geometry": { "type": "cylinder", "radiusTop": 3, "radiusBottom": 3, "height": 25 }, "material": { "color": "#8B4513" }, "position": [0, -5, 5], "rotation": [0, -0.5, 1.57] }
+        ]
+    },
+    {
+        "id": "treasure_chest", "name": "Treasure Chest", "icon": "🪙", "tags": ["chest", "container", "dungeon", "man-made", "common"],
+        "components": [
+            { "geometry": { "type": "box", "size": [50, 30, 25] }, "material": { "color": "#8B4513" }, "position": [0, 0, 12.5] },
+            { "geometry": { "type": "box", "size": [50, 30, 15] }, "material": { "color": "#654321" }, "position": [0, 0, 32.5] }
+        ],
+        "interactable": true,
+        "integrity": 25,
+        "ac": 15
+    },
+    {
+      "id": "wooden_barricade",
+      "name": "Wooden Barricade",
+      "icon": "🚧",
+      "tags": ["cover", "man-made", "common", "dungeon", "urban"],
+      "components": [
+        { "geometry": { "type": "box", "size": [80, 10, 40] }, "material": { "color": "#8B4513" }, "position": [0, 0, 20] }
+      ],
+      "interactable": true,
+      "integrity": 25,
+      "ac": 15,
+      "flammable": true,
+      "fragile": true,
+      "onDestruction": {
+        "type": "create_obscurement",
+        "radius": 1
+      }
+    },
+    {
+      "id": "explosive_barrel",
+      "name": "Explosive Barrel",
+      "icon": "💥",
+      "tags": ["barrel", "container", "hazard", "man-made", "dungeon"],
+       "components": [
+        { "geometry": { "type": "cylinder", "radiusTop": 20, "radiusBottom": 20, "height": 30 }, "material": { "color": "#A0522D" } }
+      ],
+      "interactable": true,
+      "integrity": 10,
+      "ac": 12,
+      "flammable": true,
+      "onDestruction": {
+        "type": "deal_damage",
+        "damageType": "fire",
+        "damageDice": "3d6",
+        "radius": 2
+      }
+    },
+    {
+      "id": "chandelier",
+      "name": "Chandelier",
+      "icon": "💡",
+      "tags": ["hazard", "light", "man-made", "dungeon", "urban"],
+      "components": [
+        { "geometry": { "type": "cone", "radius": 30, "height": 20 }, "material": { "color": "#FFD700" }, "position": [0, 0, 0] }
+      ],
+      "interactable": true,
+      "integrity": 10,
+      "ac": 13,
+      "onDestruction": {
+        "type": "deal_damage",
+        "damageType": "bludgeoning",
+        "damageDice": "4d6",
+        "radius": 2
+      }
+    },
+    {
+      "id": "brazier",
+      "name": "Brazier",
+      "icon": "🔥",
+      "tags": ["hazard", "light", "fire", "man-made", "dungeon"],
+      "components": [
+        { "geometry": { "type": "cylinder", "radiusTop": 18, "radiusBottom": 15, "height": 25 }, "material": { "color": "#4A4A4A" }, "position": [0, 0, 12.5] }
+      ],
+      "interactable": true,
+      "integrity": 15,
+      "ac": 14,
+      "strengthCheckDC": 12,
+      "onDestruction": {
+        "type": "create_hazard",
+        "hazardType": "fire",
+        "radius": 1
+      }
+    },
+    {
+      "id": "oil_barrel",
+      "name": "Oil Barrel",
+      "icon": "🛢️",
+      "tags": ["barrel", "container", "hazard", "man-made", "dungeon", "urban"],
+      "components": [
+        { "geometry": { "type": "cylinder", "radiusTop": 20, "radiusBottom": 20, "height": 30 }, "material": { "color": "#3A3A3A" } }
+      ],
+      "interactable": true,
+      "integrity": 10,
+      "ac": 12,
+      "flammable": true,
+      "onDestruction": {
+        "type": "create_hazard",
+        "hazardType": "oil",
+        "radius": 2
+      }
+    }
+]
