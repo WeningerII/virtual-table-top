@@ -1,0 +1,36 @@
+
+{
+    "id": "leader",
+    "description": "Identifies the highest-priority threat, designates it for the squad, and then engages. Will retreat if critically wounded.",
+    "root": {
+        "type": "Sequence",
+        "metadata": { "name": "Leader Main Logic" },
+        "children": [
+            { "type": "FindVisibleEnemiesNode", "metadata": { "name": "Perception Scan" } },
+            { "type": "HasVisibleEnemiesNode", "metadata": { "name": "Check for Targets" } },
+            {
+                "type": "Selector",
+                "metadata": { "name": "Leader's Decision" },
+                "children": [
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Self-Preservation" },
+                        "children": [
+                            { "type": "IsHealthLowNode", "args": [0.3], "metadata": { "name": "Is HP < 30%?" } },
+                            { "type": "FleeNode", "metadata": { "name": "Tactical Retreat" } }
+                        ]
+                    },
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Lead the Charge" },
+                        "children": [
+                            { "type": "AssignSquadTargetNode", "metadata": { "name": "Designate Squad Target" } },
+                            { "type": "MoveToTargetNode", "metadata": { "name": "Approach Target" } },
+                            { "type": "AttackTargetNode", "metadata": { "name": "Attack Target" } }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+
+{
+    "id": "follower",
+    "description": "Attacks the squad's designated target, or the closest enemy if none. Will flee if critically wounded.",
+    "root": {
+        "type": "Sequence",
+        "metadata": { "name": "Follower Main Logic" },
+        "children": [
+            { "type": "FindVisibleEnemiesNode", "metadata": { "name": "Perception Scan" } },
+            { "type": "HasVisibleEnemiesNode", "metadata": { "name": "Check for Targets" } },
+            {
+                "type": "Selector",
+                "metadata": { "name": "Follower's Decision" },
+                "children": [
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Self-Preservation" },
+                        "children": [
+                            { "type": "IsHealthLowNode", "args": [0.25], "metadata": { "name": "Is HP < 25%?" } },
+                            { "type": "FleeNode", "metadata": { "name": "Flee!" } }
+                        ]
+                    },
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Attack Squad Target" },
+                        "children": [
+                            { "type": "HasSquadTargetNode" },
+                            { "type": "SetTargetToSquadTargetNode" },
+                            { "type": "MoveToTargetNode" },
+                            { "type": "AttackTargetNode" }
+                        ]
+                    },
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Fallback: Attack Closest" },
+                        "children": [
+                            { "type": "FindClosestEnemyNode" },
+                            { "type": "MoveToTargetNode" },
+                            { "type": "AttackTargetNode" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

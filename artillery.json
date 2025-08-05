@@ -1,0 +1,46 @@
+
+{
+    "id": "artillery",
+    "description": "Prefers to stay at range, find cover, and attack high-priority targets.",
+    "root": {
+        "type": "Sequence",
+        "metadata": { "name": "Artillery Main Logic" },
+        "children": [
+            { "type": "FindVisibleEnemiesNode" },
+            { "type": "HasVisibleEnemiesNode" },
+            {
+                "type": "Selector",
+                "metadata": { "name": "Tactical Decision" },
+                "children": [
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Retreat if threatened" },
+                        "children": [
+                            { "type": "IsEnemyInMeleeNode" },
+                            { "type": "MoveAwayFromTargetNode" },
+                            { "type": "MoveToTargetNode" } 
+                        ]
+                    },
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Attack from Cover" },
+                        "children": [
+                            { "type": "FindCoverNode" },
+                            { "type": "MoveToTargetNode" },
+                            { "type": "FindBestTargetNode" },
+                            { "type": "AttackTargetNode" }
+                        ]
+                    },
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Fallback: Attack from current position" },
+                        "children": [
+                            { "type": "FindBestTargetNode" },
+                            { "type": "AttackTargetNode" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

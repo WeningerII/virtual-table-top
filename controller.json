@@ -1,0 +1,47 @@
+
+{
+    "id": "controller",
+    "description": "Prioritizes using area-of-effect or debilitating abilities to control the battlefield.",
+    "root": {
+        "type": "Sequence",
+        "metadata": { "name": "Controller Main Logic" },
+        "children": [
+            { "type": "FindVisibleEnemiesNode" },
+            { "type": "HasVisibleEnemiesNode" },
+            {
+                "type": "Selector",
+                "metadata": { "name": "Action Selection" },
+                "children": [
+                    { 
+                        "type": "Sequence",
+                        "metadata": { "name": "Use Best AoE" },
+                        "children": [
+                            { "type": "UseBestAreaOfEffectNode" },
+                            { "type": "MoveToTargetNode" },
+                            { "type": "AttackTargetNode" }
+                        ]
+                    },
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Use Best Single-Target Ability" },
+                        "children": [
+                            { "type": "FindBestTargetNode" },
+                            { "type": "MoveToTargetNode" },
+                            { "type": "UseMostDamagingAbilityNode" },
+                            { "type": "AttackTargetNode" }
+                        ]
+                    },
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Fallback to Basic Attack" },
+                        "children": [
+                            { "type": "FindClosestEnemyNode" },
+                            { "type": "MoveToTargetNode" },
+                            { "type": "AttackTargetNode" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,16 +1,9 @@
 
 [
-    { "id": "acolyte", "name": "Acolyte", "source": "Player's Handbook" },
-    { "id": "charlatan", "name": "Charlatan", "source": "Player's Handbook" },
-    { "id": "criminal", "name": "Criminal", "source": "Player's Handbook" },
-    { "id": "entertainer", "name": "Entertainer", "source": "Player's Handbook" },
-    { "id": "folk-hero", "name": "Folk Hero", "source": "Player's Handbook" },
-    { "id": "guild-artisan", "name": "Guild Artisan", "source": "Player's Handbook" },
-    { "id": "hermit", "name": "Hermit", "source": "Player's Handbook" },
-    { "id": "noble", "name": "Noble", "source": "Player's Handbook" },
-    { "id": "outlander", "name": "Outlander", "source": "Player's Handbook" },
-    { "id": "sage", "name": "Sage", "source": "Player's Handbook" },
-    { "id": "sailor", "name": "Sailor", "source": "Player's Handbook" },
-    { "id": "soldier", "name": "Soldier", "source": "Player's Handbook" },
-    { "id": "urchin", "name": "Urchin", "source": "Player's Handbook" }
+  { "id": "brute", "name": "Brute" },
+  { "id": "skirmisher", "name": "Skirmisher" },
+  { "id": "leader", "name": "Leader" },
+  { "id": "follower", "name": "Follower" },
+  { "id": "artillery", "name": "Artillery" },
+  { "id": "controller", "name": "Controller" }
 ]

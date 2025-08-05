@@ -1,0 +1,44 @@
+
+{
+    "id": "brute",
+    "description": "Moves towards the most opportune threat (wounded, conditioned, or last attacker) and attacks relentlessly. Will attempt to flee if health is critical.",
+    "root": {
+        "type": "Sequence",
+        "metadata": { "name": "Brute Main Logic" },
+        "children": [
+            { "type": "FindVisibleEnemiesNode", "metadata": { "name": "Perception Scan" } },
+            { "type": "HasVisibleEnemiesNode", "metadata": { "name": "Check for Targets" } },
+            {
+                "type": "Selector",
+                "metadata": { "name": "Decision Making" },
+                "children": [
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Self-Preservation" },
+                        "children": [
+                            { "type": "IsHealthLowNode", "args": [0.25], "metadata": { "name": "Is HP < 25%?" } },
+                            { "type": "FleeNode", "metadata": { "name": "Run Away!" } }
+                        ]
+                    },
+                    {
+                        "type": "Sequence",
+                        "metadata": { "name": "Standard Attack Routine" },
+                        "children": [
+                            {
+                                "type": "Selector",
+                                "metadata": { "name": "Target Selection" },
+                                "children": [
+                                    { "type": "FindBestTargetNode", "metadata": { "name": "Find Optimal Target" } },
+                                    { "type": "PrioritizeLastAttackerNode", "metadata": { "name": "Find Last Attacker" } },
+                                    { "type": "FindClosestEnemyNode", "metadata": { "name": "Find Closest Target" } }
+                                ]
+                            },
+                            { "type": "MoveToTargetNode", "metadata": { "name": "Approach Target" } },
+                            { "type": "AttackTargetNode", "metadata": { "name": "Attack Target" } }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
