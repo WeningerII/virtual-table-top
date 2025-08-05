@@ -1,0 +1,38 @@
+
+{ 
+    "id": "folk-hero", 
+    "name": "Folk Hero", 
+    "source": "Player's Handbook",
+    "description": "You come from a humble social rank, but you are destined for so much more. The common folk see you as their champion, and your destiny lies along the path of a hero.",
+    "startingGold": 10,
+    "feature": {
+        "name": "Rustic Hospitality",
+        "description": "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you.",
+        "effects": [{ "type": "special_ability", "name": "Rustic Hospitality" }]
+    },
+    "traits": [
+        {
+            "id": "folk-hero-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Animal Handling and Survival skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["animal-handling", "survival"], "count": 2 }
+            ]
+        },
+        {
+            "id": "folk-hero-tools",
+            "name": "Tool Proficiencies",
+            "description": "You gain proficiency with one type of artisan's tools and land vehicles.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["vehicles-land"], "count": 1 }
+            ],
+            "choiceOptions": [{
+                "id": "folk-hero-artisan-tool-choice",
+                "label": "Choose one type of artisan's tools",
+                "type": "tool",
+                "count": 1,
+                "from": "any"
+            }]
+        }
+    ]
+}

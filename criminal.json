@@ -1,0 +1,38 @@
+
+{ 
+    "id": "criminal", 
+    "name": "Criminal", 
+    "source": "Player's Handbook",
+    "description": "You are an experienced criminal with a history of breaking the law. You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals.",
+    "startingGold": 15,
+    "feature": {
+        "name": "Criminal Contact",
+        "description": "You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you.",
+        "effects": [{ "type": "special_ability", "name": "Criminal Contact" }]
+    },
+    "traits": [
+        {
+            "id": "criminal-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Deception and Stealth skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["deception", "stealth"], "count": 2 }
+            ]
+        },
+        {
+            "id": "criminal-tools",
+            "name": "Tool Proficiencies",
+            "description": "You gain proficiency with one type of gaming set and thieves’ tools.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["thieves-tools"], "count": 1 }
+            ],
+            "choiceOptions": [{
+                "id": "criminal-gaming-set-choice",
+                "label": "Choose a gaming set",
+                "type": "tool",
+                "count": 1,
+                "from": ["dice-set", "playing-card-set", "three-dragon-ante-set"]
+            }]
+        }
+    ]
+}

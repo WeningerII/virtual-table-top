@@ -1,0 +1,38 @@
+
+{ 
+    "id": "entertainer", 
+    "name": "Entertainer", 
+    "source": "Player's Handbook",
+    "description": "You thrive in front of an audience. You know how to entrance them, entertain them, and even inspire them.",
+    "startingGold": 15,
+    "feature": {
+        "name": "By Popular Demand",
+        "description": "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night.",
+        "effects": [{ "type": "special_ability", "name": "By Popular Demand" }]
+    },
+    "traits": [
+        {
+            "id": "entertainer-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Acrobatics and Performance skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["acrobatics", "performance"], "count": 2 }
+            ]
+        },
+        {
+            "id": "entertainer-tools",
+            "name": "Tool Proficiencies",
+            "description": "You gain proficiency with the disguise kit and one type of musical instrument.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["disguise-kit"], "count": 1 }
+            ],
+             "choiceOptions": [{
+                "id": "entertainer-instrument-choice",
+                "label": "Choose a musical instrument",
+                "type": "tool",
+                "count": 1,
+                "from": "any"
+            }]
+        }
+    ]
+}

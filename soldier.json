@@ -1,0 +1,38 @@
+
+{ 
+    "id": "soldier", 
+    "name": "Soldier", 
+    "source": "Player's Handbook",
+    "description": "War has been your life for as long as you care to remember. You are a veteran of a past conflict, and your experience has shaped you into a hardened combatant.",
+    "startingGold": 10,
+    "feature": {
+        "name": "Military Rank",
+        "description": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use.",
+        "effects": [{ "type": "special_ability", "name": "Military Rank" }]
+    },
+    "traits": [
+        {
+            "id": "soldier-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Athletics and Intimidation skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["athletics", "intimidation"], "count": 2 }
+            ]
+        },
+        {
+            "id": "soldier-tools",
+            "name": "Tool Proficiencies",
+            "description": "You gain proficiency with one type of gaming set and land vehicles.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["vehicles-land"], "count": 1 }
+            ],
+            "choiceOptions": [{
+                "id": "soldier-gaming-set-choice",
+                "label": "Choose a gaming set",
+                "type": "tool",
+                "count": 1,
+                "from": "any"
+            }]
+        }
+    ]
+}

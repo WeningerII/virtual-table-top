@@ -1,0 +1,31 @@
+
+{ 
+    "id": "urchin", 
+    "name": "Urchin", 
+    "source": "Player's Handbook",
+    "description": "You grew up on the streets alone, orphaned, and poor. You have a deep understanding of the secrets of urban survival.",
+    "startingGold": 10,
+    "feature": {
+        "name": "City Secrets",
+        "description": "You know the secret patterns and flow of cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow.",
+        "effects": [{ "type": "special_ability", "name": "City Secrets" }]
+    },
+    "traits": [
+        {
+            "id": "urchin-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Sleight of Hand and Stealth skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["sleight-of-hand", "stealth"], "count": 2 }
+            ]
+        },
+        {
+            "id": "urchin-tools",
+            "name": "Tool Proficiencies",
+            "description": "You gain proficiency with the disguise kit and thieves’ tools.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["disguise-kit", "thieves-tools"], "count": 2 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+
+{ 
+    "id": "hermit", 
+    "name": "Hermit", 
+    "source": "Player's Handbook",
+    "description": "You lived in seclusion — either in a sheltered community such as a monastery, or entirely alone. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for.",
+    "startingGold": 5,
+    "feature": {
+        "name": "Discovery",
+        "description": "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature.",
+        "effects": [{ "type": "special_ability", "name": "Discovery" }]
+    },
+    "traits": [
+        {
+            "id": "hermit-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Medicine and Religion skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["medicine", "religion"], "count": 2 }
+            ]
+        },
+        {
+            "id": "hermit-tools",
+            "name": "Tool & Language Proficiencies",
+            "description": "You gain proficiency with the herbalism kit and one language of your choice.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["herbalism-kit"], "count": 1 }
+            ],
+            "choiceOptions": [{
+                "id": "hermit-language-choice",
+                "label": "Choose one language",
+                "type": "language",
+                "count": 1,
+                "from": "any"
+            }]
+        }
+    ]
+}

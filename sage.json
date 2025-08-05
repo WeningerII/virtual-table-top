@@ -1,0 +1,35 @@
+
+{ 
+    "id": "sage", 
+    "name": "Sage", 
+    "source": "Player's Handbook",
+    "description": "You spent years learning the lore of the multiverse. You are a master of scholarly pursuits and have an unquenchable thirst for knowledge.",
+    "startingGold": 10,
+    "feature": {
+        "name": "Researcher",
+        "description": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature.",
+        "effects": [{ "type": "special_ability", "name": "Researcher" }]
+    },
+    "traits": [
+        {
+            "id": "sage-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Arcana and History skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["arcana", "history"], "count": 2 }
+            ]
+        },
+        {
+            "id": "sage-languages",
+            "name": "Languages",
+            "description": "You can speak, read, and write two extra languages of your choice.",
+            "choiceOptions": [{
+                "id": "sage-language-choice",
+                "label": "Choose two languages",
+                "type": "language",
+                "count": 2,
+                "from": "any"
+            }]
+        }
+    ]
+}

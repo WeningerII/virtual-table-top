@@ -1,0 +1,35 @@
+
+{ 
+    "id": "acolyte", 
+    "name": "Acolyte", 
+    "source": "Player's Handbook",
+    "description": "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine.",
+    "startingGold": 15,
+    "feature": {
+        "name": "Shelter of the Faithful",
+        "description": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.",
+        "effects": [{ "type": "special_ability", "name": "Shelter of the Faithful" }]
+    },
+    "traits": [
+        {
+            "id": "acolyte-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Insight and Religion skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["insight", "religion"], "count": 2 }
+            ]
+        },
+        {
+            "id": "acolyte-languages",
+            "name": "Languages",
+            "description": "You can speak, read, and write two extra languages of your choice.",
+            "choiceOptions": [{
+                "id": "acolyte-language-choice",
+                "label": "Choose two languages",
+                "type": "language",
+                "count": 2,
+                "from": "any"
+            }]
+        }
+    ]
+}

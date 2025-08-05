@@ -1,0 +1,31 @@
+
+{ 
+    "id": "charlatan", 
+    "name": "Charlatan", 
+    "source": "Player's Handbook",
+    "description": "You have always had a way with people. You know what makes them tick, you can tease out their hearts' desires after a few minutes of conversation, and you can exploit them for your gain.",
+    "startingGold": 15,
+    "feature": {
+        "name": "False Identity",
+        "description": "You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy.",
+        "effects": [{ "type": "special_ability", "name": "False Identity" }]
+    },
+    "traits": [
+        {
+            "id": "charlatan-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Deception and Sleight of Hand skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["deception", "sleight-of-hand"], "count": 2 }
+            ]
+        },
+        {
+            "id": "charlatan-tools",
+            "name": "Tool Proficiencies",
+            "description": "You gain proficiency with the disguise kit and forgery kit.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["disguise-kit", "forgery-kit"], "count": 2 }
+            ]
+        }
+    ]
+}

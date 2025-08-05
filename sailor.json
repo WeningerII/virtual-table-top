@@ -1,0 +1,31 @@
+
+{ 
+    "id": "sailor", 
+    "name": "Sailor", 
+    "source": "Player's Handbook",
+    "description": "You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the bottomless depths.",
+    "startingGold": 10,
+    "feature": {
+        "name": "Ship's Passage",
+        "description": "When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with. Because you’re calling in a favor, you can’t be certain of a schedule or route that will meet your every need.",
+        "effects": [{ "type": "special_ability", "name": "Ship's Passage" }]
+    },
+    "traits": [
+        {
+            "id": "sailor-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the Athletics and Perception skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["athletics", "perception"], "count": 2 }
+            ]
+        },
+        {
+            "id": "sailor-tools",
+            "name": "Tool Proficiencies",
+            "description": "You gain proficiency with navigator's tools and water vehicles.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["navigator's-tools", "vehicles-water"], "count": 2 }
+            ]
+        }
+    ]
+}

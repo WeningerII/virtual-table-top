@@ -1,16 +1,16 @@
 
 [
-    { "id": "artificer", "name": "Artificer", "source": "Tasha's Cauldron of Everything", "iconId": "ArtificerIcon" },
-    { "id": "barbarian", "name": "Barbarian", "source": "Player's Handbook", "iconId": "BarbarianIcon" },
-    { "id": "bard", "name": "Bard", "source": "Player's Handbook", "iconId": "BardIcon" },
-    { "id": "cleric", "name": "Cleric", "source": "Player's Handbook", "iconId": "ClericIcon" },
-    { "id": "druid", "name": "Druid", "source": "Player's Handbook", "iconId": "DruidIcon" },
-    { "id": "fighter", "name": "Fighter", "source": "Player's Handbook", "iconId": "FighterIcon" },
-    { "id": "monk", "name": "Monk", "source": "Player's Handbook", "iconId": "MonkIcon" },
-    { "id": "paladin", "name": "Paladin", "source": "Player's Handbook", "iconId": "PaladinIcon" },
-    { "id": "ranger", "name": "Ranger", "source": "Player's Handbook", "iconId": "RangerIcon" },
-    { "id": "rogue", "name": "Rogue", "source": "Player's Handbook", "iconId": "RogueIcon" },
-    { "id": "sorcerer", "name": "Sorcerer", "source": "Player's Handbook", "iconId": "SorcererIcon" },
-    { "id": "warlock", "name": "Warlock", "source": "Player's Handbook", "iconId": "WarlockIcon" },
-    { "id": "wizard", "name": "Wizard", "source": "Player's Handbook", "iconId": "WizardIcon" }
+    { "id": "acolyte", "name": "Acolyte", "source": "Player's Handbook" },
+    { "id": "charlatan", "name": "Charlatan", "source": "Player's Handbook" },
+    { "id": "criminal", "name": "Criminal", "source": "Player's Handbook" },
+    { "id": "entertainer", "name": "Entertainer", "source": "Player's Handbook" },
+    { "id": "folk-hero", "name": "Folk Hero", "source": "Player's Handbook" },
+    { "id": "guild-artisan", "name": "Guild Artisan", "source": "Player's Handbook" },
+    { "id": "hermit", "name": "Hermit", "source": "Player's Handbook" },
+    { "id": "noble", "name": "Noble", "source": "Player's Handbook" },
+    { "id": "outlander", "name": "Outlander", "source": "Player's Handbook" },
+    { "id": "sage", "name": "Sage", "source": "Player's Handbook" },
+    { "id": "sailor", "name": "Sailor", "source": "Player's Handbook" },
+    { "id": "soldier", "name": "Soldier", "source": "Player's Handbook" },
+    { "id": "urchin", "name": "Urchin", "source": "Player's Handbook" }
 ]

@@ -1,0 +1,44 @@
+
+{ 
+    "id": "noble", 
+    "name": "Noble", 
+    "source": "Player's Handbook",
+    "description": "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence.",
+    "startingGold": 25,
+    "feature": {
+        "name": "Position of Privilege",
+        "description": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere.",
+        "effects": [{ "type": "special_ability", "name": "Position of Privilege" }]
+    },
+    "traits": [
+        {
+            "id": "noble-proficiencies",
+            "name": "Skill Proficiencies",
+            "description": "You gain proficiency in the History and Persuasion skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "skill", "options": ["history", "persuasion"], "count": 2 }
+            ]
+        },
+        {
+            "id": "noble-tools",
+            "name": "Tool & Language Proficiencies",
+            "description": "You gain proficiency with one type of gaming set and one language of your choice.",
+            "choiceOptions": [
+                {
+                    "id": "noble-gaming-set-choice",
+                    "label": "Choose a gaming set",
+                    "type": "tool",
+                    "count": 1,
+                    "from": "any"
+                },
+                {
+                    "id": "noble-language-choice",
+                    "label": "Choose one language",
+                    "type": "language",
+                    "count": 1,
+                    "from": "any"
+                }
+            ]
+        }
+    ]
+}
