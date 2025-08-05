@@ -1,0 +1,208 @@
+
+{
+    "id": "ranger",
+    "name": "Ranger",
+    "source": "Player's Handbook",
+    "hitDie": 10,
+    "iconId": "RangerIcon",
+    "casterType": "half",
+    "description": "Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.",
+    "startingGoldRoll": "5d4*10",
+    "startingEquipment": [
+        { "choice": [[{ "itemId": "scale-mail", "quantity": 1 }], [{ "itemId": "leather-armor", "quantity": 1 }]] },
+        { "choice": [[{ "itemId": "shortsword", "quantity": 2 }], [{ "itemId": "any-simple-melee-weapon", "quantity": 2 }]] },
+        { "choice": [[{ "packId": "dungeoneers-pack" }], [{ "packId": "explorers-pack" }]] },
+        { "itemId": "longbow", "quantity": 1 },
+        { "itemId": "arrows", "quantity": 20 }
+    ],
+    "traits": [
+        {
+            "id": "ranger-starting-proficiencies",
+            "name": "Starting Proficiencies",
+            "description": "As a Ranger, you are proficient with light/medium armor, shields, and all weapons. Your saving throw proficiencies are Strength and Dexterity. You are also proficient in three skills of your choice.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "armor", "options": ["light armor", "medium armor", "shields"], "count": 3 },
+                { "type": "proficiency", "proficiencyType": "weapon", "options": ["simple weapons", "martial weapons"], "count": 2 },
+                { "type": "proficiency", "proficiencyType": "saving_throw", "options": ["STRENGTH", "DEXTERITY"], "count": 2 }
+            ],
+            "choiceOptions": [{
+                "id": "ranger-skills",
+                "label": "Choose three skills",
+                "type": "skill",
+                "count": 3,
+                "from": ["animal-handling", "athletics", "insight", "investigation", "nature", "perception", "stealth", "survival"]
+            }]
+        }
+    ],
+    "features": [
+        {
+            "id": "ranger-favored-enemy-1",
+            "name": "Favored Enemy",
+            "level": 1,
+            "description": "You have significant experience studying, tracking, hunting, and even talking to a certain type of enemy. Choose a type of favored enemy. You have advantage on Survival checks to track them and Intelligence checks to recall information about them. You also learn one of their languages.",
+            "interactionType": "passive_effect",
+            "choiceOptions": [
+                { "id": "favored-enemy-type-1", "label": "Choose a Favored Enemy", "type": "monster_type", "count": 1, "from": ["aberrations", "beasts", "celestials", "constructs", "dragons", "elementals", "fey", "fiends", "giants", "monstrosities", "oozes", "plants", "undead"] },
+                { "id": "favored-enemy-language-1", "label": "Choose a Language", "type": "language", "count": 1, "from": "any" }
+            ],
+            "effects": [
+                { "type": "advantage", "on": "check", "skill": "survival", "condition": "when tracking favored enemies" },
+                { "type": "advantage", "on": "check", "skill": "intelligence", "condition": "when recalling information about favored enemies" }
+            ]
+        },
+        {
+            "id": "ranger-natural-explorer-1",
+            "name": "Natural Explorer",
+            "level": 1,
+            "description": "You are familiar with one type of natural environment. Your proficiency bonus is doubled for Intelligence or Wisdom checks related to your favored terrain. While traveling for an hour or more in your favored terrain, your group gains several benefits.",
+            "interactionType": "passive_effect",
+            "choiceOptions": [{ "id": "natural-explorer-terrain-1", "label": "Choose a Favored Terrain", "type": "terrain_type", "count": 1, "from": ["arctic", "coast", "desert", "forest", "grassland", "mountain", "swamp", "underdark"] }],
+            "effects": [
+                { "type": "special_ability", "name": "Natural Explorer Benefits", "description": "Ignore difficult terrain, advantage on initiative, and double proficiency on INT/WIS checks related to favored terrain." }
+            ]
+        },
+        {
+            "id": "ranger-fighting-style-2",
+            "name": "Fighting Style",
+            "level": 2,
+            "description": "You adopt a particular style of fighting.",
+            "choiceOptions": [{ "id": "ranger-fighting-style-choice", "label": "Choose a Fighting Style", "type": "fighting_style", "count": 1, "from": ["archery", "defense", "dueling", "two-weapon-fighting"] }]
+        },
+        { "id": "ranger-spellcasting-2", "name": "Spellcasting", "level": 2, "description": "You learn to use the magical essence of nature to cast spells. You know two 1st-level spells from the ranger spell list. Wisdom is your spellcasting ability." },
+        { "id": "ranger-archetype-3", "name": "Ranger Archetype", "level": 3, "description": "You choose an archetype that you strive to emulate, granting features at 3rd, 7th, 11th, and 15th level." },
+        {
+            "id": "ranger-primeval-awareness-3",
+            "name": "Primeval Awareness",
+            "level": 3,
+            "interactionType": "action_utility",
+            "cost": "action",
+            "description": "You can expend a ranger spell slot to sense whether certain types of creatures (aberrations, celestials, dragons, elementals, fey, fiends, and undead) are present within 1 mile of you (6 miles in favored terrain)."
+        },
+        { "id": "ranger-asi-4", "name": "Ability Score Improvement", "level": 4, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "ranger-extra-attack-5", "name": "Extra Attack", "level": 5, "description": "You can attack twice, instead of once, whenever you take the Attack action on your turn." },
+        {
+            "id": "ranger-favored-enemy-6",
+            "name": "Favored Enemy Improvement",
+            "level": 6,
+            "description": "You choose an additional favored enemy.",
+            "choiceOptions": [
+                { "id": "favored-enemy-type-6", "label": "Choose an additional Favored Enemy", "type": "monster_type", "count": 1, "from": ["aberrations", "beasts", "celestials", "constructs", "dragons", "elementals", "fey", "fiends", "giants", "monstrosities", "oozes", "plants", "undead"] }
+            ]
+        },
+        {
+            "id": "ranger-natural-explorer-6",
+            "name": "Natural Explorer Improvement",
+            "level": 6,
+            "description": "You choose an additional favored terrain.",
+            "choiceOptions": [{ "id": "natural-explorer-terrain-6", "label": "Choose an additional Favored Terrain", "type": "terrain_type", "count": 1, "from": ["arctic", "coast", "desert", "forest", "grassland", "mountain", "swamp", "underdark"] }]
+        },
+        { "id": "ranger-archetype-feature-7", "name": "Ranger Archetype Feature", "level": 7, "description": "You gain a feature from your chosen ranger archetype." },
+        {
+            "id": "ranger-lands-stride-8",
+            "name": "Land’s Stride",
+            "level": 8,
+            "interactionType": "passive_effect",
+            "description": "Moving through nonmagical difficult terrain costs you no extra movement. You also have advantage on saving throws against plants that are magically created or manipulated to impede movement.",
+            "effects": [
+                { "type": "special_ability", "name": "Ignore Difficult Terrain (Nonmagical)" },
+                { "type": "advantage", "on": "saving_throw", "condition": "against magical plants that impede movement" }
+            ]
+        },
+        { "id": "ranger-asi-8", "name": "Ability Score Improvement", "level": 8, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        {
+            "id": "ranger-natural-explorer-10",
+            "name": "Natural Explorer Improvement",
+            "level": 10,
+            "description": "You choose another favored terrain.",
+            "choiceOptions": [{ "id": "natural-explorer-terrain-10", "label": "Choose an additional Favored Terrain", "type": "terrain_type", "count": 1, "from": ["arctic", "coast", "desert", "forest", "grassland", "mountain", "swamp", "underdark"] }]
+        },
+        {
+            "id": "ranger-hide-in-plain-sight-10",
+            "name": "Hide in Plain Sight",
+            "level": 10,
+            "cost": "action",
+            "interactionType": "action_utility",
+            "description": "You can spend 1 minute to create camouflage for yourself, granting a +10 bonus to Stealth checks as long as you remain stationary against a solid surface.",
+            "effects": [{ "type": "bonus", "to": "skill_check", "skill": "stealth", "value": 10, "condition": "after 1 minute of camouflage and remaining stationary" }]
+        },
+        { "id": "ranger-archetype-feature-11", "name": "Ranger Archetype Feature", "level": 11, "description": "You gain a feature from your chosen ranger archetype." },
+        { "id": "ranger-asi-12", "name": "Ability Score Improvement", "level": 12, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        {
+            "id": "ranger-vanish-14",
+            "name": "Vanish",
+            "level": 14,
+            "interactionType": "passive_effect",
+            "description": "You can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail.",
+            "effects": [
+                { "type": "grant_action", "name": "Hide (Bonus Action)" },
+                { "type": "special_ability", "name": "Cannot Be Tracked Nonmagically" }
+            ]
+        },
+        {
+            "id": "ranger-favored-enemy-14",
+            "name": "Favored Enemy Improvement",
+            "level": 14,
+            "description": "You choose another favored enemy.",
+            "choiceOptions": [
+                { "id": "favored-enemy-type-14", "label": "Choose an additional Favored Enemy", "type": "monster_type", "count": 1, "from": ["aberrations", "beasts", "celestials", "constructs", "dragons", "elementals", "fey", "fiends", "giants", "monstrosities", "oozes", "plants", "undead"] }
+            ]
+        },
+        { "id": "ranger-archetype-feature-15", "name": "Ranger Archetype Feature", "level": 15, "description": "You gain a feature from your chosen ranger archetype." },
+        { "id": "ranger-asi-16", "name": "Ability Score Improvement", "level": 16, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        {
+            "id": "ranger-feral-senses-18",
+            "name": "Feral Senses",
+            "level": 18,
+            "interactionType": "passive_effect",
+            "description": "You gain preternatural senses that help you fight creatures you can’t see. Your inability to see a creature doesn’t impose disadvantage on your attack rolls against it. You are also aware of the location of any invisible creature within 30 feet of you.",
+            "effects": [
+                { "type": "special_ability", "name": "Unseen Attacker Unimpaired" },
+                { "type": "special_ability", "name": "Blindsight (Invisible Creatures, 30 ft.)" }
+            ]
+        },
+        { "id": "ranger-asi-19", "name": "Ability Score Improvement", "level": 19, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        {
+            "id": "ranger-foe-slayer-20",
+            "name": "Foe Slayer",
+            "level": 20,
+            "interactionType": "passive_effect",
+            "description": "Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies.",
+            "effects": [{ "type": "bonus", "to": "attack_or_damage_roll", "value": "WIS_MOD", "condition": "once per turn against a favored enemy" }]
+        }
+    ],
+    "subclasses": [
+        { "id": "hunter", "name": "Hunter", "source": "Player's Handbook", "description": "Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness.", "features": [ { "id": "hunter-prey-3", "name": "Hunter’s Prey", "level": 3, "description": "Choose one of the following features: Colossus Slayer, Giant Killer, or Horde Breaker.", "choiceOptions": [{"id": "hunter-prey-choice", "label": "Choose Hunter's Prey", "type": "feat", "count": 1, "from": ["colossus-slayer", "giant-killer", "horde-breaker"]}] }, { "id": "hunter-defensive-tactics-7", "name": "Defensive Tactics", "level": 7, "description": "Choose one: Escape the Horde (opportunity attacks have disadvantage against you), Multiattack Defense (+4 AC against subsequent attacks from the same creature), or Steel Will (advantage on saves vs. frightened).", "choiceOptions": [{"id": "defensive-tactics-choice", "label": "Choose Defensive Tactic", "type": "skill", "count": 1, "from": ["escape-the-horde", "multiattack-defense", "steel-will"]}] }, { "id": "hunter-multiattack-11", "name": "Multiattack", "level": 11, "description": "Choose one: Volley (ranged attack against all creatures in a 10-foot radius) or Whirlwind Attack (melee attack against all creatures within 5 feet).", "choiceOptions": [{"id": "multiattack-choice", "label": "Choose Multiattack Option", "type": "skill", "count": 1, "from": ["volley", "whirlwind-attack"]}] }, { "id": "hunter-superior-defense-15", "name": "Superior Hunter’s Defense", "level": 15, "description": "Choose one: Evasion (take half or no damage on failed/successful DEX saves), Stand Against the Tide (reaction to force an enemy that misses you to attack another creature), or Uncanny Dodge (reaction to halve an attack’s damage against you).", "choiceOptions": [{"id": "superior-hunter-defense-choice", "label": "Choose Superior Hunter's Defense", "type": "skill", "count": 1, "from": ["evasion", "stand-against-the-tide", "uncanny-dodge"]}] } ] },
+        { "id": "beast-master", "name": "Beast Master", "source": "Player's Handbook", "description": "The Beast Master archetype embodies a friendship between the civilized races and the beasts of the wild. United in focus, beast and ranger fight the monsters that threaten civilization and the wilderness alike.", "features": [ { "id": "bm-rangers-companion-3", "name": "Ranger’s Companion", "level": 3, "description": "You gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. Its stats are enhanced by your proficiency bonus and level.", "effects": [{ "type": "special_ability", "name": "Ranger's Companion" }] }, { "id": "bm-exceptional-training-7", "name": "Exceptional Training", "level": 7, "description": "On any of your turns when your beast companion doesn’t attack, you can use a bonus action to command it to take the Dash, Disengage, or Help action. Its attacks also count as magical.", "effects": [{ "type": "special_ability", "name": "Exceptional Training" }] }, { "id": "bm-bestial-fury-11", "name": "Bestial Fury", "level": 11, "description": "When you command your beast companion to take the Attack action, the beast can make two attacks, or take the Multiattack action if it has one.", "effects": [{ "type": "special_ability", "name": "Bestial Fury" }] }, { "id": "bm-share-spells-15", "name": "Share Spells", "level": 15, "description": "When you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you.", "effects": [{ "type": "special_ability", "name": "Share Spells" }] } ] },
+        { "id": "fey-wanderer", "name": "Fey Wanderer", "source": "Tasha's Cauldron of Everything", "description": "A fey mystique surrounds you. As you wander the multiverse, your joyful laughter brightens the hearts of the downtrodden, and your martial prowess strikes terror in your foes.", "features": [ { "id": "fw-dreadful-strikes-3", "name": "Dreadful Strikes", "level": 3, "description": "When you hit a creature with a weapon, you can deal an extra 1d4 psychic damage to the target, once per turn. This increases to 1d6 at 11th level.", "effects": [{ "type": "bonus_damage", "value": "1d4", "valueByLevel": {"11": "1d6"}, "damageType": "psychic", "condition": "once per turn when you hit a creature with a weapon" }] }, { "id": "fw-otherworldly-glamour-3", "name": "Otherworldly Glamour", "level": 3, "description": "Whenever you make a Charisma check, you gain a bonus equal to your Wisdom modifier. You also gain proficiency in Deception, Performance, or Persuasion.", "choiceOptions": [{ "id": "fey-wanderer-skill", "label": "Choose Skill Proficiency", "type": "skill", "count": 1, "from": ["deception", "performance", "persuasion"] }] }, { "id": "fw-beguiling-twist-7", "name": "Beguiling Twist", "level": 7, "description": "You have advantage on saving throws against being charmed or frightened. When you or a creature you can see succeeds on such a save, you can use your reaction to force a different creature to make a Wisdom save or be charmed or frightened by you for 1 minute.", "effects": [{ "type": "advantage", "on": "saving_throw", "condition": "against being charmed or frightened" }] }, { "id": "fw-fey-reinforcements-11", "name": "Fey Reinforcements", "level": 11, "description": "You learn the summon fey spell. You can cast it once without a spell slot per long rest, and can modify it to not require concentration but last only 1 minute.", "effects": [{ "type": "special_ability", "name": "Fey Reinforcements" }] }, { "id": "fw-misty-wanderer-15", "name": "Misty Wanderer", "level": 15, "description": "You can cast misty step without a spell slot a number of times equal to your Wisdom modifier per long rest. When you do, you can bring one willing creature with you.", "effects": [{ "type": "special_ability", "name": "Misty Wanderer" }] } ], "grantedSpells": [ { "level": 3, "spellIds": ["charm-person"] }, { "level": 5, "spellIds": ["misty-step"] }, { "level": 9, "spellIds": ["dispel-magic"] }, { "level": 13, "spellIds": ["dimension-door"] }, { "level": 17, "spellIds": ["mislead"] } ] },
+        { "id": "gloom-stalker", "name": "Gloom Stalker", "source": "Xanathar's Guide to Everything", "description": "Gloom Stalkers are at home in the darkest places, seeking to ambush threats before they can reach the broader world.", "features": [ { "id": "gs-dread-ambusher-3", "name": "Dread Ambusher", "level": 3, "description": "You add your Wisdom modifier to your initiative rolls. On your first turn of combat, your speed increases by 10 feet, and if you take the Attack action, you can make one additional weapon attack that deals an extra 1d8 damage on a hit.", "effects": [{ "type": "bonus", "to": "initiative", "value": "WIS_MOD" }, { "type": "bonus", "to": "speed", "value": 10, "condition": "on first turn of combat" }, { "type": "bonus_damage", "value": "1d8", "condition": "on first turn of combat, with extra attack" }] }, { "id": "gs-umbral-sight-3", "name": "Umbral Sight", "level": 3, "description": "You gain darkvision out to 60 feet (or increase it by 30 feet). While in darkness, you are invisible to any creature that relies on darkvision to see you.", "effects": [{ "type": "special_ability", "name": "Umbral Sight" }] }, { "id": "gs-iron-mind-7", "name": "Iron Mind", "level": 7, "description": "You gain proficiency in Wisdom saving throws. If you already have it, you gain proficiency in Intelligence or Charisma saves instead.", "effects": [{ "type": "proficiency", "proficiencyType": "saving_throw", "options": ["WISDOM"], "count": 1 }], "choiceOptions": [{ "id": "iron-mind-choice", "label": "Choose Saving Throw Proficiency", "type": "ability", "count": 1, "from": ["INTELLIGENCE", "CHARISMA"]}] }, { "id": "gs-stalkers-flurry-11", "name": "Stalker’s Flurry", "level": 11, "description": "Once on each of your turns when you miss with a weapon attack, you can make another weapon attack as part of the same action.", "effects": [{ "type": "special_ability", "name": "Stalker’s Flurry" }] }, { "id": "gs-shadowy-dodge-15", "name": "Shadowy Dodge", "level": 15, "description": "Whenever a creature makes an attack roll against you and doesn’t have advantage, you can use your reaction to impose disadvantage on it.", "effects": [{ "type": "special_ability", "name": "Shadowy Dodge" }] } ], "grantedSpells": [ { "level": 3, "spellIds": ["disguise-self"] }, { "level": 5, "spellIds": ["rope-trick"] }, { "level": 9, "spellIds": ["fear"] }, { "level": 13, "spellIds": ["greater-invisibility"] }, { "level": 17, "spellIds": ["seeming"] } ] },
+        { "id": "horizon-walker", "name": "Horizon Walker", "source": "Xanathar's Guide to Everything", "description": "Horizon Walkers guard the world against threats that originate from other planes, venturing to the Inner and Outer Planes as needed.", "features": [ { "id": "hw-detect-portal-3", "name": "Detect Portal", "level": 3, "description": "As an action, you can detect the distance and direction to the closest planar portal within 1 mile. Usable once per short or long rest.", "effects": [{ "type": "special_ability", "name": "Detect Portal" }] }, { "id": "hw-planar-warrior-3", "name": "Planar Warrior", "level": 3, "description": "As a bonus action, choose a creature within 30 feet. The next time you hit it with a weapon attack, all damage becomes force damage, and it takes an extra 1d8 force damage. This increases to 2d8 at 11th level.", "effects": [{ "type": "special_ability", "name": "Planar Warrior" }] }, { "id": "hw-ethereal-step-7", "name": "Ethereal Step", "level": 7, "description": "As a bonus action, you can cast the etherealness spell, but it ends at the end of the current turn. Usable once per short or long rest.", "effects": [{ "type": "special_ability", "name": "Ethereal Step" }] }, { "id": "hw-distant-strike-11", "name": "Distant Strike", "level": 11, "description": "When you take the Attack action, you can teleport up to 10 feet before each attack. If you attack at least two different creatures, you can make one additional attack against a third.", "effects": [{ "type": "special_ability", "name": "Distant Strike" }] }, { "id": "hw-spectral-defense-15", "name": "Spectral Defense", "level": 15, "description": "When you take damage from an attack, you can use your reaction to give yourself resistance to all of that attack’s damage.", "effects": [{ "type": "special_ability", "name": "Spectral Defense" }] } ], "grantedSpells": [ { "level": 3, "spellIds": ["protection-from-evil-and-good"] }, { "level": 5, "spellIds": ["misty-step"] }, { "level": 9, "spellIds": ["haste"] }, { "level": 13, "spellIds": ["banishment"] }, { "level": 17, "spellIds": ["teleportation-circle"] } ] },
+        { "id": "monster-slayer", "name": "Monster Slayer", "source": "Xanathar's Guide to Everything", "description": "You have dedicated yourself to hunting down creatures of the night and wielders of grim magic.", "features": [ { "id": "ms-hunters-sense-3", "name": "Hunter’s Sense", "level": 3, "description": "As an action, you can learn the damage immunities, resistances, or vulnerabilities of a creature you can see. Usable a number of times equal to your Wisdom modifier per long rest.", "effects": [{ "type": "special_ability", "name": "Hunter's Sense" }] }, { "id": "ms-slayers-prey-3", "name": "Slayer’s Prey", "level": 3, "description": "As a bonus action, you designate a creature as your prey. The first time you hit it with a weapon attack each turn, it takes an extra 1d6 damage.", "effects": [{ "type": "bonus_damage", "value": "1d6", "condition": "on first hit each turn against Slayer's Prey" }] }, { "id": "ms-supernatural-defense-7", "name": "Supernatural Defense", "level": 7, "description": "Whenever your Slayer's Prey forces you to make a saving throw or an ability check to escape a grapple, add a d6 to your roll.", "effects": [{ "type": "special_ability", "name": "Supernatural Defense" }] }, { "id": "ms-magic-users-nemesis-11", "name": "Magic-User’s Nemesis", "level": 11, "description": "As a reaction when you see a creature casting a spell or teleporting, you can force it to make a Wisdom save or the spell/teleport fails. Usable once per short or long rest.", "effects": [{ "type": "special_ability", "name": "Magic-User's Nemesis" }] }, { "id": "ms-slayers-counter-15", "name": "Slayer’s Counter", "level": 15, "description": "If your Slayer's Prey forces you to make a saving throw, you can use your reaction to make a weapon attack against it. If it hits, your save automatically succeeds.", "effects": [{ "type": "special_ability", "name": "Slayer's Counter" }] } ], "grantedSpells": [ { "level": 3, "spellIds": ["protection-from-evil-and-good"] }, { "level": 5, "spellIds": ["zone-of-truth"] }, { "level": 9, "spellIds": ["magic-circle"] }, { "level": 13, "spellIds": ["banishment"] }, { "level": 17, "spellIds": ["hold-monster"] } ] },
+        { "id": "swarmkeeper", "name": "Swarmkeeper", "source": "Tasha's Cauldron of Everything", "description": "Bonded with a swarm of nature spirits, you can command them in battle to aid you and harry your foes.", "features": [ { "id": "sk-gathered-swarm-3", "name": "Gathered Swarm", "level": 3, "description": "A swarm of intangible nature spirits surrounds you. Once on each of your turns after you hit a creature with an attack, you can have the swarm deal an extra 1d6 piercing damage, force the target to make a Strength save or be moved 15 feet, or move yourself 5 feet.", "effects": [{ "type": "special_ability", "name": "Gathered Swarm" }] }, { "id": "sk-writhing-tide-7", "name": "Writhing Tide", "level": 7, "description": "As a bonus action, you gain a flying speed of 10 feet and can hover for 1 minute. You can use this a number of times equal to your proficiency bonus per long rest.", "effects": [{ "type": "special_ability", "name": "Writhing Tide" }] }, { "id": "sk-mighty-swarm-11", "name": "Mighty Swarm", "level": 11, "description": "Your Gathered Swarm damage increases to 1d8. It can also knock the target prone on a failed save. When it moves you, you gain half cover until your next turn.", "effects": [{ "type": "special_ability", "name": "Mighty Swarm" }] }, { "id": "sk-swarming-dispersal-15", "name": "Swarming Dispersal", "level": 15, "description": "As a reaction when you take damage, you can give yourself resistance to that damage, vanish into your swarm, and teleport up to 30 feet. You can use this a number of times equal to your proficiency bonus per long rest.", "effects": [{ "type": "special_ability", "name": "Swarming Dispersal" }] } ], "grantedSpells": [ { "level": 3, "spellIds": ["faerie-fire", "mage-hand"] }, { "level": 5, "spellIds": ["web"] }, { "level": 9, "spellIds": ["gaseous-form"] }, { "level": 13, "spellIds": ["arcane-eye"] }, { "level": 17, "spellIds": ["insect-plague"] } ] }
+    ],
+    "spellcasting": {
+        "ability": "WISDOM",
+        "preparationType": "known"
+    },
+    "progressionTable": [
+        { "level": 1, "profBonus": 2, "spellsKnown": 0, "spellSlots": [0, 0, 0, 0, 0] },
+        { "level": 2, "profBonus": 2, "spellsKnown": 2, "spellSlots": [2, 0, 0, 0, 0] },
+        { "level": 3, "profBonus": 2, "spellsKnown": 3, "spellSlots": [3, 0, 0, 0, 0] },
+        { "level": 4, "profBonus": 2, "spellsKnown": 3, "spellSlots": [3, 0, 0, 0, 0] },
+        { "level": 5, "profBonus": 3, "spellsKnown": 4, "spellSlots": [4, 2, 0, 0, 0] },
+        { "level": 6, "profBonus": 3, "spellsKnown": 4, "spellSlots": [4, 2, 0, 0, 0] },
+        { "level": 7, "profBonus": 3, "spellsKnown": 5, "spellSlots": [4, 3, 0, 0, 0] },
+        { "level": 8, "profBonus": 3, "spellsKnown": 5, "spellSlots": [4, 3, 0, 0, 0] },
+        { "level": 9, "profBonus": 4, "spellsKnown": 6, "spellSlots": [4, 3, 2, 0, 0] },
+        { "level": 10, "profBonus": 4, "spellsKnown": 6, "spellSlots": [4, 3, 2, 0, 0] },
+        { "level": 11, "profBonus": 4, "spellsKnown": 7, "spellSlots": [4, 3, 3, 0, 0] },
+        { "level": 12, "profBonus": 4, "spellsKnown": 7, "spellSlots": [4, 3, 3, 0, 0] },
+        { "level": 13, "profBonus": 5, "spellsKnown": 8, "spellSlots": [4, 3, 3, 1, 0] },
+        { "level": 14, "profBonus": 5, "spellsKnown": 8, "spellSlots": [4, 3, 3, 1, 0] },
+        { "level": 15, "profBonus": 5, "spellsKnown": 9, "spellSlots": [4, 3, 3, 2, 0] },
+        { "level": 16, "profBonus": 5, "spellsKnown": 9, "spellSlots": [4, 3, 3, 2, 0] },
+        { "level": 17, "profBonus": 6, "spellsKnown": 10, "spellSlots": [4, 3, 3, 3, 1] },
+        { "level": 18, "profBonus": 6, "spellsKnown": 10, "spellSlots": [4, 3, 3, 3, 1] },
+        { "level": 19, "profBonus": 6, "spellsKnown": 11, "spellSlots": [4, 3, 3, 3, 2] },
+        { "level": 20, "profBonus": 6, "spellsKnown": 11, "spellSlots": [4, 3, 3, 3, 2] }
+    ]
+}

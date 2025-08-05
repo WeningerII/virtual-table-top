@@ -1,0 +1,186 @@
+{
+    "id": "druid",
+    "name": "Druid",
+    "source": "Player's Handbook",
+    "hitDie": 8,
+    "iconId": "DruidIcon",
+    "casterType": "full",
+    "description": "Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of nature’s resilience, cunning, and fury. They claim no mastery over nature. Instead, they see themselves as extensions of nature’s indomitable will.",
+    "startingGoldRoll": "2d4*10",
+    "startingEquipment": [
+        { "choice": [[{ "itemId": "shield", "quantity": 1 }], [{ "itemId": "any-simple-weapon", "quantity": 1 }]] },
+        { "choice": [[{ "itemId": "scimitar", "quantity": 1 }], [{ "itemId": "any-simple-melee-weapon", "quantity": 1 }]] },
+        { "itemId": "leather-armor", "quantity": 1 },
+        { "packId": "explorers-pack" },
+        { "itemId": "totem-focus", "quantity": 1 }
+    ],
+    "traits": [
+        {
+            "id": "druid-starting-proficiencies",
+            "name": "Starting Proficiencies",
+            "description": "As a Druid, you have a specific set of armor, weapon, and tool proficiencies. Your saving throw proficiencies are Intelligence and Wisdom. You are also proficient in two skills of your choice.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "armor", "options": ["light armor", "medium armor", "shields"], "count": 3 },
+                { "type": "proficiency", "proficiencyType": "weapon", "options": ["clubs", "daggers", "darts", "javelins", "maces", "quarterstaffs", "scimitars", "sickles", "slings", "spears"], "count": 10 },
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["herbalism-kit"], "count": 1 },
+                { "type": "proficiency", "proficiencyType": "saving_throw", "options": ["INTELLIGENCE", "WISDOM"], "count": 2 }
+            ],
+            "choiceOptions": [{
+                "id": "druid-skills",
+                "label": "Choose two skills",
+                "type": "skill",
+                "count": 2,
+                "from": ["arcana", "animal-handling", "insight", "medicine", "nature", "perception", "religion", "survival"]
+            }]
+        }
+    ],
+    "features": [
+        { "id": "druid-druidic-1", "name": "Druidic", "level": 1, "description": "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages.", "effects": [{ "type": "proficiency", "proficiencyType": "language", "options": ["druidic"], "count": 1 }] },
+        { "id": "druid-spellcasting-1", "name": "Spellcasting", "level": 1, "description": "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will.", "effects": [{ "type": "special_ability", "name": "Spellcasting (Druid)"}] },
+        { "id": "wild-shape", "name": "Wild Shape", "level": 2, "interactionType": "action_state_toggle", "description": "You can use your action to magically assume the shape of a beast that you have seen before. Your druid level determines the beasts you can transform into.", "effects": [{ "type": "special_ability", "name": "Wild Shape" }], "limitedUse": { "per": "shortRest", "usesByLevel": [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 999] } },
+        { "id": "druid-circle-2", "name": "Druid Circle", "level": 2, "description": "You choose to identify with a circle of druids, which grants you features at 2nd, 6th, 10th, and 14th level." },
+        { "id": "druid-asi-4", "name": "Ability Score Improvement", "level": 4, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "druid-wild-shape-improvement-4", "name": "Wild Shape Improvement", "level": 4, "description": "Your Wild Shape improves. You can now transform into a beast with a challenge rating of 1/2 or lower that doesn’t have a flying speed.", "effects": [{ "type": "special_ability", "name": "Wild Shape (CR 1/2)" }] },
+        { "id": "druid-asi-8", "name": "Ability Score Improvement", "level": 8, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "druid-wild-shape-improvement-8", "name": "Wild Shape Improvement", "level": 8, "description": "Your Wild Shape improves. You can now transform into a beast with a challenge rating of 1 or lower.", "effects": [{ "type": "special_ability", "name": "Wild Shape (CR 1)" }] },
+        { "id": "druid-asi-12", "name": "Ability Score Improvement", "level": 12, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "druid-asi-16", "name": "Ability Score Improvement", "level": 16, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "druid-timeless-body-18", "name": "Timeless Body", "level": 18, "description": "The primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.", "effects": [{ "type": "special_ability", "name": "Timeless Body" }] },
+        { "id": "druid-beast-spells-18", "name": "Beast Spells", "level": 18, "description": "You can cast many of your druid spells in any shape you assume using Wild Shape, though you cannot provide material components.", "effects": [{ "type": "special_ability", "name": "Beast Spells" }] },
+        { "id": "druid-asi-19", "name": "Ability Score Improvement", "level": 19, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "druid-archdruid-20", "name": "Archdruid", "level": 20, "description": "You can use your Wild Shape an unlimited number of times. You can also ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren’t consumed by a spell.", "effects": [{ "type": "special_ability", "name": "Archdruid" }] }
+    ],
+    "subclasses": [
+        {
+            "id": "circle-of-the-land",
+            "name": "Circle of the Land",
+            "source": "Player's Handbook",
+            "description": "Druids of the Circle of the Land are keepers of the old faith, connecting to the magic of the land itself. Their magic is influenced by the terrain where they were initiated.",
+            "features": [
+                { "id": "land-bonus-cantrip-2", "name": "Bonus Cantrip", "level": 2, "description": "You learn one additional druid cantrip of your choice.", "choiceOptions": [{"id": "land-druid-cantrip", "label": "Choose a bonus cantrip", "type": "spell", "count": 1, "from": ["any_druid_cantrip"]}] },
+                { "id": "land-natural-recovery-2", "name": "Natural Recovery", "level": 2, "interactionType": "short_rest_ability", "description": "During a short rest, you can regain some of your magical energy. You can choose expended spell slots to recover with a combined level equal to or less than half your druid level (rounded up), none of which can be 6th level or higher. You can’t use this feature again until you finish a long rest.", "effects": [{ "type": "special_ability", "name": "Natural Recovery" }] },
+                { "id": "land-circle-spells-3", "name": "Circle Spells", "level": 3, "description": "Your mystical connection to the land infuses you with the ability to cast certain spells. At 3rd, 5th, 7th, and 9th level you gain access to circle spells connected to the land where you became a druid. Choose your associated land type: Arctic, Coast, Desert, Forest, Grassland, Mountain, Swamp, or Underdark. Once you gain access to a circle spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day.", "choiceOptions": [{"id": "land-druid-terrain", "label": "Choose a Land Type", "type": "skill", "count": 1, "from": ["arctic", "coast", "desert", "forest", "grassland", "mountain", "swamp", "underdark"]}] },
+                { "id": "land-lands-stride-6", "name": "Land's Stride", "level": 6, "description": "Moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard. In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement.", "effects": [{ "type": "special_ability", "name": "Land's Stride" }] },
+                { "id": "land-natures-ward-10", "name": "Nature's Ward", "level": 10, "description": "You can’t be charmed or frightened by elementals or fey, and you are immune to poison and disease.", "effects": [{ "type": "immunity", "to": "charmed", "condition": "by elementals or fey" }, { "type": "immunity", "to": "frightened", "condition": "by elementals or fey" }, { "type": "immunity", "to": "poison" }, { "type": "immunity", "to": "disease" }] },
+                { "id": "land-natures-sanctuary-14", "name": "Nature's Sanctuary", "level": 14, "description": "When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours.", "effects": [{ "type": "special_ability", "name": "Nature's Sanctuary" }] }
+            ]
+        },
+        {
+            "id": "circle-of-the-moon",
+            "name": "Circle of the Moon",
+            "source": "Player's Handbook",
+            "description": "Druids of the Circle of the Moon are fierce guardians of the wilds who are masters of Wild Shape, able to transform into more powerful combat forms.",
+            "features": [
+                { "id": "moon-combat-wild-shape-2", "name": "Combat Wild Shape", "level": 2, "interactionType": "bonus_action_state_toggle", "description": "You gain the ability to use Wild Shape on your turn as a bonus action. Additionally, you can expend one spell slot to regain 1d8 hit points per level of the spell slot while transformed.", "effects": [{ "type": "special_ability", "name": "Combat Wild Shape" }] },
+                { "id": "moon-circle-forms-2", "name": "Circle Forms", "level": 2, "description": "You can use your Wild Shape to transform into a beast with a challenge rating as high as 1. This increases to your druid level divided by 3, rounded down, starting at 6th level.", "effects": [{ "type": "special_ability", "name": "Circle Forms" }] },
+                { "id": "moon-primal-strike-6", "name": "Primal Strike", "level": 6, "description": "Your attacks in beast form count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.", "effects": [{ "type": "special_ability", "name": "Primal Strike" }] },
+                { "id": "moon-elemental-wild-shape-10", "name": "Elemental Wild Shape", "level": 10, "description": "You can expend two uses of Wild Shape at the same time to transform into an air elemental, an earth elemental, a fire elemental, or a water elemental.", "effects": [{ "type": "special_ability", "name": "Elemental Wild Shape" }] },
+                { "id": "moon-thousand-forms-14", "name": "Thousand Forms", "level": 14, "description": "You have learned to use magic to alter your physical form in more subtle ways. You can cast the Alter Self spell at will.", "effects": [{ "type": "innate_spellcasting", "ability": "WISDOM", "spells": [{ "id": "alter-self", "frequency": "at-will" }] }] }
+            ]
+        },
+        {
+            "id": "circle-of-spores",
+            "name": "Circle of Spores",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "Druids of this circle find beauty in decay, seeing within fungi the ability to transform lifeless material into abundant life. They have a complex relationship with the undead.",
+            "features": [
+                { "id": "halo-of-spores", "name": "Halo of Spores", "level": 2, "interactionType": "reaction_damage", "description": "As a reaction, when a creature moves into a space within 10 feet of you or starts its turn there, you can deal 1d4 necrotic damage to it (increases at higher levels).", "effects": [{ "type": "special_ability", "name": "Halo of Spores" }] },
+                { "id": "symbiotic-entity", "name": "Symbiotic Entity", "level": 2, "interactionType": "action_state_toggle", "description": "As an action, you can expend a use of your Wild Shape to awaken your spores, gaining 4 temporary hit points per druid level, dealing an extra 1d6 necrotic damage with your melee weapon attacks, and doubling your Halo of Spores damage. This lasts for 10 minutes or until you lose the temporary HP.", "effects": [{ "type": "special_ability", "name": "Symbiotic Entity" }] },
+                { "id": "fungal-infestation", "name": "Fungal Infestation", "level": 6, "description": "As a reaction when a Small or Medium beast or humanoid dies within 10 feet of you, you can animate it as a zombie that obeys your commands for 1 hour. You can use this a number of times equal to your Wisdom modifier per long rest.", "effects": [{ "type": "special_ability", "name": "Fungal Infestation" }] },
+                { "id": "spreading-spores", "name": "Spreading Spores", "level": 10, "description": "As a bonus action while your Symbiotic Entity is active, you can hurl spores up to 30 feet away, creating a 10-foot cube of damaging spores that deals your Halo of Spores damage to creatures inside it.", "effects": [{ "type": "special_ability", "name": "Spreading Spores" }] },
+                { "id": "fungal-body", "name": "Fungal Body", "level": 14, "description": "You can’t be blinded, deafened, frightened, or poisoned, and any critical hit against you counts as a normal hit unless you’re incapacitated.", "effects": [{ "type": "immunity", "to": "blinded" }, { "type": "immunity", "to": "deafened" }, { "type": "immunity", "to": "frightened" }, { "type": "immunity", "to": "poisoned" }, { "type": "special_ability", "name": "Critical Hit Immunity" }] }
+            ],
+            "grantedSpells": [
+                { "level": 2, "spellIds": ["chill-touch"] },
+                { "level": 3, "spellIds": ["blindness-deafness", "gentle-repose"] },
+                { "level": 5, "spellIds": ["animate-dead", "gaseous-form"] },
+                { "level": 7, "spellIds": ["blight", "confusion"] },
+                { "level": 9, "spellIds": ["cloudkill", "contagion"] }
+            ]
+        },
+        {
+            "id": "circle-of-stars",
+            "name": "Circle of Stars",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "The Circle of Stars allows druids to draw on the power of starlight, seeking to harness the patterns of the cosmos.",
+            "features": [
+                { "id": "star-map-2", "name": "Star Map", "level": 2, "description": "You've created a star map, which you can use as a spellcasting focus. You learn the Guidance cantrip and gain the Guiding Bolt spell, which you can cast a number of times equal to your proficiency bonus per long rest without a spell slot.", "effects": [{ "type": "special_ability", "name": "Star Map Focus" }] },
+                { "id": "starry-form-2", "name": "Starry Form", "level": 2, "interactionType": "action_state_toggle", "description": "As a bonus action, you can expend a use of Wild Shape to take on a starry form for 10 minutes. You can choose one of three constellations: Archer (ranged spell attack as bonus action), Chalice (healing bonus action), or Dragon (maintain concentration on spells).", "choiceOptions": [{"id": "starry-form-choice", "label": "Choose Constellation", "type": "subclass_feature", "count": 1, "from": ["archer", "chalice", "dragon"]}] },
+                { "id": "cosmic-omen-6", "name": "Cosmic Omen", "level": 6, "description": "When you finish a long rest, you can roll a d6 to gain a special reaction. On an even roll, you can use your reaction to add 1d6 to a creature's attack roll, saving throw, or ability check. On an odd roll, you subtract 1d6.", "effects": [{ "type": "special_ability", "name": "Cosmic Omen" }] },
+                { "id": "twinkling-constellations-10", "name": "Twinkling Constellations", "level": 10, "description": "The constellations of your Starry Form improve. Archer deals more damage, Chalice heals more, and Dragon gives you a flying speed.", "effects": [{ "type": "special_ability", "name": "Twinkling Constellations" }] },
+                { "id": "full-of-stars-14", "name": "Full of Stars", "level": 14, "description": "While in your Starry Form, you become partially incorporeal, giving you resistance to bludgeoning, piercing, and slashing damage.", "effects": [{ "type": "resistance", "damageType": "bludgeoning" }, { "type": "resistance", "damageType": "piercing" }, { "type": "resistance", "damageType": "slashing" }] }
+            ]
+        },
+        {
+            "id": "circle-of-wildfire",
+            "name": "Circle of Wildfire",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "Druids of the Circle of Wildfire understand that destruction is sometimes the precursor of creation, such as when a forest fire promotes later growth.",
+            "features": [
+                { "id": "wildfire-circle-spells-2", "name": "Circle Spells", "level": 2, "description": "You learn the Fire Bolt cantrip. Your mystical connection to fire also grants you access to certain spells.", "effects": [{ "type": "special_ability", "name": "Fire Bolt Cantrip" }] },
+                { "id": "wildfire-summon-spirit-2", "name": "Summon Wildfire Spirit", "level": 2, "description": "As an action, you can expend one use of your Wild Shape to summon your wildfire spirit, which has its own statistics and can take actions on your turn.", "effects": [{ "type": "special_ability", "name": "Summon Wildfire Spirit" }] },
+                { "id": "wildfire-enhanced-bond-6", "name": "Enhanced Bond", "level": 6, "description": "When you cast a spell that deals fire damage or restores hit points while your wildfire spirit is summoned, you gain a bonus to one roll of the spell equal to 1d8.", "effects": [{ "type": "bonus_damage", "value": "1d8", "condition": "on one fire damage or healing roll of a spell" }] },
+                { "id": "wildfire-cauterizing-flames-10", "name": "Cauterizing Flames", "level": 10, "description": "When a small or larger creature dies within 10 feet of you or your wildfire spirit, a harmless spectral flame springs forth, providing half cover and healing or damaging a creature that enters its space.", "effects": [{ "type": "special_ability", "name": "Cauterizing Flames" }] },
+                { "id": "wildfire-blazing-revival-14", "name": "Blazing Revival", "level": 14, "description": "If your wildfire spirit is within 120 feet of you when you are reduced to 0 hit points, you can use the spirit to drop to 0 hit points, and you drop to 1 hit point instead. Usable once per long rest.", "effects": [{ "type": "special_ability", "name": "Blazing Revival" }] }
+            ],
+            "grantedSpells": [
+                { "level": 2, "spellIds": ["burning-hands", "cure-wounds"] },
+                { "level": 3, "spellIds": ["flaming-sphere", "scorching-ray"] },
+                { "level": 5, "spellIds": ["plant-growth", "revivify"] },
+                { "level": 7, "spellIds": ["aura-of-life", "fire-shield"] },
+                { "level": 9, "spellIds": ["flame-strike", "mass-cure-wounds"] }
+            ]
+        },
+        {
+            "id": "circle-of-dreams",
+            "name": "Circle of Dreams",
+            "source": "Xanathar's Guide to Everything",
+            "description": "Druids of the Circle of Dreams hail from regions that have strong ties to the Feywild. They are allied with good-aligned fey and use their magic to bring the dreamy wonder of the Feywild to the mortal world.",
+            "features": [
+                { "id": "dreams-balm-of-the-summer-court-2", "name": "Balm of the Summer Court", "level": 2, "description": "As a bonus action, you can heal a creature you can see within 120 feet of you by expending a d6 from a pool of dice equal to your druid level. The creature regains hit points equal to the number rolled.", "effects": [{ "type": "grant_action", "name": "Balm of the Summer Court" }] },
+                { "id": "dreams-hearth-of-moonlight-and-shadow-6", "name": "Hearth of Moonlight and Shadow", "level": 6, "description": "During a short or long rest, you can create a magical sphere that provides cover, conceals light, and makes it difficult to perceive those resting inside.", "effects": [{ "type": "special_ability", "name": "Hearth of Moonlight and Shadow" }] },
+                { "id": "dreams-hidden-paths-10", "name": "Hidden Paths", "level": 10, "description": "As a bonus action, you can teleport up to 60 feet to an unoccupied space you can see. You can also use this feature to teleport a willing creature.", "effects": [{ "type": "special_ability", "name": "Hidden Paths" }] },
+                { "id": "dreams-walker-in-dreams-14", "name": "Walker in Dreams", "level": 14, "description": "You can cast Dream, Teleportation Circle, or Scrying once without expending a spell slot, regaining the ability to do so after a long rest.", "effects": [{ "type": "special_ability", "name": "Walker in Dreams" }] }
+            ]
+        },
+        {
+            "id": "circle-of-the-shepherd",
+            "name": "Circle of the Shepherd",
+            "source": "Xanathar's Guide to Everything",
+            "description": "These druids commune with the spirits of nature, especially the spirits of beasts and the fey, and call to those spirits for aid.",
+            "features": [
+                { "id": "shepherd-speech-of-the-woods-2", "name": "Speech of the Woods", "level": 2, "description": "You gain the ability to speak with beasts and many fey.", "effects": [{ "type": "special_ability", "name": "Speech of the Woods" }] },
+                { "id": "shepherd-spirit-totem-2", "name": "Spirit Totem", "level": 2, "interactionType": "bonus_action_utility", "description": "As a bonus action, you can magically summon a spirit to a point you can see. The spirit creates an aura in a 30-foot radius. You choose which spirit to summon: Bear (temp HP), Hawk (advantage on Perception, reaction to grant advantage on an attack), or Unicorn (healing when you cast a healing spell).", "choiceOptions": [{"id": "spirit-totem-choice", "label": "Choose Spirit Totem", "type": "subclass_feature", "count": 1, "from": ["bear", "hawk", "unicorn"]}] },
+                { "id": "shepherd-mighty-summoner-6", "name": "Mighty Summoner", "level": 6, "description": "Beasts and fey that you conjure are more resilient, gaining +2 hit points per Hit Die and their attacks are magical.", "effects": [{ "type": "special_ability", "name": "Mighty Summoner" }] },
+                { "id": "shepherd-guardian-spirit-10", "name": "Guardian Spirit", "level": 10, "description": "Your spirit totem now restores hit points to you and your allies who start their turn in its aura.", "effects": [{ "type": "special_ability", "name": "Guardian Spirit" }] },
+                { "id": "shepherd-faithful-summons-14", "name": "Faithful Summons", "level": 14, "description": "If you are reduced to 0 hit points or are incapacitated, you can immediately conjure four beasts of CR 2 or lower to protect you. Usable once per long rest.", "effects": [{ "type": "special_ability", "name": "Faithful Summons" }] }
+            ]
+        }
+    ],
+    "spellcasting": {
+        "ability": "WISDOM",
+        "preparationType": "prepared"
+    },
+    "progressionTable": [
+        { "level": 1, "profBonus": 2, "cantripsKnown": 2, "spellSlots": [2, 0, 0, 0, 0, 0, 0, 0, 0] },
+        { "level": 2, "profBonus": 2, "cantripsKnown": 2, "spellSlots": [3, 0, 0, 0, 0, 0, 0, 0, 0] },
+        { "level": 3, "profBonus": 2, "cantripsKnown": 2, "spellSlots": [4, 2, 0, 0, 0, 0, 0, 0, 0] },
+        { "level": 4, "profBonus": 2, "cantripsKnown": 3, "spellSlots": [4, 3, 0, 0, 0, 0, 0, 0, 0] },
+        { "level": 5, "profBonus": 3, "cantripsKnown": 3, "spellSlots": [4, 3, 2, 0, 0, 0, 0, 0, 0] },
+        { "level": 6, "profBonus": 3, "cantripsKnown": 3, "spellSlots": [4, 3, 3, 0, 0, 0, 0, 0, 0] },
+        { "level": 7, "profBonus": 3, "cantripsKnown": 3, "spellSlots": [4, 3, 3, 1, 0, 0, 0, 0, 0] },
+        { "level": 8, "profBonus": 3, "cantripsKnown": 3, "spellSlots": [4, 3, 3, 2, 0, 0, 0, 0, 0] },
+        { "level": 9, "profBonus": 4, "cantripsKnown": 3, "spellSlots": [4, 3, 3, 3, 1, 0, 0, 0, 0] },
+        { "level": 10, "profBonus": 4, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 2, 0, 0, 0, 0] },
+        { "level": 11, "profBonus": 4, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 2, 1, 0, 0, 0] },
+        { "level": 12, "profBonus": 4, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 2, 1, 0, 0, 0] },
+        { "level": 13, "profBonus": 5, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 0, 0] },
+        { "level": 14, "profBonus": 5, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 0, 0] },
+        { "level": 15, "profBonus": 5, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 1, 0] },
+        { "level": 16, "profBonus": 5, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 1, 0] },
+        { "level": 17, "profBonus": 6, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 1, 1] },
+        { "level": 18, "profBonus": 6, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 3, 1, 1, 1, 1] },
+        { "level": 19, "profBonus": 6, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 3, 2, 1, 1, 1] },
+        { "level": 20, "profBonus": 6, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 3, 2, 2, 1, 1] }
+    ]
+}

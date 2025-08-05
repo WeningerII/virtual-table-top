@@ -1,0 +1,177 @@
+{
+    "id": "artificer",
+    "name": "Artificer",
+    "source": "Tasha's Cauldron of Everything",
+    "hitDie": 8,
+    "iconId": "ArtificerIcon",
+    "casterType": "half",
+    "description": "Masters of invention, artificers use ingenuity and magic to unlock extraordinary capabilities in objects. They see magic as a complex system waiting to be decoded and then harnessed in their spells and inventions.",
+    "startingGoldRoll": "5d4*10",
+    "startingEquipment": [
+        { "choice": [[{ "itemId": "light-crossbow", "quantity": 1 }, { "itemId": "crossbow-bolts", "quantity": 20 }], [{ "itemId": "any-simple-weapon", "quantity": 2 }]] },
+        { "choice": [[{ "itemId": "studded-leather-armor", "quantity": 1 }], [{ "itemId": "scale-mail", "quantity": 1 }]] },
+        { "itemId": "thieves-tools", "quantity": 1 },
+        { "packId": "dungeoneers-pack" }
+    ],
+    "traits": [
+        {
+            "id": "artificer-starting-proficiencies",
+            "name": "Starting Proficiencies",
+            "description": "As an Artificer, you are proficient with light/medium armor, shields, and simple weapons. Your saving throw proficiencies are Constitution and Intelligence. You are also proficient with certain tools and two skills of your choice.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "armor", "options": ["light armor", "medium armor", "shields"], "count": 3 },
+                { "type": "proficiency", "proficiencyType": "weapon", "options": ["simple weapons"], "count": 1 },
+                { "type": "proficiency", "proficiencyType": "tool", "options": ["thieves' tools", "tinker's tools"], "count": 2 },
+                { "type": "proficiency", "proficiencyType": "saving_throw", "options": ["CONSTITUTION", "INTELLIGENCE"], "count": 2 }
+            ],
+            "choiceOptions": [
+                {
+                    "id": "artificer-tools",
+                    "label": "Choose one type of artisan's tools",
+                    "type": "tool",
+                    "count": 1,
+                    "from": "any"
+                },
+                {
+                    "id": "artificer-skills",
+                    "label": "Choose two skills",
+                    "type": "skill",
+                    "count": 2,
+                    "from": ["arcana", "history", "investigation", "medicine", "nature", "perception", "sleight-of-hand"]
+                }
+            ]
+        }
+    ],
+    "features": [
+        { "id": "artificer-magical-tinkering-1", "name": "Magical Tinkering", "level": 1, "interactionType": "creator", "cost": "action", "description": "You learn how to invest a spark of magic into mundane objects, giving them minor magical properties.", "effects": [{"type": "grant_action", "name": "Magical Tinkering"}] },
+        { "id": "artificer-spellcasting-1", "name": "Spellcasting", "level": 1, "description": "You’ve studied the workings of magic and how to cast spells, channeling the magic through objects and tools." },
+        { "id": "artificer-infuse-item-2", "name": "Infuse Item", "level": 2, "description": "You gain the ability to imbue mundane items with certain magical infusions, turning them into temporary magic items.", "choiceOptions": [ {"id": "infusions-known-2", "label": "Choose 4 infusions", "type": "infusion", "count": 4, "from": "any"}, {"id": "infusions-known-6", "label": "Choose 2 additional infusions", "type": "infusion", "count": 2, "from": "any"}, {"id": "infusions-known-10", "label": "Choose 2 additional infusions", "type": "infusion", "count": 2, "from": "any"}, {"id": "infusions-known-14", "label": "Choose 2 additional infusions", "type": "infusion", "count": 2, "from": "any"}, {"id": "infusions-known-18", "label": "Choose 2 additional infusions", "type": "infusion", "count": 2, "from": "any"} ] },
+        { "id": "artificer-specialist-3", "name": "Artificer Specialist", "level": 3, "description": "You choose a specialty for your craft. Your choice grants you features at 3rd, 5th, 9th, and 15th level.", "choiceOptions": [{"id": "artificer-subclass-choice", "label": "Choose an Artificer Specialist", "type": "subclass", "count": 1, "from": ["alchemist", "armorer", "artillerist", "battle-smith"]}] },
+        { "id": "artificer-right-tool-3", "name": "The Right Tool for the Job", "level": 3, "interactionType": "creator", "cost": "action", "description": "You can magically create one set of artisan’s tools in an unoccupied space within 5 feet of you.", "effects": [{"type": "grant_action", "name": "The Right Tool for the Job"}] },
+        { "id": "artificer-asi-4", "name": "Ability Score Improvement", "level": 4, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "artificer-specialist-feature-5", "name": "Artificer Specialist feature", "level": 5, "description": "You gain a feature from your Artificer Specialist." },
+        { "id": "artificer-tool-expertise-6", "name": "Tool Expertise", "level": 6, "description": "Your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool.", "effects": [{"type": "expertise", "proficiencyType": "tool", "options": ["any"], "count": 99}] },
+        { "id": "artificer-flash-of-genius-7", "name": "Flash of Genius", "level": 7, "interactionType": "reaction_roll_modification", "cost": "reaction", "description": "When you or another creature you can see makes an ability check or saving throw, you can use your reaction to add your Intelligence modifier to the roll.", "limitedUse": { "per": "longRest", "usesByLevel": ["INT_MOD"] } },
+        { "id": "artificer-asi-8", "name": "Ability Score Improvement", "level": 8, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "artificer-specialist-feature-9", "name": "Artificer Specialist feature", "level": 9, "description": "You gain a feature from your Artificer Specialist." },
+        { "id": "artificer-magic-item-adept-10", "name": "Magic Item Adept", "level": 10, "description": "You can attune to up to four magic items at once and craft common/uncommon magic items faster and cheaper.", "effects": [{"type": "bonus", "to": "max_attunement_slots", "value": 1}] },
+        { "id": "artificer-spell-storing-item-11", "name": "Spell-Storing Item", "level": 11, "interactionType": "creator", "cost": "action", "description": "You learn how to store a 1st or 2nd-level spell in an object, which can be used by another creature.", "effects": [{"type": "grant_action", "name": "Store Spell"}] },
+        { "id": "artificer-asi-12", "name": "Ability Score Improvement", "level": 12, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "artificer-magic-item-savant-14", "name": "Magic Item Savant", "level": 14, "description": "You can attune to up to five magic items at once and ignore all requirements on attuning to or using a magic item.", "effects": [{"type": "bonus", "to": "max_attunement_slots", "value": 1}, {"type": "special_ability", "name": "Ignore Attunement Requirements"}] },
+        { "id": "artificer-specialist-feature-15", "name": "Artificer Specialist feature", "level": 15, "description": "You gain a feature from your Artificer Specialist." },
+        { "id": "artificer-asi-16", "name": "Ability Score Improvement", "level": 16, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "artificer-magic-item-master-18", "name": "Magic Item Master", "level": 18, "description": "You can attune to up to six magic items at once.", "effects": [{"type": "bonus", "to": "max_attunement_slots", "value": 1}] },
+        { "id": "artificer-asi-19", "name": "Ability Score Improvement", "level": 19, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "artificer-soul-of-artifice-20", "name": "Soul of Artifice", "level": 20, "description": "You gain a +1 bonus to all saving throws per magic item you are attuned to. If you are reduced to 0 hit points, you can end an infusion to drop to 1 hit point instead.", "effects": [{"type": "bonus", "to": "saving_throw", "value": "ATTUNED_ITEM_COUNT" }, {"type": "special_ability", "name": "Soul of Artifice Death Ward"}] }
+    ],
+    "subclasses": [
+        {
+            "id": "alchemist",
+            "name": "Alchemist",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "An Alchemist is an expert at combining reagents to produce mystical effects. Alchemists use their creations to give life and to leech it away.",
+            "features": [
+                { "id": "alchemist-tool-proficiency-3", "name": "Tool Proficiency", "level": 3, "description": "You gain proficiency with alchemist’s supplies. If you already have this proficiency, you gain proficiency with one other type of artisan’s tools of your choice.", "effects": [{ "type": "proficiency", "proficiencyType": "tool", "options": ["alchemist's supplies"], "count": 1 }] },
+                { "id": "alchemist-experimental-elixir-3", "name": "Experimental Elixir", "level": 3, "interactionType": "creator", "description": "Whenever you finish a long rest, you can magically produce an experimental elixir in an empty flask you touch. Roll for a random effect or choose one by expending a spell slot." },
+                { "id": "alchemist-alchemical-savant-5", "name": "Alchemical Savant", "level": 5, "description": "Whenever you cast a spell using your alchemist’s supplies as the spellcasting focus, you gain a bonus equal to your Intelligence modifier to one roll of the spell that restores hit points or deals acid, fire, necrotic, or poison damage.", "effects": [{ "type": "bonus", "to": "healing_spell", "value": "INT_MOD" }, { "type": "bonus_damage", "value": "INT_MOD", "condition": "on one roll of a spell that deals acid, fire, necrotic, or poison damage"}] },
+                { "id": "alchemist-restorative-reagents-9", "name": "Restorative Reagents", "level": 9, "description": "Whenever a creature drinks your experimental elixir, it gains temporary hit points. You can also cast Lesser Restoration a number of times equal to your INT modifier.", "effects": [{ "type": "temporary_hit_points", "value": "2d6 + INT_MOD", "condition": "when a creature drinks your elixir" }, { "type": "special_ability", "name": "Cast Lesser Restoration (INT_MOD times)"}] },
+                { "id": "alchemist-chemical-mastery-15", "name": "Chemical Mastery", "level": 15, "description": "You gain resistance to acid and poison damage and are immune to the poisoned condition. You can also cast Greater Restoration and Heal without expending a spell slot.", "effects": [{ "type": "resistance", "damageType": "acid" }, { "type": "resistance", "damageType": "poison" }, { "type": "immunity", "to": "poisoned" }, { "type": "special_ability", "name": "Cast Greater Restoration and Heal (once each per long rest)"}] }
+            ],
+            "grantedSpells": [
+                { "level": 3, "spellIds": ["healing-word", "ray-of-sickness"] },
+                { "level": 5, "spellIds": ["flaming-sphere", "melfs-acid-arrow"] },
+                { "level": 9, "spellIds": ["gaseous-form", "mass-healing-word"] },
+                { "level": 13, "spellIds": ["blight", "death-ward"] },
+                { "level": 17, "spellIds": ["cloudkill", "raise-dead"] }
+            ]
+        },
+        {
+            "id": "armorer",
+            "name": "Armorer",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "An Armorer modifies armor to function almost like a second skin, enhancing their magic, unleashing potent attacks, and generating a formidable defense.",
+            "features": [
+                { "id": "armorer-tools-of-the-trade-3", "name": "Tools of the Trade", "level": 3, "description": "You gain proficiency with heavy armor and smith’s tools.", "effects": [{ "type": "proficiency", "proficiencyType": "armor", "options": ["heavy armor"], "count": 1 }, { "type": "proficiency", "proficiencyType": "tool", "options": ["smith's tools"], "count": 1 }] },
+                { "id": "armorer-arcane-armor-3", "name": "Arcane Armor", "level": 3, "interactionType": "action_state_toggle", "description": "As an action, you can turn a suit of armor you are wearing into Arcane Armor, which you can use as a spellcasting focus." },
+                { "id": "armorer-armor-model-3", "name": "Armor Model", "level": 3, "description": "Choose between Guardian (melee-focused with Thunder Gauntlets and a defensive field) or Infiltrator (stealth-focused with a Lightning Launcher and dampened sound).", "choiceOptions": [{"id": "armorer-model-choice", "label": "Choose Armor Model", "type": "subclass_feature", "count": 1, "from": ["guardian", "infiltrator"]}] },
+                { "id": "armorer-extra-attack-5", "name": "Extra Attack", "level": 5, "description": "You can attack twice, rather than once, whenever you take the Attack action on your turn.", "effects": [{"type": "special_ability", "name": "Extra Attack"}] },
+                { "id": "armorer-armor-modifications-9", "name": "Armor Modifications", "level": 9, "description": "You can apply infusions to individual parts of your Arcane Armor. The maximum number of items you can infuse at once increases by 2.", "effects": [{"type": "bonus", "to": "max_infused_items", "value": 2}] },
+                { "id": "armorer-perfected-armor-15", "name": "Perfected Armor", "level": 15, "description": "Your Arcane Armor gains additional benefits based on its model, enhancing its Guardian or Infiltrator capabilities." }
+            ],
+            "grantedSpells": [
+                { "level": 3, "spellIds": ["magic-missile", "thunderwave"] },
+                { "level": 5, "spellIds": ["mirror-image", "shatter"] },
+                { "level": 9, "spellIds": ["hypnotic-pattern", "lightning-bolt"] },
+                { "level": 13, "spellIds": ["fire-shield", "greater-invisibility"] },
+                { "level": 17, "spellIds": ["passwall", "wall-of-force"] }
+            ]
+        },
+        {
+            "id": "artillerist",
+            "name": "Artillerist",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "An Artillerist specializes in using magic to hurl energy, projectiles, and explosions on a battlefield.",
+            "features": [
+                { "id": "artillerist-tool-proficiency-3", "name": "Tool Proficiency", "level": 3, "description": "You gain proficiency with woodcarver’s tools. If you already have this proficiency, you gain proficiency with one other type of artisan’s tools of your choice.", "effects": [{ "type": "proficiency", "proficiencyType": "tool", "options": ["woodcarver's tools"], "count": 1 }] },
+                { "id": "artillerist-eldritch-cannon-3", "name": "Eldritch Cannon", "level": 3, "interactionType": "action_utility", "cost": "action", "description": "You can magically create a Small or Tiny eldritch cannon (Flamethrower, Force Ballista, or Protector) which you can activate as a bonus action.", "effects": [{"type": "summon_creature", "companionId": "eldritch-cannon"}] },
+                { "id": "artillerist-arcane-firearm-5", "name": "Arcane Firearm", "level": 5, "description": "You can turn a wand, staff, or rod into an arcane firearm. When you cast a spell through it, you can add a bonus d8 to one of the spell’s damage rolls.", "effects": [{ "type": "bonus_damage", "value": "1d8", "condition": "to one damage roll of an artificer spell cast through the firearm" }] },
+                { "id": "artillerist-explosive-cannon-9", "name": "Explosive Cannon", "level": 9, "description": "Your eldritch cannon’s damage rolls increase by 1d8. You can also command the cannon to detonate." },
+                { "id": "artillerist-fortified-position-15", "name": "Fortified Position", "level": 15, "description": "You and your allies have half cover while within 10 feet of one of your cannons. You can also have two cannons at the same time." }
+            ],
+             "grantedSpells": [
+                { "level": 3, "spellIds": ["shield", "thunderwave"] },
+                { "level": 5, "spellIds": ["scorching-ray", "shatter"] },
+                { "level": 9, "spellIds": ["fireball", "wind-wall"] },
+                { "level": 13, "spellIds": ["ice-storm", "wall-of-fire"] },
+                { "level": 17, "spellIds": ["cone-of-cold", "wall-of-force"] }
+            ]
+        },
+        {
+            "id": "battle-smith",
+            "name": "Battle Smith",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "A Battle Smith is an expert at defending others and repairing both material and personnel, often accompanied by a steel defender companion.",
+            "features": [
+                { "id": "battle-smith-tool-proficiency-3", "name": "Tool Proficiency", "level": 3, "description": "You gain proficiency with smith’s tools. If you already have this proficiency, you gain proficiency with one other type of artisan’s tools of your choice.", "effects": [{ "type": "proficiency", "proficiencyType": "tool", "options": ["smith's tools"], "count": 1 }] },
+                { "id": "battle-smith-battle-ready-3", "name": "Battle Ready", "level": 3, "description": "You gain proficiency with martial weapons. When you attack with a magic weapon, you can use your Intelligence modifier, instead of Strength or Dexterity, for the attack and damage rolls.", "effects": [{ "type": "proficiency", "proficiencyType": "weapon", "options": ["martial weapons"], "count": 1 }, { "type": "special_ability", "name": "Battle Ready (INT for magic weapons)"}] },
+                { "id": "battle-smith-steel-defender-3", "name": "Steel Defender", "level": 3, "interactionType": "action_utility", "cost": "action", "description": "You build a loyal construct companion that aids you in and out of combat.", "effects": [{"type": "summon_creature", "companionId": "steel-defender"}] },
+                { "id": "battle-smith-extra-attack-5", "name": "Extra Attack", "level": 5, "description": "You can attack twice, rather than once, whenever you take the Attack action on your turn.", "effects": [{"type": "special_ability", "name": "Extra Attack"}] },
+                { "id": "battle-smith-arcane-jolt-9", "name": "Arcane Jolt", "level": 9, "interactionType": "on_hit_trigger", "description": "When you or your steel defender hits a target, you can channel energy to either deal an extra 2d6 force damage or heal a creature for 2d6 hit points.", "limitedUse": { "per": "longRest", "usesByLevel": ["INT_MOD"] } },
+                { "id": "battle-smith-improved-defender-15", "name": "Improved Defender", "level": 15, "description": "Your Arcane Jolt becomes more powerful (4d6) and your steel defender gains a +2 bonus to AC and can deal damage when it uses its Deflect Attack reaction." }
+            ],
+            "grantedSpells": [
+                { "level": 3, "spellIds": ["heroism", "shield"] },
+                { "level": 5, "spellIds": ["branding-smite", "warding-bond"] },
+                { "level": 9, "spellIds": ["aura-of-vitality", "conjure-barrage"] },
+                { "level": 13, "spellIds": ["aura-of-purity", "fire-shield"] },
+                { "level": 17, "spellIds": ["banishing-smite", "mass-cure-wounds"] }
+            ]
+        }
+    ],
+    "spellcasting": {
+        "ability": "INTELLIGENCE",
+        "preparationType": "prepared"
+    },
+    "progressionTable": [
+        { "level": 1, "profBonus": 2, "cantripsKnown": 2, "infusionsKnown": 0, "infusedItems": 0, "spellSlots": [2, 0, 0, 0, 0] },
+        { "level": 2, "profBonus": 2, "cantripsKnown": 2, "infusionsKnown": 4, "infusedItems": 2, "spellSlots": [2, 0, 0, 0, 0] },
+        { "level": 3, "profBonus": 2, "cantripsKnown": 2, "infusionsKnown": 4, "infusedItems": 2, "spellSlots": [3, 0, 0, 0, 0] },
+        { "level": 4, "profBonus": 2, "cantripsKnown": 2, "infusionsKnown": 4, "infusedItems": 2, "spellSlots": [3, 0, 0, 0, 0] },
+        { "level": 5, "profBonus": 3, "cantripsKnown": 2, "infusionsKnown": 4, "infusedItems": 2, "spellSlots": [4, 2, 0, 0, 0] },
+        { "level": 6, "profBonus": 3, "cantripsKnown": 2, "infusionsKnown": 6, "infusedItems": 3, "spellSlots": [4, 2, 0, 0, 0] },
+        { "level": 7, "profBonus": 3, "cantripsKnown": 2, "infusionsKnown": 6, "infusedItems": 3, "spellSlots": [4, 3, 0, 0, 0] },
+        { "level": 8, "profBonus": 3, "cantripsKnown": 2, "infusionsKnown": 6, "infusedItems": 3, "spellSlots": [4, 3, 0, 0, 0] },
+        { "level": 9, "profBonus": 4, "cantripsKnown": 2, "infusionsKnown": 6, "infusedItems": 3, "spellSlots": [4, 3, 2, 0, 0] },
+        { "level": 10, "profBonus": 4, "cantripsKnown": 3, "infusionsKnown": 8, "infusedItems": 4, "spellSlots": [4, 3, 2, 0, 0] },
+        { "level": 11, "profBonus": 4, "cantripsKnown": 3, "infusionsKnown": 8, "infusedItems": 4, "spellSlots": [4, 3, 3, 0, 0] },
+        { "level": 12, "profBonus": 4, "cantripsKnown": 3, "infusionsKnown": 8, "infusedItems": 4, "spellSlots": [4, 3, 3, 0, 0] },
+        { "level": 13, "profBonus": 5, "cantripsKnown": 3, "infusionsKnown": 8, "infusedItems": 4, "spellSlots": [4, 3, 3, 1, 0] },
+        { "level": 14, "profBonus": 5, "cantripsKnown": 4, "infusionsKnown": 10, "infusedItems": 5, "spellSlots": [4, 3, 3, 1, 0] },
+        { "level": 15, "profBonus": 5, "cantripsKnown": 4, "infusionsKnown": 10, "infusedItems": 5, "spellSlots": [4, 3, 3, 2, 0] },
+        { "level": 16, "profBonus": 5, "cantripsKnown": 4, "infusionsKnown": 10, "infusedItems": 5, "spellSlots": [4, 3, 3, 2, 0] },
+        { "level": 17, "profBonus": 6, "cantripsKnown": 4, "infusionsKnown": 10, "infusedItems": 5, "spellSlots": [4, 3, 3, 3, 1] },
+        { "level": 18, "profBonus": 6, "cantripsKnown": 4, "infusionsKnown": 12, "infusedItems": 6, "spellSlots": [4, 3, 3, 3, 1] },
+        { "level": 19, "profBonus": 6, "cantripsKnown": 4, "infusionsKnown": 12, "infusedItems": 6, "spellSlots": [4, 3, 3, 3, 2] },
+        { "level": 20, "profBonus": 6, "cantripsKnown": 4, "infusionsKnown": 12, "infusedItems": 6, "spellSlots": [4, 3, 3, 3, 2] }
+    ]
+}

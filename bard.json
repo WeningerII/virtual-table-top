@@ -1,0 +1,197 @@
+
+{
+    "id": "bard",
+    "name": "Bard",
+    "source": "Player's Handbook",
+    "hitDie": 8,
+    "iconId": "BardIcon",
+    "casterType": "full",
+    "description": "An inspiring magician whose power echoes the music of creation.",
+    "startingGoldRoll": "5d4*10",
+    "startingEquipment": [
+        { "choice": [[{ "itemId": "rapier", "quantity": 1 }], [{ "itemId": "longsword", "quantity": 1 }], [{ "itemId": "any-simple-weapon", "quantity": 1 }]] },
+        { "choice": [[{ "packId": "diplomats-pack" }], [{ "packId": "entertainers-pack" }]] },
+        { "choice": [[{ "itemId": "lute", "quantity": 1 }], [{ "itemId": "any-musical-instrument", "quantity": 1 }]] },
+        { "itemId": "leather-armor", "quantity": 1 },
+        { "itemId": "dagger", "quantity": 1 }
+    ],
+    "traits": [
+        {
+            "id": "bard-starting-proficiencies",
+            "name": "Starting Proficiencies",
+            "description": "Bards have a broad range of proficiencies in armor, weapons, and skills.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "armor", "options": ["light armor"], "count": 1 },
+                { "type": "proficiency", "proficiencyType": "weapon", "options": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"], "count": 5 },
+                { "type": "proficiency", "proficiencyType": "saving_throw", "options": ["DEXTERITY", "CHARISMA"], "count": 2 }
+            ],
+            "choiceOptions": [
+                {
+                    "id": "bard-tools",
+                    "label": "Choose three musical instruments",
+                    "type": "tool",
+                    "count": 3,
+                    "from": "any"
+                },
+                {
+                    "id": "bard-skills",
+                    "label": "Choose three skills",
+                    "type": "skill",
+                    "count": 3,
+                    "from": [
+                        "acrobatics", "animal-handling", "arcana", "athletics", "deception", "history",
+                        "insight", "intimidation", "investigation", "medicine", "nature", "perception",
+                        "performance", "persuasion", "religion", "sleight-of-hand", "stealth", "survival"
+                    ]
+                }
+            ]
+        }
+    ],
+    "features": [
+        { "id": "bard-spellcasting-1", "name": "Spellcasting", "level": 1, "description": "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. You can use a musical instrument as a spellcasting focus.", "effects": [{ "type": "special_ability", "name": "Spellcasting (Bard)"}] },
+        { "id": "bardic-inspiration", "name": "Bardic Inspiration", "level": 1, "interactionType": "bonus_action_buff", "cost": "bonus action", "description": "As a bonus action, you can choose one creature other than yourself within 60 feet who can hear you. That creature gains one Bardic Inspiration die. Once within the next 10 minutes, the creature can roll the die and add the number to one ability check, attack roll, or saving throw.", "limitedUse": { "id": "bardic-inspiration", "per": "longRest", "usesByLevel": ["CHA_MOD"] } },
+        { "id": "bard-jack-of-all-trades-2", "name": "Jack of All Trades", "level": 2, "description": "You can add half your proficiency bonus, rounded down, to any ability check you make that doesn’t already include your proficiency bonus.", "effects": [{ "type": "half_proficiency_bonus", "to": "ability_check", "condition": "on any check you are not proficient with" }] },
+        { "id": "bard-song-of-rest-2", "name": "Song of Rest", "level": 2, "description": "If you or any friendly creatures who can hear your performance regain hit points at the end of a short rest, each of those creatures regains extra hit points. The die becomes a d8 at 9th level, d10 at 13th level, and d12 at 17th level.", "effects": [{ "type": "special_ability", "name": "Song of Rest" }] },
+        { "id": "bard-college-3", "name": "Bard College", "level": 3, "description": "You delve into the advanced techniques of a bard college of your choice.", "choiceOptions": [{"id": "bard-subclass-choice", "label": "Choose a Bard College", "type": "subclass", "count": 1, "from": ["college-of-lore", "college-of-creation", "college-of-eloquence", "college-of-glamour", "college-of-spirits", "college-of-swords", "college-of-valor", "college-of-whispers"]}] },
+        { "id": "bard-expertise-3", "name": "Expertise", "level": 3, "description": "Choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.", "choiceOptions": [{ "id": "bard-expertise-3", "label": "Choose two skills/tools for Expertise", "type": "skill_or_tool", "count": 2, "from": "any" }] },
+        { "id": "bard-asi-4", "name": "Ability Score Improvement", "level": 4, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "bard-font-of-inspiration-5", "name": "Font of Inspiration", "level": 5, "description": "You regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.", "effects": [{ "type": "modify_feature", "featureId": "bardic-inspiration", "modification": "recharges on short or long rest" }] },
+        { "id": "bard-countercharm-6", "name": "Countercharm", "level": 6, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed.", "effects": [{ "type": "grant_action", "name": "Countercharm" }] },
+        { "id": "bard-asi-8", "name": "Ability Score Improvement", "level": 8, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "bard-expertise-10", "name": "Expertise (Level 10)", "level": 10, "description": "Choose two more of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.", "choiceOptions": [{ "id": "bard-expertise-10", "label": "Choose two more skills/tools for Expertise", "type": "skill_or_tool", "count": 2, "from": "any" }] },
+        { "id": "bard-magical-secrets-10", "name": "Magical Secrets", "level": 10, "description": "Choose two spells from any classes. A spell you choose must be of a level you can cast. The chosen spells count as bard spells for you.", "choiceOptions": [{ "id": "bard-magical-secrets-10", "label": "Choose two spells from any class (up to 5th level)", "type": "spell", "count": 2, "from": "any" }] },
+        { "id": "bard-asi-12", "name": "Ability Score Improvement", "level": 12, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "bard-magical-secrets-14", "name": "Magical Secrets (Level 14)", "level": 14, "description": "You learn two additional spells of your choice from any class (up to 7th level).", "choiceOptions": [{ "id": "bard-magical-secrets-14", "label": "Choose two spells from any class (up to 7th level)", "type": "spell", "count": 2, "from": "any" }] },
+        { "id": "bard-asi-16", "name": "Ability Score Improvement", "level": 16, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "bard-magical-secrets-18", "name": "Magical Secrets (Level 18)", "level": 18, "description": "You learn two additional spells of your choice from any class (up to 9th level).", "choiceOptions": [{ "id": "bard-magical-secrets-18", "label": "Choose two spells from any class (up to 9th level)", "type": "spell", "count": 2, "from": "any" }] },
+        { "id": "bard-asi-19", "name": "Ability Score Improvement", "level": 19, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "bard-superior-inspiration-20", "name": "Superior Inspiration", "level": 20, "description": "When you roll initiative and have no uses of Bardic Inspiration left, you regain one use.", "effects": [{ "type": "special_ability", "name": "Superior Inspiration" }] }
+    ],
+    "subclasses": [
+        {
+            "id": "college-of-lore",
+            "name": "College of Lore",
+            "source": "Player's Handbook",
+            "description": "Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tales.",
+            "features": [
+                { "id": "lore-bonus-proficiencies-3", "name": "Bonus Proficiencies", "level": 3, "description": "You gain proficiency with three skills of your choice.", "choiceOptions": [{ "id": "lore-bard-proficiencies", "label": "Choose three skills", "type": "skill", "count": 3, "from": "any" }] },
+                { "id": "lore-cutting-words-3", "name": "Cutting Words", "level": 3, "interactionType": "reaction_penalty", "cost": "reaction", "description": "When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature’s roll.", "effects": [{ "type": "special_ability", "name": "Cutting Words" }] },
+                { "id": "lore-additional-magical-secrets-6", "name": "Additional Magical Secrets", "level": 6, "description": "You learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don’t count against the number of bard spells you know.", "choiceOptions": [{ "id": "lore-bard-magical-secrets-6", "label": "Choose two spells from any class (up to 3rd level)", "type": "spell", "count": 2, "from": "any" }] },
+                { "id": "lore-peerless-skill-14", "name": "Peerless Skill", "level": 14, "description": "When you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check.", "effects": [{ "type": "special_ability", "name": "Peerless Skill" }] }
+            ]
+        },
+        {
+            "id": "college-of-creation",
+            "name": "College of Creation",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "Bards of the College of Creation draw on the primeval song of creation, using it to bring items to life and inspire wondrous effects.",
+            "features": [
+                { "id": "creation-mote-of-potential-3", "name": "Mote of Potential", "level": 3, "description": "When you give a creature a Bardic Inspiration die, you create a mote of potential that orbits them, providing an additional effect when the die is used for an ability check, attack roll, or saving throw.", "effects": [{ "type": "special_ability", "name": "Mote of Potential" }] },
+                { "id": "creation-performance-of-creation-3", "name": "Performance of Creation", "level": 3, "interactionType": "creator", "cost": "action", "description": "As an action, you can create one nonmagical item of your choice in an unoccupied space within 10 feet. The item’s value is limited by your level.", "effects": [{ "type": "grant_action", "name": "Performance of Creation"}] },
+                { "id": "creation-animating-performance-6", "name": "Animating Performance", "level": 6, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can animate one Large or smaller nonmagical item, which becomes a friendly creature that obeys your commands.", "effects": [{ "type": "grant_action", "name": "Animating Performance"}] },
+                { "id": "creation-creative-crescendo-14", "name": "Creative Crescendo", "level": 14, "description": "When you use Performance of Creation, you can create a number of items equal to your Charisma modifier, and you are no longer limited by gp value.", "effects": [{ "type": "special_ability", "name": "Creative Crescendo" }] }
+            ]
+        },
+        {
+            "id": "college-of-eloquence",
+            "name": "College of Eloquence",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "Adherents of the College of Eloquence master the art of oratory, wielding a blend of logic and theatrical wordplay to win over skeptics and detractors.",
+            "features": [
+                { "id": "eloquence-silver-tongue-3", "name": "Silver Tongue", "level": 3, "description": "When you make a Charisma (Persuasion) or Charisma (Deception) check, you can treat a d20 roll of 9 or lower as a 10.", "effects": [{ "type": "special_ability", "name": "Silver Tongue" }] },
+                { "id": "eloquence-unsettling-words-3", "name": "Unsettling Words", "level": 3, "interactionType": "bonus_action_debuff", "cost": "bonus action", "description": "As a bonus action, you can expend one use of Bardic Inspiration to cause a creature to subtract the number rolled from its next saving throw.", "effects": [{ "type": "special_ability", "name": "Unsettling Words" }] },
+                { "id": "eloquence-unfailing-inspiration-6", "name": "Unfailing Inspiration", "level": 6, "description": "When a creature adds one of your Bardic Inspiration dice to a roll and fails, the creature can keep the Bardic Inspiration die.", "effects": [{ "type": "special_ability", "name": "Unfailing Inspiration" }] },
+                { "id": "eloquence-universal-speech-6", "name": "Universal Speech", "level": 6, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can choose creatures to magically understand you, regardless of the language you speak, for 1 hour.", "effects": [{ "type": "grant_action", "name": "Universal Speech" }] },
+                { "id": "eloquence-infectious-inspiration-14", "name": "Infectious Inspiration", "level": 14, "interactionType": "reaction_utility", "cost": "reaction", "description": "When a creature succeeds on a roll using your Bardic Inspiration, you can use your reaction to give a Bardic Inspiration die to another creature without expending a use.", "effects": [{ "type": "special_ability", "name": "Infectious Inspiration" }] }
+            ]
+        },
+        {
+            "id": "college-of-glamour",
+            "name": "College of Glamour",
+            "source": "Xanathar's Guide to Everything",
+            "description": "The College of Glamour is the home of bards who mastered their craft in the vibrant realm of the Feywild, using their magic to delight and captivate others.",
+            "features": [
+                { "id": "glamour-mantle-of-inspiration-3", "name": "Mantle of Inspiration", "level": 3, "interactionType": "bonus_action_buff", "cost": "bonus action", "description": "As a bonus action, you can expend a Bardic Inspiration use to grant temporary HP and an immediate move reaction to a number of creatures equal to your Charisma modifier.", "effects": [{ "type": "special_ability", "name": "Mantle of Inspiration" }] },
+                { "id": "glamour-enthralling-performance-3", "name": "Enthralling Performance", "level": 3, "interactionType": "action_utility", "cost": "action", "description": "If you perform for at least 1 minute, you can attempt to charm a number of humanoids who watched and listened to you.", "effects": [{ "type": "grant_action", "name": "Enthralling Performance" }] },
+                { "id": "glamour-mantle-of-majesty-6", "name": "Mantle of Majesty", "level": 6, "interactionType": "bonus_action_buff", "cost": "bonus action", "description": "As a bonus action, you can cast Command without a spell slot for 1 minute. Creatures charmed by you automatically fail the saving throw.", "effects": [{ "type": "grant_action", "name": "Mantle of Majesty" }] },
+                { "id": "glamour-unbreakable-majesty-14", "name": "Unbreakable Majesty", "level": 14, "interactionType": "bonus_action_buff", "cost": "bonus action", "description": "As a bonus action, you can assume a majestic presence. Any creature trying to attack you for the first time on a turn must make a Charisma save or attack a different target.", "effects": [{ "type": "grant_action", "name": "Unbreakable Majesty" }] }
+            ]
+        },
+        {
+            "id": "college-of-spirits",
+            "name": "College of Spirits",
+            "source": "Tasha's Cauldron of Everything",
+            "description": "Bards of the College of Spirits seek tales with inherent power, using occult trappings to conjure spiritual embodiments of powerful forces.",
+            "features": [
+                { "id": "spirits-guiding-whispers-3", "name": "Guiding Whispers", "level": 3, "description": "You learn the Guidance cantrip, which has a range of 60 feet for you.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [{ "id": "guidance", "frequency": "at-will" }] }] },
+                { "id": "spirits-spiritual-focus-3", "name": "Spiritual Focus", "level": 3, "description": "You can use a candle, crystal ball, skull, spirit board, or tarokka deck as a spellcasting focus. At 6th level, you gain a bonus d6 to one damage or healing roll of a spell cast through it.", "effects": [{ "type": "special_ability", "name": "Spiritual Focus" }, { "type": "bonus_damage", "value": "1d6", "condition": "on one damage or healing roll of a spell cast with this focus (starting at level 6)" }] },
+                { "id": "spirits-tales-from-beyond-3", "name": "Tales from Beyond", "level": 3, "interactionType": "bonus_action_utility", "cost": "bonus action", "description": "As a bonus action, you can expend a use of Bardic Inspiration to roll on the Spirit Tales table and gain a random magical effect to bestow on another creature.", "effects": [{ "type": "special_ability", "name": "Tales from Beyond" }] },
+                { "id": "spirits-spirit-session-6", "name": "Spirit Session", "level": 6, "description": "You can conduct an hour-long ritual to learn one spell of your choice from any class, which must be from the Divination or Necromancy school.", "effects": [{ "type": "special_ability", "name": "Spirit Session" }] },
+                { "id": "spirits-mystical-connection-14", "name": "Mystical Connection", "level": 14, "description": "When you roll on the Spirit Tales table, you can roll twice and choose which effect to bestow. If you roll the same number, you can choose any effect on the table.", "effects": [{ "type": "special_ability", "name": "Mystical Connection" }] }
+            ]
+        },
+        {
+            "id": "college-of-swords",
+            "name": "College of Swords",
+            "source": "Xanathar's Guide to Everything",
+            "description": "Bards of the College of Swords, called blades, entertain through daring feats of weapon prowess, but are also highly trained warriors.",
+            "features": [
+                { "id": "swords-bonus-proficiencies-3", "name": "Bonus Proficiencies", "level": 3, "description": "You gain proficiency with medium armor and the scimitar. You can use a melee weapon you are proficient with as a spellcasting focus.", "effects": [{ "type": "proficiency", "proficiencyType": "armor", "options": ["medium armor"], "count": 1 }, { "type": "proficiency", "proficiencyType": "weapon", "options": ["scimitar"], "count": 1 }, { "type": "special_ability", "name": "Weapon Spellcasting Focus (Bard)" }] },
+                { "id": "swords-fighting-style-3", "name": "Fighting Style", "level": 3, "description": "Choose either Dueling or Two-Weapon Fighting style.", "choiceOptions": [{ "id": "swords-bard-fighting-style", "label": "Choose a Fighting Style", "type": "fighting_style", "count": 1, "from": ["dueling", "two-weapon-fighting"] }] },
+                { "id": "swords-blade-flourish-3", "name": "Blade Flourish", "level": 3, "interactionType": "on_hit_trigger", "description": "When you take the Attack action, you can expend a Bardic Inspiration die to perform one of three flourishes: Defensive, Slashing, or Mobile.", "effects": [{ "type": "special_ability", "name": "Blade Flourish" }] },
+                { "id": "swords-extra-attack-6", "name": "Extra Attack", "level": 6, "description": "You can attack twice, instead of once, whenever you take the Attack action on your turn.", "effects": [{ "type": "special_ability", "name": "Extra Attack" }] },
+                { "id": "swords-masters-flourish-14", "name": "Master’s Flourish", "level": 14, "description": "Whenever you use a Blade Flourish option, you can roll a d6 and use it instead of expending a Bardic Inspiration die.", "effects": [{ "type": "special_ability", "name": "Master’s Flourish" }] }
+            ]
+        },
+        {
+            "id": "college-of-valor",
+            "name": "College of Valor",
+            "source": "Player's Handbook",
+            "description": "Bards of the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past, and thereby inspire a new generation of heroes.",
+            "features": [
+                { "id": "valor-bonus-proficiencies-3", "name": "Bonus Proficiencies", "level": 3, "description": "You gain proficiency with medium armor, shields, and martial weapons.", "effects": [{ "type": "proficiency", "proficiencyType": "armor", "options": ["medium armor", "shields"], "count": 2 }, { "type": "proficiency", "proficiencyType": "weapon", "options": ["martial weapons"], "count": 1 }] },
+                { "id": "valor-combat-inspiration-3", "name": "Combat Inspiration", "level": 3, "description": "A creature with your Bardic Inspiration die can add it to a weapon damage roll, or use its reaction to add it to AC against an attack.", "effects": [{ "type": "modify_feature", "featureId": "bardic-inspiration", "modification": "can be used for damage or AC" }] },
+                { "id": "valor-extra-attack-6", "name": "Extra Attack", "level": 6, "description": "You can attack twice, instead of once, whenever you take the Attack action on your turn.", "effects": [{ "type": "special_ability", "name": "Extra Attack" }] },
+                { "id": "valor-battle-magic-14", "name": "Battle Magic", "level": 14, "description": "When you use your action to cast a bard spell, you can make one weapon attack as a bonus action.", "effects": [{ "type": "special_ability", "name": "Battle Magic" }] }
+            ]
+        },
+        {
+            "id": "college-of-whispers",
+            "name": "College of Whispers",
+            "source": "Xanathar's Guide to Everything",
+            "description": "Bards of the College of Whispers use their knowledge and magic to uncover secrets and turn them against others through extortion and threats.",
+            "features": [
+                { "id": "whispers-psychic-blades-3", "name": "Psychic Blades", "level": 3, "interactionType": "on_hit_trigger", "description": "When you hit a creature with a weapon attack, you can expend one use of Bardic Inspiration to deal extra psychic damage.", "effects": [{ "type": "special_ability", "name": "Psychic Blades" }] },
+                { "id": "whispers-words-of-terror-3", "name": "Words of Terror", "level": 3, "interactionType": "action_utility", "cost": "action", "description": "If you speak to a humanoid alone for at least 1 minute, you can attempt to seed paranoia in its mind, potentially frightening them of a creature of your choice.", "effects": [{ "type": "grant_action", "name": "Words of Terror" }] },
+                { "id": "whispers-mantle-of-whispers-6", "name": "Mantle of Whispers", "level": 6, "interactionType": "reaction_utility", "cost": "reaction", "description": "When a humanoid dies within 30 feet, you can use your reaction to magically capture its shadow and transform into a disguise of that person, gaining access to some of their memories.", "effects": [{ "type": "special_ability", "name": "Mantle of Whispers" }] },
+                { "id": "whispers-shadow-lore-14", "name": "Shadow Lore", "level": 14, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can magically whisper a phrase to one creature that it believes is its most mortifying secret. The creature is charmed by you for 8 hours, obeying your commands for fear of you revealing it.", "effects": [{ "type": "grant_action", "name": "Shadow Lore" }] }
+            ]
+        }
+    ],
+    "spellcasting": {
+        "ability": "CHARISMA",
+        "preparationType": "known"
+    },
+    "progressionTable": [
+        { "level": 1, "profBonus": 2, "cantripsKnown": 2, "spellsKnown": 4, "spellSlots": [2, 0, 0, 0, 0, 0, 0, 0, 0], "bardicInspirationDie": 6, "songOfRestDie": 0 },
+        { "level": 2, "profBonus": 2, "cantripsKnown": 2, "spellsKnown": 5, "spellSlots": [3, 0, 0, 0, 0, 0, 0, 0, 0], "bardicInspirationDie": 6, "songOfRestDie": 6 },
+        { "level": 3, "profBonus": 2, "cantripsKnown": 2, "spellsKnown": 6, "spellSlots": [4, 2, 0, 0, 0, 0, 0, 0, 0], "bardicInspirationDie": 6, "songOfRestDie": 6 },
+        { "level": 4, "profBonus": 2, "cantripsKnown": 3, "spellsKnown": 7, "spellSlots": [4, 3, 0, 0, 0, 0, 0, 0, 0], "bardicInspirationDie": 6, "songOfRestDie": 6 },
+        { "level": 5, "profBonus": 3, "cantripsKnown": 3, "spellsKnown": 8, "spellSlots": [4, 3, 2, 0, 0, 0, 0, 0, 0], "bardicInspirationDie": 8, "songOfRestDie": 6 },
+        { "level": 6, "profBonus": 3, "cantripsKnown": 3, "spellsKnown": 9, "spellSlots": [4, 3, 3, 0, 0, 0, 0, 0, 0], "bardicInspirationDie": 8, "songOfRestDie": 6 },
+        { "level": 7, "profBonus": 3, "cantripsKnown": 3, "spellsKnown": 10, "spellSlots": [4, 3, 3, 1, 0, 0, 0, 0, 0], "bardicInspirationDie": 8, "songOfRestDie": 6 },
+        { "level": 8, "profBonus": 3, "cantripsKnown": 3, "spellsKnown": 11, "spellSlots": [4, 3, 3, 2, 0, 0, 0, 0, 0], "bardicInspirationDie": 8, "songOfRestDie": 6 },
+        { "level": 9, "profBonus": 4, "cantripsKnown": 3, "spellsKnown": 12, "spellSlots": [4, 3, 3, 3, 1, 0, 0, 0, 0], "bardicInspirationDie": 8, "songOfRestDie": 8 },
+        { "level": 10, "profBonus": 4, "cantripsKnown": 4, "spellsKnown": 14, "spellSlots": [4, 3, 3, 3, 2, 0, 0, 0, 0], "bardicInspirationDie": 10, "songOfRestDie": 8 },
+        { "level": 11, "profBonus": 4, "cantripsKnown": 4, "spellsKnown": 15, "spellSlots": [4, 3, 3, 3, 2, 1, 0, 0, 0], "bardicInspirationDie": 10, "songOfRestDie": 8 },
+        { "level": 12, "profBonus": 4, "cantripsKnown": 4, "spellsKnown": 15, "spellSlots": [4, 3, 3, 3, 2, 1, 0, 0, 0], "bardicInspirationDie": 10, "songOfRestDie": 8 },
+        { "level": 13, "profBonus": 5, "cantripsKnown": 4, "spellsKnown": 16, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 0, 0], "bardicInspirationDie": 10, "songOfRestDie": 10 },
+        { "level": 14, "profBonus": 5, "cantripsKnown": 4, "spellsKnown": 18, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 0, 0], "bardicInspirationDie": 10, "songOfRestDie": 10 },
+        { "level": 15, "profBonus": 5, "cantripsKnown": 4, "spellsKnown": 19, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 1, 0], "bardicInspirationDie": 12, "songOfRestDie": 10 },
+        { "level": 16, "profBonus": 5, "cantripsKnown": 4, "spellsKnown": 19, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 1, 0], "bardicInspirationDie": 12, "songOfRestDie": 10 },
+        { "level": 17, "profBonus": 6, "cantripsKnown": 4, "spellsKnown": 20, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 1, 1], "bardicInspirationDie": 12, "songOfRestDie": 12 },
+        { "level": 18, "profBonus": 6, "cantripsKnown": 4, "spellsKnown": 22, "spellSlots": [4, 3, 3, 3, 3, 1, 1, 1, 1], "bardicInspirationDie": 12, "songOfRestDie": 12 },
+        { "level": 19, "profBonus": 6, "cantripsKnown": 4, "spellsKnown": 22, "spellSlots": [4, 3, 3, 3, 3, 2, 1, 1, 1], "bardicInspirationDie": 12, "songOfRestDie": 12 },
+        { "level": 20, "profBonus": 6, "cantripsKnown": 4, "spellsKnown": 22, "spellSlots": [4, 3, 3, 3, 3, 2, 2, 1, 1], "bardicInspirationDie": 12, "songOfRestDie": 12 }
+    ]
+}

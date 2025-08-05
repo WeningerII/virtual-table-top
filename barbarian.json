@@ -1,0 +1,82 @@
+{
+    "id": "barbarian",
+    "name": "Barbarian",
+    "source": "Player's Handbook",
+    "hitDie": 12,
+    "iconId": "BarbarianIcon",
+    "casterType": "none",
+    "description": "A fierce warrior of primitive background who can enter a battle rage.",
+    "startingGoldRoll": "2d4*10",
+    "startingEquipment": [
+        { "choice": [[{ "itemId": "greataxe", "quantity": 1 }], [{ "itemId": "any-martial-weapon", "quantity": 1 }]] },
+        { "choice": [[{ "itemId": "handaxe", "quantity": 2 }], [{ "itemId": "any-simple-weapon", "quantity": 1 }]] },
+        { "packId": "explorers-pack" },
+        { "itemId": "javelin", "quantity": 4 }
+    ],
+    "traits": [
+        {
+            "id": "barbarian-starting-proficiencies",
+            "name": "Starting Proficiencies",
+            "description": "As a Barbarian, you have proficiencies that reflect your martial and primal nature.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "armor", "options": ["light armor", "medium armor", "shields"], "count": 3 },
+                { "type": "proficiency", "proficiencyType": "weapon", "options": ["simple weapons", "martial weapons"], "count": 2 },
+                { "type": "proficiency", "proficiencyType": "saving_throw", "options": ["STRENGTH", "CONSTITUTION"], "count": 2 }
+            ],
+            "choiceOptions": [{
+                "id": "barbarian-skills",
+                "label": "Choose two skills",
+                "type": "skill",
+                "count": 2,
+                "from": ["animal-handling", "athletics", "intimidation", "nature", "perception", "survival"]
+            }]
+        }
+    ],
+    "features": [
+        { "id": "rage", "name": "Rage", "level": 1, "interactionType": "bonus_action_state_toggle", "cost": "bonus action", "description": "On your turn, you can enter a rage as a bonus action. Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then.", "limitedUse": { "id": "rage", "per": "longRest", "usesByLevel": [2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 999] }, "effects": [{ "type": "advantage", "on": "check", "ability": "STRENGTH" }, { "type": "advantage", "on": "saving_throw", "ability": "STRENGTH" }, { "type": "resistance", "damageType": "bludgeoning" }, { "type": "resistance", "damageType": "piercing" }, { "type": "resistance", "damageType": "slashing" }, { "type": "bonus_damage", "value": "RAGE_DAMAGE", "condition": "on Strength-based melee attacks" }] },
+        { "id": "barbarian-unarmored-defense-1", "name": "Unarmored Defense", "level": 1, "description": "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.", "effects": [{ "type": "unarmored_defense", "ability": "CONSTITUTION" }] },
+        { "id": "barbarian-reckless-attack-2", "name": "Reckless Attack", "level": 2, "interactionType": "action_state_toggle", "description": "You can throw aside all concern for defense to attack with fierce desperation, giving you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.", "effects": [{ "type": "advantage", "on": "attack_roll", "condition": "on your melee weapon attacks using Strength this turn" }, { "type": "disadvantage", "on": "defense", "condition": "attack rolls against you have advantage until your next turn" }] },
+        { "id": "barbarian-danger-sense-2", "name": "Danger Sense", "level": 2, "description": "You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can’t be blinded, deafened, or incapacitated.", "effects": [{"type": "advantage", "on": "saving_throw", "ability": "DEXTERITY", "condition": "against effects you can see"}] },
+        { "id": "barbarian-primal-path-3", "name": "Primal Path", "level": 3, "description": "You choose a path that shapes the nature of your rage. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.", "choiceOptions": [{"id": "barbarian-subclass-choice", "label": "Choose a Primal Path", "type": "subclass", "count": 1, "from": ["path-of-the-berserker", "path-of-the-totem-warrior", "path-of-the-ancestral-guardian", "path-of-the-storm-herald", "path-of-the-zealot", "path-of-the-beast", "path-of-wild-magic"]}] },
+        { "id": "barbarian-asi-4", "name": "Ability Score Improvement", "level": 4, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "barbarian-extra-attack-5", "name": "Extra Attack", "level": 5, "description": "You can attack twice, instead of once, whenever you take the Attack action on your turn.", "effects": [{ "type": "special_ability", "name": "Extra Attack" }] },
+        { "id": "barbarian-fast-movement-5", "name": "Fast Movement", "level": 5, "description": "Your speed increases by 10 feet while you aren’t wearing heavy armor.", "effects": [{"type": "bonus", "to": "speed", "value": 10, "condition": "while not wearing heavy armor"}] },
+        { "id": "barbarian-feral-instinct-7", "name": "Feral Instinct", "level": 7, "description": "Your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.", "effects": [{"type": "advantage", "on": "initiative" }, { "type": "special_ability", "name": "Feral Instinct Surprise Rage" }] },
+        { "id": "barbarian-asi-8", "name": "Ability Score Improvement", "level": 8, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "barbarian-brutal-critical-9", "name": "Brutal Critical", "level": 9, "description": "You can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.", "effects": [{"type": "bonus_crit_damage", "dice": 1, "valueByLevel": { "13": 2, "17": 3 } }] },
+        { "id": "barbarian-relentless-rage-11", "name": "Relentless Rage", "level": 11, "description": "If you drop to 0 hit points while you’re raging and don’t die outright, you can make a DC 10 Constitution saving throw to drop to 1 hit point instead. The DC increases by 5 for each use after the first.", "effects": [{ "type": "special_ability", "name": "Relentless Rage" }] },
+        { "id": "barbarian-asi-12", "name": "Ability Score Improvement", "level": 12, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "barbarian-persistent-rage-15", "name": "Persistent Rage", "level": 15, "description": "Your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.", "effects": [{"type": "modify_feature", "featureId": "rage", "modification": "ends only on unconsciousness or choice" }] },
+        { "id": "barbarian-asi-16", "name": "Ability Score Improvement", "level": 16, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "barbarian-indomitable-might-18", "name": "Indomitable Might", "level": 18, "description": "If your total for a Strength check is less than your Strength score, you can use that score in place of the total.", "effects": [{ "type": "roll_floor", "value": "STRENGTH_SCORE", "condition": "on any Strength check" }] },
+        { "id": "barbarian-asi-19", "name": "Ability Score Improvement", "level": 19, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "barbarian-primal-champion-20", "name": "Primal Champion", "level": 20, "description": "Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.", "effects": [{"type": "ability_score_increase", "abilities": ["STRENGTH", "CONSTITUTION"], "value": 4, "count": 2}, {"type": "set_ability_score_max", "ability": "STRENGTH", "value": 24}, {"type": "set_ability_score_max", "ability": "CONSTITUTION", "value": 24}] }
+    ],
+    "subclasses": [
+        { "id": "path-of-the-berserker", "name": "Path of the Berserker", "source": "Player's Handbook", "description": "For some barbarians, rage is a means to an end—that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood.", "features": [ { "id": "berserker-frenzy-3", "name": "Frenzy", "level": 3, "interactionType": "bonus_action_state_toggle", "description": "While raging, you can go into a frenzy to make a single melee weapon attack as a bonus action on each of your turns. When your rage ends, you suffer one level of exhaustion.", "effects": [{"type": "grant_action", "name": "Frenzy Bonus Attack"}] }, { "id": "berserker-mindless-rage-6", "name": "Mindless Rage", "level": 6, "description": "You can’t be charmed or frightened while raging.", "effects": [{"type": "immunity", "to": "charmed", "condition": "while raging"}, {"type": "immunity", "to": "frightened", "condition": "while raging"}] }, { "id": "berserker-intimidating-presence-10", "name": "Intimidating Presence", "level": 10, "interactionType": "action_utility", "cost": "action", "description": "You can use your action to frighten someone with your menacing presence.", "effects": [{"type": "grant_action", "name": "Intimidating Presence"}] }, { "id": "berserker-retaliation-14", "name": "Retaliation", "level": 14, "interactionType": "reaction_damage", "cost": "reaction", "description": "When you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature." } ] },
+        { "id": "path-of-the-totem-warrior", "name": "Path of the Totem Warrior", "source": "Player's Handbook", "description": "The Path of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal as a guide, protector, and inspiration.", "features": [ { "id": "totem-spirit-seeker-3", "name": "Spirit Seeker", "level": 3, "description": "You gain the ability to cast the Beast Sense and Speak with Animals spells, but only as rituals.", "effects": [{ "type": "innate_spellcasting", "ability": "WISDOM", "spells": [{ "id": "beast-sense", "frequency": "at-will", "description": "(Ritual Only)"}, { "id": "speak-with-animals", "frequency": "at-will", "description": "(Ritual Only)"}] }] }, { "id": "totem-spirit-3", "name": "Totem Spirit", "level": 3, "description": "You choose a totem spirit and gain its feature while raging.", "choiceOptions": [{"id": "totem-choice-3", "label": "Totem Spirit (Level 3)", "type": "totem_animal", "count": 1, "from": ["bear", "eagle", "wolf", "elk", "tiger"], "level": 3 }] }, { "id": "totem-aspect-of-the-beast-6", "name": "Aspect of the Beast", "level": 6, "description": "You gain a magical benefit based on the totem animal of your choice.", "choiceOptions": [{"id": "totem-choice-6", "label": "Aspect of the Beast (Level 6)", "type": "totem_animal", "count": 1, "from": ["bear", "eagle", "wolf", "elk", "tiger"], "level": 6 }] }, { "id": "totem-spirit-walker-10", "name": "Spirit Walker", "level": 10, "description": "You can cast the Commune with Nature spell, but only as a ritual.", "effects": [{ "type": "innate_spellcasting", "ability": "WISDOM", "spells": [{ "id": "commune-with-nature", "frequency": "at-will", "description": "(Ritual Only)"}] }] }, { "id": "totem-attunement-14", "name": "Totemic Attunement", "level": 14, "description": "You gain a magical benefit based on a totem animal of your choice.", "choiceOptions": [{"id": "totem-choice-14", "label": "Totemic Attunement (Level 14)", "type": "totem_animal", "count": 1, "from": ["bear", "eagle", "wolf", "elk", "tiger"], "level": 14 }] } ] }
+    ],
+    "spellcasting": null,
+    "progressionTable": [
+        { "level": 1, "profBonus": 2, "rageDamage": 2 },
+        { "level": 2, "profBonus": 2, "rageDamage": 2 },
+        { "level": 3, "profBonus": 2, "rageDamage": 2 },
+        { "level": 4, "profBonus": 2, "rageDamage": 2 },
+        { "level": 5, "profBonus": 3, "rageDamage": 2 },
+        { "level": 6, "profBonus": 3, "rageDamage": 2 },
+        { "level": 7, "profBonus": 3, "rageDamage": 2 },
+        { "level": 8, "profBonus": 3, "rageDamage": 2 },
+        { "level": 9, "profBonus": 4, "rageDamage": 3 },
+        { "level": 10, "profBonus": 4, "rageDamage": 3 },
+        { "level": 11, "profBonus": 4, "rageDamage": 3 },
+        { "level": 12, "profBonus": 4, "rageDamage": 3 },
+        { "level": 13, "profBonus": 5, "rageDamage": 3 },
+        { "level": 14, "profBonus": 5, "rageDamage": 3 },
+        { "level": 15, "profBonus": 5, "rageDamage": 3 },
+        { "level": 16, "profBonus": 5, "rageDamage": 4 },
+        { "level": 17, "profBonus": 6, "rageDamage": 4 },
+        { "level": 18, "profBonus": 6, "rageDamage": 4 },
+        { "level": 19, "profBonus": 6, "rageDamage": 4 },
+        { "level": 20, "profBonus": 6, "rageDamage": 4 }
+    ]
+}

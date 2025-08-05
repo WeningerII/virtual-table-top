@@ -1,0 +1,146 @@
+
+{
+    "id": "paladin",
+    "name": "Paladin",
+    "source": "Player's Handbook",
+    "hitDie": 10,
+    "iconId": "PaladinIcon",
+    "casterType": "half",
+    "description": "A holy warrior bound to a sacred oath, a paladin's power comes as much from a commitment to justice itself as it does from a god.",
+    "startingGoldRoll": "5d4*10",
+    "startingEquipment": [
+        { "choice": [[{ "itemId": "any-martial-weapon", "quantity": 1 }, { "itemId": "shield", "quantity": 1 }], [{ "itemId": "any-martial-weapon", "quantity": 2 }]] },
+        { "choice": [[{ "itemId": "javelin", "quantity": 5 }], [{ "itemId": "any-simple-weapon", "quantity": 1 }]] },
+        { "choice": [[{ "packId": "priests-pack" }], [{ "packId": "explorers-pack" }]] },
+        { "itemId": "chain-mail", "quantity": 1 },
+        { "itemId": "holy-symbol-any", "quantity": 1 }
+    ],
+    "traits": [
+        {
+            "id": "paladin-starting-proficiencies",
+            "name": "Starting Proficiencies",
+            "description": "As a Paladin, you are proficient with all armor, shields, and all weapons. Your saving throw proficiencies are Wisdom and Charisma. You are also proficient in two skills of your choice.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "armor", "options": ["light armor", "medium armor", "heavy armor", "shields"], "count": 4 },
+                { "type": "proficiency", "proficiencyType": "weapon", "options": ["simple weapons", "martial weapons"], "count": 2 },
+                { "type": "proficiency", "proficiencyType": "saving_throw", "options": ["WISDOM", "CHARISMA"], "count": 2 }
+            ],
+            "choiceOptions": [{
+                "id": "paladin-skills",
+                "label": "Choose two skills",
+                "type": "skill",
+                "count": 2,
+                "from": ["athletics", "insight", "intimidation", "medicine", "persuasion", "religion"]
+            }]
+        }
+    ],
+    "features": [
+        { "id": "paladin-divine-sense-1", "name": "Divine Sense", "level": 1, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can open your awareness to detect strong evil and good. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover.", "limitedUse": { "per": "longRest", "usesByLevel": ["1 + CHA_MOD"] } },
+        { "id": "paladin-lay-on-hands-1", "name": "Lay on Hands", "level": 1, "interactionType": "action_heal", "cost": "action", "description": "You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5.", "limitedUse": { "per": "longRest", "usesByLevel": ["PALADIN_LEVEL * 5"] } },
+        { "id": "paladin-fighting-style-2", "name": "Fighting Style", "level": 2, "description": "You adopt a particular style of fighting as your specialty.", "choiceOptions": [{ "id": "paladin-fighting-style-choice", "label": "Choose a Fighting Style", "type": "fighting_style", "count": 1, "from": ["defense", "dueling", "great-weapon-fighting", "protection", "blessed-warrior", "blind-fighting", "interception"] }] },
+        { "id": "paladin-spellcasting-2", "name": "Spellcasting", "level": 2, "description": "You have learned to draw on divine magic through meditation and prayer to cast spells." },
+        { "id": "paladin-divine-smite-2", "name": "Divine Smite", "level": 2, "interactionType": "on_hit_trigger", "description": "When you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon’s damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8." },
+        { "id": "paladin-divine-health-3", "name": "Divine Health", "level": 3, "description": "By 3rd level, the divine magic flowing through you makes you immune to disease.", "effects": [{ "type": "immunity", "to": "disease" }] },
+        { "id": "paladin-sacred-oath-3", "name": "Sacred Oath", "level": 3, "description": "You swear the oath that binds you as a paladin forever. Your choice grants you features at 3rd level and again at 7th, 15th, and 20th level.", "choiceOptions": [{"id": "paladin-oath-choice", "label": "Choose a Sacred Oath", "type": "subclass", "count": 1, "from": ["oath-of-devotion", "oath-of-the-ancients", "oath-of-vengeance", "oath-of-conquest", "oath-of-redemption", "oath-of-glory", "oath-of-the-watchers", "oathbreaker"]}] },
+        { "id": "paladin-harness-divine-power-3", "name": "Harness Divine Power (Optional)", "level": 3, "interactionType": "bonus_action_utility", "cost": "bonus action", "description": "As a bonus action, you can expend a use of your Channel Divinity to regain one expended 1st-level spell slot." },
+        { "id": "paladin-asi-4", "name": "Ability Score Improvement", "level": 4, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "paladin-extra-attack-5", "name": "Extra Attack", "level": 5, "description": "You can attack twice, instead of once, whenever you take the Attack action on your turn.", "effects": [{ "type": "special_ability", "name": "Extra Attack" }] },
+        { "id": "paladin-aura-of-protection-6", "name": "Aura of Protection", "level": 6, "interactionType": "passive_aura", "template": { "type": "sphere", "size": 10 }, "description": "Whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.", "effects": [{ "type": "bonus", "to": "saving_throw", "value": "CHA_MOD", "condition": "while conscious and within aura" }] },
+        { "id": "paladin-asi-8", "name": "Ability Score Improvement", "level": 8, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "paladin-aura-of-courage-10", "name": "Aura of Courage", "level": 10, "interactionType": "passive_aura", "template": { "type": "sphere", "size": 10 }, "description": "You and friendly creatures within 10 feet of you can’t be frightened while you are conscious.", "effects": [{ "type": "immunity", "to": "frightened", "condition": "while conscious and within aura" }] },
+        { "id": "paladin-improved-divine-smite-11", "name": "Improved Divine Smite", "level": 11, "interactionType": "passive_damage_rider", "description": "Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage.", "effects": [{ "type": "bonus_damage", "value": "1d8", "damageType": "radiant", "condition": "on all melee weapon hits" }] },
+        { "id": "paladin-asi-12", "name": "Ability Score Improvement", "level": 12, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "paladin-cleansing-touch-14", "name": "Cleansing Touch", "level": 14, "interactionType": "action_utility", "cost": "action", "description": "You can use your action to end one spell on yourself or on one willing creature that you touch. You can use this feature a number of times equal to your Charisma modifier (minimum of once).", "limitedUse": { "per": "longRest", "usesByLevel": ["CHA_MOD"] } },
+        { "id": "paladin-asi-16", "name": "Ability Score Improvement", "level": 16, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "paladin-aura-improvement-18", "name": "Aura Improvements", "level": 18, "description": "The ranges of your auras increase to 30 feet.", "effects": [{"type": "modify_feature", "featureId": "paladin-aura-of-protection-6", "modification": "range increases to 30 feet"}, {"type": "modify_feature", "featureId": "paladin-aura-of-courage-10", "modification": "range increases to 30 feet"}] },
+        { "id": "paladin-asi-19", "name": "Ability Score Improvement", "level": 19, "description": "You can increase one ability score by 2, or two ability scores by 1." }
+    ],
+    "subclasses": [
+        {
+            "id": "oath-of-devotion",
+            "name": "Oath of Devotion",
+            "source": "Player's Handbook",
+            "description": "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order.",
+            "features": [
+                { "id": "devotion-channel-divinity-sacred-weapon-3", "name": "Channel Divinity: Sacred Weapon", "level": 3, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can imbue one weapon that you are holding with positive energy. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon.", "effects": [{"type": "bonus", "to": "attack_roll", "value": "CHA_MOD", "condition": "for 1 minute on one weapon"}] },
+                { "id": "devotion-channel-divinity-turn-unholy-3", "name": "Channel Divinity: Turn the Unholy", "level": 3, "interactionType": "action_utility", "cost": "action", "description": "As an action, you present your holy symbol and speak a prayer censuring fiends and undead, forcing them to make a Wisdom saving throw or be turned.", "template": {"type": "sphere", "size": 30} },
+                { "id": "devotion-aura-of-devotion-7", "name": "Aura of Devotion", "level": 7, "interactionType": "passive_aura", "template": { "type": "sphere", "size": 10 }, "description": "You and friendly creatures within 10 feet of you can’t be charmed while you are conscious.", "effects": [{"type": "immunity", "to": "charmed", "condition": "while conscious and within aura"}] },
+                { "id": "devotion-purity-of-spirit-15", "name": "Purity of Spirit", "level": 15, "description": "You are always under the effects of a protection from evil and good spell.", "effects": [{"type": "special_ability", "name": "Permanent Protection from Evil and Good"}] },
+                { "id": "devotion-holy-nimbus-20", "name": "Holy Nimbus", "level": 20, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can emanate an aura of sunlight. For 1 minute, you shed bright light, creatures that start their turn in the light take radiant damage, and you have advantage on saving throws against spells cast by fiends or undead.", "template": {"type": "sphere", "size": 30}, "effects": [{"type": "bonus_damage", "value": 10, "damageType": "radiant", "condition": "to creatures starting turn in aura"}, {"type": "advantage", "on": "saving_throw", "condition": "against spells from fiends or undead"}]}
+            ],
+            "grantedSpells": [
+                { "level": 3, "spellIds": ["protection-from-evil-and-good", "sanctuary"] },
+                { "level": 5, "spellIds": ["lesser-restoration", "zone-of-truth"] },
+                { "level": 9, "spellIds": ["beacon-of-hope", "dispel-magic"] },
+                { "level": 13, "spellIds": ["freedom-of-movement", "guardian-of-faith"] },
+                { "level": 17, "spellIds": ["commune", "flame-strike"] }
+            ]
+        },
+        {
+            "id": "oath-of-the-ancients",
+            "name": "Oath of the Ancients",
+            "source": "Player's Handbook",
+            "description": "The Oath of the Ancients is as old as the race of elves and the rituals of the druids, binding paladins to the light side of nature.",
+            "features": [
+                { "id": "ancients-channel-divinity-natures-wrath-3", "name": "Channel Divinity: Nature's Wrath", "level": 3, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can cause spectral vines to spring up and reach for a creature within 10 feet of you, which must make a Strength or Dexterity saving throw or be restrained.", "effects": [{"type": "apply_condition", "conditionId": "Restrained", "duration": "1_minute"}] },
+                { "id": "ancients-channel-divinity-turn-faithless-3", "name": "Channel Divinity: Turn the Faithless", "level": 3, "interactionType": "action_utility", "cost": "action", "description": "As an action, you present your holy symbol and speak a prayer censuring fey and fiends, forcing them to make a Wisdom saving throw or be turned.", "template": {"type": "sphere", "size": 30} },
+                { "id": "ancients-aura-of-warding-7", "name": "Aura of Warding", "level": 7, "interactionType": "passive_aura", "template": { "type": "sphere", "size": 10 }, "description": "You and friendly creatures within 10 feet of you have resistance to damage from spells.", "effects": [{"type": "resistance", "damageType": "from spells", "condition": "while conscious and within aura"}] },
+                { "id": "ancients-undying-sentinel-15", "name": "Undying Sentinel", "level": 15, "description": "When you are reduced to 0 hit points and are not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can’t use it again until you finish a long rest. Additionally, you suffer none of the drawbacks of old age, and you can’t be aged magically.", "limitedUse": { "per": "longRest", "usesByLevel": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1] } },
+                { "id": "ancients-elder-champion-20", "name": "Elder Champion", "level": 20, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can assume the form of an ancient nature guardian, gaining regeneration, casting paladin spells as a bonus action, and causing enemies to have disadvantage on saves against your spells and Channel Divinity." }
+            ],
+            "grantedSpells": [
+                { "level": 3, "spellIds": ["ensnaring-strike", "speak-with-animals"] },
+                { "level": 5, "spellIds": ["moonbeam", "misty-step"] },
+                { "level": 9, "spellIds": ["plant-growth", "protection-from-energy"] },
+                { "level": 13, "spellIds": ["ice-storm", "stoneskin"] },
+                { "level": 17, "spellIds": ["commune-with-nature", "tree-stride"] }
+            ]
+        },
+        {
+            "id": "oath-of-vengeance",
+            "name": "Oath of Vengeance",
+            "source": "Player's Handbook",
+            "description": "The Oath of Vengeance is a solemn commitment to punish those who have committed a grievous sin.",
+            "features": [
+                { "id": "vengeance-channel-divinity-abjure-enemy-3", "name": "Channel Divinity: Abjure Enemy", "level": 3, "interactionType": "action_utility", "cost": "action", "description": "As an action, you present your holy symbol and speak a prayer of denunciation, choosing one creature within 60 feet. That creature must make a Wisdom saving throw or be frightened for 1 minute and have its speed halved." },
+                { "id": "vengeance-channel-divinity-vow-of-enmity-3", "name": "Channel Divinity: Vow of Enmity", "level": 3, "interactionType": "bonus_action_buff", "cost": "bonus action", "description": "As a bonus action, you can utter a vow of enmity against a creature you can see within 10 feet. You gain advantage on attack rolls against the creature for 1 minute or until it drops to 0 hit points or falls unconscious.", "effects": [{"type": "advantage", "on": "attack_roll", "condition": "against Vow of Enmity target for 1 minute"}] },
+                { "id": "vengeance-relentless-avenger-7", "name": "Relentless Avenger", "level": 7, "description": "When you hit a creature with an opportunity attack, you can move up to half your speed immediately after the attack as part of the same reaction. This movement doesn’t provoke opportunity attacks." },
+                { "id": "vengeance-soul-of-vengeance-15", "name": "Soul of Vengeance", "level": 15, "interactionType": "reaction_damage", "cost": "reaction", "description": "When a creature under the effect of your Vow of Enmity makes an attack, you can use your reaction to make a melee weapon attack against that creature if it is within range." },
+                { "id": "vengeance-avenging-angel-20", "name": "Avenging Angel", "level": 20, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can transform into an angelic avenger for 1 hour. You sprout wings and gain a flying speed of 60 feet, and you emanate an aura of menace in a 30-foot radius. Enemies in the aura have disadvantage on saving throws against your spells and Channel Divinity." }
+            ],
+            "grantedSpells": [
+                { "level": 3, "spellIds": ["bane", "hunter's-mark"] },
+                { "level": 5, "spellIds": ["hold-person", "misty-step"] },
+                { "level": 9, "spellIds": ["haste", "protection-from-energy"] },
+                { "level": 13, "spellIds": ["banishment", "dimension-door"] },
+                { "level": 17, "spellIds": ["hold-monster", "scrying"] }
+            ]
+        }
+    ],
+    "spellcasting": {
+        "ability": "CHARISMA",
+        "preparationType": "prepared"
+    },
+    "progressionTable": [
+        { "level": 1, "profBonus": 2, "spellSlots": [0, 0, 0, 0, 0] },
+        { "level": 2, "profBonus": 2, "spellSlots": [2, 0, 0, 0, 0] },
+        { "level": 3, "profBonus": 2, "spellSlots": [3, 0, 0, 0, 0] },
+        { "level": 4, "profBonus": 2, "spellSlots": [3, 0, 0, 0, 0] },
+        { "level": 5, "profBonus": 3, "spellSlots": [4, 2, 0, 0, 0] },
+        { "level": 6, "profBonus": 3, "spellSlots": [4, 2, 0, 0, 0] },
+        { "level": 7, "profBonus": 3, "spellSlots": [4, 3, 0, 0, 0] },
+        { "level": 8, "profBonus": 3, "spellSlots": [4, 3, 0, 0, 0] },
+        { "level": 9, "profBonus": 4, "spellSlots": [4, 3, 2, 0, 0] },
+        { "level": 10, "profBonus": 4, "spellSlots": [4, 3, 2, 0, 0] },
+        { "level": 11, "profBonus": 4, "spellSlots": [4, 3, 3, 0, 0] },
+        { "level": 12, "profBonus": 4, "spellSlots": [4, 3, 3, 0, 0] },
+        { "level": 13, "profBonus": 5, "spellSlots": [4, 3, 3, 1, 0] },
+        { "level": 14, "profBonus": 5, "spellSlots": [4, 3, 3, 1, 0] },
+        { "level": 15, "profBonus": 5, "spellSlots": [4, 3, 3, 2, 0] },
+        { "level": 16, "profBonus": 5, "spellSlots": [4, 3, 3, 2, 0] },
+        { "level": 17, "profBonus": 6, "spellSlots": [4, 3, 3, 3, 1] },
+        { "level": 18, "profBonus": 6, "spellSlots": [4, 3, 3, 3, 1] },
+        { "level": 19, "profBonus": 6, "spellSlots": [4, 3, 3, 3, 2] },
+        { "level": 20, "profBonus": 6, "spellSlots": [4, 3, 3, 3, 2] }
+    ]
+}

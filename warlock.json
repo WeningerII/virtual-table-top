@@ -1,0 +1,145 @@
+{
+    "id": "warlock",
+    "name": "Warlock",
+    "source": "Player's Handbook",
+    "hitDie": 8,
+    "iconId": "WarlockIcon",
+    "casterType": "pact",
+    "description": "Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular. Drawing on the ancient knowledge of beings such as fey nobles, demons, devils, hags, and alien entities of the Far Realm, warlocks piece together arcane secrets to bolster their own power.",
+    "startingGoldRoll": "4d4*10",
+    "startingEquipment": [
+        { "choice": [[{ "itemId": "light-crossbow", "quantity": 1 }, { "itemId": "crossbow-bolts", "quantity": 20 }], [{ "itemId": "any-simple-weapon", "quantity": 1 }]] },
+        { "choice": [[{ "itemId": "component-pouch", "quantity": 1 }], [{ "itemId": "arcane-focus-any", "quantity": 1 }]] },
+        { "choice": [[{ "packId": "scholars-pack" }], [{ "packId": "dungeoneers-pack" }]] },
+        { "itemId": "leather-armor", "quantity": 1 },
+        { "itemId": "any-simple-weapon", "quantity": 1 },
+        { "itemId": "dagger", "quantity": 2 }
+    ],
+    "traits": [
+        {
+            "id": "warlock-starting-proficiencies",
+            "name": "Starting Proficiencies",
+            "description": "As a Warlock, you are proficient with light armor and simple weapons. Your saving throw proficiencies are Wisdom and Charisma. You are also proficient in two skills of your choice.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "armor", "options": ["light armor"], "count": 1 },
+                { "type": "proficiency", "proficiencyType": "weapon", "options": ["simple weapons"], "count": 1 },
+                { "type": "proficiency", "proficiencyType": "saving_throw", "options": ["WISDOM", "CHARISMA"], "count": 2 }
+            ],
+            "choiceOptions": [{
+                "id": "warlock-skills",
+                "label": "Choose two skills",
+                "type": "skill",
+                "count": 2,
+                "from": ["arcana", "deception", "history", "intimidation", "investigation", "nature", "religion"]
+            }]
+        }
+    ],
+    "features": [
+        { "id": "warlock-otherworldly-patron-1", "name": "Otherworldly Patron", "level": 1, "description": "You have struck a bargain with an otherworldly being of your choice. Your choice grants you features at 1st, 6th, 10th, and 14th level.", "choiceOptions": [{"id": "warlock-patron-choice", "label": "Choose an Otherworldly Patron", "type": "subclass", "count": 1, "from": ["the-archfey", "the-fiend", "the-great-old-one", "the-celestial", "the-fathomless", "the-genie"]}] },
+        { "id": "warlock-pact-magic-1", "name": "Pact Magic", "level": 1, "description": "Your arcane research and the magic bestowed on you by your patron have given you facility with spells. You regain all expended Pact Magic spell slots when you finish a short or long rest.", "effects": [{"type": "special_ability", "name": "Pact Magic"}] },
+        { "id": "warlock-eldritch-invocations-2", "name": "Eldritch Invocations", "level": 2, "description": "You learn fragments of forbidden knowledge that imbue you with magical abilities.", "choiceOptions": [{"id": "invocation-choice-2", "label": "Choose two Eldritch Invocations", "type": "invocation", "count": 2, "from": "any"}] },
+        { "id": "warlock-pact-boon-3", "name": "Pact Boon", "level": 3, "description": "Your otherworldly patron bestows a gift upon you.", "choiceOptions": [{"id": "pact-boon-choice", "label": "Choose a Pact Boon", "type": "subclass_feature", "count": 1, "from": ["blade", "chain", "tome", "talisman"]}] },
+        { "id": "warlock-pact-of-the-blade-3", "name": "Pact of the Blade", "level": 3, "interactionType": "creator", "cost": "action", "description": "You can use your action to create a pact weapon in your empty hand, or transform one magic weapon into your pact weapon." },
+        { "id": "warlock-asi-4", "name": "Ability Score Improvement", "level": 4, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "warlock-eldritch-invocations-5", "name": "Eldritch Invocation", "level": 5, "description": "You learn an additional Eldritch Invocation.", "choiceOptions": [{"id": "invocation-choice-5", "label": "Choose an Eldritch Invocation", "type": "invocation", "count": 1, "from": "any"}] },
+        { "id": "warlock-eldritch-invocations-7", "name": "Eldritch Invocation", "level": 7, "description": "You learn an additional Eldritch Invocation.", "choiceOptions": [{"id": "invocation-choice-7", "label": "Choose an Eldritch Invocation", "type": "invocation", "count": 1, "from": "any"}] },
+        { "id": "warlock-asi-8", "name": "Ability Score Improvement", "level": 8, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "warlock-eldritch-invocations-9", "name": "Eldritch Invocation", "level": 9, "description": "You learn an additional Eldritch Invocation.", "choiceOptions": [{"id": "invocation-choice-9", "label": "Choose an Eldritch Invocation", "type": "invocation", "count": 1, "from": "any"}] },
+        { "id": "warlock-mystic-arcanum-6-11", "name": "Mystic Arcanum (6th level)", "level": 11, "description": "Your patron bestows a magical secret. Choose one 6th-level warlock spell. You can cast it once without a spell slot per long rest.", "choiceOptions": [{"id": "mystic-arcanum-6", "label": "Choose a 6th-level spell", "type": "spell", "count": 1, "from": "any_warlock_level_6_spell"}] },
+        { "id": "warlock-asi-12", "name": "Ability Score Improvement", "level": 12, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "warlock-eldritch-invocations-12", "name": "Eldritch Invocation", "level": 12, "description": "You learn an additional Eldritch Invocation.", "choiceOptions": [{"id": "invocation-choice-12", "label": "Choose an Eldritch Invocation", "type": "invocation", "count": 1, "from": "any"}] },
+        { "id": "warlock-mystic-arcanum-7-13", "name": "Mystic Arcanum (7th level)", "level": 13, "description": "You gain one 7th-level warlock spell that you can cast once per long rest.", "choiceOptions": [{"id": "mystic-arcanum-7", "label": "Choose a 7th-level spell", "type": "spell", "count": 1, "from": "any_warlock_level_7_spell"}] },
+        { "id": "warlock-eldritch-invocations-15", "name": "Eldritch Invocation", "level": 15, "description": "You learn an additional Eldritch Invocation.", "choiceOptions": [{"id": "invocation-choice-15", "label": "Choose an Eldritch Invocation", "type": "invocation", "count": 1, "from": "any"}] },
+        { "id": "warlock-mystic-arcanum-8-15", "name": "Mystic Arcanum (8th level)", "level": 15, "description": "You gain one 8th-level warlock spell that you can cast once per long rest.", "choiceOptions": [{"id": "mystic-arcanum-8", "label": "Choose an 8th-level spell", "type": "spell", "count": 1, "from": "any_warlock_level_8_spell"}] },
+        { "id": "warlock-asi-16", "name": "Ability Score Improvement", "level": 16, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "warlock-mystic-arcanum-9-17", "name": "Mystic Arcanum (9th level)", "level": 17, "description": "You gain one 9th-level warlock spell that you can cast once per long rest.", "choiceOptions": [{"id": "mystic-arcanum-9", "label": "Choose a 9th-level spell", "type": "spell", "count": 1, "from": "any_warlock_level_9_spell"}] },
+        { "id": "warlock-eldritch-invocations-18", "name": "Eldritch Invocation", "level": 18, "description": "You learn an additional Eldritch Invocation.", "choiceOptions": [{"id": "invocation-choice-18", "label": "Choose an Eldritch Invocation", "type": "invocation", "count": 1, "from": "any"}] },
+        { "id": "warlock-asi-19", "name": "Ability Score Improvement", "level": 19, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "warlock-eldritch-master-20", "name": "Eldritch Master", "level": 20, "interactionType": "action_utility", "cost": "action", "description": "You can spend 1 minute entreating your patron to regain all your expended Pact Magic spell slots. Usable once per long rest.", "effects": [{"type": "special_ability", "name": "Eldritch Master"}], "limitedUse": { "per": "longRest", "usesByLevel": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1] } }
+    ],
+    "subclasses": [
+        {
+            "id": "the-archfey",
+            "name": "The Archfey",
+            "source": "Player's Handbook",
+            "description": "Your patron is a lord or lady of the fey, a creature of legend who holds secrets that were forgotten before the mortal races were born. This being’s motivations are often inscrutable, and sometimes whimsical.",
+            "features": [
+                { "id": "archfey-fey-presence-1", "name": "Fey Presence", "level": 1, "interactionType": "action_utility", "cost": "action", "template": { "type": "cube", "size": 10 }, "description": "As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw. The creatures that fail are all charmed or frightened by you (your choice) until the end of your next turn.", "limitedUse": { "per": "shortRest", "usesByLevel": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]} },
+                { "id": "archfey-misty-escape-6", "name": "Misty Escape", "level": 6, "interactionType": "reaction_utility", "cost": "reaction", "description": "When you take damage, you can use your reaction to turn invisible and teleport up to 60 feet to an unoccupied space you can see. You remain invisible until the start of your next turn or until you attack or cast a spell.", "limitedUse": { "per": "shortRest", "usesByLevel": [0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]} },
+                { "id": "archfey-beguiling-defenses-10", "name": "Beguiling Defenses", "level": 10, "description": "You are immune to being charmed. When another creature attempts to charm you, you can use your reaction to attempt to turn the charm back on that creature.", "effects": [{ "type": "immunity", "to": "charmed" }, { "type": "special_ability", "name": "Turn the Charm" }] },
+                { "id": "archfey-dark-delirium-14", "name": "Dark Delirium", "level": 14, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can plunge a creature into an illusory realm. It must make a Wisdom save or be charmed or frightened by you for 1 minute or until your concentration is broken.", "limitedUse": { "per": "shortRest", "usesByLevel": [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1]} }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["faerie-fire", "sleep"] },
+                { "level": 3, "spellIds": ["calm-emotions", "phantasmal-force"] },
+                { "level": 5, "spellIds": ["blink", "plant-growth"] },
+                { "level": 7, "spellIds": ["dominate-beast", "greater-invisibility"] },
+                { "level": 9, "spellIds": ["dominate-person", "seeming"] }
+            ]
+        },
+        {
+            "id": "the-fiend",
+            "name": "The Fiend",
+            "source": "Player's Handbook",
+            "description": "You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against them.",
+            "features": [
+                { "id": "fiend-dark-ones-blessing-1", "name": "Dark One's Blessing", "level": 1, "description": "When you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1).", "effects": [{"type": "temporary_hit_points", "value": "CHA_MOD + WARLOCK_LEVEL", "condition": "when you reduce a hostile creature to 0 HP"}] },
+                { "id": "fiend-dark-ones-own-luck-6", "name": "Dark One's Own Luck", "level": 6, "interactionType": "reaction_roll_modification", "description": "When you make an ability check or a saving throw, you can use this feature to add a d10 to your roll. Once you use this feature, you can’t use it again until you finish a short or long rest.", "limitedUse": { "per": "shortRest", "usesByLevel": [0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]} },
+                { "id": "fiend-fiendish-resilience-10", "name": "Fiendish Resilience", "level": 10, "description": "You can choose one damage type when you finish a short or long rest. You gain resistance to that damage type until you choose a different one with this feature.", "choiceOptions": [{"id": "fiendish-resilience-choice", "label": "Choose Damage Resistance", "type": "elemental_damage_type", "count": 1, "from": ["acid", "cold", "fire", "lightning", "poison", "thunder", "bludgeoning", "piercing", "slashing"]}] },
+                { "id": "fiend-hurl-through-hell-14", "name": "Hurl Through Hell", "level": 14, "interactionType": "on_hit_trigger", "description": "When you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes, dealing 10d10 psychic damage upon its return.", "limitedUse": { "per": "longRest", "usesByLevel": [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1]} }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["burning-hands", "command"] },
+                { "level": 3, "spellIds": ["blindness-deafness", "scorching-ray"] },
+                { "level": 5, "spellIds": ["fireball", "stinking-cloud"] },
+                { "level": 7, "spellIds": ["fire-shield", "wall-of-fire"] },
+                { "level": 9, "spellIds": ["flame-strike", "hallow"] }
+            ]
+        },
+        {
+            "id": "the-great-old-one",
+            "name": "The Great Old One",
+            "source": "Player's Handbook",
+            "description": "Your patron is a mysterious entity whose nature is utterly alien to the fabric of reality. It might come from the Far Realm, the space beyond reality, or it could be one of the elder gods.",
+            "features": [
+                { "id": "goo-awakened-mind-1", "name": "Awakened Mind", "level": 1, "description": "You can communicate telepathically with any creature you can see within 30 feet of you.", "effects": [{"type": "special_ability", "name": "Telepathy (30 ft.)"}] },
+                { "id": "goo-entropic-ward-6", "name": "Entropic Ward", "level": 6, "interactionType": "reaction_penalty", "cost": "reaction", "description": "When a creature makes an attack roll against you, you can use your reaction to impose disadvantage on that roll. If the attack misses you, your next attack roll against the creature has advantage.", "limitedUse": { "per": "shortRest", "usesByLevel": [0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]} },
+                { "id": "goo-thought-shield-10", "name": "Thought Shield", "level": 10, "description": "Your thoughts can’t be read by telepathy or other means unless you allow it. You also have resistance to psychic damage, and whenever a creature deals psychic damage to you, that creature takes the same amount of damage that you do.", "effects": [{"type": "immunity", "to": "thought_reading"}, {"type": "resistance", "damageType": "psychic"}, {"type": "special_ability", "name": "Psychic Retaliation"}] },
+                { "id": "goo-create-thrall-14", "name": "Create Thrall", "level": 14, "interactionType": "action_utility", "cost": "action", "description": "You can use your action to touch an incapacitated humanoid. That creature is then charmed by you until a remove curse spell is cast on it." }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["dissonant-whispers", "tashas-hideous-laughter"] },
+                { "level": 3, "spellIds": ["detect-thoughts", "phantasmal-force"] },
+                { "level": 5, "spellIds": ["clairvoyance", "sending"] },
+                { "level": 7, "spellIds": ["dominate-beast", "evards-black-tentacles"] },
+                { "level": 9, "spellIds": ["dominate-person", "telekinesis"] }
+            ]
+        }
+    ],
+    "spellcasting": {
+        "ability": "CHARISMA",
+        "preparationType": "known"
+    },
+    "progressionTable": [
+        { "level": 1, "profBonus": 2, "cantripsKnown": 2, "spellsKnown": 2, "spellSlots": 1, "slotLevel": 1, "invocationsKnown": 0 },
+        { "level": 2, "profBonus": 2, "cantripsKnown": 2, "spellsKnown": 3, "spellSlots": 2, "slotLevel": 1, "invocationsKnown": 2 },
+        { "level": 3, "profBonus": 2, "cantripsKnown": 2, "spellsKnown": 4, "spellSlots": 2, "slotLevel": 2, "invocationsKnown": 2 },
+        { "level": 4, "profBonus": 2, "cantripsKnown": 3, "spellsKnown": 5, "spellSlots": 2, "slotLevel": 2, "invocationsKnown": 2 },
+        { "level": 5, "profBonus": 3, "cantripsKnown": 3, "spellsKnown": 6, "spellSlots": 2, "slotLevel": 3, "invocationsKnown": 3 },
+        { "level": 6, "profBonus": 3, "cantripsKnown": 3, "spellsKnown": 7, "spellSlots": 2, "slotLevel": 3, "invocationsKnown": 3 },
+        { "level": 7, "profBonus": 3, "cantripsKnown": 3, "spellsKnown": 8, "spellSlots": 2, "slotLevel": 4, "invocationsKnown": 4 },
+        { "level": 8, "profBonus": 3, "cantripsKnown": 3, "spellsKnown": 9, "spellSlots": 2, "slotLevel": 4, "invocationsKnown": 4 },
+        { "level": 9, "profBonus": 4, "cantripsKnown": 3, "spellsKnown": 10, "spellSlots": 2, "slotLevel": 5, "invocationsKnown": 5 },
+        { "level": 10, "profBonus": 4, "cantripsKnown": 4, "spellsKnown": 10, "spellSlots": 2, "slotLevel": 5, "invocationsKnown": 5 },
+        { "level": 11, "profBonus": 4, "cantripsKnown": 4, "spellsKnown": 11, "spellSlots": 3, "slotLevel": 5, "invocationsKnown": 5 },
+        { "level": 12, "profBonus": 4, "cantripsKnown": 4, "spellsKnown": 11, "spellSlots": 3, "slotLevel": 5, "invocationsKnown": 6 },
+        { "level": 13, "profBonus": 5, "cantripsKnown": 4, "spellsKnown": 12, "spellSlots": 3, "slotLevel": 5, "invocationsKnown": 6 },
+        { "level": 14, "profBonus": 5, "cantripsKnown": 4, "spellsKnown": 12, "spellSlots": 3, "slotLevel": 5, "invocationsKnown": 6 },
+        { "level": 15, "profBonus": 5, "cantripsKnown": 4, "spellsKnown": 13, "spellSlots": 3, "slotLevel": 5, "invocationsKnown": 7 },
+        { "level": 16, "profBonus": 5, "cantripsKnown": 4, "spellsKnown": 13, "spellSlots": 3, "slotLevel": 5, "invocationsKnown": 7 },
+        { "level": 17, "profBonus": 6, "cantripsKnown": 4, "spellsKnown": 14, "spellSlots": 4, "slotLevel": 5, "invocationsKnown": 7 },
+        { "level": 18, "profBonus": 6, "cantripsKnown": 4, "spellsKnown": 14, "spellSlots": 4, "slotLevel": 5, "invocationsKnown": 8 },
+        { "level": 19, "profBonus": 6, "cantripsKnown": 4, "spellsKnown": 15, "spellSlots": 4, "slotLevel": 5, "invocationsKnown": 8 },
+        { "level": 20, "profBonus": 6, "cantripsKnown": 4, "spellsKnown": 15, "spellSlots": 4, "slotLevel": 5, "invocationsKnown": 8 }
+    ]
+}

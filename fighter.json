@@ -1,0 +1,117 @@
+
+{
+    "id": "fighter",
+    "name": "Fighter",
+    "source": "Player's Handbook",
+    "hitDie": 10,
+    "iconId": "FighterIcon",
+    "casterType": "third",
+    "description": "A master of martial combat, skilled with a variety of weapons and armor. Fighters share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat.",
+    "startingGoldRoll": "5d4*10",
+    "startingEquipment": [
+        { "choice": [[{ "itemId": "chain-mail", "quantity": 1 }], [{ "itemId": "leather-armor", "quantity": 1 }, { "itemId": "longbow", "quantity": 1 }, { "itemId": "arrows", "quantity": 20 }]] },
+        { "choice": [[{ "itemId": "any-martial-weapon", "quantity": 1 }, { "itemId": "shield", "quantity": 1 }], [{ "itemId": "any-martial-weapon", "quantity": 2 }]] },
+        { "choice": [[{ "itemId": "light-crossbow", "quantity": 1 }, { "itemId": "crossbow-bolts", "quantity": 20 }], [{ "itemId": "handaxe", "quantity": 2 }]] },
+        { "choice": [[{ "packId": "dungeoneers-pack" }], [{ "packId": "explorers-pack" }]] }
+    ],
+    "traits": [
+        {
+            "id": "fighter-starting-proficiencies",
+            "name": "Starting Proficiencies",
+            "description": "As a Fighter, you are proficient with all armor, shields, simple weapons, and martial weapons. You are also proficient in Strength and Constitution saving throws, and two skills of your choice.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "armor", "options": ["light armor", "medium armor", "heavy armor", "shields"], "count": 4 },
+                { "type": "proficiency", "proficiencyType": "weapon", "options": ["simple weapons", "martial weapons"], "count": 2 },
+                { "type": "proficiency", "proficiencyType": "saving_throw", "options": ["STRENGTH", "CONSTITUTION"], "count": 2 }
+            ],
+            "choiceOptions": [{
+                "id": "fighter-skills",
+                "label": "Choose two skills",
+                "type": "skill",
+                "count": 2,
+                "from": ["acrobatics", "animal-handling", "athletics", "history", "insight", "intimidation", "perception", "survival"]
+            }]
+        }
+    ],
+    "features": [
+        { "id": "fighter-fighting-style", "name": "Fighting Style", "level": 1, "description": "You adopt a particular style of fighting as your specialty. Choose one option.", "choiceOptions": [{ "id": "fighter-style-1", "label": "Choose a fighting style", "type": "fighting_style", "count": 1, "from": [ "archery", "defense", "dueling", "great-weapon-fighting", "protection", "two-weapon-fighting" ] }] },
+        { "id": "second-wind", "name": "Second Wind", "level": 1, "interactionType": "bonus_action_heal", "cost": "bonus action", "description": "On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. You must finish a short or long rest before you can use it again.", "effects": [{ "type": "heal", "value": "1d10 + FIGHTER_LEVEL" }], "limitedUse": { "id": "second-wind", "per": "shortRest", "usesByLevel": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]} },
+        { "id": "action-surge", "name": "Action Surge", "level": 2, "interactionType": "action_utility", "description": "On your turn, you can take one additional action. You must finish a short or long rest before you can use it again.", "effects": [{ "type": "grant_action", "actionType": "action", "name": "Action Surge" }], "limitedUse": { "id": "action-surge", "per": "shortRest", "usesByLevel": [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2]} },
+        { "id": "fighter-martial-archetype-3", "name": "Martial Archetype", "level": 3, "description": "You choose an archetype that you strive to emulate in your combat styles and techniques.", "choiceOptions": [{"id": "fighter-subclass-choice", "label": "Choose a Martial Archetype", "type": "subclass", "count": 1, "from": ["battle-master", "champion", "eldritch-knight", "rune-knight", "arcane-archer", "cavalier", "samurai", "psi-warrior"]}] },
+        { "id": "fighter-asi-4", "name": "Ability Score Improvement", "level": 4, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "fighter-extra-attack-5", "name": "Extra Attack", "level": 5, "description": "You can attack twice, instead of once, whenever you take the Attack action on your turn.", "effects": [{ "type": "extra_attack", "count": 1 }] },
+        { "id": "fighter-asi-6", "name": "Ability Score Improvement", "level": 6, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "fighter-asi-8", "name": "Ability Score Improvement", "level": 8, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "indomitable", "name": "Indomitable", "level": 9, "interactionType": "reaction_roll_modification", "description": "You can reroll a saving throw that you fail. You must use the new roll. You must finish a long rest before you can use this feature again.", "limitedUse": { "id": "indomitable", "per": "longRest", "usesByLevel": [0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3] } },
+        { "id": "fighter-extra-attack-11", "name": "Extra Attack (2)", "level": 11, "description": "You can attack three times, instead of twice, whenever you take the Attack action on your turn.", "effects": [{ "type": "extra_attack", "count": 1 }] },
+        { "id": "fighter-asi-12", "name": "Ability Score Improvement", "level": 12, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "fighter-asi-14", "name": "Ability Score Improvement", "level": 14, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "fighter-asi-16", "name": "Ability Score Improvement", "level": 16, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "fighter-asi-19", "name": "Ability Score Improvement", "level": 19, "description": "You can increase one ability score by 2, or two ability scores by 1." },
+        { "id": "fighter-extra-attack-20", "name": "Extra Attack (3)", "level": 20, "description": "You can attack four times, instead of three, whenever you take the Attack action on your turn.", "effects": [{ "type": "extra_attack", "count": 1 }] }
+    ],
+    "subclasses": [
+        {
+            "id": "battle-master",
+            "name": "Battle Master",
+            "source": "Player's Handbook",
+            "description": "Those who emulate the ideals of the Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field.",
+            "features": [
+                { "id": "combat-superiority", "name": "Combat Superiority", "level": 3, "description": "You learn maneuvers that are fueled by special dice called superiority dice.", "choiceOptions": [{"id": "battle-master-maneuvers-3", "label": "Choose 3 Maneuvers", "type": "maneuver", "count": 3, "from": "any"}, {"id": "battle-master-maneuvers-7", "label": "Choose 2 Maneuvers", "type": "maneuver", "count": 2, "from": "any"}, {"id": "battle-master-maneuvers-10", "label": "Choose 2 Maneuvers", "type": "maneuver", "count": 2, "from": "any"}, {"id": "battle-master-maneuvers-15", "label": "Choose 2 Maneuvers", "type": "maneuver", "count": 2, "from": "any"}], "limitedUse": { "id": "superiority-dice", "per": "shortRest", "usesByLevel": [0,0,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6,6,6,6], "dieSizeByLevel": { "1": 8, "10": 10, "18": 12 } } },
+                { "id": "battle-master-student-of-war-3", "name": "Student of War", "level": 3, "description": "You gain proficiency with one type of artisan’s tools of your choice.", "choiceOptions": [{ "id": "student-of-war-tool", "label": "Choose Artisan's Tools", "type": "tool", "count": 1, "from": "any" }] },
+                { "id": "battle-master-know-your-enemy-7", "name": "Know Your Enemy", "level": 7, "description": "If you spend 1 minute observing a creature, you can learn if it's superior, equal, or inferior in regard to two characteristics of your choice (e.g., Strength score, AC, current HP)." },
+                { "id": "battle-master-relentless-15", "name": "Relentless", "level": 15, "description": "When you roll initiative and have no superiority dice remaining, you regain one superiority die." }
+            ]
+        },
+        {
+            "id": "champion",
+            "name": "Champion",
+            "source": "Player's Handbook",
+            "description": "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection.",
+            "features": [
+                { "id": "champion-improved-critical-3", "name": "Improved Critical", "level": 3, "description": "Your weapon attacks score a critical hit on a roll of 19 or 20.", "effects": [{ "type": "crit_range", "value": 19 }] },
+                { "id": "champion-remarkable-athlete-7", "name": "Remarkable Athlete", "level": 7, "description": "You can add half your proficiency bonus to any Strength, Dexterity, or Constitution check you make that doesn’t already use your proficiency bonus. Your running long jump distance also increases.", "effects": [{ "type": "half_proficiency_bonus", "to": "ability_check", "abilities": ["STRENGTH", "DEXTERITY", "CONSTITUTION"]}, {"type": "special_ability", "name": "Improved Jump"}] },
+                { "id": "champion-additional-fighting-style-10", "name": "Additional Fighting Style", "level": 10, "description": "You can choose a second option from the Fighting Style class feature.", "choiceOptions": [{ "id": "fighter-style-10", "label": "Choose a fighting style", "type": "fighting_style", "count": 1, "from": [ "archery", "defense", "dueling", "great-weapon-fighting", "protection", "two-weapon-fighting" ] }] },
+                { "id": "champion-superior-critical-15", "name": "Superior Critical", "level": 15, "description": "Your weapon attacks score a critical hit on a roll of 18–20.", "effects": [{ "type": "crit_range", "value": 18 }] },
+                { "id": "champion-survivor-18", "name": "Survivor", "level": 18, "description": "At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left.", "effects": [{ "type": "regeneration", "value": "5 + CON_MOD", "condition": "at start of turn if below half HP" }] }
+            ]
+        },
+        {
+            "id": "eldritch-knight",
+            "name": "Eldritch Knight",
+            "source": "Player's Handbook",
+            "description": "The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic, focusing on abjuration and evocation.",
+            "spellcasting": { "ability": "INTELLIGENCE", "preparationType": "known", "schoolRestrictions": ["abjuration", "evocation"] },
+            "features": [
+                { "id": "eldritch-knight-spellcasting-3", "name": "Spellcasting", "level": 3, "description": "You gain the ability to cast wizard spells (mostly abjuration/evocation). Intelligence is your spellcasting ability." },
+                { "id": "eldritch-knight-weapon-bond-3", "name": "Weapon Bond", "level": 3, "description": "You can magically bond with up to two weapons. You can't be disarmed and can summon one to your hand as a bonus action." },
+                { "id": "eldritch-knight-war-magic-7", "name": "War Magic", "level": 7, "description": "When you use your action to cast a cantrip, you can make one weapon attack as a bonus action.", "effects": [{"type": "special_ability", "name": "War Magic"}] },
+                { "id": "eldritch-knight-eldritch-strike-10", "name": "Eldritch Strike", "level": 10, "interactionType": "on_hit_trigger", "description": "When you hit a creature with a weapon attack, it has disadvantage on the next save against a spell you cast before the end of your next turn.", "effects": [{"type": "apply_condition_on_hit", "conditionId": "Eldritch Struck", "duration": "1_round", "description": "Target has disadvantage on next spell save."}] },
+                { "id": "eldritch-knight-arcane-charge-15", "name": "Arcane Charge", "level": 15, "description": "When you use your Action Surge, you can teleport up to 30 feet." },
+                { "id": "eldritch-knight-improved-war-magic-18", "name": "Improved War Magic", "level": 18, "description": "When you use your action to cast a spell, you can make one weapon attack as a bonus action.", "effects": [{"type": "special_ability", "name": "Improved War Magic"}]}
+            ]
+        }
+    ],
+    "progressionTable": [
+        { "level": 1, "profBonus": 2 },
+        { "level": 2, "profBonus": 2 },
+        { "level": 3, "profBonus": 2 },
+        { "level": 4, "profBonus": 2 },
+        { "level": 5, "profBonus": 3 },
+        { "level": 6, "profBonus": 3 },
+        { "level": 7, "profBonus": 3 },
+        { "level": 8, "profBonus": 3 },
+        { "level": 9, "profBonus": 4 },
+        { "level": 10, "profBonus": 4 },
+        { "level": 11, "profBonus": 4 },
+        { "level": 12, "profBonus": 4 },
+        { "level": 13, "profBonus": 5 },
+        { "level": 14, "profBonus": 5 },
+        { "level": 15, "profBonus": 5 },
+        { "level": 16, "profBonus": 5 },
+        { "level": 17, "profBonus": 6 },
+        { "level": 18, "profBonus": 6 },
+        { "level": 19, "profBonus": 6 },
+        { "level": 20, "profBonus": 6 }
+    ]
+}

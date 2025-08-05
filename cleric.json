@@ -1,0 +1,223 @@
+{
+    "id": "cleric",
+    "name": "Cleric",
+    "source": "Player's Handbook",
+    "hitDie": 8,
+    "iconId": "ClericIcon",
+    "casterType": "full",
+    "description": "Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.",
+    "startingGoldRoll": "5d4*10",
+    "startingEquipment": [
+        { "choice": [[{ "itemId": "mace", "quantity": 1 }], [{ "itemId": "warhammer", "quantity": 1 }]] },
+        { "choice": [[{ "itemId": "scale-mail", "quantity": 1 }], [{ "itemId": "leather-armor", "quantity": 1 }], [{ "itemId": "chain-mail", "quantity": 1 }]] },
+        { "choice": [[{ "itemId": "light-crossbow", "quantity": 1 }, { "itemId": "crossbow-bolts", "quantity": 20 }], [{ "itemId": "any-simple-weapon", "quantity": 1 }]] },
+        { "choice": [[{ "packId": "priests-pack" }], [{ "packId": "explorers-pack" }]] },
+        { "itemId": "shield", "quantity": 1 },
+        { "itemId": "holy-symbol-any", "quantity": 1 }
+    ],
+    "traits": [
+        {
+            "id": "cleric-starting-proficiencies",
+            "name": "Starting Proficiencies",
+            "description": "As a Cleric, you are proficient with light and medium armor, shields, and simple weapons. Your saving throw proficiencies are Wisdom and Charisma. You are also proficient in two skills of your choice.",
+            "effects": [
+                { "type": "proficiency", "proficiencyType": "armor", "options": ["light armor", "medium armor", "shields"], "count": 3 },
+                { "type": "proficiency", "proficiencyType": "weapon", "options": ["simple weapons"], "count": 1 },
+                { "type": "proficiency", "proficiencyType": "saving_throw", "options": ["WISDOM", "CHARISMA"], "count": 2 }
+            ],
+            "choiceOptions": [{
+                "id": "cleric-skills",
+                "label": "Choose two skills",
+                "type": "skill",
+                "count": 2,
+                "from": ["history", "insight", "medicine", "persuasion", "religion"]
+            }]
+        }
+    ],
+    "features": [
+        { "id": "cleric-spellcasting-1", "name": "Spellcasting", "level": 1, "description": "As a conduit for divine power, you can cast cleric spells. You prepare a list of cleric spells that are available for you to cast, choosing from the cleric spell list.", "effects": [{ "type": "special_ability", "name": "Spellcasting (Cleric)" }, { "type": "special_ability", "name": "Ritual Casting (Cleric)"}] },
+        { "id": "cleric-divine-domain-1", "name": "Divine Domain", "level": 1, "description": "Choose one domain related to your deity. Your choice grants you domain spells and other features when you choose it at 1st level.", "choiceOptions": [{"id": "cleric-subclass-choice", "label": "Choose a Divine Domain", "type": "subclass", "count": 1, "from": ["knowledge-domain", "life-domain", "light-domain", "nature-domain", "tempest-domain", "trickery-domain", "war-domain", "forge-domain", "grave-domain", "order-domain", "peace-domain", "twilight-domain"]}] },
+        { "id": "channel-divinity", "name": "Channel Divinity", "level": 2, "description": "You gain the ability to channel divine energy directly from your deity. You start with two effects: Turn Undead and an effect determined by your domain.", "limitedUse": { "id": "channel-divinity", "per": "shortRest", "usesByLevel": [0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3] } },
+        { "id": "turn-undead", "name": "Channel Divinity: Turn Undead", "level": 2, "interactionType": "action_utility", "cost": "action", "description": "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.", "template": {"type": "sphere", "size": 30} },
+        { "id": "cleric-asi-4", "name": "Ability Score Improvement", "level": 4, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "cleric-destroy-undead-5", "name": "Destroy Undead", "level": 5, "description": "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold.", "effects": [{ "type": "special_ability", "name": "Destroy Undead", "valueByLevel": { "5": "CR 1/2", "8": "CR 1", "11": "CR 2", "14": "CR 3", "17": "CR 4" } }] },
+        { "id": "cleric-asi-8", "name": "Ability Score Improvement", "level": 8, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "divine-intervention", "name": "Divine Intervention", "level": 10, "interactionType": "action_utility", "cost": "action", "description": "You can call on your deity to intervene on your behalf. Roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. At 20th level, your call for intervention succeeds automatically.", "limitedUse": { "id": "divine-intervention", "per": "longRest", "usesByLevel": [0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1] } },
+        { "id": "cleric-asi-12", "name": "Ability Score Improvement", "level": 12, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "cleric-asi-16", "name": "Ability Score Improvement", "level": 16, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." },
+        { "id": "cleric-asi-19", "name": "Ability Score Improvement", "level": 19, "description": "You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1." }
+    ],
+    "subclasses": [
+        {
+            "id": "knowledge-domain",
+            "name": "Knowledge Domain",
+            "source": "Player's Handbook",
+            "description": "The gods of knowledge value learning and understanding above all. Some teach that knowledge is to be gathered and shared, while others hoard it.",
+            "features": [
+                { "id": "knowledge-blessings-1", "name": "Blessings of Knowledge", "level": 1, "description": "You learn two languages of your choice. You also become proficient in two skills from Arcana, History, Nature, or Religion, with double proficiency bonus.", "choiceOptions": [{ "id": "knowledge-domain-languages", "label": "Choose two languages", "type": "language", "count": 2, "from": "any" }, { "id": "knowledge-domain-skills", "label": "Choose two skills for Expertise", "type": "skill", "count": 2, "from": ["arcana", "history", "nature", "religion"] }] },
+                { "id": "knowledge-channel-divinity-ages-2", "name": "Channel Divinity: Knowledge of the Ages", "level": 2, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can use your Channel Divinity to gain proficiency with one skill or tool for 10 minutes." },
+                { "id": "knowledge-channel-divinity-read-thoughts-6", "name": "Channel Divinity: Read Thoughts", "level": 6, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can use your Channel Divinity to read a creature’s thoughts and cast Suggestion on it without a spell slot." },
+                { "id": "knowledge-potent-spellcasting-8", "name": "Potent Spellcasting", "level": 8, "description": "You add your Wisdom modifier to the damage you deal with any cleric cantrip.", "effects": [{ "type": "bonus_damage", "value": "WIS_MOD", "condition": "on any cleric cantrip" }] },
+                { "id": "knowledge-visions-of-the-past-17", "name": "Visions of the Past", "level": 17, "interactionType": "action_utility", "cost": "action", "description": "You can call up visions of the past related to an object you hold or your immediate surroundings." }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["command", "identify"] },
+                { "level": 3, "spellIds": ["augury", "suggestion"] },
+                { "level": 5, "spellIds": ["nondetection", "speak-with-dead"] },
+                { "level": 7, "spellIds": ["arcane-eye", "confusion"] },
+                { "level": 9, "spellIds": ["legend-lore", "scrying"] }
+            ]
+        },
+        {
+            "id": "life-domain",
+            "name": "Life Domain",
+            "source": "Player's Handbook",
+            "description": "The Life domain focuses on the vibrant positive energy that sustains all life. The gods of life promote vitality and health through healing the sick and wounded.",
+            "features": [
+                { "id": "life-bonus-proficiency-1", "name": "Bonus Proficiency", "level": 1, "description": "You gain proficiency with heavy armor.", "effects": [{ "type": "proficiency", "proficiencyType": "armor", "options": ["heavy armor"], "count": 1 }] },
+                { "id": "life-disciple-of-life-1", "name": "Disciple of Life", "level": 1, "description": "Whenever you use a spell of 1st level or higher to restore hit points, the creature regains additional hit points equal to 2 + the spell’s level.", "effects": [{ "type": "bonus", "to": "healing_spell", "value": "2 + spell_level" }] },
+                { "id": "life-channel-divinity-preserve-life-2", "name": "Channel Divinity: Preserve Life", "level": 2, "interactionType": "action_heal", "cost": "action", "description": "As an action, you can use your Channel Divinity to restore a number of hit points equal to five times your cleric level, divided among creatures within 30 feet.", "effects": [{"type": "special_ability", "name": "Preserve Life Heal", "value": "5 * CLERIC_LEVEL"}] },
+                { "id": "life-blessed-healer-6", "name": "Blessed Healer", "level": 6, "description": "When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell’s level.", "effects": [{"type": "special_ability", "name": "Blessed Healer Self-Heal"}] },
+                { "id": "life-divine-strike-8", "name": "Divine Strike", "level": 8, "description": "Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage. This damage increases to 2d8 at 14th level.", "effects": [{ "type": "bonus_damage", "value": "1d8", "valueByLevel": {"14": "2d8"}, "damageType": "radiant", "condition": "once per turn on weapon attack" }] },
+                { "id": "life-supreme-healing-17", "name": "Supreme Healing", "level": 17, "description": "When you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die.", "effects": [{"type": "special_ability", "name": "Maximize Healing Dice"}] }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["bless", "cure-wounds"] },
+                { "level": 3, "spellIds": ["lesser-restoration", "spiritual-weapon"] },
+                { "level": 5, "spellIds": ["beacon-of-hope", "revivify"] },
+                { "level": 7, "spellIds": ["death-ward", "guardian-of-faith"] },
+                { "level": 9, "spellIds": ["mass-cure-wounds", "raise-dead"] }
+            ]
+        },
+        {
+            "id": "light-domain",
+            "name": "Light Domain",
+            "source": "Player's Handbook",
+            "description": "Gods of light promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun.",
+            "features": [
+                { "id": "light-bonus-cantrip-1", "name": "Bonus Cantrip", "level": 1, "description": "You gain the Light cantrip if you don’t already know it.", "effects": [{ "type": "innate_spellcasting", "spells": [{"id": "light", "frequency": "at-will"}], "ability": "WISDOM" }] },
+                { "id": "light-warding-flare-1", "name": "Warding Flare", "level": 1, "interactionType": "reaction_penalty", "cost": "reaction", "description": "As a reaction, you can impose disadvantage on the attack roll of a creature attacking you.", "limitedUse": { "per": "longRest", "usesByLevel": ["WIS_MOD"] } },
+                { "id": "light-channel-divinity-radiance-2", "name": "Channel Divinity: Radiance of the Dawn", "level": 2, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can dispel any magical darkness and deal radiant damage to hostile creatures.", "template": {"type": "sphere", "size": 30}, "effects": [{"type": "special_ability", "name": "Radiance of the Dawn Damage", "value": "2d10 + CLERIC_LEVEL"}] },
+                { "id": "light-improved-flare-6", "name": "Improved Flare", "level": 6, "description": "You can use your Warding Flare feature when a creature attacks an ally." },
+                { "id": "light-potent-spellcasting-8", "name": "Potent Spellcasting", "level": 8, "description": "You add your Wisdom modifier to the damage you deal with any cleric cantrip.", "effects": [{ "type": "bonus_damage", "value": "WIS_MOD", "condition": "on any cleric cantrip" }] },
+                { "id": "light-corona-of-light-17", "name": "Corona of Light", "level": 17, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can activate an aura of sunlight that gives enemies disadvantage on saving throws against spells that deal fire or radiant damage." }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["burning-hands", "faerie-fire"] },
+                { "level": 3, "spellIds": ["flaming-sphere", "scorching-ray"] },
+                { "level": 5, "spellIds": ["daylight", "fireball"] },
+                { "level": 7, "spellIds": ["guardian-of-faith", "wall-of-fire"] },
+                { "level": 9, "spellIds": ["flame-strike", "scrying"] }
+            ]
+        },
+        {
+            "id": "nature-domain",
+            "name": "Nature Domain",
+            "source": "Player's Handbook",
+            "description": "Gods of nature are as varied as the natural world itself, from inscrutable gods of the deep forests to friendly deities associated with particular springs and groves.",
+            "features": [
+                { "id": "nature-acolyte-1", "name": "Acolyte of Nature", "level": 1, "description": "You learn one druid cantrip of your choice and gain proficiency in Animal Handling, Nature, or Survival.", "choiceOptions": [{ "id": "nature-domain-cantrip", "label": "Choose a druid cantrip", "type": "spell", "count": 1, "from": ["any_druid_cantrip"] }, { "id": "nature-domain-skill", "label": "Choose a skill", "type": "skill", "count": 1, "from": ["animal-handling", "nature", "survival"] }] },
+                { "id": "nature-bonus-proficiency-1", "name": "Bonus Proficiency", "level": 1, "description": "You gain proficiency with heavy armor.", "effects": [{ "type": "proficiency", "proficiencyType": "armor", "options": ["heavy armor"], "count": 1 }] },
+                { "id": "nature-channel-divinity-charm-animals-2", "name": "Channel Divinity: Charm Animals and Plants", "level": 2, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can use your Channel Divinity to charm beasts and plants.", "template": {"type": "sphere", "size": 30} },
+                { "id": "nature-dampen-elements-6", "name": "Dampen Elements", "level": 6, "interactionType": "reaction_utility", "cost": "reaction", "description": "As a reaction, you can grant resistance to acid, cold, fire, lightning, or thunder damage." },
+                { "id": "nature-divine-strike-8", "name": "Divine Strike", "level": 8, "description": "Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 cold, fire, or lightning damage. This increases to 2d8 at 14th level.", "effects": [{ "type": "bonus_damage", "value": "1d8", "valueByLevel": {"14": "2d8"}, "damageType": "elemental", "condition": "once per turn on weapon attack", "description": "Choose cold, fire, or lightning damage." }] },
+                { "id": "nature-master-of-nature-17", "name": "Master of Nature", "level": 17, "description": "As a bonus action, you can command creatures charmed by your Charm Animals and Plants feature.", "cost": "bonus action" }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["animal-friendship", "speak-with-animals"] },
+                { "level": 3, "spellIds": ["barkskin", "spike-growth"] },
+                { "level": 5, "spellIds": ["plant-growth", "wind-wall"] },
+                { "level": 7, "spellIds": ["dominate-beast", "grasping-vine"] },
+                { "level": 9, "spellIds": ["insect-plague", "tree-stride"] }
+            ]
+        },
+        {
+            "id": "tempest-domain",
+            "name": "Tempest Domain",
+            "source": "Player's Handbook",
+            "description": "Gods of the Tempest domain govern storms, sea, and sky. They are gods of lightning and thunder, earthquakes, and violence.",
+            "features": [
+                { "id": "tempest-bonus-proficiencies-1", "name": "Bonus Proficiencies", "level": 1, "description": "You gain proficiency with martial weapons and heavy armor.", "effects": [{ "type": "proficiency", "proficiencyType": "weapon", "options": ["martial weapons"], "count": 1 }, { "type": "proficiency", "proficiencyType": "armor", "options": ["heavy armor"], "count": 1 }] },
+                { "id": "tempest-wrath-of-the-storm-1", "name": "Wrath of the Storm", "level": 1, "interactionType": "reaction_damage", "cost": "reaction", "description": "When a creature hits you with an attack, you can use your reaction to force it to make a Dexterity save. The creature takes 2d8 lightning or thunder damage on a failed save.", "limitedUse": { "per": "longRest", "usesByLevel": ["WIS_MOD"] } },
+                { "id": "tempest-channel-divinity-destructive-wrath-2", "name": "Channel Divinity: Destructive Wrath", "level": 2, "description": "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling.", "effects": [{"type": "special_ability", "name": "Maximize Lightning/Thunder Damage"}] },
+                { "id": "tempest-thunderbolt-strike-6", "name": "Thunderbolt Strike", "level": 6, "description": "When you deal lightning damage to a Large or smaller creature, you can also push it up to 10 feet away from you.", "effects": [{"type": "special_ability", "name": "Thunderbolt Strike Push"}] },
+                { "id": "tempest-divine-strike-8", "name": "Divine Strike", "level": 8, "description": "Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 thunder damage. This increases to 2d8 at 14th level.", "effects": [{ "type": "bonus_damage", "value": "1d8", "valueByLevel": {"14": "2d8"}, "damageType": "thunder", "condition": "once per turn on weapon attack" }] },
+                { "id": "tempest-stormborn-17", "name": "Stormborn", "level": 17, "description": "You gain a flying speed equal to your current walking speed whenever you are not underground or indoors.", "effects": [{"type": "grant_speed", "speedType": "flying", "value": "walking_speed", "condition": "when not underground or indoors"}] }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["fog-cloud", "thunderwave"] },
+                { "level": 3, "spellIds": ["gust-of-wind", "shatter"] },
+                { "level": 5, "spellIds": ["call-lightning", "sleet-storm"] },
+                { "level": 7, "spellIds": ["control-water", "ice-storm"] },
+                { "level": 9, "spellIds": ["destructive-wave", "insect-plague"] }
+            ]
+        },
+        {
+            "id": "trickery-domain",
+            "name": "Trickery Domain",
+            "source": "Player's Handbook",
+            "description": "Gods of trickery are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals.",
+            "features": [
+                { "id": "trickery-blessing-of-the-trickster-1", "name": "Blessing of the Trickster", "level": 1, "interactionType": "action_utility", "cost": "action", "description": "You can use your action to give another willing creature advantage on Dexterity (Stealth) checks for 1 hour." },
+                { "id": "trickery-channel-divinity-invoke-duplicity-2", "name": "Channel Divinity: Invoke Duplicity", "level": 2, "interactionType": "action_utility", "cost": "action", "description": "As an action, you create a perfect illusion of yourself that you can cast spells from and that grants you advantage on attacks against creatures near it." },
+                { "id": "trickery-channel-divinity-cloak-of-shadows-6", "name": "Channel Divinity: Cloak of Shadows", "level": 6, "interactionType": "action_utility", "cost": "action", "description": "As an action, you can use your Channel Divinity to become invisible until the end of your next turn." },
+                { "id": "trickery-divine-strike-8", "name": "Divine Strike", "level": 8, "description": "Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage. This increases to 2d8 at 14th level.", "effects": [{ "type": "bonus_damage", "value": "1d8", "valueByLevel": {"14": "2d8"}, "damageType": "poison", "condition": "once per turn on weapon attack" }] },
+                { "id": "trickery-improved-duplicity-17", "name": "Improved Duplicity", "level": 17, "description": "You can create up to four duplicates of yourself when you use Invoke Duplicity." }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["charm-person", "disguise-self"] },
+                { "level": 3, "spellIds": ["mirror-image", "pass-without-trace"] },
+                { "level": 5, "spellIds": ["blink", "dispel-magic"] },
+                { "level": 7, "spellIds": ["dimension-door", "polymorph"] },
+                { "level": 9, "spellIds": ["dominate-person", "modify-memory"] }
+            ]
+        },
+        {
+            "id": "war-domain",
+            "name": "War Domain",
+            "source": "Player's Handbook",
+            "description": "War has many manifestations. The clerics of such gods excel in battle, inspiring others to fight the good fight or offering acts of violence as prayers.",
+            "features": [
+                { "id": "war-bonus-proficiencies-1", "name": "Bonus Proficiencies", "level": 1, "description": "You gain proficiency with martial weapons and heavy armor.", "effects": [{ "type": "proficiency", "proficiencyType": "weapon", "options": ["martial weapons"], "count": 1 }, { "type": "proficiency", "proficiencyType": "armor", "options": ["heavy armor"], "count": 1 }] },
+                { "id": "war-priest-1", "name": "War Priest", "level": 1, "description": "When you use the Attack action, you can make one weapon attack as a bonus action. You can use this a number of times equal to your Wisdom modifier per long rest.", "limitedUse": { "per": "longRest", "usesByLevel": ["WIS_MOD"] }, "effects": [{ "type": "grant_action", "name": "War Priest Bonus Attack", "actionType": "bonus" }] },
+                { "id": "war-channel-divinity-guided-strike-2", "name": "Channel Divinity: Guided Strike", "level": 2, "interactionType": "reaction_roll_modification", "description": "When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll." },
+                { "id": "war-channel-divinity-gods-blessing-6", "name": "Channel Divinity: War God’s Blessing", "level": 6, "interactionType": "reaction_roll_modification", "cost": "reaction", "description": "As a reaction, you can grant an ally a +10 bonus to their attack roll." },
+                { "id": "war-divine-strike-8", "name": "Divine Strike", "level": 8, "description": "Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon. This increases to 2d8 at 14th level.", "effects": [{ "type": "bonus_damage", "value": "1d8", "valueByLevel": {"14": "2d8"}, "damageType": "same_as_weapon", "condition": "once per turn on weapon attack" }] },
+                { "id": "war-avatar-of-battle-17", "name": "Avatar of Battle", "level": 17, "description": "You gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.", "effects": [{ "type": "resistance", "damageType": "bludgeoning", "condition": "from nonmagical attacks" }, { "type": "resistance", "damageType": "piercing", "condition": "from nonmagical attacks" }, { "type": "resistance", "damageType": "slashing", "condition": "from nonmagical attacks" }] }
+            ],
+            "grantedSpells": [
+                { "level": 1, "spellIds": ["divine-favor", "shield-of-faith"] },
+                { "level": 3, "spellIds": ["magic-weapon", "spiritual-weapon"] },
+                { "level": 5, "spellIds": ["crusaders-mantle", "spirit-guardians"] },
+                { "level": 7, "spellIds": ["freedom-of-movement", "stoneskin"] },
+                { "level": 9, "spellIds": ["flame-strike", "hold-monster"] }
+            ]
+        }
+    ],
+    "spellcasting": {
+        "ability": "WISDOM",
+        "preparationType": "prepared"
+    },
+    "progressionTable": [
+        { "level": 1, "profBonus": 2, "cantripsKnown": 3, "spellSlots": [2, 0, 0, 0, 0, 0, 0, 0, 0] },
+        { "level": 2, "profBonus": 2, "cantripsKnown": 3, "spellSlots": [3, 0, 0, 0, 0, 0, 0, 0, 0] },
+        { "level": 3, "profBonus": 2, "cantripsKnown": 3, "spellSlots": [4, 2, 0, 0, 0, 0, 0, 0, 0] },
+        { "level": 4, "profBonus": 2, "cantripsKnown": 4, "spellSlots": [4, 3, 0, 0, 0, 0, 0, 0, 0] },
+        { "level": 5, "profBonus": 3, "cantripsKnown": 4, "spellSlots": [4, 3, 2, 0, 0, 0, 0, 0, 0] },
+        { "level": 6, "profBonus": 3, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 0, 0, 0, 0, 0, 0] },
+        { "level": 7, "profBonus": 3, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 1, 0, 0, 0, 0, 0] },
+        { "level": 8, "profBonus": 3, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 2, 0, 0, 0, 0, 0] },
+        { "level": 9, "profBonus": 4, "cantripsKnown": 4, "spellSlots": [4, 3, 3, 3, 1, 0, 0, 0, 0] },
+        { "level": 10, "profBonus": 4, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 2, 0, 0, 0, 0] },
+        { "level": 11, "profBonus": 4, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 2, 1, 0, 0, 0] },
+        { "level": 12, "profBonus": 4, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 2, 1, 0, 0, 0] },
+        { "level": 13, "profBonus": 5, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 0, 0] },
+        { "level": 14, "profBonus": 5, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 0, 0] },
+        { "level": 15, "profBonus": 5, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 1, 0] },
+        { "level": 16, "profBonus": 5, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 1, 0] },
+        { "level": 17, "profBonus": 6, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 2, 1, 1, 1, 1] },
+        { "level": 18, "profBonus": 6, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 3, 1, 1, 1, 1] },
+        { "level": 19, "profBonus": 6, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 3, 2, 1, 1, 1] },
+        { "level": 20, "profBonus": 6, "cantripsKnown": 5, "spellSlots": [4, 3, 3, 3, 3, 2, 2, 1, 1] }
+    ]
+}
