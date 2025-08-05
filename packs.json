@@ -1,0 +1,118 @@
+
+[
+    {
+        "id": "burglars-pack",
+        "name": "Burglar's Pack",
+        "costInCopper": 1600,
+        "contents": [
+            { "itemId": "backpack", "quantity": 1 },
+            { "itemId": "ball-bearings", "quantity": 1 },
+            { "itemId": "string", "quantity": 1 },
+            { "itemId": "bell", "quantity": 1 },
+            { "itemId": "candle", "quantity": 5 },
+            { "itemId": "crowbar", "quantity": 1 },
+            { "itemId": "hammer", "quantity": 1 },
+            { "itemId": "piton", "quantity": 10 },
+            { "itemId": "lantern-hooded", "quantity": 1 },
+            { "itemId": "oil-flask", "quantity": 2 },
+            { "itemId": "rations", "quantity": 5 },
+            { "itemId": "tinderbox", "quantity": 1 },
+            { "itemId": "waterskin", "quantity": 1 },
+            { "itemId": "rope-hempen", "quantity": 1 }
+        ]
+    },
+    {
+        "id": "diplomats-pack",
+        "name": "Diplomat's Pack",
+        "costInCopper": 3900,
+        "contents": [
+            { "itemId": "chest", "quantity": 1 },
+            { "itemId": "case-map-scroll", "quantity": 2 },
+            { "itemId": "clothes-fine", "quantity": 1 },
+            { "itemId": "ink-bottle", "quantity": 1 },
+            { "itemId": "ink-pen", "quantity": 1 },
+            { "itemId": "lamp", "quantity": 1 },
+            { "itemId": "oil-flask", "quantity": 2 },
+            { "itemId": "paper", "quantity": 5 },
+            { "itemId": "perfume-vial", "quantity": 1 },
+            { "itemId": "sealing-wax", "quantity": 1 },
+            { "itemId": "soap", "quantity": 1 }
+        ]
+    },
+    {
+        "id": "dungeoneers-pack",
+        "name": "Dungeoneer's Pack",
+        "costInCopper": 1200,
+        "contents": [
+            { "itemId": "backpack", "quantity": 1 },
+            { "itemId": "crowbar", "quantity": 1 },
+            { "itemId": "hammer", "quantity": 1 },
+            { "itemId": "piton", "quantity": 10 },
+            { "itemId": "torch", "quantity": 10 },
+            { "itemId": "tinderbox", "quantity": 1 },
+            { "itemId": "rations", "quantity": 10 },
+            { "itemId": "waterskin", "quantity": 1 },
+            { "itemId": "rope-hempen", "quantity": 1 }
+        ]
+    },
+    {
+        "id": "entertainers-pack",
+        "name": "Entertainer's Pack",
+        "costInCopper": 4000,
+        "contents": [
+            { "itemId": "backpack", "quantity": 1 },
+            { "itemId": "bedroll", "quantity": 1 },
+            { "itemId": "costume-clothes", "quantity": 2 },
+            { "itemId": "candle", "quantity": 5 },
+            { "itemId": "rations", "quantity": 5 },
+            { "itemId": "waterskin", "quantity": 1 },
+            { "itemId": "disguise-kit", "quantity": 1 }
+        ]
+    },
+    {
+        "id": "explorers-pack",
+        "name": "Explorer's Pack",
+        "costInCopper": 1000,
+        "contents": [
+            { "itemId": "backpack", "quantity": 1 },
+            { "itemId": "bedroll", "quantity": 1 },
+            { "itemId": "mess-kit", "quantity": 1 },
+            { "itemId": "tinderbox", "quantity": 1 },
+            { "itemId": "torch", "quantity": 10 },
+            { "itemId": "rations", "quantity": 10 },
+            { "itemId": "waterskin", "quantity": 1 },
+            { "itemId": "rope-hempen", "quantity": 1 }
+        ]
+    },
+    {
+        "id": "priests-pack",
+        "name": "Priest's Pack",
+        "costInCopper": 1900,
+        "contents": [
+            { "itemId": "backpack", "quantity": 1 },
+            { "itemId": "blanket", "quantity": 1 },
+            { "itemId": "candle", "quantity": 10 },
+            { "itemId": "tinderbox", "quantity": 1 },
+            { "itemId": "alms-box", "quantity": 1 },
+            { "itemId": "incense", "quantity": 1 },
+            { "itemId": "censer", "quantity": 1 },
+            { "itemId": "vestments", "quantity": 1 },
+            { "itemId": "rations", "quantity": 2 },
+            { "itemId": "waterskin", "quantity": 1 }
+        ]
+    },
+    {
+        "id": "scholars-pack",
+        "name": "Scholar's Pack",
+        "costInCopper": 4000,
+        "contents": [
+            { "itemId": "backpack", "quantity": 1 },
+            { "itemId": "book-of-lore", "quantity": 1 },
+            { "itemId": "ink-bottle", "quantity": 1 },
+            { "itemId": "ink-pen", "quantity": 1 },
+            { "itemId": "parchment", "quantity": 10 },
+            { "itemId": "sand-bag", "quantity": 1 },
+            { "itemId": "small-knife", "quantity": 1 }
+        ]
+    }
+]

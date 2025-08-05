@@ -1,0 +1,146 @@
+
+[
+    {
+        "id": "adamantine-armor", "name": "Adamantine Armor", "category": "Armor", "costInCopper": 0, "weight": 0,
+        "description": "While wearing this armor, any critical hit against you becomes a normal hit.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [{ "type": "special_ability", "name": "Critical Hit Immunity" }]
+    },
+    {
+        "id": "amulet-of-health", "name": "Amulet of Health", "category": "Wondrous Item", "costInCopper": 0, "weight": 1,
+        "description": "Your Constitution score is 19 while you wear this amulet.", "rarity": "rare", "requiresAttunement": true,
+        "effects": [{ "type": "set_ability_score", "ability": "CONSTITUTION", "value": 19 }]
+    },
+    {
+        "id": "bag-of-holding", "name": "Bag of Holding", "category": "Wondrous Item", "costInCopper": 0, "weight": 15,
+        "description": "This bag has an interior space considerably larger than its outside dimensions, roughly 2 feet in diameter at the mouth and 4 feet deep.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [{ "type": "special_ability", "name": "Extradimensional Storage" }]
+    },
+    {
+        "id": "boots-of-elvenkind", "name": "Boots of Elvenkind", "category": "Wondrous Item", "costInCopper": 0, "weight": 1,
+        "description": "While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have advantage on Dexterity (Stealth) checks that rely on moving silently.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [{ "type": "advantage", "on": "check", "skill": "stealth", "condition": "when moving silently" }]
+    },
+    {
+        "id": "boots-of-speed", "name": "Boots of Speed", "category": "Wondrous Item", "costInCopper": 0, "weight": 1,
+        "description": "While you wear these boots, you can use a bonus action to double your speed for 10 minutes.", "rarity": "rare", "requiresAttunement": true,
+        "effects": [{ "type": "grant_action", "name": "Activate Boots of Speed" }]
+    },
+    {
+        "id": "bracers-of-archery", "name": "Bracers of Archery", "category": "Wondrous Item", "costInCopper": 0, "weight": 1,
+        "description": "While wearing these bracers, you have proficiency with the longbow and shortbow, and you gain a +2 bonus to damage rolls on ranged attacks made with such weapons.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [
+            { "type": "proficiency", "proficiencyType": "weapon", "options": ["longbow", "shortbow"], "count": 2 },
+            { "type": "bonus", "to": "damage_roll", "value": 2, "condition": "with longbows and shortbows" }
+        ]
+    },
+    {
+        "id": "brooch-of-shielding", "name": "Brooch of Shielding", "category": "Wondrous Item", "costInCopper": 0, "weight": 0,
+        "description": "While wearing this brooch, you have resistance to force damage and immunity to damage from the magic missile spell.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [
+            { "type": "resistance", "damageType": "force" },
+            { "type": "immunity", "to": "magic missile" }
+        ]
+    },
+    {
+        "id": "cloak-of-elvenkind", "name": "Cloak of Elvenkind", "category": "Wondrous Item", "costInCopper": 0, "weight": 1,
+        "description": "While you wear this cloak with its hood up, Wisdom (Perception) checks made to see you have disadvantage, and you have advantage on Dexterity (Stealth) checks made to hide.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [{ "type": "advantage", "on": "check", "skill": "stealth", "condition": "to hide" }]
+    },
+    {
+        "id": "cloak-of-protection", "name": "Cloak of Protection", "category": "Wondrous Item", "costInCopper": 0, "weight": 1,
+        "description": "You gain a +1 bonus to AC and saving throws while you wear this cloak.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [
+            { "type": "bonus", "to": "ac", "value": 1 },
+            { "type": "bonus", "to": "saving_throw", "value": 1 }
+        ]
+    },
+    {
+        "id": "eyes-of-the-eagle", "name": "Eyes of the Eagle", "category": "Wondrous Item", "costInCopper": 0, "weight": 0,
+        "description": "While wearing these crystal lenses, you have advantage on Wisdom (Perception) checks that rely on sight.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [{ "type": "advantage", "on": "check", "skill": "perception", "condition": "relying on sight" }]
+    },
+    {
+        "id": "gauntlets-of-ogre-power", "name": "Gauntlets of Ogre Power", "category": "Wondrous Item", "costInCopper": 0, "weight": 2,
+        "description": "Your Strength score is 19 while you wear these gauntlets.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [{ "type": "set_ability_score", "ability": "STRENGTH", "value": 19 }]
+    },
+    {
+        "id": "gloves-of-thievery", "name": "Gloves of Thievery", "category": "Wondrous Item", "costInCopper": 0, "weight": 0,
+        "description": "These gloves grant a +5 bonus to Dexterity (Sleight of Hand) checks and checks made with thieves' tools.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [{ "type": "bonus", "to": "skill_check", "value": 5, "skill": "sleight-of-hand" }]
+    },
+    {
+        "id": "headband-of-intellect", "name": "Headband of Intellect", "category": "Wondrous Item", "costInCopper": 0, "weight": 1,
+        "description": "Your Intelligence score is 19 while you wear this headband.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [{ "type": "set_ability_score", "ability": "INTELLIGENCE", "value": 19 }]
+    },
+    {
+        "id": "helm-of-comprehending-languages", "name": "Helm of Comprehending Languages", "category": "Wondrous Item", "costInCopper": 0, "weight": 3,
+        "description": "While wearing this helmet, you can use an action to cast the comprehend languages spell from it at will.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [{ "type": "grant_action", "name": "Cast Comprehend Languages" }]
+    },
+    {
+        "id": "immovable-rod", "name": "Immovable Rod", "category": "Rod", "costInCopper": 0, "weight": 2,
+        "description": "This flat iron rod has a button on one end. You can use an action to press the button, which causes the rod to become magically fixed in place.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [{ "type": "grant_action", "name": "Activate Immovable Rod" }]
+    },
+    {
+        "id": "periapt-of-wound-closure", "name": "Periapt of Wound Closure", "category": "Wondrous Item", "costInCopper": 0, "weight": 1,
+        "description": "While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [{ "type": "special_ability", "name": "Auto-Stabilize" }, { "type": "special_ability", "name": "Double Hit Die Healing" }]
+    },
+    {
+        "id": "ring-of-jumping", "name": "Ring of Jumping", "category": "Ring", "costInCopper": 0, "weight": 0,
+        "description": "While wearing this ring, you can cast the jump spell from it as a bonus action at will, but can target only yourself when you do so.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [{ "type": "grant_action", "name": "Cast Jump (Self)" }]
+    },
+    {
+        "id": "ring-of-mind-shielding", "name": "Ring of Mind Shielding", "category": "Ring", "costInCopper": 0, "weight": 0,
+        "description": "While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type.", "rarity": "uncommon", "requiresAttunement": true,
+        "effects": [{ "type": "immunity", "to": "thought_reading" }]
+    },
+    {
+        "id": "ring-of-protection", "name": "Ring of Protection", "category": "Ring", "costInCopper": 0, "weight": 0,
+        "description": "You gain a +1 bonus to AC and saving throws while wearing this ring.", "rarity": "rare", "requiresAttunement": true,
+        "effects": [
+            { "type": "bonus", "to": "ac", "value": 1 },
+            { "type": "bonus", "to": "saving_throw", "value": 1 }
+        ]
+    },
+    {
+        "id": "rope-of-climbing", "name": "Rope of Climbing", "category": "Wondrous Item", "costInCopper": 0, "weight": 3,
+        "description": "This 60-foot length of silk rope holds up to 3,000 pounds and is easy to tie. As an action, you can command one end of the rope to move to a destination you choose.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [{ "type": "grant_action", "name": "Command Rope" }]
+    },
+    {
+        "id": "sentinel-shield", "name": "Sentinel Shield", "category": "Armor (Shield)", "costInCopper": 0, "weight": 6,
+        "description": "While holding this shield, you have advantage on initiative rolls and Wisdom (Perception) checks.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [
+            { "type": "advantage", "on": "initiative", "condition": "while holding shield" },
+            { "type": "advantage", "on": "check", "skill": "perception", "condition": "while holding shield" }
+        ]
+    },
+    {
+        "id": "wand-of-magic-detection", "name": "Wand of Magic Detection", "category": "Wand", "costInCopper": 0, "weight": 1,
+        "description": "This wand has 3 charges. While holding it, you can use an action to expend 1 charge and cast the detect magic spell from it. The wand regains 1d3 expended charges daily at dawn.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [{ "type": "grant_action", "name": "Cast Detect Magic (Wand)" }]
+    },
+    {
+        "id": "weapon-plus-1", "name": "Weapon +1", "category": "Weapon", "costInCopper": 0, "weight": 0,
+        "description": "You have a +1 bonus to attack and damage rolls made with this magic weapon.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [
+            { "type": "bonus", "to": "attack_roll", "value": 1 },
+            { "type": "bonus", "to": "damage_roll", "value": 1 }
+        ]
+    },
+    {
+        "id": "shield-plus-1", "name": "Shield +1", "category": "Armor (Shield)", "costInCopper": 0, "weight": 6,
+        "description": "While holding this shield, you have a +1 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.", "rarity": "uncommon", "requiresAttunement": false,
+        "effects": [{ "type": "bonus", "to": "ac", "value": 1 }]
+    },
+    {
+        "id": "armor-plus-1", "name": "Armor +1", "category": "Armor", "costInCopper": 0, "weight": 0,
+        "description": "You have a +1 bonus to AC while wearing this armor.", "rarity": "rare", "requiresAttunement": false,
+        "effects": [{ "type": "bonus", "to": "ac", "value": 1 }]
+    }
+]
