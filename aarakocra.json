@@ -1,0 +1,47 @@
+{
+    "id": "aarakocra",
+    "name": "Aarakocra",
+    "source": "Elemental Evil Player’s Companion p.3",
+    "iconUrl": "https://picsum.photos/seed/aarakocra/64/64",
+    "creatureType": "Humanoid",
+    "description": "Sequestered in high mountains and windy plains, the Aarakocra are avian humanoids who guard the border between the Material Plane and the Elemental Plane of Air. They are gifted fliers, capable of soaring to great heights, and their connection to the sky gives them a unique, and sometimes alien, perspective on the world below. Often serving as scouts and explorers, many Aarakocra are driven by a desire to defend their homes from the incursions of elemental evil.",
+    "traits": [
+        {
+            "id": "aarakocra-ability-score-increase",
+            "name": "Ability Score Increase",
+            "description": "Your Dexterity score increases by 2, and your Wisdom score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 1 }
+            ]
+        },
+        {
+            "id": "aarakocra-speed",
+            "name": "Speed",
+            "description": "Your base walking speed is 25 feet.",
+            "effects": [{ "type": "set_base_speed", "value": 25 }]
+        },
+        {
+            "id": "aarakocra-flight",
+            "name": "Flight",
+            "description": "You have a flying speed of 50 feet. To use this speed, you can’t be wearing medium or heavy armor.",
+            "effects": [{
+                "type": "grant_speed",
+                "speedType": "flying",
+                "value": 50,
+                "condition": "while not wearing medium or heavy armor"
+            }]
+        },
+        {
+            "id": "aarakocra-talons",
+            "name": "Talons",
+            "description": "Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.",
+            "effects": [{
+                "type": "natural_weapon",
+                "name": "Talons",
+                "damageDice": "1d4",
+                "damageType": "slashing"
+            }]
+        }
+    ]
+}

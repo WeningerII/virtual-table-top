@@ -1,0 +1,16 @@
+
+{
+    "id": "gith-githyanki",
+    "name": "Githyanki",
+    "source": "Mordenkainen's Tome of Foes",
+    "iconUrl": "https://picsum.photos/seed/gith-githyanki/64/64",
+    "creatureType": "Humanoid",
+    "description": "Githyanki are warriors from the Astral Plane, known for their psionic abilities and their red dragon mounts. They are typically gaunt, with yellow-green skin.",
+    "traits": [
+        { "id": "gith-base-asi", "name": "Ability Score Increase", "description": "Your Intelligence score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["INTELLIGENCE"], "count": 1, "value": 1 }] },
+        { "id": "githyanki-asi", "name": "Ability Score Increase", "description": "Your Strength score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 2 }] },
+        { "id": "gith-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "githyanki-psionics", "name": "Githyanki Psionics", "description": "You know the Mage Hand cantrip. At 3rd level, you can cast Jump once per long rest. At 5th level, you can cast Misty Step once per long rest. Intelligence is your spellcasting ability for these spells.", "effects": [{ "type": "innate_spellcasting", "ability": "INTELLIGENCE", "spells": [{ "id": "mage-hand", "frequency": "at-will" }, { "id": "jump", "levelRequirement": 3, "frequency": "1/long_rest" }, { "id": "misty-step", "levelRequirement": 5, "frequency": "1/long_rest" }] }] },
+        { "id": "martial-prodigy", "name": "Martial Prodigy", "description": "You have proficiency with light and medium armor and with shortswords, longswords, and greatswords.", "effects": [{ "type": "proficiency", "proficiencyType": "armor", "options": ["light armor", "medium armor"], "count": 2 }, { "type": "proficiency", "proficiencyType": "weapon", "options": ["shortsword", "longsword", "greatsword"], "count": 3 }] }
+    ]
+}

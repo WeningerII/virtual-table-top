@@ -1,0 +1,26 @@
+
+{
+    "id": "loxodon",
+    "name": "Loxodon",
+    "source": "Guildmasters' Guide to Ravnica",
+    "iconUrl": "https://picsum.photos/seed/loxodon/64/64",
+    "creatureType": "Humanoid",
+    "description": "Loxodons are calm, patient, and stoic humanoids with the thick, leathery skin of elephants. They are pillars of their communities, often acting as cornerstones of tranquility and strength.",
+    "traits": [
+        {
+            "id": "loxodon-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Constitution score increases by 2, and your Wisdom score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "loxodon-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "powerful-build", "name": "Powerful Build", "description": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.", "effects": [{ "type": "special_ability", "name": "Powerful Build" }] },
+        { "id": "loxodon-serenity", "name": "Loxodon Serenity", "description": "You have advantage on saving throws against being charmed or frightened.", "effects": [{ "type": "advantage", "on": "saving_throw", "condition": "against being charmed or frightened" }] },
+        { "id": "natural-armor", "name": "Natural Armor", "description": "You have thick, leathery skin. When you aren’t wearing armor, your AC is 12 + your Constitution modifier.", "effects": [{ "type": "set_base_ac", "value": 12, "ability": "CONSTITUTION" }] },
+        { "id": "trunk", "name": "Trunk", "description": "You can grasp things with your trunk, and you can use it as a snorkel. It has a reach of 5 feet, and it can lift a number of pounds equal to five times your Strength score. You can use it to do the following simple tasks: lift, drop, hold, push, or pull an object or a creature; open or close a door or a container; grapple someone; or make an unarmed strike. Your DM might allow other simple tasks to be added to that list of options.", "effects": [{ "type": "special_ability", "name": "Trunk" }] },
+        { "id": "keen-smell", "name": "Keen Smell", "description": "Thanks to your sensitive trunk, you have advantage on Wisdom (Perception), Wisdom (Survival), and Intelligence (Investigation) checks that involve smell.", "effects": [{ "type": "advantage", "on": "check", "skill": "perception", "condition": "involving smell" }] }
+    ]
+}

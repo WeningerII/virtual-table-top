@@ -1,0 +1,16 @@
+
+{
+    "id": "genasi-earth",
+    "name": "Earth Genasi",
+    "source": "Elemental Evil Player's Companion",
+    "iconUrl": "https://picsum.photos/seed/genasi-earth/64/64",
+    "creatureType": "Humanoid",
+    "description": "Earth genasi are descended from dao, the genies of the Elemental Plane of Earth. They are often stoic and stubborn, with a connection to stone and soil.",
+    "traits": [
+        { "id": "genasi-base-asi", "name": "Ability Score Increase", "description": "Your Constitution score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 }] },
+        { "id": "earth-genasi-asi", "name": "Ability Score Increase", "description": "Your Strength score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 1 }] },
+        { "id": "genasi-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "earth-walk", "name": "Earth Walk", "description": "You can move across difficult terrain made of earth or stone without expending extra movement.", "effects": [{ "type": "special_ability", "name": "Earth Walk" }] },
+        { "id": "merge-with-stone", "name": "Merge with Stone", "description": "You can cast the Pass without Trace spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell.", "effects": [{ "type": "innate_spellcasting", "ability": "CONSTITUTION", "spells": [{ "id": "pass-without-trace", "levelRequirement": 3, "frequency": "1/long_rest" }] }] }
+    ]
+}

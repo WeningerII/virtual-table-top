@@ -1,0 +1,25 @@
+
+{
+    "id": "firbolg",
+    "name": "Firbolg",
+    "source": "Volo's Guide to Monsters",
+    "iconUrl": "https://picsum.photos/seed/firbolg/64/64",
+    "creatureType": "Humanoid",
+    "description": "Firbolgs are reclusive giant-kin who prefer to live in harmony with nature, far from other sentient races. They are guardians of the woodlands and gentle souls.",
+    "traits": [
+        {
+            "id": "firbolg-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Wisdom score increases by 2, and your Strength score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "firbolg-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "firbolg-magic", "name": "Firbolg Magic", "description": "You can cast Detect Magic and Disguise Self with this trait. Once you cast either spell, you can’t cast it again until you finish a short or long rest. Wisdom is your spellcasting ability for these spells.", "effects": [{ "type": "innate_spellcasting", "ability": "WISDOM", "spells": [{ "id": "detect-magic", "frequency": "1/short_rest" }, { "id": "disguise-self", "frequency": "1/short_rest" }] }] },
+        { "id": "hidden-step", "name": "Hidden Step", "description": "As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can’t use it again until you finish a short or long rest.", "effects": [{ "type": "grant_action", "name": "Hidden Step" }] },
+        { "id": "powerful-build", "name": "Powerful Build", "description": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.", "effects": [{ "type": "special_ability", "name": "Powerful Build" }] },
+        { "id": "speech-of-beast-and-leaf", "name": "Speech of Beast and Leaf", "description": "You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return.", "effects": [{ "type": "special_ability", "name": "Speech of Beast and Leaf" }] }
+    ]
+}

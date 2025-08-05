@@ -1,0 +1,17 @@
+
+{
+    "id": "tiefling-mammon",
+    "name": "Mammon Tiefling",
+    "source": "Mordenkainen's Tome of Foes",
+    "iconUrl": "https://picsum.photos/seed/tiefling-mammon/64/64",
+    "creatureType": "Humanoid",
+    "description": "These tieflings bear the mark of Mammon, the archdevil of avarice and the ruler of Minauros.",
+    "traits": [
+        { "id": "tiefling-base-asi", "name": "Ability Score Increase", "description": "Your Charisma score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 2 }] },
+        { "id": "tiefling-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "hellish-resistance", "name": "Hellish Resistance", "description": "You have resistance to fire damage.", "effects": [{ "type": "resistance", "damageType": "fire" }] },
+        { "id": "mammon-asi", "name": "Ability Score Increase", "description": "Your Intelligence score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["INTELLIGENCE"], "count": 1, "value": 1 }] },
+        { "id": "legacy-of-minauros", "name": "Legacy of Minauros", "description": "You know the Mage Hand cantrip. At 3rd level, you can cast Tenser's Floating Disk once. At 5th level, you can cast Arcane Lock once. You must finish a long rest to cast these spells again with this trait.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [{ "id": "mage-hand", "frequency": "at-will" }, { "id": "tensers-floating-disk", "levelRequirement": 3, "frequency": "1/long_rest" }, { "id": "arcane-lock", "levelRequirement": 5, "frequency": "1/long_rest" }] }] }
+    ]
+}

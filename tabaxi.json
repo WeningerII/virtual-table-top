@@ -1,0 +1,25 @@
+
+{
+    "id": "tabaxi",
+    "name": "Tabaxi",
+    "source": "Volo's Guide to Monsters",
+    "iconUrl": "https://picsum.photos/seed/tabaxi/64/64",
+    "creatureType": "Humanoid",
+    "description": "Hailing from a strange and distant land, wandering tabaxi are catlike humanoids driven by curiosity to collect interesting artifacts, gather tales and stories, and lay eyes on all the world’s wonders.",
+    "traits": [
+        {
+            "id": "tabaxi-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Dexterity score increases by 2, and your Charisma score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "tabaxi-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "feline-agility", "name": "Feline Agility", "description": "Your reflexes and agility allow you to move with a burst of speed. When you move on your turn in combat, you can double your speed until the end of the turn. Once you use this trait, you can’t use it again until you move 0 feet on one of your turns.", "effects": [{ "type": "special_ability", "name": "Feline Agility" }] },
+        { "id": "cats-claws", "name": "Cat's Claws", "description": "You have a climbing speed of 20 feet. In addition, your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier.", "effects": [{ "type": "grant_speed", "speedType": "climbing", "value": 20 }, { "type": "natural_weapon", "name": "Claws", "damageDice": "1d4", "damageType": "slashing" }] },
+        { "id": "cats-talent", "name": "Cat's Talent", "description": "You have proficiency in the Perception and Stealth skills.", "effects": [{ "type": "proficiency", "proficiencyType": "skill", "options": ["perception", "stealth"], "count": 2 }] }
+    ]
+}

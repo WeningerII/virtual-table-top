@@ -1,0 +1,35 @@
+{
+    "id": "elf-wood",
+    "name": "Wood Elf",
+    "source": "Player's Handbook p.24",
+    "iconUrl": "https://picsum.photos/seed/elf-wood/64/64",
+    "creatureType": "Humanoid",
+    "description": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. Where high elves build cities, wood elves forge a life in harmony with the untamed wilderness. They are superlative archers and hunters, their connection to the wild granting them the ability to blend into the scenery and move with a speed unmatched by their kin.",
+    "traits": [
+        { "id": "elf-base-asi", "name": "Ability Score Increase", "description": "Your Dexterity score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 2 }] },
+        { "id": "elf-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "fey-ancestry", "name": "Fey Ancestry", "description": "You have advantage on saving throws against being charmed, and magic can’t put you to sleep.", "effects": [ { "type": "advantage", "on": "saving_throw", "condition": "against being charmed" }, { "type": "immunity", "to": "magical_sleep" } ] },
+        { "id": "keen-senses", "name": "Keen Senses", "description": "You have proficiency in the Perception skill.", "effects": [ { "type": "proficiency", "proficiencyType": "skill", "options": ["perception"], "count": 1 } ] },
+        { "id": "trance", "name": "Trance", "description": "You don’t need to sleep. Instead, you meditate deeply for 4 hours a day.", "effects": [{ "type": "special_ability", "name": "Trance" }] },
+        {
+            "id": "wood-elf-ability-score-increase",
+            "name": "Ability Score Increase",
+            "description": "Your Wisdom score increases by 1.",
+            "effects": [{ "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 1 }]
+        },
+        { 
+            "id": "elf-weapon-training", 
+            "name": "Elf Weapon Training", 
+            "description": "You have proficiency with the longsword, shortsword, shortbow, and longbow.",
+            "effects": [{ "type": "proficiency", "proficiencyType": "weapon", "options": ["longsword", "shortsword", "shortbow", "longbow"], "count": 4 }]
+        },
+        { "id": "fleet-of-foot", "name": "Fleet of Foot", "description": "Your base walking speed increases to 35 feet.", "effects": [{"type": "set_base_speed", "value": 35}] },
+        { 
+            "id": "mask-of-the-wild", 
+            "name": "Mask of the Wild", 
+            "description": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.",
+            "effects": [{ "type": "special_ability", "name": "Mask of the Wild" }]
+        }
+    ]
+}

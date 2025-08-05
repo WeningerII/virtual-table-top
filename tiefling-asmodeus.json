@@ -1,0 +1,17 @@
+
+{
+    "id": "tiefling-asmodeus",
+    "name": "Asmodeus Tiefling",
+    "source": "Player's Handbook p.42",
+    "iconUrl": "https://picsum.photos/seed/tiefling-asmodeus/64/64",
+    "creatureType": "Humanoid",
+    "description": "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling.",
+    "traits": [
+        { "id": "tiefling-base-asi", "name": "Ability Score Increase", "description": "Your Charisma score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 2 }] },
+        { "id": "tiefling-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "hellish-resistance", "name": "Hellish Resistance", "description": "You have resistance to fire damage.", "effects": [{ "type": "resistance", "damageType": "fire" }] },
+        { "id": "asmodeus-asi", "name": "Ability Score Increase", "description": "Your Intelligence score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["INTELLIGENCE"], "count": 1, "value": 1 }] },
+        { "id": "infernal-legacy", "name": "Infernal Legacy", "description": "You know the Thaumaturgy cantrip. Once you reach 3rd level, you can cast the Hellish Rebuke spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the Darkness spell once. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [ { "id": "thaumaturgy", "frequency": "at-will" }, { "id": "hellish-rebuke", "levelRequirement": 3, "frequency": "1/long_rest" }, { "id": "darkness", "levelRequirement": 5, "frequency": "1/long_rest" } ] }] }
+    ]
+}

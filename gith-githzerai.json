@@ -1,0 +1,16 @@
+
+{
+    "id": "gith-githzerai",
+    "name": "Githzerai",
+    "source": "Mordenkainen's Tome of Foes",
+    "iconUrl": "https://picsum.photos/seed/gith-githzerai/64/64",
+    "creatureType": "Humanoid",
+    "description": "Githzerai are ascetics and philosophers from the plane of Limbo. They are known for their psionic abilities and their monastic discipline.",
+    "traits": [
+        { "id": "gith-base-asi", "name": "Ability Score Increase", "description": "Your Intelligence score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["INTELLIGENCE"], "count": 1, "value": 1 }] },
+        { "id": "githzerai-asi", "name": "Ability Score Increase", "description": "Your Wisdom score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 2 }] },
+        { "id": "gith-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "githzerai-psionics", "name": "Githzerai Psionics", "description": "You know the Mage Hand cantrip. At 3rd level, you can cast Shield once per long rest. At 5th level, you can cast Detect Thoughts once per long rest. Wisdom is your spellcasting ability for these spells.", "effects": [{ "type": "innate_spellcasting", "ability": "WISDOM", "spells": [{ "id": "mage-hand", "frequency": "at-will" }, { "id": "shield", "levelRequirement": 3, "frequency": "1/long_rest" }, { "id": "detect-thoughts", "levelRequirement": 5, "frequency": "1/long_rest" }] }] },
+        { "id": "mental-discipline", "name": "Mental Discipline", "description": "You have advantage on saving throws against the charmed and frightened conditions.", "effects": [{ "type": "advantage", "on": "saving_throw", "condition": "against being charmed or frightened" }] }
+    ]
+}

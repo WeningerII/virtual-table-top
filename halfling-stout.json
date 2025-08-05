@@ -1,0 +1,18 @@
+
+{
+    "id": "halfling-stout",
+    "name": "Stout Halfling",
+    "source": "Player's Handbook p.28",
+    "iconUrl": "https://picsum.photos/seed/halfling-stout/64/64",
+    "creatureType": "Humanoid",
+    "description": "Stout halflings are hardier than their cousins and somewhat resistant to poison. They are said to have dwarven blood.",
+    "traits": [
+        { "id": "halfling-base-asi", "name": "Ability Score Increase", "description": "Your Dexterity score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 2 }] },
+        { "id": "halfling-speed", "name": "Speed", "description": "Your base walking speed is 25 feet.", "effects": [{ "type": "set_base_speed", "value": 25 }] },
+        { "id": "lucky", "name": "Lucky", "description": "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.", "effects": [{ "type": "special_ability", "name": "Lucky" }] },
+        { "id": "brave", "name": "Brave", "description": "You have advantage on saving throws against being frightened.", "effects": [{ "type": "advantage", "on": "saving_throw", "condition": "against being frightened" }] },
+        { "id": "halfling-nimbleness", "name": "Halfling Nimbleness", "description": "You can move through the space of any creature that is of a size larger than yours.", "effects": [{ "type": "special_ability", "name": "Halfling Nimbleness" }] },
+        { "id": "stout-asi", "name": "Ability Score Increase", "description": "Your Constitution score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 1 }] },
+        { "id": "stout-resilience", "name": "Stout Resilience", "description": "You have advantage on saving throws against poison, and you have resistance against poison damage.", "effects": [{ "type": "advantage", "on": "saving_throw", "condition": "against poison" }, { "type": "resistance", "damageType": "poison" }] }
+    ]
+}

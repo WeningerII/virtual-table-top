@@ -1,0 +1,65 @@
+{
+    "id": "dwarf-mountain",
+    "name": "Mountain Dwarf",
+    "source": "Player's Handbook p.20",
+    "iconUrl": "https://picsum.photos/seed/dwarf-mountain/64/64",
+    "creatureType": "Humanoid",
+    "description": "As a mountain dwarf, you’re strong and hardy, accustomed to a difficult life in rugged terrain. You’re probably on the tall side (for a dwarf), and tend toward lighter coloration. The shield dwarves of northern Faerûn, as well as the ruling Hylar clan of Dragonlance, are mountain dwarves.",
+    "traits": [
+        {
+            "id": "dwarf-ability-score-increase",
+            "name": "Ability Score Increase",
+            "description": "Your Constitution score increases by 2.",
+            "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 }]
+        },
+        {
+            "id": "dwarf-speed",
+            "name": "Speed",
+            "description": "Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.",
+            "effects": [
+                { "type": "set_base_speed", "value": 25 },
+                { "type": "special_ability", "name": "Unyielding Speed"}
+            ]
+        },
+        {
+            "id": "darkvision",
+            "name": "Darkvision",
+            "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
+            "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }]
+        },
+        { 
+            "id": "dwarven-resilience", 
+            "name": "Dwarven Resilience", 
+            "description": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
+            "effects": [
+                { "type": "advantage", "on": "saving_throw", "condition": "against poison" },
+                { "type": "resistance", "damageType": "poison" }
+            ]
+        },
+        { 
+            "id": "dwarven-combat-training", 
+            "name": "Dwarven Combat Training", 
+            "description": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
+            "effects": [{ "type": "proficiency", "proficiencyType": "weapon", "options": ["battleaxe", "handaxe", "light hammer", "warhammer"], "count": 4 }]
+        },
+        { 
+            "id": "tool-proficiency", 
+            "name": "Tool Proficiency", 
+            "description": "You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.",
+            "effects": [{ "type": "proficiency", "proficiencyType": "tool", "options": ["smith's tools", "brewer's supplies", "mason's tools"], "count": 1 }]
+        },
+        { 
+            "id": "stonecunning", 
+            "name": "Stonecunning", 
+            "description": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.",
+            "effects": [{ "type": "special_ability", "name": "Stonecunning" }]
+        },
+        {
+           "id": "mountain-dwarf-ability-score-increase",
+           "name": "Ability Score Increase",
+           "description": "Your Strength score increases by 2.",
+           "effects": [{ "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 2 }]
+        },
+        { "id": "dwarven-armor-training", "name": "Dwarven Armor Training", "description": "You have proficiency with light and medium armor.", "effects": [{ "type": "proficiency", "proficiencyType": "armor", "options": ["light", "medium"], "count": 2}]}
+    ]
+}

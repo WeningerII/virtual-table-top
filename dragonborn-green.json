@@ -1,0 +1,16 @@
+
+{
+    "id": "dragonborn-green",
+    "name": "Green Dragonborn",
+    "source": "Player's Handbook",
+    "iconUrl": "https://picsum.photos/seed/dragonborn-green/64/64",
+    "creatureType": "Humanoid",
+    "description": "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail. Green dragonborn are cunning and masters of deception, with a connection to poison.",
+    "traits": [
+        { "id": "dragonborn-base-asi", "name": "Ability Score Increase", "description": "Your Strength score increases by 2, and your Charisma score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 2 }, { "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 1 }] },
+        { "id": "dragonborn-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "draconic-ancestry-green", "name": "Draconic Ancestry", "description": "You have a green dragon ancestor, granting you a poisonous breath weapon and resistance to poison." },
+        { "id": "breath-weapon-green", "name": "Breath Weapon", "description": "You can use your action to exhale destructive energy. It deals poison damage in a 15-foot cone. Each creature in the area must make a Constitution saving throw (DC 8 + CON mod + prof bonus), taking 2d6 damage on a failed save, and half on a success. This damage increases at higher levels. You can't use this again until you finish a short or long rest.", "effects": [{ "type": "grant_action", "name": "Poison Breath" }] },
+        { "id": "damage-resistance-green", "name": "Damage Resistance", "description": "You have resistance to poison damage.", "effects": [{ "type": "resistance", "damageType": "poison" }] }
+    ]
+}

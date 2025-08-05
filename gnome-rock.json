@@ -1,0 +1,18 @@
+
+{
+    "id": "gnome-rock",
+    "name": "Rock Gnome",
+    "source": "Player's Handbook p.37",
+    "iconUrl": "https://picsum.photos/seed/gnome-rock/64/64",
+    "creatureType": "Humanoid",
+    "description": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes.",
+    "traits": [
+        { "id": "gnome-base-asi", "name": "Ability Score Increase", "description": "Your Intelligence score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["INTELLIGENCE"], "count": 1, "value": 2 }] },
+        { "id": "gnome-speed", "name": "Speed", "description": "Your base walking speed is 25 feet.", "effects": [{ "type": "set_base_speed", "value": 25 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "gnome-cunning", "name": "Gnome Cunning", "description": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.", "effects": [{ "type": "advantage", "on": "saving_throw", "ability": "INTELLIGENCE", "condition": "against magic" }, { "type": "advantage", "on": "saving_throw", "ability": "WISDOM", "condition": "against magic" }, { "type": "advantage", "on": "saving_throw", "ability": "CHARISMA", "condition": "against magic" }] },
+        { "id": "rock-gnome-asi", "name": "Ability Score Increase", "description": "Your Constitution score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 1 }] },
+        { "id": "artificers-lore", "name": "Artificer's Lore", "description": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.", "effects": [{ "type": "special_ability", "name": "Artificer's Lore" }] },
+        { "id": "tinker", "name": "Tinker", "description": "You have proficiency with artisan’s tools (tinker’s tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp).", "effects": [{ "type": "proficiency", "proficiencyType": "tool", "options": ["tinker's-tools"], "count": 1 }, { "type": "grant_action", "name": "Tinker" }] }
+    ]
+}

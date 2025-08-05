@@ -1,0 +1,17 @@
+
+{
+    "id": "half-orc",
+    "name": "Half-Orc",
+    "source": "Player's Handbook p.40",
+    "iconUrl": "https://picsum.photos/seed/half-orc/64/64",
+    "creatureType": "Humanoid",
+    "description": "Half-orcs’ grayish pigmentation, sloping foreheads, jutting jaws, prominent teeth, and towering builds make their orcish heritage plain for all to see.",
+    "traits": [
+        { "id": "half-orc-asi", "name": "Ability Score Increase", "description": "Your Strength score increases by 2, and your Constitution score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 2 }, { "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 1 }] },
+        { "id": "half-orc-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "menacing", "name": "Menacing", "description": "You gain proficiency in the Intimidation skill.", "effects": [{ "type": "proficiency", "proficiencyType": "skill", "options": ["intimidation"], "count": 1 }] },
+        { "id": "relentless-endurance", "name": "Relentless Endurance", "description": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.", "effects": [{ "type": "special_ability", "name": "Relentless Endurance" }] },
+        { "id": "savage-attacks", "name": "Savage Attacks", "description": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit.", "effects": [{ "type": "bonus_crit_damage", "dice": 1 }] }
+    ]
+}

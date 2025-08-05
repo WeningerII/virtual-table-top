@@ -1,0 +1,25 @@
+
+{
+    "id": "leonin",
+    "name": "Leonin",
+    "source": "Mythic Odysseys of Theros",
+    "iconUrl": "https://picsum.photos/seed/leonin/64/64",
+    "creatureType": "Humanoid",
+    "description": "Leonin are proud, lion-like humanoids who live in prides and value strength and self-reliance.",
+    "traits": [
+        {
+            "id": "leonin-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Constitution score increases by 2, and your Strength score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "leonin-speed", "name": "Speed", "description": "Your base walking speed is 35 feet.", "effects": [{ "type": "set_base_speed", "value": 35 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "claws", "name": "Claws", "description": "Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier.", "effects": [{ "type": "natural_weapon", "name": "Claws", "damageDice": "1d4", "damageType": "slashing" }] },
+        { "id": "daunting-roar", "name": "Daunting Roar", "description": "As a bonus action, you can let out a menacing roar. Creatures of your choice within 10 feet of you that can hear you must succeed on a Wisdom saving throw (DC 8 + proficiency bonus + Constitution modifier) or become frightened of you until the end of your next turn. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.", "effects": [{ "type": "grant_action", "name": "Daunting Roar" }] },
+        { "id": "hunters-instincts", "name": "Hunter's Instincts", "description": "You have proficiency in one of the following skills of your choice: Athletics, Intimidation, Perception, or Survival.", "choiceOptions": [{ "id": "leonin-skill-choice", "label": "Choose a skill", "type": "skill", "count": 1, "from": ["athletics", "intimidation", "perception", "survival"] }] }
+    ]
+}

@@ -1,0 +1,17 @@
+
+{
+    "id": "tiefling-zariel",
+    "name": "Zariel Tiefling",
+    "source": "Mordenkainen's Tome of Foes",
+    "iconUrl": "https://picsum.photos/seed/tiefling-zariel/64/64",
+    "creatureType": "Humanoid",
+    "description": "Tieflings sworn to Zariel, the archduchess of Avernus, are forged in the fires of war and are known for their martial prowess.",
+    "traits": [
+        { "id": "tiefling-base-asi", "name": "Ability Score Increase", "description": "Your Charisma score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 2 }] },
+        { "id": "tiefling-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "hellish-resistance", "name": "Hellish Resistance", "description": "You have resistance to fire damage.", "effects": [{ "type": "resistance", "damageType": "fire" }] },
+        { "id": "zariel-asi", "name": "Ability Score Increase", "description": "Your Strength score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 1 }] },
+        { "id": "legacy-of-avernus", "name": "Legacy of Avernus", "description": "You know the Thaumaturgy cantrip. At 3rd level, you can cast Searing Smite once as a 2nd-level spell. At 5th level, you can cast Branding Smite once. You must finish a long rest to cast these spells again with this trait.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [{ "id": "thaumaturgy", "frequency": "at-will" }, { "id": "searing-smite", "levelRequirement": 3, "frequency": "1/long_rest" }, { "id": "branding-smite", "levelRequirement": 5, "frequency": "1/long_rest" }] }] }
+    ]
+}

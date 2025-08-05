@@ -1,0 +1,19 @@
+
+{
+    "id": "aasimar-scourge",
+    "name": "Scourge Aasimar",
+    "source": "Volo's Guide to Monsters",
+    "iconUrl": "https://picsum.photos/seed/aasimar-scourge/64/64",
+    "creatureType": "Humanoid",
+    "description": "Scourge aasimar are imbued with a divine energy that blazes intensely within them. It feeds a powerful desire to destroy evil — a desire that is, at its best, a heroic public service and at its worst, an obsession.",
+    "traits": [
+        { "id": "aasimar-base-asi", "name": "Ability Score Increase", "description": "Your Charisma score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 2 }] },
+        { "id": "aasimar-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "celestial-resistance", "name": "Celestial Resistance", "description": "You have resistance to necrotic damage and radiant damage.", "effects": [{ "type": "resistance", "damageType": "necrotic" }, { "type": "resistance", "damageType": "radiant" }] },
+        { "id": "healing-hands", "name": "Healing Hands", "description": "As an action, you can touch a creature and cause it to regain a number of hit points equal to your level. Once you use this trait, you can’t use it again until you finish a long rest.", "effects": [{ "type": "grant_action", "name": "Healing Hands" }] },
+        { "id": "light-bearer", "name": "Light Bearer", "description": "You know the Light cantrip. Charisma is your spellcasting ability for it.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [{ "id": "light", "frequency": "at-will" }] }] },
+        { "id": "scourge-aasimar-asi", "name": "Ability Score Increase", "description": "Your Constitution score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 1 }] },
+        { "id": "radiant-consumption", "name": "Radiant Consumption", "description": "Starting at 3rd level, you can use your action to unleash divine energy, causing a searing light to radiate from you. For 1 minute, you shed bright light in a 10-foot radius, and at the end of each of your turns, you and each creature within 10 feet of you take radiant damage equal to half your level (rounded up). In addition, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage equals your level. Once you use this trait, you can’t use it again until you finish a long rest.", "effects": [{ "type": "grant_action", "name": "Radiant Consumption" }] }
+    ]
+}

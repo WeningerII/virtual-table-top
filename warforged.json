@@ -1,0 +1,17 @@
+
+{
+    "id": "warforged",
+    "name": "Warforged",
+    "source": "Eberron: Rising from the Last War",
+    "iconUrl": "https://picsum.photos/seed/warforged/64/64",
+    "creatureType": "Construct",
+    "description": "Warforged are sentient constructs built for war. They are made from a mixture of organic and inorganic materials and possess a unique combination of biological and mechanical traits.",
+    "traits": [
+        { "id": "warforged-asi", "name": "Ability Score Increase", "description": "Your Constitution score increases by 2, and one other ability score of your choice increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 }], "choiceOptions": [{ "id": "warforged-asi-choice", "label": "Choose one other ability score to increase by 1", "type": "ability", "count": 1, "from": ["STRENGTH", "DEXTERITY", "INTELLIGENCE", "WISDOM", "CHARISMA"] }] },
+        { "id": "warforged-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "constructed-resilience", "name": "Constructed Resilience", "description": "You were created to have remarkable fortitude. You have advantage on saving throws against being poisoned, and you have resistance to poison damage. You don’t need to eat, drink, or breathe. You are immune to disease. You don’t need to sleep and magic can’t put you to sleep.", "effects": [{ "type": "advantage", "on": "saving_throw", "condition": "against being poisoned" }, { "type": "resistance", "damageType": "poison" }, { "type": "immunity", "to": "disease" }, { "type": "immunity", "to": "magical_sleep" }] },
+        { "id": "sentrys-rest", "name": "Sentry's Rest", "description": "When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn’t render you unconscious, and you can see and hear as normal.", "effects": [{ "type": "special_ability", "name": "Sentry's Rest" }] },
+        { "id": "integrated-protection", "name": "Integrated Protection", "description": "Your body has built-in defensive layers, which can be enhanced with armor. You gain a +1 bonus to Armor Class. You can don only armor with which you have proficiency. To don armor, you must incorporate it into your body over the course of 1 hour, during which you must remain in contact with the armor. To doff armor, you must spend 1 hour removing it.", "effects": [{ "type": "bonus", "to": "ac", "value": 1 }] },
+        { "id": "specialized-design", "name": "Specialized Design", "description": "You gain one skill proficiency and one tool proficiency of your choice.", "choiceOptions": [{ "id": "warforged-skill-choice", "label": "Choose one skill", "type": "skill", "count": 1, "from": "any" }, { "id": "warforged-tool-choice", "label": "Choose one tool", "type": "tool", "count": 1, "from": "any" }] }
+    ]
+}

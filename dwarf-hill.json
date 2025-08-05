@@ -1,0 +1,20 @@
+
+{
+    "id": "dwarf-hill",
+    "name": "Hill Dwarf",
+    "source": "Player's Handbook p.20",
+    "iconUrl": "https://picsum.photos/seed/dwarf-hill/64/64",
+    "creatureType": "Humanoid",
+    "description": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold of the dwarves’ home in the Forgotten Realms is a powerful influence, making them slightly more attuned to the world around them and giving them a sturdiness that is remarkable even for a dwarf.",
+    "traits": [
+        { "id": "dwarf-base-asi", "name": "Ability Score Increase", "description": "Your Constitution score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 }] },
+        { "id": "dwarf-speed", "name": "Speed", "description": "Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.", "effects": [ { "type": "set_base_speed", "value": 25 }, { "type": "special_ability", "name": "Unyielding Speed"} ] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "dwarven-resilience", "name": "Dwarven Resilience", "description": "You have advantage on saving throws against poison, and you have resistance against poison damage.", "effects": [ { "type": "advantage", "on": "saving_throw", "condition": "against poison" }, { "type": "resistance", "damageType": "poison" } ] },
+        { "id": "dwarven-combat-training", "name": "Dwarven Combat Training", "description": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.", "effects": [{ "type": "proficiency", "proficiencyType": "weapon", "options": ["battleaxe", "handaxe", "light hammer", "warhammer"], "count": 4 }] },
+        { "id": "tool-proficiency", "name": "Tool Proficiency", "description": "You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.", "effects": [{ "type": "proficiency", "proficiencyType": "tool", "options": ["smith's tools", "brewer's supplies", "mason's tools"], "count": 1 }] },
+        { "id": "stonecunning", "name": "Stonecunning", "description": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check.", "effects": [{ "type": "special_ability", "name": "Stonecunning" }] },
+        { "id": "hill-dwarf-asi", "name": "Ability Score Increase", "description": "Your Wisdom score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 1 }] },
+        { "id": "dwarven-toughness", "name": "Dwarven Toughness", "description": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.", "effects": [{ "type": "bonus", "to": "hp_per_level", "value": 1}]}
+    ]
+}

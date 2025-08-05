@@ -1,0 +1,17 @@
+
+{
+    "id": "tiefling-fierna",
+    "name": "Fierna Tiefling",
+    "source": "Mordenkainen's Tome of Foes",
+    "iconUrl": "https://picsum.photos/seed/tiefling-fierna/64/64",
+    "creatureType": "Humanoid",
+    "description": "Descended from Fierna, a powerful archdevil who rules Phlegethos, the fourth layer of the Nine Hells, these tieflings are known for their silver tongues.",
+    "traits": [
+        { "id": "tiefling-base-asi", "name": "Ability Score Increase", "description": "Your Charisma score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 2 }] },
+        { "id": "tiefling-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "hellish-resistance", "name": "Hellish Resistance", "description": "You have resistance to fire damage.", "effects": [{ "type": "resistance", "damageType": "fire" }] },
+        { "id": "fierna-asi", "name": "Ability Score Increase", "description": "Your Wisdom score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 1 }] },
+        { "id": "legacy-of-phlegethos", "name": "Legacy of Phlegethos", "description": "You know the Friends cantrip. At 3rd level, you can cast Charm Person once as a 2nd-level spell. At 5th level, you can cast Suggestion once. You must finish a long rest to cast these spells again with this trait.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [{ "id": "friends", "frequency": "at-will" }, { "id": "charm-person", "levelRequirement": 3, "frequency": "1/long_rest" }, { "id": "suggestion", "levelRequirement": 5, "frequency": "1/long_rest" }] }] }
+    ]
+}

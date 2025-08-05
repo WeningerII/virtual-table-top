@@ -1,0 +1,26 @@
+
+{
+    "id": "changeling",
+    "name": "Changeling",
+    "source": "Eberron: Rising from the Last War",
+    "iconUrl": "https://picsum.photos/seed/changeling/64/64",
+    "creatureType": "Humanoid",
+    "description": "Changelings are subtle shapeshifters capable of disguising their appearance. They are often found in cities, where they can blend in and assume any role they desire.",
+    "traits": [
+        {
+            "id": "changeling-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Charisma score increases by 2, and one other ability score of your choice increases by 1.",
+            "effects": [{ "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 2 }],
+            "choiceOptions": [{ "id": "changeling-asi-choice", "label": "Choose one other ability score to increase by 1", "type": "ability", "count": 1, "from": ["STRENGTH", "DEXTERITY", "CONSTITUTION", "INTELLIGENCE", "WISDOM"] }]
+        },
+        { "id": "changeling-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "changeling-shapechanger", "name": "Shapechanger", "description": "As an action, you can change your appearance and your voice. You determine the specifics of the changes, including your coloration, hair length, and sex. You can also adjust your height and weight, but not so much that your size changes. You can make yourself appear as a member of another race, though none of your game statistics change. You can’t duplicate the appearance of a creature you’ve never seen, and you must adopt a form that has the same basic arrangement of limbs that you have.", "effects": [{ "type": "grant_action", "name": "Shapechanger" }] },
+        {
+            "id": "changeling-instincts",
+            "name": "Changeling Instincts",
+            "description": "You gain proficiency in two of the following skills of your choice: Deception, Insight, Intimidation, and Persuasion.",
+            "choiceOptions": [{ "id": "changeling-skill-choice", "label": "Choose two skills", "type": "skill", "count": 2, "from": ["deception", "insight", "intimidation", "persuasion"] }]
+        }
+    ]
+}

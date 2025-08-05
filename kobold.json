@@ -1,0 +1,22 @@
+
+{
+    "id": "kobold",
+    "name": "Kobold",
+    "source": "Volo's Guide to Monsters",
+    "iconUrl": "https://picsum.photos/seed/kobold/64/64",
+    "creatureType": "Humanoid",
+    "description": "Kobolds are craven reptilian humanoids that worship evil dragons as demigods and serve them as minions and sycophants.",
+    "traits": [
+        {
+            "id": "kobold-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Dexterity score increases by 2.",
+            "effects": [{ "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 2 }]
+        },
+        { "id": "kobold-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "grovel-cower-and-beg", "name": "Grovel, Cower, and Beg", "description": "As an action on your turn, you can cower pathetically to distract nearby foes. Until the end of your next turn, your allies gain advantage on attack rolls against enemies within 10 feet of you that can see you. Once you use this trait, you can’t use it again until you finish a short or long rest.", "effects": [{ "type": "grant_action", "name": "Grovel, Cower, and Beg" }] },
+        { "id": "pack-tactics", "name": "Pack Tactics", "description": "You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of the creature and the ally isn’t incapacitated.", "effects": [{ "type": "advantage", "on": "attack_roll", "condition": "if an ally is within 5 feet of the target" }] },
+        { "id": "sunlight-sensitivity", "name": "Sunlight Sensitivity", "description": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.", "effects": [{ "type": "special_ability", "name": "Sunlight Sensitivity" }] }
+    ]
+}

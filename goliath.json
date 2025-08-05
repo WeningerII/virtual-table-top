@@ -1,0 +1,17 @@
+
+{
+    "id": "goliath",
+    "name": "Goliath",
+    "source": "Volo's Guide to Monsters p.108",
+    "iconUrl": "https://picsum.photos/seed/goliath/64/64",
+    "creatureType": "Humanoid",
+    "description": "Strong and reclusive, goliaths live in scattered tribes high in the mountains. They are driven by a fierce love of competition.",
+    "traits": [
+        { "id": "goliath-asi", "name": "Ability Score Increase", "description": "Your Strength score increases by 2, and your Constitution score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 2 }, { "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 1 }] },
+        { "id": "goliath-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "natural-athlete", "name": "Natural Athlete", "description": "You have proficiency in the Athletics skill.", "effects": [{ "type": "proficiency", "proficiencyType": "skill", "options": ["athletics"], "count": 1 }] },
+        { "id": "stones-endurance", "name": "Stone's Endurance", "description": "You can focus yourself to occasionally shrug off injury. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled, and reduce the damage by that total. After you use this trait, you can’t use it again until you finish a short or long rest.", "effects": [{ "type": "special_ability", "name": "Stone's Endurance" }] },
+        { "id": "powerful-build", "name": "Powerful Build", "description": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.", "effects": [{ "type": "special_ability", "name": "Powerful Build" }] },
+        { "id": "mountain-born", "name": "Mountain Born", "description": "You’re acclimated to high altitude, including elevations above 20,000 feet. You’re also naturally adapted to cold climates.", "effects": [{ "type": "special_ability", "name": "Mountain Born" }] }
+    ]
+}

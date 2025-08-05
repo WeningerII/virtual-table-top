@@ -1,0 +1,24 @@
+
+{
+    "id": "hobgoblin",
+    "name": "Hobgoblin",
+    "source": "Volo's Guide to Monsters",
+    "iconUrl": "https://picsum.photos/seed/hobgoblin/64/64",
+    "creatureType": "Humanoid",
+    "description": "Hobgoblins are militaristic and fecund, a combination that makes them a threat to all who stand in their way. They are larger, stronger, and more disciplined than their goblin cousins.",
+    "traits": [
+        {
+            "id": "hobgoblin-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Constitution score increases by 2, and your Intelligence score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["INTELLIGENCE"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "hobgoblin-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "martial-training", "name": "Martial Training", "description": "You are proficient with two martial weapons of your choice and with light armor.", "effects": [{ "type": "proficiency", "proficiencyType": "armor", "options": ["light armor"], "count": 1 }], "choiceOptions": [{ "id": "hobgoblin-weapon-choice", "label": "Choose two martial weapons", "type": "weapon", "count": 2, "from": "any_martial" }] },
+        { "id": "saving-face", "name": "Saving Face", "description": "If you miss with an attack roll or fail an ability check or a saving throw, you can gain a bonus to the roll equal to the number of allies you can see within 30 feet of you (maximum bonus of +5). Once you use this trait, you can’t use it again until you finish a short or long rest.", "effects": [{ "type": "special_ability", "name": "Saving Face" }] }
+    ]
+}

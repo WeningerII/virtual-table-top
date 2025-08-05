@@ -1,0 +1,14 @@
+
+{
+    "id": "shifter",
+    "name": "Shifter",
+    "source": "Eberron: Rising from the Last War",
+    "iconUrl": "https://picsum.photos/seed/shifter/64/64",
+    "creatureType": "Humanoid",
+    "description": "Shifters are humanoids with a bestial aspect. They can't fully transform, but they can temporarily enhance their animalistic features—a state they call shifting.",
+    "traits": [
+        { "id": "shifter-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "shifting", "name": "Shifting", "description": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute. While shifted, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1). You also gain additional benefits that depend on your shifter subrace. Once you shift, you can’t do so again until you finish a short or long rest.", "effects": [{ "type": "grant_action", "name": "Shifting" }] }
+    ]
+}

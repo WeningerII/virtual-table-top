@@ -1,0 +1,26 @@
+
+{
+    "id": "triton",
+    "name": "Triton",
+    "source": "Volo's Guide to Monsters",
+    "iconUrl": "https://picsum.photos/seed/triton/64/64",
+    "creatureType": "Humanoid",
+    "description": "Tritons are an amphibious humanoid race, native to the Elemental Plane of Water. They are known for their pride and their sense of duty to protect the seas.",
+    "traits": [
+        {
+            "id": "triton-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Strength, Constitution, and Charisma scores each increase by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 1 },
+                { "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 1 },
+                { "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "triton-speed", "name": "Speed", "description": "Your base walking speed is 30 feet, and you have a swimming speed of 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }, { "type": "grant_speed", "speedType": "swimming", "value": 30 }] },
+        { "id": "amphibious", "name": "Amphibious", "description": "You can breathe air and water.", "effects": [{ "type": "special_ability", "name": "Amphibious" }] },
+        { "id": "control-air-and-water", "name": "Control Air and Water", "description": "You know the Fog Cloud spell. At 3rd level, you can cast Gust of Wind. At 5th level, you can cast Wall of Water. You can cast each spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [{ "id": "fog-cloud", "frequency": "1/long_rest" }, { "id": "gust-of-wind", "levelRequirement": 3, "frequency": "1/long_rest" }, { "id": "wall-of-water", "levelRequirement": 5, "frequency": "1/long_rest" }] }] },
+        { "id": "emissary-of-the-sea", "name": "Emissary of the Sea", "description": "You can communicate simple ideas with beasts that have an innate swimming speed.", "effects": [{ "type": "special_ability", "name": "Emissary of the Sea" }] },
+        { "id": "guardians-of-the-depths", "name": "Guardians of the Depths", "description": "You have resistance to cold damage.", "effects": [{ "type": "resistance", "damageType": "cold" }] }
+    ]
+}

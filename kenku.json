@@ -1,0 +1,24 @@
+
+{
+    "id": "kenku",
+    "name": "Kenku",
+    "source": "Volo's Guide to Monsters",
+    "iconUrl": "https://picsum.photos/seed/kenku/64/64",
+    "creatureType": "Humanoid",
+    "description": "Haunted by an ancient crime, the flightless kenku wander the world as servants and scoundrels, cursed to only speak through mimicry.",
+    "traits": [
+        {
+            "id": "kenku-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Dexterity score increases by 2, and your Wisdom score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "kenku-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "expert-forgery", "name": "Expert Forgery", "description": "You can duplicate other creatures' handwriting and craftwork. You have advantage on all checks made to produce forgeries or duplicates of existing objects.", "effects": [{ "type": "advantage", "on": "check", "condition": "on checks to produce forgeries or duplicates" }] },
+        { "id": "kenku-training", "name": "Kenku Training", "description": "You are proficient in your choice of two of the following skills: Acrobatics, Deception, Stealth, and Sleight of Hand.", "choiceOptions": [{ "id": "kenku-skill-choice", "label": "Choose two skills", "type": "skill", "count": 2, "from": ["acrobatics", "deception", "stealth", "sleight-of-hand"] }] },
+        { "id": "mimicry", "name": "Mimicry", "description": "You can mimic sounds you have heard, including voices. A creature that hears the sounds can tell they are imitations with a successful DC 8 + your proficiency bonus + your Charisma modifier Wisdom (Insight) check.", "effects": [{ "type": "special_ability", "name": "Mimicry" }] }
+    ]
+}

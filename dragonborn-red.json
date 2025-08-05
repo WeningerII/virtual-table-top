@@ -1,0 +1,16 @@
+
+{
+    "id": "dragonborn-red",
+    "name": "Red Dragonborn",
+    "source": "Player's Handbook",
+    "iconUrl": "https://picsum.photos/seed/dragonborn-red/64/64",
+    "creatureType": "Humanoid",
+    "description": "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail. Red dragonborn are proud and powerful, with a connection to fire.",
+    "traits": [
+        { "id": "dragonborn-base-asi", "name": "Ability Score Increase", "description": "Your Strength score increases by 2, and your Charisma score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 2 }, { "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 1 }] },
+        { "id": "dragonborn-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "draconic-ancestry-red", "name": "Draconic Ancestry", "description": "You have a red dragon ancestor, granting you a fiery breath weapon and resistance to fire." },
+        { "id": "breath-weapon-red", "name": "Breath Weapon", "description": "You can use your action to exhale destructive energy. It deals fire damage in a 15-foot cone. Each creature in the area must make a Dexterity saving throw (DC 8 + CON mod + prof bonus), taking 2d6 damage on a failed save, and half on a success. This damage increases at higher levels. You can't use this again until you finish a short or long rest.", "effects": [{ "type": "grant_action", "name": "Fire Breath" }] },
+        { "id": "damage-resistance-red", "name": "Damage Resistance", "description": "You have resistance to fire damage.", "effects": [{ "type": "resistance", "damageType": "fire" }] }
+    ]
+}

@@ -1,0 +1,24 @@
+
+{
+    "id": "orc",
+    "name": "Orc",
+    "source": "Volo's Guide to Monsters",
+    "iconUrl": "https://picsum.photos/seed/orc/64/64",
+    "creatureType": "Humanoid",
+    "description": "Orcs are known for their prodigious strength and aggression. They live a harsh, warlike existence, driven by the need to prove their might.",
+    "traits": [
+        {
+            "id": "orc-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Strength score increases by 2, and your Constitution score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "orc-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "aggressive", "name": "Aggressive", "description": "As a bonus action on your turn, you can move up to your speed toward an enemy of your choice that you can see or hear. You must end this move closer to the enemy than you started.", "effects": [{ "type": "grant_action", "name": "Aggressive" }] },
+        { "id": "powerful-build", "name": "Powerful Build", "description": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.", "effects": [{ "type": "special_ability", "name": "Powerful Build" }] }
+    ]
+}

@@ -1,0 +1,19 @@
+
+{
+    "id": "aasimar-protector",
+    "name": "Protector Aasimar",
+    "source": "Volo's Guide to Monsters",
+    "iconUrl": "https://picsum.photos/seed/aasimar-protector/64/64",
+    "creatureType": "Humanoid",
+    "description": "Protector aasimar are charged by the powers of good to guard the weak, to strike at evil wherever it arises, and to stand vigilant against the darkness.",
+    "traits": [
+        { "id": "aasimar-base-asi", "name": "Ability Score Increase", "description": "Your Charisma score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 2 }] },
+        { "id": "aasimar-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "celestial-resistance", "name": "Celestial Resistance", "description": "You have resistance to necrotic damage and radiant damage.", "effects": [{ "type": "resistance", "damageType": "necrotic" }, { "type": "resistance", "damageType": "radiant" }] },
+        { "id": "healing-hands", "name": "Healing Hands", "description": "As an action, you can touch a creature and cause it to regain a number of hit points equal to your level. Once you use this trait, you can’t use it again until you finish a long rest.", "effects": [{ "type": "grant_action", "name": "Healing Hands" }] },
+        { "id": "light-bearer", "name": "Light Bearer", "description": "You know the Light cantrip. Charisma is your spellcasting ability for it.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [{ "id": "light", "frequency": "at-will" }] }] },
+        { "id": "protector-aasimar-asi", "name": "Ability Score Increase", "description": "Your Wisdom score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 1 }] },
+        { "id": "radiant-soul", "name": "Radiant Soul", "description": "Starting at 3rd level, you can use your action to unleash the divine energy within yourself, causing your eyes to glimmer and two luminous, incorporeal wings to sprout from your back. This transformation lasts for 1 minute. During it, you have a flying speed of 30 feet, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra radiant damage equals your level. Once you use this trait, you can’t use it again until you finish a long rest.", "effects": [{ "type": "grant_action", "name": "Radiant Soul" }] }
+    ]
+}

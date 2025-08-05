@@ -1,0 +1,41 @@
+
+{
+    "id": "human-variant",
+    "name": "Variant Human",
+    "source": "Player's Handbook p.31",
+    "iconUrl": "https://picsum.photos/seed/human-variant/64/64",
+    "creatureType": "Humanoid",
+    "description": "Some humans are born with a spark of specialization that sets them apart. They trade the broad adaptability of their kin for a focused talent developed early in life. This path allows for greater customization, representing an individual who has trained in a specific skill and learned a unique technique or area of expertise (a feat) from the very start of their adventuring career.",
+    "traits": [
+        { 
+            "id": "variant-human-asi", 
+            "name": "Ability Score Increase", 
+            "description": "Two different ability scores of your choice increase by 1.",
+            "choiceOptions": [{
+                "id": "variant-human-asi-choice",
+                "label": "Choose two ability scores to increase by 1",
+                "type": "ability",
+                "count": 2,
+                "from": "any"
+            }]
+        },
+        {
+            "id": "variant-human-speed",
+            "name": "Speed",
+            "description": "Your base walking speed is 30 feet.",
+            "effects": [{ "type": "set_base_speed", "value": 30 }]
+        },
+        {
+            "id": "variant-human-skill",
+            "name": "Skills",
+            "description": "You gain proficiency in one skill of your choice.",
+            "effects": [{ "type": "proficiency", "proficiencyType": "skill", "count": 1, "options": ["any"] }]
+        },
+        {
+            "id": "variant-human-feat",
+            "name": "Feat",
+            "description": "You gain one feat of your choice.",
+            "effects": [{ "type": "special_ability", "name": "Bonus Feat"}]
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+
+{
+    "id": "human",
+    "name": "Human",
+    "source": "Player's Handbook p.29",
+    "iconUrl": "https://picsum.photos/seed/human/64/64",
+    "creatureType": "Humanoid",
+    "description": "Humans are the most adaptable, ambitious, and diverse people among the common races. Their tastes, morals, and customs are wide-ranging, and they are innovators, achievers, and pioneers of the world. While other races are often defined by a singular trait, humans are defined by their boundless potential and their drive to make their mark on a world they will only inhabit for a short time.",
+    "traits": [
+        { 
+            "id": "human-ability-increase", 
+            "name": "Ability Score Increase", 
+            "description": "Your ability scores each increase by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 1 },
+                { "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 1 },
+                { "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 1 },
+                { "type": "ability_score_increase", "abilities": ["INTELLIGENCE"], "count": 1, "value": 1 },
+                { "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 1 },
+                { "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 1 }
+            ]
+        },
+        {
+            "id": "human-speed",
+            "name": "Speed",
+            "description": "Your base walking speed is 30 feet.",
+            "effects": [{ "type": "set_base_speed", "value": 30 }]
+        },
+        { 
+            "id": "human-extra-language", 
+            "name": "Extra Language", 
+            "description": "You can speak, read, and write one extra language of your choice.",
+            "effects": [{ "type": "proficiency", "proficiencyType": "language", "options": ["any"], "count": 1 }]
+        }
+    ]
+}

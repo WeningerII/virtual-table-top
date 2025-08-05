@@ -1,0 +1,16 @@
+
+{
+    "id": "simic-hybrid",
+    "name": "Simic Hybrid",
+    "source": "Guildmasters' Guide to Ravnica",
+    "iconUrl": "https://picsum.photos/seed/simic-hybrid/64/64",
+    "creatureType": "Humanoid",
+    "description": "The Simic Combine uses magic to fuse different life forms together. As a Simic hybrid, you are a product of this magical science, enhanced with characteristics from animals.",
+    "traits": [
+        { "id": "simic-hybrid-asi", "name": "Ability Score Increase", "description": "Your Constitution score increases by 2, and one other ability score of your choice increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 }], "choiceOptions": [{ "id": "simic-hybrid-asi-choice", "label": "Choose one other ability score to increase by 1", "type": "ability", "count": 1, "from": ["STRENGTH", "DEXTERITY", "INTELLIGENCE", "WISDOM", "CHARISMA"] }] },
+        { "id": "simic-hybrid-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "animal-enhancement-1", "name": "Animal Enhancement (Level 1)", "description": "Your body has been altered to incorporate certain animal characteristics. You choose one of the following enhancements: Manta Glide, Nimble Climber, or Underwater Adaptation.", "choiceOptions": [{ "id": "simic-level-1-choice", "label": "Choose a level 1 enhancement", "type": "feat", "count": 1, "from": ["manta-glide", "nimble-climber", "underwater-adaptation"] }] },
+        { "id": "animal-enhancement-5", "name": "Animal Enhancement (Level 5)", "description": "At 5th level, you choose a second animal enhancement: Grappling Appendages, Carapace, or Acid Spit.", "choiceOptions": [{ "id": "simic-level-5-choice", "label": "Choose a level 5 enhancement", "type": "feat", "count": 1, "from": ["grappling-appendages", "carapace", "acid-spit"] }] }
+    ]
+}

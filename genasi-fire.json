@@ -1,0 +1,17 @@
+
+{
+    "id": "genasi-fire",
+    "name": "Fire Genasi",
+    "source": "Elemental Evil Player's Companion",
+    "iconUrl": "https://picsum.photos/seed/genasi-fire/64/64",
+    "creatureType": "Humanoid",
+    "description": "Fire genasi are descended from efreet, the genies of the Elemental Plane of Fire. They are often passionate and quick-tempered, with a connection to flame.",
+    "traits": [
+        { "id": "genasi-base-asi", "name": "Ability Score Increase", "description": "Your Constitution score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 }] },
+        { "id": "fire-genasi-asi", "name": "Ability Score Increase", "description": "Your Intelligence score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["INTELLIGENCE"], "count": 1, "value": 1 }] },
+        { "id": "genasi-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "fire-resistance", "name": "Fire Resistance", "description": "You have resistance to fire damage.", "effects": [{ "type": "resistance", "damageType": "fire" }] },
+        { "id": "reach-to-the-blaze", "name": "Reach to the Blaze", "description": "You know the Produce Flame cantrip. At 3rd level, you can cast Burning Hands once as a 1st-level spell. You regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells.", "effects": [{ "type": "innate_spellcasting", "ability": "CONSTITUTION", "spells": [{ "id": "produce-flame", "frequency": "at-will" }, { "id": "burning-hands", "levelRequirement": 3, "frequency": "1/long_rest" }] }] }
+    ]
+}

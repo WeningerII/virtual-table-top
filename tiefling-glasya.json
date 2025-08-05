@@ -1,0 +1,17 @@
+
+{
+    "id": "tiefling-glasya",
+    "name": "Glasya Tiefling",
+    "source": "Mordenkainen's Tome of Foes",
+    "iconUrl": "https://picsum.photos/seed/tiefling-glasya/64/64",
+    "creatureType": "Humanoid",
+    "description": "Glasya, the daughter of Asmodeus and the lord of Malbolge, grants her tiefling offspring a subtle, beguiling nature.",
+    "traits": [
+        { "id": "tiefling-base-asi", "name": "Ability Score Increase", "description": "Your Charisma score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 2 }] },
+        { "id": "tiefling-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "hellish-resistance", "name": "Hellish Resistance", "description": "You have resistance to fire damage.", "effects": [{ "type": "resistance", "damageType": "fire" }] },
+        { "id": "glasya-asi", "name": "Ability Score Increase", "description": "Your Dexterity score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 1 }] },
+        { "id": "legacy-of-malbolge", "name": "Legacy of Malbolge", "description": "You know the Minor Illusion cantrip. At 3rd level, you can cast Disguise Self once. At 5th level, you can cast Invisibility once. You must finish a long rest to cast these spells again with this trait.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [{ "id": "minor-illusion", "frequency": "at-will" }, { "id": "disguise-self", "levelRequirement": 3, "frequency": "1/long_rest" }, { "id": "invisibility", "levelRequirement": 5, "frequency": "1/long_rest" }] }] }
+    ]
+}

@@ -1,0 +1,18 @@
+
+{
+    "id": "genasi-water",
+    "name": "Water Genasi",
+    "source": "Elemental Evil Player's Companion",
+    "iconUrl": "https://picsum.photos/seed/genasi-water/64/64",
+    "creatureType": "Humanoid",
+    "description": "Water genasi are descended from marids, the genies of the Elemental Plane of Water. They are often patient and independent, with a connection to the sea.",
+    "traits": [
+        { "id": "genasi-base-asi", "name": "Ability Score Increase", "description": "Your Constitution score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 2 }] },
+        { "id": "water-genasi-asi", "name": "Ability Score Increase", "description": "Your Wisdom score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["WISDOM"], "count": 1, "value": 1 }] },
+        { "id": "genasi-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "acid-resistance", "name": "Acid Resistance", "description": "You have resistance to acid damage.", "effects": [{ "type": "resistance", "damageType": "acid" }] },
+        { "id": "amphibious", "name": "Amphibious", "description": "You can breathe air and water.", "effects": [{ "type": "special_ability", "name": "Amphibious" }] },
+        { "id": "swim", "name": "Swim", "description": "You have a swimming speed of 30 feet.", "effects": [{ "type": "grant_speed", "speedType": "swimming", "value": 30 }] },
+        { "id": "call-to-the-wave", "name": "Call to the Wave", "description": "You know the Shape Water cantrip. At 3rd level, you can cast Create or Destroy Water once as a 2nd-level spell. You regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for these spells.", "effects": [{ "type": "innate_spellcasting", "ability": "CONSTITUTION", "spells": [{ "id": "shape-water", "frequency": "at-will" }, { "id": "create-or-destroy-water", "levelRequirement": 3, "frequency": "1/long_rest" }] }] }
+    ]
+}

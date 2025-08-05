@@ -1,0 +1,21 @@
+
+{
+    "id": "elf-high",
+    "name": "High Elf",
+    "source": "Player's Handbook p.23",
+    "iconUrl": "https://picsum.photos/seed/elf-high/64/64",
+    "creatureType": "Humanoid",
+    "description": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. They are the most common and friendly of their kind, often encountered in human lands and valuing artistry and academic pursuits. Their training in both sword and spell is a remnant of ancient days when all elves were expected to defend their homes.",
+    "traits": [
+        { "id": "elf-base-asi", "name": "Ability Score Increase", "description": "Your Dexterity score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 2 }] },
+        { "id": "elf-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "darkvision", "name": "Darkvision", "description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.", "effects": [{ "type": "special_ability", "name": "Darkvision (60 ft.)" }] },
+        { "id": "fey-ancestry", "name": "Fey Ancestry", "description": "You have advantage on saving throws against being charmed, and magic can’t put you to sleep.", "effects": [ { "type": "advantage", "on": "saving_throw", "condition": "against being charmed" }, { "type": "immunity", "to": "magical_sleep" } ] },
+        { "id": "keen-senses", "name": "Keen Senses", "description": "You have proficiency in the Perception skill.", "effects": [ { "type": "proficiency", "proficiencyType": "skill", "options": ["perception"], "count": 1 } ] },
+        { "id": "trance", "name": "Trance", "description": "You don’t need to sleep. Instead, you meditate deeply for 4 hours a day.", "effects": [{ "type": "special_ability", "name": "Trance" }] },
+        { "id": "high-elf-asi", "name": "Ability Score Increase", "description": "Your Intelligence score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["INTELLIGENCE"], "count": 1, "value": 1 }] },
+        { "id": "elf-weapon-training", "name": "Elf Weapon Training", "description": "You have proficiency with the longsword, shortsword, shortbow, and longbow.", "effects": [{ "type": "proficiency", "proficiencyType": "weapon", "options": ["longsword", "shortsword", "shortbow", "longbow"], "count": 4 }] },
+        { "id": "high-elf-cantrip", "name": "Cantrip", "description": "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.", "effects": [{ "type": "innate_spellcasting", "ability": "INTELLIGENCE", "spells": [{ "id": "any_wizard_cantrip", "frequency": "at-will" }] }] },
+        { "id": "extra-language", "name": "Extra Language", "description": "You can speak, read, and write one extra language of your choice.", "effects": [{ "type": "proficiency", "proficiencyType": "language", "options": ["any"], "count": 1 }] }
+    ]
+}

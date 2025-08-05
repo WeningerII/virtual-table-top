@@ -1,0 +1,21 @@
+
+{
+    "id": "elf-drow",
+    "name": "Drow (Dark Elf)",
+    "source": "Player's Handbook p.24",
+    "iconUrl": "https://picsum.photos/seed/elf-drow/64/64",
+    "creatureType": "Humanoid",
+    "description": "Descended from an earlier subrace of dark-skinned elves, the drow were banished from the surface world for following the goddess Lolth down the path to evil and corruption. Now they have built their own civilization in the depths of the Underdark.",
+    "traits": [
+        { "id": "elf-base-asi", "name": "Ability Score Increase", "description": "Your Dexterity score increases by 2.", "effects": [{ "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 2 }] },
+        { "id": "elf-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "fey-ancestry", "name": "Fey Ancestry", "description": "You have advantage on saving throws against being charmed, and magic can’t put you to sleep.", "effects": [ { "type": "advantage", "on": "saving_throw", "condition": "against being charmed" }, { "type": "immunity", "to": "magical_sleep" } ] },
+        { "id": "keen-senses", "name": "Keen Senses", "description": "You have proficiency in the Perception skill.", "effects": [ { "type": "proficiency", "proficiencyType": "skill", "options": ["perception"], "count": 1 } ] },
+        { "id": "trance", "name": "Trance", "description": "You don’t need to sleep. Instead, you meditate deeply for 4 hours a day.", "effects": [{ "type": "special_ability", "name": "Trance" }] },
+        { "id": "drow-asi", "name": "Ability Score Increase", "description": "Your Charisma score increases by 1.", "effects": [{ "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 1 }] },
+        { "id": "superior-darkvision", "name": "Superior Darkvision", "description": "Your darkvision has a radius of 120 feet.", "effects": [{ "type": "special_ability", "name": "Darkvision (120 ft.)" }] },
+        { "id": "sunlight-sensitivity", "name": "Sunlight Sensitivity", "description": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.", "effects": [{ "type": "special_ability", "name": "Sunlight Sensitivity" }] },
+        { "id": "drow-magic", "name": "Drow Magic", "description": "You know the Dancing Lights cantrip. When you reach 3rd level, you can cast the Faerie Fire spell once per day. When you reach 5th level, you can also cast the Darkness spell once per day. Charisma is your spellcasting ability for these spells.", "effects": [{ "type": "innate_spellcasting", "ability": "CHARISMA", "spells": [ { "id": "dancing-lights", "frequency": "at-will" }, { "id": "faerie-fire", "levelRequirement": 3, "frequency": "1/long_rest" }, { "id": "darkness", "levelRequirement": 5, "frequency": "1/long_rest" } ] }] },
+        { "id": "drow-weapon-training", "name": "Drow Weapon Training", "description": "You have proficiency with rapiers, shortswords, and hand crossbows.", "effects": [{ "type": "proficiency", "proficiencyType": "weapon", "options": ["rapier", "shortsword", "hand-crossbow"], "count": 3 }] }
+    ]
+}

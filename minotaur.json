@@ -1,0 +1,25 @@
+
+{
+    "id": "minotaur",
+    "name": "Minotaur",
+    "source": "Guildmasters' Guide to Ravnica",
+    "iconUrl": "https://picsum.photos/seed/minotaur/64/64",
+    "creatureType": "Humanoid",
+    "description": "Minotaurs are strong-framed humanoids with heads resembling those of bulls. Their horns range in size from a foot to three feet long.",
+    "traits": [
+        {
+            "id": "minotaur-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Strength score increases by 2, and your Constitution score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["STRENGTH"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["CONSTITUTION"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "minotaur-speed", "name": "Speed", "description": "Your base walking speed is 30 feet.", "effects": [{ "type": "set_base_speed", "value": 30 }] },
+        { "id": "horns", "name": "Horns", "description": "Your horns are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal piercing damage equal to 1d6 + your Strength modifier.", "effects": [{ "type": "natural_weapon", "name": "Horns", "damageDice": "1d6", "damageType": "piercing" }] },
+        { "id": "goring-rush", "name": "Goring Rush", "description": "Immediately after you use the Dash action on your turn and move at least 20 feet, you can make one melee attack with your horns as a bonus action.", "effects": [{ "type": "grant_action", "name": "Goring Rush" }] },
+        { "id": "hammering-horns", "name": "Hammering Horns", "description": "Immediately after you hit a creature with a melee attack as a bonus action on your turn, you can attempt to shove that creature with your horns. The creature must be no more than one size larger than you and within 5 feet of you. It must make a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be pushed up to 10 feet away from you.", "effects": [{ "type": "special_ability", "name": "Hammering Horns" }] },
+        { "id": "imposing-presence", "name": "Imposing Presence", "description": "You have proficiency in one of the following skills of your choice: Intimidation or Persuasion.", "choiceOptions": [{ "id": "minotaur-skill-choice", "label": "Choose a skill", "type": "skill", "count": 1, "from": ["intimidation", "persuasion"] }] }
+    ]
+}

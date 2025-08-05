@@ -1,0 +1,25 @@
+
+{
+    "id": "satyr",
+    "name": "Satyr",
+    "source": "Mythic Odysseys of Theros",
+    "iconUrl": "https://picsum.photos/seed/satyr/64/64",
+    "creatureType": "Fey",
+    "description": "Satyrs are fey creatures with a reputation for being fun-loving and hedonistic, but they are also known for their bravery and loyalty to their friends.",
+    "traits": [
+        {
+            "id": "satyr-asi",
+            "name": "Ability Score Increase",
+            "description": "Your Charisma score increases by 2, and your Dexterity score increases by 1.",
+            "effects": [
+                { "type": "ability_score_increase", "abilities": ["CHARISMA"], "count": 1, "value": 2 },
+                { "type": "ability_score_increase", "abilities": ["DEXTERITY"], "count": 1, "value": 1 }
+            ]
+        },
+        { "id": "satyr-speed", "name": "Speed", "description": "Your base walking speed is 35 feet.", "effects": [{ "type": "set_base_speed", "value": 35 }] },
+        { "id": "magic-resistance", "name": "Magic Resistance", "description": "You have advantage on saving throws against spells and other magical effects.", "effects": [{ "type": "advantage", "on": "saving_throw", "condition": "against spells and other magical effects" }] },
+        { "id": "ram", "name": "Ram", "description": "You can use your head and horns to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to 1d4 + your Strength modifier.", "effects": [{ "type": "natural_weapon", "name": "Ram", "damageDice": "1d4", "damageType": "bludgeoning" }] },
+        { "id": "mirthful-leaps", "name": "Mirthful Leaps", "description": "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump.", "effects": [{ "type": "special_ability", "name": "Mirthful Leaps" }] },
+        { "id": "reveler", "name": "Reveler", "description": "You have proficiency in the Performance and Persuasion skills, and you have proficiency with one musical instrument of your choice.", "effects": [{ "type": "proficiency", "proficiencyType": "skill", "options": ["performance", "persuasion"], "count": 2 }], "choiceOptions": [{ "id": "satyr-instrument-choice", "label": "Choose a musical instrument", "type": "tool", "count": 1, "from": "any" }] }
+    ]
+}
