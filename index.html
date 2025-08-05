@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VTT Cathedral</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark fallback */
+            background-image: linear-gradient(135deg, #111827 0%, #1f2937 50%, #374151 100%);
+            background-attachment: fixed;
+        }
+        .font-teko {
+            font-family: 'Teko', sans-serif;
+        }
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.4s ease-out forwards;
+        }
+        @keyframes highlight-stat {
+            0% { background-color: rgba(67, 56, 202, 0); } /* bg-indigo-700 transparent */
+            50% { background-color: rgba(67, 56, 202, 0.6); } /* bg-indigo-700 semi-opaque */
+            100% { background-color: rgba(67, 56, 202, 0); }
+        }
+        .animate-highlight {
+            animation: highlight-stat 1.5s ease-out;
+        }
+        .log-panel-handle {
+            width: 100%;
+            height: 8px;
+            background-color: #1f2937; /* bg-gray-800 */
+            cursor: ns-resize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .log-panel-handle::after {
+            content: '...';
+            color: #6b7280; /* text-gray-500 */
+            font-size: 1.5rem;
+            line-height: 0;
+            letter-spacing: 2px;
+        }
+        @keyframes slide-in {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100%); }
+        }
+        .animate-slide-in {
+            animation: slide-in 2s ease-in-out infinite;
+        }
+
+        /* Modal Animations */
+        @keyframes modal-bg-fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-modal-bg-fade-in {
+            animation: modal-bg-fade-in 0.2s ease-out forwards;
+        }
+
+        @keyframes modal-content-scale-in {
+            from { opacity: 0; transform: scale(0.95) translateY(10px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-modal-content-scale-in {
+            animation: modal-content-scale-in 0.2s ease-out forwards;
+        }
+
+        /* Damage Number Animation */
+        @keyframes damage-popup {
+            0% { transform: translateY(0) scale(0.8); opacity: 1; }
+            100% { transform: translateY(-50px) scale(1.2); opacity: 0; }
+        }
+        .damage-popup {
+            animation: damage-popup 1.5s ease-out forwards;
+            position: absolute;
+            pointer-events: none;
+            text-shadow: 1px 1px 2px black;
+            font-weight: bold;
+        }
+        .damage-popup-crit {
+            font-size: 2rem;
+            color: #FBBF24; /* yellow-400 */
+        }
+        .damage-popup-normal {
+            font-size: 1.5rem;
+            color: #F87171; /* red-400 */
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.9.0",
+    "react-redux": "https://esm.sh/react-redux@^9.1.2",
+    "@reduxjs/toolkit": "https://esm.sh/@reduxjs/toolkit@^2.2.6",
+    "redux-persist": "https://esm.sh/redux-persist@6.0.0",
+    "redux-persist/lib/storage": "https://esm.sh/redux-persist@6.0.0/lib/storage",
+    "redux-persist/integration/react": "https://esm.sh/redux-persist@6.0.0/es/integration/react.js",
+    "vitest": "https://esm.sh/vitest@^3.2.4",
+    "redux-persist/": "https://esm.sh/redux-persist@^6.0.0/",
+    "three/": "https://esm.sh/three@^0.179.1/",
+    "three": "https://esm.sh/three@^0.179.1",
+    "immer": "https://esm.sh/immer@^10.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

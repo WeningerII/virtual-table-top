@@ -1,0 +1,6 @@
+{
+  "name": "VTT Cathedral",
+  "description": "An AI-powered Virtual Tabletop. Create characters, build worlds, and play with an intelligent, dynamic environment powered by the Gemini API.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
