@@ -1,0 +1,203 @@
+
+[
+  {
+    "id": "wolf",
+    "name": "Wolf",
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "unaligned",
+    "ac": { "value": 13, "type": "natural armor" },
+    "hp": { "average": 11, "formula": "2d8 + 2" },
+    "speed": { "walk": 40 },
+    "abilityScores": { "STRENGTH": 12, "DEXTERITY": 15, "CONSTITUTION": 12, "INTELLIGENCE": 3, "WISDOM": 12, "CHARISMA": 6 },
+    "skills": [ { "skill": "perception", "bonus": 3 }, { "skill": "stealth", "bonus": 4 } ],
+    "senses": { "passivePerception": 13 },
+    "languages": [],
+    "challengeRating": "1/4",
+    "xp": 50,
+    "specialTraits": [
+        { "name": "Keen Hearing and Smell", "description": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell." },
+        { "name": "Pack Tactics", "description": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated." }
+    ],
+    "actions": [
+        {
+            "name": "Bite",
+            "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.",
+            "attackBonus": 4,
+            "damageParts": [{ "dice": "2d4", "bonus": 2, "type": "piercing" }],
+            "onHitEffects": [{
+                "type": "saving_throw",
+                "ability": "STRENGTH",
+                "dc": 11,
+                "effectOnFail": {
+                    "type": "apply_condition",
+                    "condition": "prone"
+                }
+            }]
+        }
+    ],
+    "archetype": "skirmisher"
+  },
+  {
+    "id": "giant-wolf-spider",
+    "name": "Giant Wolf Spider",
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "unaligned",
+    "ac": { "value": 12 },
+    "hp": { "average": 11, "formula": "2d8 + 2" },
+    "speed": { "walk": 40, "climb": 40 },
+    "abilityScores": { "STRENGTH": 12, "DEXTERITY": 16, "CONSTITUTION": 13, "INTELLIGENCE": 3, "WISDOM": 12, "CHARISMA": 4 },
+    "skills": [{ "skill": "perception", "bonus": 3 }, { "skill": "stealth", "bonus": 7 }],
+    "senses": { "darkvision": 60, "passivePerception": 13 },
+    "languages": [],
+    "challengeRating": "1/4",
+    "xp": 50,
+    "specialTraits": [
+        { "name": "Spider Climb", "description": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check." },
+        { "name": "Web Sense", "description": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web." },
+        { "name": "Web Walker", "description": "The spider ignores movement restrictions caused by webbing." }
+    ],
+    "actions": [
+        {
+            "name": "Bite",
+            "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 4 (1d6 + 1) piercing damage. The target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.",
+            "attackBonus": 3,
+            "damageParts": [{ "dice": "1d6", "bonus": 1, "type": "piercing" }],
+            "onHitEffects": [{ "type": "saving_throw", "ability": "CONSTITUTION", "dc": 11, "effectOnFail": { "type": "deal_damage", "damage": { "dice": "2d6", "bonus": 0, "type": "poison" } } }]
+        }
+    ],
+    "archetype": "skirmisher"
+  },
+  {
+    "id": "giant-boar",
+    "name": "Giant Boar",
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "unaligned",
+    "ac": { "value": 12, "type": "natural armor" },
+    "hp": { "average": 42, "formula": "5d10 + 15" },
+    "speed": { "walk": 40 },
+    "abilityScores": { "STRENGTH": 17, "DEXTERITY": 10, "CONSTITUTION": 16, "INTELLIGENCE": 2, "WISDOM": 7, "CHARISMA": 5 },
+    "senses": { "passivePerception": 8 },
+    "languages": [],
+    "challengeRating": "2",
+    "xp": 450,
+    "specialTraits": [
+      { "name": "Charge", "description": "If the boar moves at least 20 feet straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone." },
+      { "name": "Relentless (Recharges after a Short or Long Rest)", "description": "If the boar takes 10 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead." }
+    ],
+    "archetype": "brute"
+  },
+  {
+    "id": "tiger",
+    "name": "Tiger",
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "unaligned",
+    "ac": { "value": 12 },
+    "hp": { "average": 37, "formula": "5d10 + 10" },
+    "speed": { "walk": 40 },
+    "abilityScores": { "STRENGTH": 17, "DEXTERITY": 15, "CONSTITUTION": 14, "INTELLIGENCE": 3, "WISDOM": 12, "CHARISMA": 8 },
+    "skills": [{ "skill": "perception", "bonus": 3 }, { "skill": "stealth", "bonus": 6 }],
+    "senses": { "darkvision": 60, "passivePerception": 13 },
+    "languages": [],
+    "challengeRating": "1",
+    "xp": 200,
+    "specialTraits": [
+      { "name": "Keen Smell", "description": "The tiger has advantage on Wisdom (Perception) checks that rely on smell." },
+      { "name": "Pounce", "description": "If the tiger moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action." }
+    ],
+    "actions": [
+      { "name": "Bite", "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (1d10 + 3) piercing damage.", "attackBonus": 5, "damageParts": [{ "dice": "1d10", "bonus": 3, "type": "piercing" }] },
+      { 
+        "name": "Claw", 
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage.", 
+        "attackBonus": 5, 
+        "damageParts": [{ "dice": "1d8", "bonus": 3, "type": "slashing" }],
+        "savingThrow": { "ability": "STRENGTH", "dc": 13, "effect": "knocked prone (only on pounce)" }
+      }
+    ],
+    "archetype": "brute"
+  },
+  {
+    "id": "brown-bear",
+    "name": "Brown Bear",
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "unaligned",
+    "ac": { "value": 11, "type": "natural armor" },
+    "hp": { "average": 34, "formula": "4d10 + 12" },
+    "speed": { "walk": 40, "climb": 30 },
+    "abilityScores": { "STRENGTH": 19, "DEXTERITY": 10, "CONSTITUTION": 16, "INTELLIGENCE": 2, "WISDOM": 13, "CHARISMA": 7 },
+    "skills": [{ "skill": "perception", "bonus": 3 }],
+    "senses": { "passivePerception": 13 },
+    "languages": [],
+    "challengeRating": "1",
+    "xp": 200,
+    "specialTraits": [
+        { "name": "Keen Smell", "description": "The bear has advantage on Wisdom (Perception) checks that rely on smell." }
+    ],
+    "actions": [
+        { "name": "Multiattack", "description": "The bear makes two attacks: one with its bite and one with its claws." },
+        { "name": "Bite", "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) piercing damage.", "attackBonus": 5, "damageParts": [{ "dice": "1d8", "bonus": 4, "type": "piercing" }] },
+        { "name": "Claws", "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.", "attackBonus": 5, "damageParts": [{ "dice": "2d6", "bonus": 4, "type": "slashing" }] }
+    ],
+    "archetype": "brute"
+  },
+  {
+    "id": "dire-wolf",
+    "name": "Dire Wolf",
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "unaligned",
+    "ac": { "value": 14, "type": "natural armor" },
+    "hp": { "average": 37, "formula": "5d10 + 10" },
+    "speed": { "walk": 50 },
+    "abilityScores": { "STRENGTH": 17, "DEXTERITY": 15, "CONSTITUTION": 15, "INTELLIGENCE": 3, "WISDOM": 12, "CHARISMA": 7 },
+    "skills": [{ "skill": "perception", "bonus": 3 }, { "skill": "stealth", "bonus": 4 }],
+    "senses": { "passivePerception": 13 },
+    "languages": [],
+    "challengeRating": "1",
+    "xp": 200,
+    "specialTraits": [
+      { "name": "Keen Hearing and Smell", "description": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell." },
+      { "name": "Pack Tactics", "description": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated." }
+    ],
+    "actions": [
+      { 
+        "name": "Bite", 
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.", 
+        "attackBonus": 5, 
+        "damageParts": [{ "dice": "2d6", "bonus": 3, "type": "piercing" }],
+        "onHitEffects": [{ "type": "saving_throw", "ability": "STRENGTH", "dc": 13, "effectOnFail": { "type": "apply_condition", "condition": "prone" } }]
+      }
+    ],
+    "archetype": "skirmisher"
+  },
+  {
+    "id": "giant-eagle",
+    "name": "Giant Eagle",
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "neutral good",
+    "ac": { "value": 13 },
+    "hp": { "average": 26, "formula": "4d10 + 4" },
+    "speed": { "walk": 10, "fly": 80 },
+    "abilityScores": { "STRENGTH": 16, "DEXTERITY": 17, "CONSTITUTION": 13, "INTELLIGENCE": 8, "WISDOM": 14, "CHARISMA": 10 },
+    "skills": [{ "skill": "perception", "bonus": 4 }],
+    "senses": { "passivePerception": 14 },
+    "languages": ["Giant Eagle, understands Common and Auran but can't speak them"],
+    "challengeRating": "1",
+    "xp": 200,
+    "specialTraits": [
+        { "name": "Keen Sight", "description": "The eagle has advantage on Wisdom (Perception) checks that rely on sight." }
+    ],
+    "actions": [
+        { "name": "Multiattack", "description": "The eagle makes two attacks: one with its beak and one with its talons." },
+        { "name": "Beak", "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.", "attackBonus": 5, "damageParts": [{ "dice": "1d6", "bonus": 3, "type": "piercing" }] },
+        { "name": "Talons", "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.", "attackBonus": 5, "damageParts": [{ "dice": "2d6", "bonus": 3, "type": "slashing" }] }
+    ],
+    "archetype": "skirmisher"
+  }
+]

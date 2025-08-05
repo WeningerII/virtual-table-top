@@ -1,0 +1,100 @@
+
+[
+  {
+    "id": "owlbear",
+    "name": "Owlbear",
+    "size": "Large",
+    "type": "Monstrosity",
+    "alignment": "unaligned",
+    "ac": { "value": 13, "type": "natural armor" },
+    "hp": { "average": 59, "formula": "7d10 + 21" },
+    "speed": { "walk": 40 },
+    "abilityScores": { "STRENGTH": 20, "DEXTERITY": 12, "CONSTITUTION": 17, "INTELLIGENCE": 3, "WISDOM": 12, "CHARISMA": 7 },
+    "skills": [{ "skill": "perception", "bonus": 3 }],
+    "senses": { "darkvision": 60, "passivePerception": 13 },
+    "languages": [],
+    "challengeRating": "3",
+    "xp": 700,
+    "specialTraits": [
+        { "name": "Keen Sight and Smell", "description": "The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell." }
+    ],
+    "actions": [
+        {
+            "name": "Multiattack",
+            "description": "The owlbear makes two attacks: one with its beak and one with its claws."
+        },
+        {
+            "name": "Beak",
+            "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 10 (1d10 + 5) piercing damage.",
+            "attackBonus": 7,
+            "damageParts": [{ "dice": "1d10", "bonus": 5, "type": "piercing" }]
+        },
+        {
+            "name": "Claws",
+            "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage.",
+            "attackBonus": 7,
+            "damageParts": [{ "dice": "2d8", "bonus": 5, "type": "slashing" }]
+        }
+    ],
+    "archetype": "brute"
+  },
+  {
+    "id": "hydra",
+    "name": "Hydra",
+    "size": "Huge",
+    "type": "Monstrosity",
+    "alignment": "unaligned",
+    "ac": { "value": 15, "type": "natural armor" },
+    "hp": { "average": 172, "formula": "15d12 + 75" },
+    "speed": { "walk": 30, "swim": 30 },
+    "abilityScores": { "STRENGTH": 20, "DEXTERITY": 12, "CONSTITUTION": 20, "INTELLIGENCE": 2, "WISDOM": 10, "CHARISMA": 7 },
+    "skills": [{"skill": "perception", "bonus": 6}],
+    "senses": { "darkvision": 60, "passivePerception": 16 },
+    "languages": [],
+    "challengeRating": "8",
+    "xp": 3900,
+    "specialTraits": [
+        { "name": "Hold Breath", "description": "The hydra can hold its breath for 1 hour." },
+        { "name": "Multiple Heads", "description": "The hydra has five heads. While it has more than one head, the hydra has advantage on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious." },
+        { "name": "Reactive Heads", "description": "For each head the hydra has beyond one, it gets an extra reaction that can be used only for opportunity attacks." },
+        { "name": "Wakeful", "description": "While the hydra sleeps, at least one of its heads is awake." }
+    ],
+    "actions": [
+        { "name": "Multiattack", "description": "The hydra makes as many bite attacks as it has heads." },
+        { "name": "Bite", "description": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 10 (1d10 + 5) piercing damage.", "attackBonus": 8, "damageParts": [{ "dice": "1d10", "bonus": 5, "type": "piercing" }] }
+    ],
+    "archetype": "brute"
+  },
+  {
+    "id": "minotaur",
+    "name": "Minotaur",
+    "size": "Large",
+    "type": "Monstrosity",
+    "alignment": "chaotic evil",
+    "ac": { "value": 14, "type": "natural armor" },
+    "hp": { "average": 76, "formula": "9d10 + 27" },
+    "speed": { "walk": 40 },
+    "abilityScores": { "STRENGTH": 18, "DEXTERITY": 11, "CONSTITUTION": 16, "INTELLIGENCE": 6, "WISDOM": 16, "CHARISMA": 9 },
+    "skills": [{ "skill": "perception", "bonus": 7 }],
+    "senses": { "darkvision": 60, "passivePerception": 17 },
+    "languages": ["Abyssal"],
+    "challengeRating": "3",
+    "xp": 700,
+    "specialTraits": [
+        { "name": "Charge", "description": "If the minotaur moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 feet away and knocked prone." },
+        { "name": "Labyrinthine Recall", "description": "The minotaur can perfectly recall any path it has traveled." },
+        { "name": "Reckless", "description": "At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn." }
+    ],
+    "actions": [
+        { "name": "Greataxe", "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 17 (2d12 + 4) slashing damage.", "attackBonus": 6, "damageParts": [{ "dice": "2d12", "bonus": 4, "type": "slashing" }] },
+        { 
+            "name": "Gore", 
+            "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) piercing damage.", 
+            "attackBonus": 6, 
+            "damageParts": [{ "dice": "2d8", "bonus": 4, "type": "piercing" }],
+            "savingThrow": { "ability": "STRENGTH", "dc": 14, "effect": "pushed up to 10 feet away and knocked prone (only on a charge)" }
+        }
+    ],
+    "archetype": "brute"
+  }
+]

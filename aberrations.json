@@ -1,0 +1,78 @@
+
+[
+  {
+    "id": "flumph",
+    "name": "Flumph",
+    "size": "Small",
+    "type": "Aberration",
+    "alignment": "lawful good",
+    "ac": { "value": 12 },
+    "hp": { "average": 7, "formula": "2d6" },
+    "speed": { "walk": 5, "fly": 30 },
+    "abilityScores": { "STRENGTH": 6, "DEXTERITY": 15, "CONSTITUTION": 10, "INTELLIGENCE": 14, "WISDOM": 14, "CHARISMA": 11 },
+    "skills": [{ "skill": "arcana", "bonus": 4 }, { "skill": "perception", "bonus": 4 }],
+    "damageVulnerabilities": ["psychic"],
+    "senses": { "darkvision": 60, "passivePerception": 14 },
+    "languages": ["understands Undercommon but can't speak", "Telepathy 60 ft."],
+    "challengeRating": "1/8",
+    "xp": 25,
+    "specialTraits": [
+        { "name": "Advanced Telepathy", "description": "The flumph can perceive the content of any telepathic communication within 60 feet of it, and it can't be surprised by creatures with any form of telepathy." },
+        { "name": "Prone Deficiency", "description": "If the flumph is knocked prone, it can't get up until it is helped up by another creature." },
+        { "name": "Telepathic Shroud", "description": "The flumph is immune to any effect that would sense its emotions or read its thoughts, as well as all divination spells." }
+    ],
+    "actions": [
+        {
+            "name": "Tendrils",
+            "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) piercing damage plus 2 (1d4) acid damage. At the end of each of its turns, the target must make a DC 10 Constitution saving throw, taking 2 (1d4) acid damage on a failure or ending the recurring acid damage on a success.",
+            "attackBonus": 4,
+            "damageParts": [{ "dice": "1d4", "bonus": 2, "type": "piercing" }, { "dice": "1d4", "bonus": 0, "type": "acid" }]
+        },
+        {
+            "name": "Stench Spray (1/Day)",
+            "description": "Each creature in a 15-foot cone originating from the flumph must succeed on a DC 10 Dexterity saving throw or be coated in a foul-smelling liquid. The coated creature is poisoned for 1d4 hours. The creature can remove the liquid by spending a short rest scrubbing with water and soap.",
+            "usage": { "type": "per_day", "value": 1 },
+            "areaOfEffect": { "type": "cone", "size": 15 },
+            "savingThrow": { "ability": "DEXTERITY", "dc": 10, "effect": "poisoned for 1d4 hours" }
+        }
+    ],
+    "archetype": "controller"
+  },
+  {
+    "id": "aboleth",
+    "name": "Aboleth",
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "lawful evil",
+    "archetype": "controller",
+    "personalityTraits": ["patient", "scheming", "arrogant", "ancient"],
+    "bonds": ["its ancient underwater city", "its enslaved minions"],
+    "goals": ["recover lost knowledge", "enslave powerful minds", "expand its subterranean domain"],
+    "ac": { "value": 17, "type": "natural armor" },
+    "hp": { "average": 135, "formula": "18d10 + 36" },
+    "speed": { "walk": 10, "swim": 40 },
+    "abilityScores": { "STRENGTH": 21, "DEXTERITY": 9, "CONSTITUTION": 15, "INTELLIGENCE": 18, "WISDOM": 15, "CHARISMA": 18 },
+    "savingThrows": [{"ability": "CON", "bonus": 6}, {"ability": "INT", "bonus": 8}, {"ability": "WIS", "bonus": 6}],
+    "skills": [{"skill": "history", "bonus": 12}, {"skill": "perception", "bonus": 10}],
+    "senses": { "darkvision": 120, "passivePerception": 20 },
+    "languages": ["Deep Speech", "telepathy 120 ft."],
+    "challengeRating": "10",
+    "xp": 5900,
+    "specialTraits": [
+        { "name": "Amphibious", "description": "The aboleth can breathe air and water." },
+        { "name": "Mucous Cloud", "description": "While underwater, the aboleth exudes a cloud of transparent slime in a 30-foot radius. A creature that enters the cloud for the first time on a turn or starts its turn there must make a DC 14 Constitution saving throw. On a failed save, the creature is diseased for 1d4 hours. The diseased creature can breathe only underwater.", "savingThrow": { "ability": "CONSTITUTION", "dc": 14, "effect": "diseased for 1d4 hours (can only breathe water)" }, "areaOfEffect": { "type": "sphere", "size": 30 } },
+        { "name": "Probing Telepathy", "description": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires if the aboleth can see the creature." }
+    ],
+    "actions": [
+        { "name": "Multiattack", "description": "The aboleth makes three tentacle attacks." },
+        { "name": "Tentacle", "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 12 (2d6 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher.", "attackBonus": 9, "damageParts": [{ "dice": "2d6", "bonus": 5, "type": "bludgeoning" }], "onHitEffects": [{ "type": "saving_throw", "ability": "CONSTITUTION", "dc": 14, "effectOnFail": { "type": "apply_condition", "condition": "diseased" } }] },
+        { "name": "Tail", "description": "Melee Weapon Attack: +9 to hit, reach 10 ft. one target. Hit: 15 (3d6 + 5) bludgeoning damage.", "attackBonus": 9, "damageParts": [{ "dice": "3d6", "bonus": 5, "type": "bludgeoning" }] },
+        { "name": "Enslave (3/Day)", "description": "The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically charmed by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.", "savingThrow": { "ability": "WISDOM", "dc": 14, "effect": "charmed and controlled by the aboleth" }, "usage": { "type": "per_day", "value": 3 } }
+    ],
+    "legendaryActions": [
+        { "name": "Detect", "description": "The aboleth makes a Wisdom (Perception) check." },
+        { "name": "Tail Swipe", "description": "The aboleth makes one tail attack." },
+        { "name": "Psychic Drain (Costs 2 Actions)", "description": "One creature charmed by the aboleth takes 10 (3d6) psychic damage, and the aboleth regains hit points equal to the damage the creature takes." }
+    ]
+  }
+]

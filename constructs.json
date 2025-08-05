@@ -1,0 +1,68 @@
+
+[
+  {
+    "id": "animated-armor",
+    "name": "Animated Armor",
+    "size": "Medium",
+    "type": "Construct",
+    "alignment": "unaligned",
+    "ac": { "value": 18, "type": "natural armor" },
+    "hp": { "average": 33, "formula": "6d8 + 6" },
+    "speed": { "walk": 25 },
+    "abilityScores": { "STRENGTH": 14, "DEXTERITY": 11, "CONSTITUTION": 13, "INTELLIGENCE": 1, "WISDOM": 3, "CHARISMA": 1 },
+    "damageImmunities": ["poison", "psychic"],
+    "conditionImmunities": ["blinded", "charmed", "deafened", "exhaustion", "frightened", "paralyzed", "petrified", "poisoned"],
+    "senses": { "blindsight": 60, "passivePerception": 6 },
+    "languages": [],
+    "challengeRating": "1",
+    "xp": 200,
+    "specialTraits": [
+        { "name": "Antimagic Susceptibility", "description": "The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute." },
+        { "name": "False Appearance", "description": "While the armor remains motionless, it is indistinguishable from a normal suit of armor." }
+    ],
+    "actions": [
+        {
+            "name": "Slam",
+            "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage.",
+            "attackBonus": 4,
+            "damageParts": [{ "dice": "1d6", "bonus": 2, "type": "bludgeoning" }]
+        }
+    ],
+    "archetype": "brute"
+  },
+  {
+    "id": "stone-golem",
+    "name": "Stone Golem",
+    "size": "Large",
+    "type": "Construct",
+    "alignment": "unaligned",
+    "personalityTraits": ["mindless", "unquestioningly obedient", "implacable"],
+    "goals": ["guard the area designated by its creator", "destroy all intruders"],
+    "ac": { "value": 17, "type": "natural armor" },
+    "hp": { "average": 178, "formula": "17d10 + 85" },
+    "speed": { "walk": 30 },
+    "abilityScores": { "STRENGTH": 22, "DEXTERITY": 9, "CONSTITUTION": 20, "INTELLIGENCE": 3, "WISDOM": 11, "CHARISMA": 1 },
+    "damageImmunities": ["poison", "psychic", "bludgeoning, piercing, and slashing from nonmagical attacks not made with adamantine weapons"],
+    "conditionImmunities": ["charmed", "exhaustion", "frightened", "paralyzed", "petrified", "poisoned"],
+    "senses": { "darkvision": 120, "passivePerception": 10 },
+    "languages": ["understands the languages of its creator but can't speak"],
+    "challengeRating": "10",
+    "xp": 5900,
+    "specialTraits": [
+        { "name": "Immutable Form", "description": "The golem is immune to any spell or effect that would alter its form." },
+        { "name": "Magic Resistance", "description": "The golem has advantage on saving throws against spells and other magical effects." },
+        { "name": "Magic Weapons", "description": "The golem's weapon attacks are magical." }
+    ],
+    "actions": [
+        { "name": "Multiattack", "description": "The golem makes two slam attacks." },
+        { "name": "Slam", "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 19 (3d8 + 6) bludgeoning damage.", "attackBonus": 10, "damageParts": [{ "dice": "3d8", "bonus": 6, "type": "bludgeoning" }] },
+        { 
+            "name": "Slow (Recharge 5-6)", 
+            "description": "The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute.",
+            "usage": { "type": "recharge", "value": "5-6" },
+            "savingThrow": { "ability": "WISDOM", "dc": 17, "effect": "can't use reactions, speed halved, limited to one attack, and can only take an action or bonus action (not both) for 1 minute" }
+        }
+    ],
+    "archetype": "brute"
+  }
+]

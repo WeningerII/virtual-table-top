@@ -1,0 +1,78 @@
+
+[
+  {
+    "id": "black-dragon-wyrmling",
+    "name": "Black Dragon Wyrmling",
+    "size": "Medium",
+    "type": "Dragon",
+    "alignment": "chaotic evil",
+    "ac": { "value": 17, "type": "natural armor" },
+    "hp": { "average": 33, "formula": "6d8 + 6" },
+    "speed": { "walk": 30, "fly": 60, "swim": 30 },
+    "abilityScores": { "STRENGTH": 15, "DEXTERITY": 14, "CONSTITUTION": 13, "INTELLIGENCE": 10, "WISDOM": 11, "CHARISMA": 13 },
+    "savingThrows": [
+        { "ability": "DEXTERITY", "bonus": 4 },
+        { "ability": "CONSTITUTION", "bonus": 3 },
+        { "ability": "WISDOM", "bonus": 2 },
+        { "ability": "CHARISMA", "bonus": 3 }
+    ],
+    "skills": [{ "skill": "perception", "bonus": 4 }, { "skill": "stealth", "bonus": 4 }],
+    "damageImmunities": ["acid"],
+    "senses": { "blindsight": 10, "darkvision": 60, "passivePerception": 14 },
+    "languages": ["Draconic"],
+    "challengeRating": "2",
+    "xp": 450,
+    "specialTraits": [
+        { "name": "Amphibious", "description": "The dragon can breathe air and water." }
+    ],
+    "actions": [
+        {
+            "name": "Bite",
+            "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage plus 2 (1d4) acid damage.",
+            "attackBonus": 4,
+            "damageParts": [{ "dice": "1d10", "bonus": 2, "type": "piercing" }, { "dice": "1d4", "bonus": 0, "type": "acid" }]
+        },
+        {
+            "name": "Acid Breath (Recharge 5-6)",
+            "description": "The dragon exhales acid in a 15-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 22 (5d8) acid damage on a failed save, or half as much damage on a successful one.",
+            "usage": { "type": "recharge", "value": "5-6" },
+            "areaOfEffect": { "type": "line", "size": 15 },
+            "savingThrow": { "ability": "DEXTERITY", "dc": 11, "effect": "22 (5d8) acid damage, or half on success" }
+        }
+    ],
+    "archetype": "brute"
+  },
+  {
+    "id": "young-red-dragon",
+    "name": "Young Red Dragon",
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "chaotic evil",
+    "personalityTraits": ["arrogant", "greedy", "vain"],
+    "goals": ["prove its superiority", "amass treasure"],
+    "ac": { "value": 18, "type": "natural armor" },
+    "hp": { "average": 178, "formula": "17d10 + 85" },
+    "speed": { "walk": 40, "climb": 40, "fly": 80 },
+    "abilityScores": { "STRENGTH": 23, "DEXTERITY": 10, "CONSTITUTION": 21, "INTELLIGENCE": 14, "WISDOM": 11, "CHARISMA": 19 },
+    "savingThrows": [{"ability": "DEX", "bonus": 4}, {"ability": "CON", "bonus": 9}, {"ability": "WIS", "bonus": 4}, {"ability": "CHA", "bonus": 8}],
+    "skills": [{"skill": "perception", "bonus": 8}, {"skill": "stealth", "bonus": 4}],
+    "damageImmunities": ["fire"],
+    "senses": { "blindsight": 30, "darkvision": 120, "passivePerception": 18 },
+    "languages": ["Common", "Draconic"],
+    "challengeRating": "10",
+    "xp": 5900,
+    "actions": [
+        { "name": "Multiattack", "description": "The dragon makes three attacks: one with its bite and two with its claws." },
+        { "name": "Bite", "description": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage plus 3 (1d6) fire damage.", "attackBonus": 10, "damageParts": [{ "dice": "2d10", "bonus": 6, "type": "piercing" }, { "dice": "1d6", "bonus": 0, "type": "fire" }] },
+        { "name": "Claw", "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage.", "attackBonus": 10, "damageParts": [{ "dice": "2d6", "bonus": 6, "type": "slashing" }] },
+        { 
+            "name": "Fire Breath (Recharge 5-6)", 
+            "description": "The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 56 (16d6) fire damage on a failed save, or half as much damage on a successful one.",
+            "usage": { "type": "recharge", "value": "5-6" },
+            "areaOfEffect": { "type": "cone", "size": 30 },
+            "savingThrow": { "ability": "DEXTERITY", "dc": 17, "effect": "56 (16d6) fire damage, or half on success" }
+        }
+    ],
+    "archetype": "brute"
+  }
+]

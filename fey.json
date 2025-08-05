@@ -1,0 +1,89 @@
+
+[
+  {
+    "id": "pixie",
+    "name": "Pixie",
+    "size": "Tiny",
+    "type": "Fey",
+    "alignment": "neutral good",
+    "ac": { "value": 15 },
+    "hp": { "average": 1, "formula": "1d4 - 1" },
+    "speed": { "walk": 10, "fly": 30 },
+    "abilityScores": { "STRENGTH": 2, "DEXTERITY": 20, "CONSTITUTION": 8, "INTELLIGENCE": 10, "WISDOM": 14, "CHARISMA": 15 },
+    "skills": [{ "skill": "perception", "bonus": 4 }, { "skill": "stealth", "bonus": 7 }],
+    "senses": { "passivePerception": 14 },
+    "languages": ["Sylvan"],
+    "challengeRating": "1/4",
+    "xp": 50,
+    "specialTraits": [
+        { "name": "Magic Resistance", "description": "The pixie has advantage on saving throws against spells and other magical effects." },
+        { "name": "Innate Spellcasting", "description": "The pixie's innate spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring only verbal components: At will: druidcraft; 1/day each: confusion, dancing lights, detect evil and good, detect thoughts, dispel magic, entangle, fly, phantasmal force, polymorph, sleep." }
+    ],
+    "actions": [
+        { "name": "Superior Invisibility", "description": "The pixie magically turns invisible until its concentration ends (as if concentrating on a spell)." }
+    ],
+    "archetype": "controller"
+  },
+  {
+    "id": "satyr",
+    "name": "Satyr",
+    "size": "Medium",
+    "type": "Fey",
+    "alignment": "chaotic neutral",
+    "ac": { "value": 14, "type": "leather armor" },
+    "hp": { "average": 31, "formula": "7d8" },
+    "speed": { "walk": 40 },
+    "abilityScores": { "STRENGTH": 12, "DEXTERITY": 16, "CONSTITUTION": 11, "INTELLIGENCE": 12, "WISDOM": 10, "CHARISMA": 14 },
+    "skills": [{"skill": "perception", "bonus": 2}, {"skill": "performance", "bonus": 6}, {"skill": "stealth", "bonus": 5}],
+    "senses": { "passivePerception": 12 },
+    "languages": ["Common", "Elvish", "Sylvan"],
+    "challengeRating": "1/2",
+    "xp": 100,
+    "specialTraits": [
+        { "name": "Magic Resistance", "description": "The satyr has advantage on saving throws against spells and other magical effects." }
+    ],
+    "actions": [
+        { "name": "Ram", "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) bludgeoning damage.", "attackBonus": 3, "damageParts": [{"dice": "2d4", "bonus": 1, "type": "bludgeoning"}] },
+        { "name": "Shortsword", "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.", "attackBonus": 5, "damageParts": [{"dice": "1d6", "bonus": 3, "type": "piercing"}] },
+        { "name": "Shortbow", "description": "Ranged Weapon Attack: +5 to hit, range 80/320 ft., one target. Hit: 6 (1d6 + 3) piercing damage.", "attackBonus": 5, "damageParts": [{"dice": "1d6", "bonus": 3, "type": "piercing"}] },
+        { 
+            "name": "Pipes", 
+            "description": "The satyr plays its pipes and chooses one of the following magical effects: a charming melody, a frightening strain, or a slumbering tune. Any creature within 60 feet of the satyr that can hear the pipes must succeed on a DC 13 Wisdom saving throw or be affected as described.",
+            "areaOfEffect": { "type": "sphere", "size": 60 },
+            "savingThrow": { "ability": "WISDOM", "dc": 13, "effect": "charmed, frightened, or put to sleep" }
+        }
+    ],
+    "archetype": "skirmisher"
+  },
+  {
+    "id": "dryad",
+    "name": "Dryad",
+    "size": "Medium",
+    "type": "Fey",
+    "alignment": "neutral",
+    "ac": { "value": 11, "type": "16 with barkskin" },
+    "hp": { "average": 22, "formula": "5d8" },
+    "speed": { "walk": 30 },
+    "abilityScores": { "STRENGTH": 10, "DEXTERITY": 12, "CONSTITUTION": 11, "INTELLIGENCE": 14, "WISDOM": 15, "CHARISMA": 18 },
+    "skills": [{"skill": "perception", "bonus": 4}, {"skill": "stealth", "bonus": 5}],
+    "senses": { "darkvision": 60, "passivePerception": 14 },
+    "languages": ["Elvish", "Sylvan"],
+    "challengeRating": "1",
+    "xp": 200,
+    "specialTraits": [
+        { "name": "Innate Spellcasting", "description": "The dryad's innate spellcasting ability is Charisma (spell save DC 14). The dryad can innately cast the following spells, requiring no material components: At will: druidcraft; 3/day each: entangle, goodberry; 1/day each: barkskin, pass without trace, shillelagh." },
+        { "name": "Magic Resistance", "description": "The dryad has advantage on saving throws against spells and other magical effects." },
+        { "name": "Speak with Beasts and Plants", "description": "The dryad can communicate with beasts and plants as if they shared a language." },
+        { "name": "Tree Stride", "description": "Once on her turn, the dryad can use 10 feet of her movement to step magically into one living tree within her reach and emerge from a second living tree within 60 feet of the first tree, appearing in an unoccupied space within 5 feet of the second tree. Both trees must be Large or bigger." }
+    ],
+    "actions": [
+        { "name": "Club", "description": "Melee Weapon Attack: +2 to hit (+6 to hit with shillelagh), reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage, or 8 (1d8 + 4) bludgeoning damage with shillelagh." },
+        { 
+            "name": "Fey Charm", 
+            "description": "The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must succeed on a DC 14 Wisdom saving throw or be magically charmed. The charmed creature regards the dryad as a trusted friend to be heeded and protected. Although the target isn't under the dryad's control, it takes the dryad's requests or actions in the most favorable way it can.",
+            "savingThrow": { "ability": "WISDOM", "dc": 14, "effect": "charmed" }
+        }
+    ],
+    "archetype": "controller"
+  }
+]

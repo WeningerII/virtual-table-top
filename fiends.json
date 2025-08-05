@@ -1,0 +1,78 @@
+
+[
+  {
+    "id": "imp",
+    "name": "Imp",
+    "size": "Tiny",
+    "type": "Fiend",
+    "tags": ["devil", "shapechanger"],
+    "alignment": "lawful evil",
+    "ac": { "value": 13 },
+    "hp": { "average": 10, "formula": "3d4 + 3" },
+    "speed": { "walk": 20, "fly": 40 },
+    "abilityScores": { "STRENGTH": 6, "DEXTERITY": 17, "CONSTITUTION": 13, "INTELLIGENCE": 11, "WISDOM": 12, "CHARISMA": 14 },
+    "skills": [{ "skill": "deception", "bonus": 4 }, { "skill": "insight", "bonus": 3 }, { "skill": "persuasion", "bonus": 4 }, { "skill": "stealth", "bonus": 5 }],
+    "damageResistances": ["cold", "bludgeoning, piercing, and slashing from nonmagical attacks not silvered"],
+    "damageImmunities": ["fire", "poison"],
+    "conditionImmunities": ["poisoned"],
+    "senses": { "darkvision": 120, "passivePerception": 11 },
+    "languages": ["Infernal", "Common"],
+    "challengeRating": "1",
+    "xp": 200,
+    "specialTraits": [
+        { "name": "Shapechanger", "description": "The imp can use its action to polymorph into a beast form that resembles a rat, a raven, or a spider, or back into its true form." },
+        { "name": "Devil's Sight", "description": "Magical darkness doesn't impede the imp's darkvision." },
+        { "name": "Magic Resistance", "description": "The imp has advantage on saving throws against spells and other magical effects." }
+    ],
+    "actions": [
+        {
+            "name": "Sting (Bite in Beast Form)",
+            "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.",
+            "attackBonus": 5,
+            "damageParts": [{ "dice": "1d4", "bonus": 3, "type": "piercing" }],
+            "triggeredEffects": [{ "trigger": "on_hit", "type": "saving_throw", "ability": "CONSTITUTION", "dc": 11, "effectOnFail": { "type": "deal_damage", "damage": { "dice": "3d6", "bonus": 0, "type": "poison" } } }]
+        },
+        { "name": "Invisibility", "description": "The imp magically turns invisible until it attacks or until its concentration ends (as if concentrating on a spell)." }
+    ],
+    "archetype": "skirmisher"
+  },
+  {
+    "id": "balor",
+    "name": "Balor",
+    "size": "Large",
+    "type": "Fiend",
+    "tags": ["demon"],
+    "alignment": "chaotic evil",
+    "personalityTraits": ["arrogant", "destructive", "hateful", "filled with primal rage"],
+    "goals": ["sow chaos and destruction", "destroy all that is beautiful", "defeat powerful foes to prove its might"],
+    "ac": { "value": 19, "type": "natural armor" },
+    "hp": { "average": 262, "formula": "21d10 + 147" },
+    "speed": { "walk": 40, "fly": 80 },
+    "abilityScores": { "STRENGTH": 26, "DEXTERITY": 15, "CONSTITUTION": 22, "INTELLIGENCE": 20, "WISDOM": 16, "CHARISMA": 22 },
+    "savingThrows": [{"ability": "STR", "bonus": 14}, {"ability": "CON", "bonus": 12}, {"ability": "WIS", "bonus": 9}, {"ability": "CHA", "bonus": 12}],
+    "damageResistances": ["cold", "lightning", "bludgeoning, piercing, and slashing from nonmagical attacks"],
+    "damageImmunities": ["fire", "poison"],
+    "conditionImmunities": ["poisoned"],
+    "senses": { "truesight": 120, "passivePerception": 13 },
+    "languages": ["Abyssal", "telepathy 120 ft."],
+    "challengeRating": "19",
+    "xp": 22000,
+    "specialTraits": [
+      { "name": "Death Throes", "description": "When the balor dies, it explodes, and each creature within 30 feet of it must make a DC 20 Dexterity saving throw, taking 70 (20d6) fire damage on a failed save, or half as much damage on a successful one. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons.", "areaOfEffect": { "type": "sphere", "size": 30 }, "savingThrow": { "ability": "DEXTERITY", "dc": 20, "effect": "70 (20d6) fire damage, or half on success" } },
+      { "name": "Fire Aura", "description": "At the start of each of the balor's turns, each creature within 5 feet of it takes 10 (3d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the balor or hits it with a melee attack while within 5 feet of it takes 10 (3d6) fire damage.", "areaOfEffect": { "type": "sphere", "size": 5 } },
+      { "name": "Magic Resistance", "description": "The balor has advantage on saving throws against spells and other magical effects." },
+      { "name": "Magic Weapons", "description": "The balor's weapon attacks are magical." }
+    ],
+    "actions": [
+      { "name": "Multiattack", "description": "The balor makes two attacks: one with its longsword and one with its whip." },
+      { "name": "Longsword", "description": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) slashing damage plus 13 (3d8) lightning damage. If the balor scores a critical hit, it rolls damage dice three times, instead of twice.", "attackBonus": 14, "damageParts": [{ "dice": "3d8", "bonus": 8, "type": "slashing" }, { "dice": "3d8", "bonus": 0, "type": "lightning" }] },
+      { "name": "Whip", "description": "Melee Weapon Attack: +14 to hit, reach 30 ft., one target. Hit: 15 (2d6 + 8) slashing damage plus 10 (3d6) fire damage, and the target must succeed on a DC 20 Strength saving throw or be pulled up to 25 feet toward the balor.", "attackBonus": 14, "reach": 30, "damageParts": [{ "dice": "2d6", "bonus": 8, "type": "slashing" }, { "dice": "3d6", "bonus": 0, "type": "fire" }], "triggeredEffects": [{ "trigger": "on_hit", "type": "saving_throw", "ability": "STRENGTH", "dc": 20, "effectOnFail": { "type": "move_target", "distance": 25, "direction": "towards" } }, { "trigger": "on_miss", "type": "deal_damage", "damage": { "dice": "1d6", "bonus": 0, "type": "fire" }, "description": "The whip's heat lashes out even on a miss." }] },
+      { "name": "Teleport", "description": "The balor magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see." }
+    ],
+    "legendaryActions": [
+      { "name": "Teleport", "description": "The balor uses its Teleport action." },
+      { "name": "Whip Attack", "description": "The balor makes one whip attack." }
+    ],
+    "archetype": "brute"
+  }
+]
