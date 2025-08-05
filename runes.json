@@ -1,0 +1,44 @@
+[
+    {
+        "id": "rune-cloud",
+        "name": "Cloud Rune",
+        "description": "This rune emulates the deceptive magic of cloud giants.",
+        "passiveEffect": "While wearing or carrying the object inscribed with this rune, you have advantage on Dexterity (Sleight of Hand) checks and Charisma (Deception) checks.",
+        "activeEffect": "As a reaction when you or a creature you can see within 30 feet of you is hit by an attack roll, you can invoke the rune to choose a different creature within 30 feet of you (other than the attacker) to be the target of the attack instead."
+    },
+    {
+        "id": "rune-fire",
+        "name": "Fire Rune",
+        "description": "This rune’s magic channels the masterful craftsmanship of fire giant smiths.",
+        "passiveEffect": "While wearing or carrying the object, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool.",
+        "activeEffect": "When you hit a creature with a weapon attack, you can invoke the rune to summon fiery shackles. The target takes an extra 2d6 fire damage and must succeed on a Strength saving throw or be restrained for 1 minute."
+    },
+    {
+        "id": "rune-frost",
+        "name": "Frost Rune",
+        "description": "This rune’s magic evokes the might of frost giants.",
+        "passiveEffect": "While wearing or carrying the object, you have advantage on Wisdom (Animal Handling) checks and Charisma (Intimidation) checks.",
+        "activeEffect": "When you hit a creature with a weapon attack, you can invoke the rune to increase your sturdiness. You gain a +2 bonus to all ability checks and saving throws that use Strength or Constitution for 10 minutes."
+    },
+    {
+        "id": "rune-stone",
+        "name": "Stone Rune",
+        "description": "This rune’s magic channels the insightful nature of stone giants.",
+        "passiveEffect": "While wearing or carrying the object, you have advantage on Wisdom (Insight) checks, and you have darkvision out to a range of 120 feet.",
+        "activeEffect": "As a reaction when a creature you can see ends its turn within 30 feet of you, you can invoke the rune to force the creature to make a Wisdom saving throw. On a failed save, the creature is charmed by you for 1 minute."
+    },
+    {
+        "id": "rune-hill",
+        "name": "Hill Rune",
+        "description": "This rune’s magic grants an echo of the resilience of hill giants.",
+        "passiveEffect": "While wearing or carrying the object, you have advantage on saving throws against being poisoned, and you have resistance to poison damage.",
+        "activeEffect": "As a bonus action, you can invoke the rune to gain resistance to bludgeoning, piercing, and slashing damage for 1 minute."
+    },
+    {
+        "id": "rune-storm",
+        "name": "Storm Rune",
+        "description": "Using this rune, you can glimpse the future like a storm giant.",
+        "passiveEffect": "While wearing or carrying the object, you have advantage on Intelligence (Arcana) checks, and you can’t be surprised as long as you aren’t incapacitated.",
+        "activeEffect": "As a bonus action, you can invoke the rune to enter a prophetic state for 1 minute. Until the state ends, when you or another creature you can see within 30 feet of you makes an attack roll, a saving throw, or an ability check, you can use your reaction to cause the roll to have advantage or disadvantage."
+    }
+]

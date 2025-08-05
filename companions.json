@@ -1,0 +1,73 @@
+{
+    "steel-defender": {
+        "id": "steel-defender",
+        "name": "Steel Defender",
+        "creatureType": "Medium construct",
+        "hpFormula": "2 + INT + 5 * ArtificerLevel",
+        "acFormula": "15 + PB",
+        "speed": { "walk": 40 },
+        "actions": [
+            { "name": "Force-Empowered Rend", "modifier": "SpellAttackModifier", "description": "Melee Weapon Attack, reach 5 ft., one target you can see. Hit: 1d8 + PB force damage.", "attackRoll": "1d20+SpellAttackModifier", "damageRoll": "1d8+PB" },
+            { "name": "Repair (3/Day)", "description": "The magical mechanisms inside the defender restore 2d8 + PB hit points to itself or to one construct or object within 5 feet of it." }
+        ],
+        "reactions": [
+            { "name": "Deflect Attack", "description": "The defender imposes disadvantage on the attack roll of one creature it can see that is within 5 feet of it, provided the attack roll is against a creature other than the defender." }
+        ]
+    },
+    "homunculus-servant": {
+        "id": "homunculus-servant",
+        "name": "Homunculus Servant",
+        "creatureType": "Tiny construct",
+        "hpFormula": "1 + INT + ArtificerLevel",
+        "acFormula": "13 + PB",
+        "speed": { "walk": 25, "fly": 30 },
+        "actions": [
+            { "name": "Force Strike", "modifier": "SpellAttackModifier", "description": "Ranged Weapon Attack, range 30 ft., one target. Hit: 1d4 + PB force damage.", "attackRoll": "1d20+SpellAttackModifier", "damageRoll": "1d4+PB" }
+        ],
+        "reactions": [
+            { "name": "Channel Magic", "description": "The homunculus delivers a spell you cast that has a range of touch. The homunculus must be within 120 feet of you." }
+        ]
+    },
+    "eldritch-cannon-flamethrower": {
+        "id": "eldritch-cannon-flamethrower",
+        "name": "Eldritch Cannon (Flamethrower)",
+        "creatureType": "Small or Tiny object",
+        "hpFormula": "5 * ArtificerLevel",
+        "ac": 18,
+        "speed": { "walk": 15 },
+        "actions": [
+            { "name": "Flamethrower", "modifier": "SpellSaveDC", "description": "Exhales fire in a 15-foot cone. Each creature in that area must make a Dexterity saving throw. A creature takes 2d8 fire damage on a failed save, or half as much damage on a successful one." }
+        ]
+    },
+    "eldritch-cannon-force-ballista": {
+        "id": "eldritch-cannon-force-ballista",
+        "name": "Eldritch Cannon (Force Ballista)",
+        "creatureType": "Small or Tiny object",
+        "hpFormula": "5 * ArtificerLevel",
+        "ac": 18,
+        "speed": { "walk": 15 },
+        "actions": [
+            { "name": "Force Ballista", "modifier": "SpellAttackModifier", "description": "Make a ranged spell attack, originating from the cannon, at one creature or object within 120 feet of it. On a hit, the target takes 2d8 force damage, and if the target is a creature, it is pushed up to 5 feet away from the cannon.", "attackRoll": "1d20+SpellAttackModifier", "damageRoll": "2d8" }
+        ]
+    },
+    "eldritch-cannon-protector": {
+        "id": "eldritch-cannon-protector",
+        "name": "Eldritch Cannon (Protector)",
+        "creatureType": "Small or Tiny object",
+        "hpFormula": "5 * ArtificerLevel",
+        "ac": 18,
+        "speed": { "walk": 15 },
+        "actions": [
+            { "name": "Protective Field", "description": "The cannon emits a burst of positive energy that grants you and each creature of your choice within 10 feet of it a number of temporary hit points equal to 1d8 + your Intelligence modifier." }
+        ]
+    },
+    "beast-spirit": { "id": "beast-spirit", "name": "Bestial Spirit", "creatureType": "Spirit", "hpFormula": "20 + 5 * SpellLevel", "acFormula": "11 + PB", "speed": { "walk": 30, "fly": 60 }, "actions": [ { "name": "Multiattack", "description": "The spirit makes a number of attacks equal to half the spell's level (rounded down)." }, { "name": "Maul", "modifier": "SpellAttackModifier", "description": "Melee Weapon Attack, reach 5 ft., one target. Hit: 1d8 + PB + SpellLevel force damage.", "attackRoll": "1d20+SpellAttackModifier", "damageRoll": "1d8+PB+SpellLevel" } ] },
+    "spiritual-weapon": { "id": "spiritual-weapon", "name": "Spiritual Weapon", "creatureType": "Spectral Weapon", "hp": 1, "ac": 10, "speed": { "fly": 20, "hover": true }, "actions": [ { "name": "Force Strike", "modifier": "SpellAttackModifier", "description": "Melee Spell Attack, reach 5 ft., one creature. Hit: 1d8 + SpellcastingAbilityModifier force damage.", "attackRoll": "1d20+SpellAttackModifier", "damageRoll": "1d8+SpellcastingAbilityModifier" } ] },
+    "imp": { "id": "imp", "name": "Imp", "creatureType": "Tiny fiend (devil, shapechanger)", "hp": 10, "ac": 13, "speed": { "walk": 20, "fly": 40 }, "actions": [ { "name": "Sting", "modifier": "+5", "description": "Melee Weapon Attack. Hit: 5 (1d4 + 3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half on a success." } ] },
+    "pseudodragon": { "id": "pseudodragon", "name": "Pseudodragon", "creatureType": "Tiny dragon", "hp": 7, "ac": 13, "speed": { "walk": 15, "fly": 60 }, "actions": [ { "name": "Sting", "modifier": "+4", "description": "Melee Weapon Attack. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or become poisoned for 1 hour. If the saving throw fails by 5 or more, the target is instead unconscious." } ] },
+    "quasit": { "id": "quasit", "name": "Quasit", "creatureType": "Tiny fiend (demon, shapechanger)", "hp": 7, "ac": 13, "speed": { "walk": 40 }, "actions": [ { "name": "Claws", "modifier": "+4", "description": "Melee Weapon Attack. Hit: 5 (1d4 + 3) piercing damage, and the target must succeed on a DC 10 Constitution saving throw or take 5 (2d4) poison damage and become poisoned for 1 minute." } ] },
+    "sprite": { "id": "sprite", "name": "Sprite", "creatureType": "Tiny fey", "hp": 2, "ac": 15, "speed": { "walk": 10, "fly": 40 }, "actions": [ { "name": "Shortsword", "modifier": "+6", "description": "Melee Weapon Attack. Hit: 1 piercing damage." }, { "name": "Shortbow", "modifier": "+6", "description": "Ranged Weapon Attack. Hit: 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or become poisoned for 1 minute." } ] },
+    "bear-spirit": { "id": "bear-spirit", "name": "Spirit Totem (Bear)", "creatureType": "Spirit", "hp": 1, "ac": 10, "speed": {}, "actions": [ { "name": "Bear Spirit Aura", "description": "You and your allies gain temporary hit points equal to 5 + your druid level and have advantage on Strength checks and saves." } ] },
+    "hawk-spirit": { "id": "hawk-spirit", "name": "Spirit Totem (Hawk)", "creatureType": "Spirit", "hp": 1, "ac": 10, "speed": {}, "actions": [ { "name": "Hawk Spirit Aura", "description": "You can use your reaction to grant advantage to an ally's attack roll. You and your allies have advantage on Wisdom (Perception) checks." } ] },
+    "unicorn-spirit": { "id": "unicorn-spirit", "name": "Spirit Totem (Unicorn)", "creatureType": "Spirit", "hp": 1, "ac": 10, "speed": {}, "actions": [ { "name": "Unicorn Spirit Aura", "description": "When you cast a spell that restores hit points, each ally in the aura regains hit points equal to your druid level." } ] }
+}

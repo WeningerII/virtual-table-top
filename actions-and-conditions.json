@@ -1,0 +1,106 @@
+
+{
+  "conditionsCategory": {
+    "title": "Conditions",
+    "description": "Conditions alter your capabilities in a variety of ways, and can arise as a result of a spell, a class feature, a monster's attack, or other effect.",
+    "items": [
+        { "name": "Blinded", "description": "You can't see and automatically fail any ability check that requires sight. Attack rolls against you have advantage, and your attack rolls have disadvantage." },
+        { "name": "Charmed", "description": "You can't attack the charmer or target the charmer with harmful abilities or magical effects. The charmer has advantage on any ability check to interact socially with you." },
+        { "name": "Deafened", "description": "You can't hear and automatically fail any ability check that requires hearing." },
+        { "name": "Exhaustion", "description": "Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description." },
+        { "name": "Frightened", "description": "You have disadvantage on ability checks and attack rolls while the source of your fear is within line of sight. You can't willingly move closer to the source of your fear." },
+        { "name": "Grappled", "description": "Your speed becomes 0, and you can't benefit from any bonus to your speed. The condition ends if the grappler is incapacitated. The condition also ends if an effect removes the grappled creature from the reach of the grappler or grappling effect." },
+        { "name": "Incapacitated", "description": "You can't take actions or reactions." },
+        { "name": "Invisible", "description": "You are impossible to see without the aid of magic or a special sense. For the purpose of hiding, you are heavily obscured. Your location can be detected by any noise you make or any tracks you leave. Attack rolls against you have disadvantage, and your attack rolls have advantage." },
+        { "name": "Paralyzed", "description": "You are incapacitated and can't move or speak. You automatically fail Strength and Dexterity saving throws. Attack rolls against you have advantage. Any attack that hits you is a critical hit if the attacker is within 5 feet of you." },
+        { "name": "Petrified", "description": "You are transformed, along with any nonmagical object you are wearing or carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging. You are incapacitated, can't move or speak, and are unaware of your surroundings. Attack rolls against you have advantage. You automatically fail Strength and Dexterity saving throws. You have resistance to all damage. You are immune to poison and disease, though a poison or disease already in your system is suspended, not neutralized." },
+        { "name": "Poisoned", "description": "You have disadvantage on attack rolls and ability checks." },
+        { "name": "Prone", "description": "Your only movement option is to crawl, unless you stand up and thereby end the condition. You have disadvantage on attack rolls. An attack roll against you has advantage if the attacker is within 5 feet of you. Otherwise, the attack roll has disadvantage." },
+        { "name": "Restrained", "description": "Your speed becomes 0, and you can't benefit from any bonus to your speed. Attack rolls against you have advantage, and your attack rolls have disadvantage. You have disadvantage on Dexterity saving throws." },
+        { "name": "Stunned", "description": "A stunned creature is incapacitated, can’t move, and can speak only falteringly. You automatically fail Strength and Dexterity saving throws. Attack rolls against the creature have advantage." },
+        { "name": "Unconscious", "description": "An unconscious creature is incapacitated, can’t move or speak, and is unaware of its surroundings. The creature drops whatever it’s holding and falls prone." }
+    ]
+  },
+  "actionCategories": [
+    {
+        "title": "Movement",
+        "subtitle": "Limited by movement speed",
+        "description": "You can move at any time during your turn (before, after, or during actions).",
+        "items": [
+            { "name": "Move", "cost": "5ft per 5ft" },
+            { "name": "Climb", "cost": "10ft per 5ft" },
+            { "name": "Swim", "cost": "10ft per 5ft" },
+            { "name": "Drop prone", "cost": "0ft" },
+            { "name": "Crawl", "cost": "10ft per 5ft" },
+            { "name": "Stand up", "cost": "half movement speed" },
+            { "name": "High jump", "cost": "5ft per 5ft" },
+            { "name": "Long jump", "cost": "5ft per 5ft" },
+            { "name": "Improvise", "description": "Any stunt not on this list" },
+            { "name": "Difficult terrain", "cost": "+5ft per 5ft", "modifier": "Cost modifier" },
+            { "name": "Grapple move", "modifier": "speed halved" }
+        ]
+    },
+    {
+        "title": "Action",
+        "subtitle": "1 per turn",
+        "description": "You can also interact with one object or feature of the environment for free.",
+        "items": [
+            { "name": "Attack", "description": "Melee or ranged attack" },
+            { "name": "Grapple", "description": "Special melee attack" },
+            { "name": "Shove", "description": "Special melee attack" },
+            { "name": "Cast a spell", "description": "Cast time of 1 action" },
+            { "name": "Dash", "description": "Double movement speed" },
+            { "name": "Disengage", "description": "Prevent opportunity attacks" },
+            { "name": "Dodge", "description": "Increase defenses" },
+            { "name": "Escape", "description": "Escape a grapple" },
+            { "name": "Help", "description": "Grant an ally advantage" },
+            { "name": "Use Object", "description": "Interact, use special abilities" },
+            { "name": "Use shield", "description": "Equip or unequip a shield" },
+            { "name": "Hide", "description": "Attempt to become unseen" },
+            { "name": "Search", "description": "Devote your attention to finding something" },
+            { "name": "Ready", "description": "Choose trigger and action" },
+            { "name": "Improvise", "description": "Any action not on this list" }
+        ]
+    },
+    {
+        "title": "Bonus Action",
+        "subtitle": "Max. 1 per turn",
+        "description": "You can take a bonus action only when a special ability, spell, or feature states that you can do something as a bonus action.",
+        "items": [
+            { "name": "Offhand Attack", "description": "Use with the Attack action" },
+            { "name": "Cast a spell", "description": "Cast time of 1 bonus action" },
+            { "name": "Use class feature", "description": "Some features use bonus actions" }
+        ]
+    },
+    {
+        "title": "Reaction",
+        "subtitle": "Max. 1 per round",
+        "description": "A reaction is an instant response to a trigger of some kind, which can occur on your turn or on someone else's.",
+        "items": [
+            { "name": "Opportunity attack", "description": "Enemy leaves your reach" },
+            { "name": "Readied action", "description": "Part of your Ready action" },
+            { "name": "Cast a spell", "description": "Cast time of 1 reaction" }
+        ]
+    },
+    {
+        "title": "Environmental Effects",
+        "description": "Effects that obscure vision can prove a significant hindrance to most adventuring tasks.",
+        "items": [
+            { "name": "Lightly obscured", "description": "Disadvantage on Perception" },
+            { "name": "Heavily obscured", "description": "Effectively blind" },
+            { "name": "Bright light", "description": "Normal vision" },
+            { "name": "Dim light", "description": "Lightly obscured" },
+            { "name": "Darkness", "description": "Heavily obscured" }
+        ]
+    },
+    {
+        "title": "Cover",
+        "description": "Obstacles can provide cover during combat, making a target more difficult to harm.",
+        "items": [
+            { "name": "Half cover", "description": "+2 to AC and Dexterity saving throws. e.g., Low wall, furniture" },
+            { "name": "Three-quarters cover", "description": "+5 to AC and Dexterity saving throws. e.g., Portcullis, arrow slit" },
+            { "name": "Full cover", "description": "Can't be targeted directly. e.g., Completely concealed" }
+        ]
+    }
+  ]
+}

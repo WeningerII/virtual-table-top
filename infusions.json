@@ -1,0 +1,139 @@
+
+[
+    {
+        "id": "enhanced-defense",
+        "name": "Enhanced Defense",
+        "description": "A creature gains a +1 bonus to Armor Class while wearing (armor) or wielding (shield) the infused item. The bonus increases to +2 when you reach 10th level in this class.",
+        "itemTypeFilter": ["armor", "shield"],
+        "attunement": true,
+        "effects": [{ "type": "bonus", "to": "ac", "value": 1, "valueByLevel": { "10": 2 } }]
+    },
+    {
+        "id": "enhanced-weapon",
+        "name": "Enhanced Weapon",
+        "description": "This magic weapon grants a +1 bonus to attack and damage rolls made with it. The bonus increases to +2 when you reach 10th level in this class.",
+        "itemTypeFilter": ["simple_or_martial_weapon"],
+        "attunement": true,
+        "effects": [
+            { "type": "bonus", "to": "attack_roll", "value": 1, "valueByLevel": { "10": 2 } },
+            { "type": "bonus", "to": "damage_roll", "value": 1, "valueByLevel": { "10": 2 } }
+        ]
+    },
+    {
+        "id": "repeating-shot",
+        "name": "Repeating Shot",
+        "description": "This magic weapon grants a +1 bonus to attack and damage rolls made with it and ignores the loading property if it has it. If you load no ammunition in the weapon, it produces its own, automatically creating one piece of magic ammunition when you make a ranged attack with it.",
+        "itemTypeFilter": ["ammunition_weapon"],
+        "attunement": true,
+        "effects": [{ "type": "bonus", "to": "attack_roll", "value": 1 }, { "type": "bonus", "to": "damage_roll", "value": 1 }, { "type": "special_ability", "name": "Ignore Loading"}]
+    },
+    {
+        "id": "returning-weapon",
+        "name": "Returning Weapon",
+        "description": "This magic weapon grants a +1 bonus to attack and damage rolls made with it, and it returns to the wielder’s hand immediately after it is used to make a ranged attack.",
+        "itemTypeFilter": ["thrown_weapon"],
+        "attunement": true,
+        "effects": [{ "type": "bonus", "to": "attack_roll", "value": 1 }, { "type": "bonus", "to": "damage_roll", "value": 1 }, { "type": "special_ability", "name": "Returning Weapon"}]
+    },
+    {
+        "id": "mind-sharpener",
+        "name": "Mind Sharpener",
+        "description": "The infused item has 4 charges. When the wearer fails a Constitution saving throw to maintain concentration on a spell, they can use their reaction to expend 1 of the item’s charges to succeed instead. The item regains 1d4 expended charges daily at dawn.",
+        "itemTypeFilter": ["armor", "robes"],
+        "attunement": true,
+        "effects": [{ "type": "special_ability", "name": "Mind Sharpener" }]
+    },
+    {
+        "id": "enhanced-arcane-focus",
+        "name": "Enhanced Arcane Focus",
+        "description": "While holding this item, a creature gains a +1 bonus to spell attack rolls. In addition, the creature ignores half cover when making a spell attack. The bonus increases to +2 when you reach 10th level in this class.",
+        "itemTypeFilter": ["rod_staff_or_wand"],
+        "attunement": true,
+        "effects": [
+            { "type": "bonus", "to": "attack_roll", "value": 1, "condition": "with spell attacks", "valueByLevel": { "10": 2 }},
+            { "type": "special_ability", "name": "Ignore Half Cover (Spells)"}
+        ]
+    },
+     {
+        "id": "homunculus-servant",
+        "name": "Homunculus Servant",
+        "description": "You learn how to create a homunculus servant. Choose a gem or crystal worth at least 100 gp, and you can magically create a special homunculus that serves you.",
+        "itemTypeFilter": ["gem_or_crystal_100gp"],
+        "createsCompanionId": "homunculus-servant"
+    },
+    {
+        "id": "boots-of-the-winding-path",
+        "name": "Boots of the Winding Path",
+        "minLevel": 6,
+        "description": "While wearing these boots, a creature can teleport up to 15 feet as a bonus action to an unoccupied space the creature can see. The creature must have occupied that space at some point during the current turn.",
+        "itemTypeFilter": ["boots"],
+        "attunement": true,
+        "effects": [{ "type": "grant_action", "name": "Winding Path Teleport" }]
+    },
+    {
+        "id": "radiant-weapon",
+        "name": "Radiant Weapon",
+        "minLevel": 6,
+        "description": "This magic weapon grants a +1 bonus to attack and damage rolls made with it. While holding it, the wielder can take a bonus action to cause it to shed bright light. As a reaction after being hit, the wielder can expend 1 of 4 charges to blind the attacker.",
+        "itemTypeFilter": ["simple_or_martial_weapon"],
+        "attunement": true,
+        "effects": [{ "type": "bonus", "to": "attack_roll", "value": 1 }, { "type": "bonus", "to": "damage_roll", "value": 1 }, { "type": "grant_action", "name": "Radiant Weapon Light" }, { "type": "special_ability", "name": "Radiant Weapon Blind" }]
+    },
+    {
+        "id": "repulsion-shield",
+        "name": "Repulsion Shield",
+        "minLevel": 6,
+        "description": "A creature gains a +1 bonus to Armor Class while wielding this shield. While holding it, the wielder can use a reaction to expend 1 of 4 charges to push an attacker up to 15 feet away.",
+        "itemTypeFilter": ["shield"],
+        "attunement": true,
+        "effects": [{ "type": "bonus", "to": "ac", "value": 1 }, { "type": "special_ability", "name": "Repulsion Shield Push"}]
+    },
+    {
+        "id": "resistant-armor",
+        "name": "Resistant Armor",
+        "minLevel": 6,
+        "description": "While wearing this armor, a creature has resistance to one damage type of your choice: acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, or thunder.",
+        "itemTypeFilter": ["armor"],
+        "attunement": true,
+        "effects": [{ "type": "resistance", "damageType": "chosen_elemental" }]
+    },
+    {
+        "id": "helm-of-awareness",
+        "name": "Helm of Awareness",
+        "minLevel": 10,
+        "description": "While wearing this helmet, a creature has advantage on initiative rolls. In addition, the wearer can’t be surprised, provided it isn’t incapacitated.",
+        "itemTypeFilter": ["helmet"],
+        "attunement": true,
+        "effects": [{ "type": "advantage", "on": "initiative", "condition": "Always" }, { "type": "special_ability", "name": "Cannot be Surprised" }]
+    },
+    {
+        "id": "replicate-bag-of-holding",
+        "name": "Replicate Magic Item: Bag of Holding",
+        "description": "Replicates a Bag of Holding.",
+        "itemTypeFilter": [],
+        "replicatesItemId": "bag-of-holding"
+    },
+    {
+        "id": "replicate-goggles-of-night",
+        "name": "Replicate Magic Item: Goggles of Night",
+        "description": "Replicates Goggles of Night, granting the wearer darkvision out to 60 feet.",
+        "itemTypeFilter": [],
+        "replicatesItemId": "goggles-of-night"
+    },
+    {
+        "id": "replicate-sending-stones",
+        "name": "Replicate Magic Item: Sending Stones",
+        "description": "Replicates a pair of Sending Stones.",
+        "itemTypeFilter": [],
+        "replicatesItemId": "sending-stones"
+    },
+    {
+        "id": "replicate-winged-boots",
+        "name": "Replicate Magic Item: Winged Boots",
+        "minLevel": 10,
+        "description": "Replicates Winged Boots, granting the wearer a flying speed equal to their walking speed for up to 4 hours.",
+        "itemTypeFilter": ["boots"],
+        "replicatesItemId": "winged-boots",
+        "attunement": true
+    }
+]

@@ -1,0 +1,125 @@
+
+[
+    {
+        "source": "Blessed",
+        "duration": "concentration",
+        "effect": {
+            "type": "special_ability",
+            "name": "Bless Bonus",
+            "description": "Roll a d4 and add it to attack rolls and saving throws."
+        }
+    },
+    {
+        "source": "Baned",
+        "duration": "concentration",
+        "effect": {
+            "type": "special_ability",
+            "name": "Bane Penalty",
+            "description": "Roll a d4 and subtract it from attack rolls and saving throws."
+        }
+    },
+    {
+        "source": "Hastened",
+        "duration": "concentration",
+        "effect": {
+            "type": "special_ability",
+            "name": "Haste Effects",
+            "description": "+2 AC, advantage on Dexterity saves, doubled speed, and an additional action (Attack, Dash, Disengage, Hide, or Use an Object). When the spell ends, the target can't move or take actions for a turn."
+        }
+    },
+    {
+        "source": "Blinded",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You can't see and automatically fail any ability check that requires sight. Attack rolls against you have advantage, and your attack rolls have disadvantage." }
+    },
+    {
+        "source": "Charmed",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You can't attack the charmer or target the charmer with harmful abilities or magical effects. The charmer has advantage on any ability check to interact socially with you." }
+    },
+    {
+        "source": "Deafened",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You can't hear and automatically fail any ability check that requires hearing." }
+    },
+    {
+        "source": "Frightened",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You have disadvantage on ability checks and attack rolls while the source of your fear is within line of sight. You can't willingly move closer to the source of your fear." }
+    },
+    {
+        "source": "Grappled",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "Your speed becomes 0, and you can't benefit from any bonus to your speed." }
+    },
+    {
+        "source": "Incapacitated",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You can't take actions or reactions." }
+    },
+    {
+        "source": "Invisible",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You are impossible to see without the aid of magic or a special sense. Attack rolls against you have disadvantage, and your attack rolls have advantage." }
+    },
+    {
+        "source": "Paralyzed",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You are incapacitated and can't move or speak. You automatically fail Strength and Dexterity saving throws. Attack rolls against you have advantage. Any attack that hits you is a critical hit if the attacker is within 5 feet of you." }
+    },
+    {
+        "source": "Petrified",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You are transformed into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging. You are incapacitated, can't move or speak, and are unaware of your surroundings. Attack rolls against you have advantage. You automatically fail Strength and Dexterity saving throws. You have resistance to all damage. You are immune to poison and disease." }
+    },
+    {
+        "source": "Poisoned",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You have disadvantage on attack rolls and ability checks." }
+    },
+    {
+        "source": "Prone",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "Your only movement option is to crawl. You have disadvantage on attack rolls. An attack roll against you has advantage if the attacker is within 5 feet of you, otherwise it has disadvantage." }
+    },
+    {
+        "source": "Restrained",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "Your speed becomes 0. Attack rolls against you have advantage, and your attack rolls have disadvantage. You have disadvantage on Dexterity saving throws." }
+    },
+    {
+        "source": "Stunned",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You are incapacitated, can’t move, and can speak only falteringly. You automatically fail Strength and Dexterity saving throws. Attack rolls against you have advantage." }
+    },
+    {
+        "source": "Unconscious",
+        "duration": "special",
+        "effect": { "type": "condition", "description": "You are incapacitated, can’t move or speak, and are unaware of your surroundings. You drop whatever you’re holding and fall prone." }
+    },
+    {
+        "source": "Burning",
+        "duration": "special",
+        "effect": { "type": "special_ability", "description": "Takes fire damage at the start of each turn." }
+    },
+    {
+        "source": "Enfeebled",
+        "duration": "concentration",
+        "effect": { "type": "special_ability", "description": "Deals only half damage with weapon attacks that use Strength." }
+    },
+    {
+        "source": "Slowed",
+        "duration": "concentration",
+        "effect": { "type": "special_ability", "description": "Speed is halved, -2 penalty to AC and Dexterity saving throws, can't use reactions, can only use an action or a bonus action, not both." }
+    },
+    {
+        "source": "No-Healing",
+        "duration": "1_round",
+        "effect": { "type": "special_ability", "description": "The creature can't regain hit points." }
+    },
+    {
+        "source": "Speed-Reduced",
+        "duration": "1_round",
+        "effect": { "type": "bonus", "to": "speed", "value": -10, "condition": "Speed reduced by 10 feet" }
+    }
+]

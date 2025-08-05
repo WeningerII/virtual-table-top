@@ -1,0 +1,32 @@
+
+{
+    "prerequisites": {
+        "barbarian": { "STRENGTH": 13 },
+        "bard": { "CHARISMA": 13 },
+        "cleric": { "WISDOM": 13 },
+        "druid": { "WISDOM": 13 },
+        "fighter": { "STRENGTH": 13, "DEXTERITY": 13 },
+        "monk": { "DEXTERITY": 13, "WISDOM": 13 },
+        "paladin": { "STRENGTH": 13, "CHARISMA": 13 },
+        "ranger": { "DEXTERITY": 13, "WISDOM": 13 },
+        "rogue": { "DEXTERITY": 13 },
+        "sorcerer": { "CHARISMA": 13 },
+        "warlock": { "CHARISMA": 13 },
+        "wizard": { "INTELLIGENCE": 13 }
+    },
+    "proficiencyGains": {
+        "barbarian": { "armor": ["shields"], "weapons": ["simple weapons", "martial weapons"] },
+        "bard": { "armor": ["light armor"], "skills": { "choose": 1, "from": ["any"] }, "tools": ["one-musical-instrument"] },
+        "cleric": { "armor": ["light armor", "medium armor", "shields"] },
+        "druid": { "armor": ["light armor", "medium armor", "shields"] },
+        "fighter": { "armor": ["light armor", "medium armor", "shields"], "weapons": ["simple weapons", "martial weapons"] },
+        "monk": { "weapons": ["simple weapons", "shortswords"] },
+        "paladin": { "armor": ["light armor", "medium armor", "shields"], "weapons": ["simple weapons", "martial weapons"] },
+        "ranger": { "armor": ["light armor", "medium armor", "shields"], "weapons": ["simple weapons", "martial weapons"], "skills": { "choose": 1, "from": ["animal-handling", "athletics", "insight", "investigation", "nature", "perception", "stealth", "survival"] } },
+        "rogue": { "armor": ["light armor"], "skills": { "choose": 1, "from": ["acrobatics", "athletics", "deception", "insight", "intimidation", "investigation", "perception", "performance", "persuasion", "sleight-of-hand", "stealth"] }, "tools": ["thieves-tools"] },
+        "sorcerer": {},
+        "warlock": { "armor": ["light armor"], "weapons": ["simple weapons"] },
+        "wizard": {},
+        "artificer": { "armor": ["light armor", "medium armor", "shields"], "tools": ["thieves' tools", "tinker's tools"] }
+    }
+}
