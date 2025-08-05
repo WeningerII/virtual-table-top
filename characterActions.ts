@@ -1,3 +1,4 @@
+
 import { metaActions } from '../engine/slices/metaSlice';
 import { abilitiesActions } from '../engine/slices/abilitiesSlice';
 import { proficienciesActions } from '../engine/slices/proficienciesSlice';
@@ -5,6 +6,8 @@ import { inventoryActions } from '../engine/slices/inventorySlice';
 import { spellsActions } from '../engine/slices/spellsSlice';
 import { vitalsActions } from '../engine/slices/vitalsSlice';
 import { playStateActions } from '../engine/slices/playStateSlice';
+
+// This is a bit of a trick to get a union of all action types
 
 type MetaActionCreators = typeof metaActions;
 type AbilitiesActionCreators = typeof abilitiesActions;
