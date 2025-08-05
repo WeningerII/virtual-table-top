@@ -1,0 +1,25 @@
+{
+    "id": "heavy-armor-master",
+    "name": "Heavy Armor Master",
+    "description": "You can use your armor to deflect strikes that would kill others. You gain the following benefits: Increase your Strength score by 1, to a maximum of 20. While you are wearing heavy armor, bludgeoning, piercing, and slashing damage that you take from nonmagical attacks is reduced by 3.",
+    "prerequisites": [
+        {
+            "type": "proficiency",
+            "proficiencyType": "armor",
+            "proficiencyId": "heavy"
+        }
+    ],
+    "effects": [
+        {
+            "type": "ability_score_increase",
+            "abilities": ["STRENGTH"],
+            "value": 1,
+            "count": 1
+        },
+        {
+            "type": "special_ability",
+            "name": "Damage Reduction",
+            "description": "While you are wearing heavy armor, bludgeoning, piercing, and slashing damage that you take from nonmagical attacks is reduced by 3."
+        }
+    ]
+}

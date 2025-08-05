@@ -1,0 +1,26 @@
+{
+    "id": "heavily-armored",
+    "name": "Heavily Armored",
+    "description": "You have trained to master the use of heavy armor, gaining the following benefits: Increase your Strength score by 1, to a maximum of 20. You gain proficiency with heavy armor.",
+    "prerequisites": [
+        {
+            "type": "proficiency",
+            "proficiencyType": "armor",
+            "proficiencyId": "medium"
+        }
+    ],
+    "effects": [
+        {
+            "type": "ability_score_increase",
+            "abilities": ["STRENGTH"],
+            "value": 1,
+            "count": 1
+        },
+        {
+            "type": "proficiency",
+            "proficiencyType": "armor",
+            "options": ["heavy"],
+            "count": 1
+        }
+    ]
+}

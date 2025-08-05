@@ -1,0 +1,29 @@
+{
+    "id": "spell-sniper",
+    "name": "Spell Sniper",
+    "description": "You have learned techniques to enhance your attacks with certain kinds of spells, gaining the following benefits: When you cast a spell that requires you to make an attack roll, the spell’s range is doubled. Your ranged spell attacks ignore half cover and three-quarters cover. You learn one cantrip that requires an attack roll.",
+    "prerequisites": [
+        {
+            "type": "spellcasting"
+        }
+    ],
+    "effects": [
+        {
+            "type": "special_ability",
+            "name": "Double Spell Range"
+        },
+        {
+            "type": "special_ability",
+            "name": "Ignore Cover (Spells)"
+        }
+    ],
+    "choiceOptions": [
+        {
+            "id": "spell-sniper-cantrip",
+            "label": "Choose a cantrip that requires an attack roll",
+            "type": "spell",
+            "count": 1,
+            "from": "any_attack_cantrip"
+        }
+    ]
+}

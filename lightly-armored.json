@@ -1,0 +1,23 @@
+{
+    "id": "lightly-armored",
+    "name": "Lightly Armored",
+    "description": "You have trained to master the use of light armor, gaining the following benefits: Increase your Strength or Dexterity score by 1, to a maximum of 20. You gain proficiency with light armor.",
+    "prerequisites": [],
+    "choiceOptions": [
+        {
+            "id": "lightly-armored-ability-choice",
+            "label": "Increase Strength or Dexterity by 1",
+            "type": "ability",
+            "count": 1,
+            "from": ["STRENGTH", "DEXTERITY"]
+        }
+    ],
+    "effects": [
+        {
+            "type": "proficiency",
+            "proficiencyType": "armor",
+            "options": ["light"],
+            "count": 1
+        }
+    ]
+}

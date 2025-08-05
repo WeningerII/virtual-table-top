@@ -1,0 +1,29 @@
+{
+    "id": "moderately-armored",
+    "name": "Moderately Armored",
+    "description": "You have trained to master the use of medium armor and shields, gaining the following benefits: Increase your Strength or Dexterity score by 1, to a maximum of 20. You gain proficiency with medium armor and shields.",
+    "prerequisites": [
+        {
+            "type": "proficiency",
+            "proficiencyType": "armor",
+            "proficiencyId": "light"
+        }
+    ],
+    "choiceOptions": [
+        {
+            "id": "moderately-armored-ability-choice",
+            "label": "Increase Strength or Dexterity by 1",
+            "type": "ability",
+            "count": 1,
+            "from": ["STRENGTH", "DEXTERITY"]
+        }
+    ],
+    "effects": [
+        {
+            "type": "proficiency",
+            "proficiencyType": "armor",
+            "options": ["medium", "shields"],
+            "count": 2
+        }
+    ]
+}

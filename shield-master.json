@@ -1,0 +1,24 @@
+{
+    "id": "shield-master",
+    "name": "Shield Master",
+    "description": "You use shields not just for protection but also for offense. You gain the following benefits while you are wielding a shield: If you take the Attack action on your turn, you can use a bonus action to try to shove a creature within 5 feet of you with your shield. If you aren’t incapacitated, you can add your shield’s AC bonus to any Dexterity saving throw you make against a spell or other harmful effect that targets only you. If you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to take no damage if you succeed on the saving throw.",
+    "prerequisites": [],
+    "effects": [
+        {
+            "type": "grant_action",
+            "name": "Shield Shove",
+            "actionType": "bonus",
+            "description": "If you take the Attack action, you can use a bonus action to shove a creature."
+        },
+        {
+            "type": "special_ability",
+            "name": "Shield Dex Save Bonus",
+            "description": "Add your shield’s AC bonus to Dexterity saving throws against effects that target only you."
+        },
+        {
+            "type": "special_ability",
+            "name": "Shield Evasion",
+            "description": "Use your reaction on a successful Dex save for half damage to take no damage instead."
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "id": "lucky",
+    "name": "Lucky",
+    "description": "You have inexplicable luck that seems to kick in at just the right moment. You have 3 luck points. Whenever you make an attack roll, an ability check, or a saving throw, you can spend one luck point to roll an additional d20. You can choose to spend one of your luck points after you roll the die, but before the outcome is determined. You regain your expended luck points when you finish a long rest.",
+    "prerequisites": [],
+    "effects": [
+        {
+            "type": "special_ability",
+            "name": "Luck Points",
+            "description": "You have 3 luck points. You can spend one to roll an additional d20 on an attack roll, ability check, or saving throw you make, or on an attack roll made against you. You choose which d20 is used. You regain expended luck points when you finish a long rest."
+        }
+    ]
+}

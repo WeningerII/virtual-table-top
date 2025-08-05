@@ -1,0 +1,13 @@
+{
+    "id": "savage-attacker",
+    "name": "Savage Attacker",
+    "description": "Once per turn when you roll damage for a melee weapon attack, you can reroll the weapon’s damage dice and use either total.",
+    "prerequisites": [],
+    "effects": [
+        {
+            "type": "special_ability",
+            "name": "Savage Attacker Reroll",
+            "description": "Once per turn when you roll damage for a melee weapon attack, you can reroll the weapon’s damage dice and use either total."
+        }
+    ]
+}

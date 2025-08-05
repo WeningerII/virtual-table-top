@@ -1,0 +1,23 @@
+{
+    "id": "mobile",
+    "name": "Mobile",
+    "description": "You are exceptionally speedy and agile. You gain the following benefits: Your speed increases by 10 feet. When you use the Dash action, difficult terrain doesn’t cost you extra movement on that turn. When you make a melee attack against a creature, you don’t provoke opportunity attacks from that creature for the rest of the turn, whether you hit or not.",
+    "prerequisites": [],
+    "effects": [
+        {
+            "type": "bonus",
+            "to": "speed",
+            "value": 10
+        },
+        {
+            "type": "special_ability",
+            "name": "Mobile Dash",
+            "description": "When you use the Dash action, difficult terrain doesn’t cost you extra movement on that turn."
+        },
+        {
+            "type": "special_ability",
+            "name": "Mobile Attacker",
+            "description": "When you make a melee attack against a creature, you don’t provoke opportunity attacks from that creature for the rest of the turn, whether you hit or not."
+        }
+    ]
+}

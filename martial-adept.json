@@ -1,0 +1,22 @@
+{
+    "id": "martial-adept",
+    "name": "Martial Adept",
+    "description": "You have martial training that allows you to perform special combat maneuvers. You learn two maneuvers of your choice from among those available to the Battle Master archetype in the fighter class. You gain one superiority die, which is a d6. This die is used to fuel your maneuvers. You regain your expended superiority dice when you finish a short or long rest.",
+    "prerequisites": [],
+    "choiceOptions": [
+        {
+            "id": "martial-adept-maneuvers",
+            "label": "Choose 2 maneuvers",
+            "type": "maneuver",
+            "count": 2,
+            "from": "any"
+        }
+    ],
+    "effects": [
+        {
+            "type": "special_ability",
+            "name": "Superiority Die (1d6)",
+            "description": "You gain one superiority die, which is a d6. You regain it on a short or long rest."
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "id": "keen-mind",
+    "name": "Keen Mind",
+    "description": "You have a mind that can track time, direction, and detail with uncanny precision. You gain the following benefits. Increase your Intelligence score by 1, to a maximum of 20. You always know which way is north. You always know the number of hours left before the next sunrise or sunset. You can accurately recall anything you have seen or heard within the past month.",
+    "prerequisites": [],
+    "effects": [
+        {
+            "type": "ability_score_increase",
+            "abilities": ["INTELLIGENCE"],
+            "value": 1,
+            "count": 1
+        },
+        {
+            "type": "special_ability",
+            "name": "Perfect Orientation",
+            "description": "You always know which way is north and the hours left before sunrise or sunset."
+        },
+        {
+            "type": "special_ability",
+            "name": "Photographic Memory",
+            "description": "You can accurately recall anything you have seen or heard within the past month."
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "id": "tavern-brawler",
+    "name": "Tavern Brawler",
+    "description": "Accustomed to rough-and-tumble fighting using whatever weapons happen to be at hand, you gain the following benefits: Increase your Strength or Constitution score by 1, to a maximum of 20. You are proficient with improvised weapons. Your unarmed strike uses a d4 for damage. When you hit a creature with an unarmed strike or an improvised weapon on your turn, you can use a bonus action to attempt to grapple the target.",
+    "prerequisites": [],
+    "choiceOptions": [
+        {
+            "id": "tavern-brawler-ability-choice",
+            "label": "Increase Strength or Constitution by 1",
+            "type": "ability",
+            "count": 1,
+            "from": ["STRENGTH", "CONSTITUTION"]
+        }
+    ],
+    "effects": [
+        {
+            "type": "proficiency",
+            "proficiencyType": "weapon",
+            "options": ["improvised"],
+            "count": 1
+        },
+        {
+            "type": "special_ability",
+            "name": "Improved Unarmed Strike (d4)"
+        },
+        {
+            "type": "grant_action",
+            "name": "Bonus Action Grapple",
+            "actionType": "bonus",
+            "description": "When you hit with an unarmed strike or improvised weapon, you can attempt to grapple as a bonus action."
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "id": "crossbow-expert",
+    "name": "Crossbow Expert",
+    "description": "Thanks to extensive practice with the crossbow, you gain the following benefits: You ignore the loading property of crossbows with which you are proficient. Being within 5 feet of a hostile creature doesn’t impose disadvantage on your ranged attack rolls. When you use the Attack action and attack with a one-handed weapon, you can use a bonus action to attack with a hand crossbow you are holding.",
+    "prerequisites": [],
+    "effects": [
+        {
+            "type": "special_ability",
+            "name": "Ignore Loading (Crossbows)"
+        },
+        {
+            "type": "special_ability",
+            "name": "Point-Blank Shooter"
+        },
+        {
+            "type": "grant_action",
+            "name": "Hand Crossbow Attack",
+            "actionType": "bonus",
+            "description": "When you use the Attack action with a one-handed weapon, you can attack with a hand crossbow."
+        }
+    ]
+}

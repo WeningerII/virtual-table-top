@@ -1,0 +1,13 @@
+{
+    "id": "tough",
+    "name": "Tough",
+    "description": "Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit points.",
+    "prerequisites": [],
+    "effects": [
+        {
+            "type": "bonus",
+            "to": "hp_per_level",
+            "value": 2
+        }
+    ]
+}

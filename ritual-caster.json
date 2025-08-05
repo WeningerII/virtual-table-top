@@ -1,0 +1,24 @@
+{
+    "id": "ritual-caster",
+    "name": "Ritual Caster",
+    "description": "You have learned a number of spells that you can cast as rituals. These spells are written in a ritual book, which you must have in hand while casting one of them. When you choose this feat, you acquire a ritual book holding two 1st-level spells of your choice. Choose one of the following classes: bard, cleric, druid, sorcerer, warlock, or wizard. You must choose your spells from that class’s spell list, and the spells you choose must have the ritual tag.",
+    "prerequisites": [
+        {
+            "type": "ability",
+            "ability": "INTELLIGENCE",
+            "value": 13
+        },
+        {
+            "type": "ability",
+            "ability": "WISDOM",
+            "value": 13
+        }
+    ],
+    "effects": [
+        {
+            "type": "special_ability",
+            "name": "Ritual Book",
+            "description": "You gain a ritual book with two 1st-level ritual spells from a chosen class list (bard, cleric, druid, sorcerer, warlock, or wizard). You can add more ritual spells you find to this book."
+        }
+    ]
+}

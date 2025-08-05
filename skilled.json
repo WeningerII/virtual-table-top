@@ -1,0 +1,15 @@
+{
+    "id": "skilled",
+    "name": "Skilled",
+    "description": "You gain proficiency in any combination of three skills or tools of your choice.",
+    "prerequisites": [],
+    "choiceOptions": [
+        { 
+            "id": "skilled-proficiencies", 
+            "label": "Choose 3 skills or tools", 
+            "type": "skill_or_tool", 
+            "count": 3,
+            "from": "any"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "id": "charger",
+    "name": "Charger",
+    "description": "When you use your action to Dash, you can use a bonus action to make one melee weapon attack or to shove a creature. If you move at least 10 feet in a straight line immediately before taking this bonus action, you either gain a +5 bonus to the attack’s damage roll or push the target up to 10 feet away from you.",
+    "prerequisites": [],
+    "effects": [
+        {
+            "type": "grant_action",
+            "name": "Charger Attack/Shove",
+            "actionType": "bonus",
+            "description": "After a Dash action, you can make one melee attack or shove as a bonus action."
+        }
+    ]
+}

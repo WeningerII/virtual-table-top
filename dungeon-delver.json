@@ -1,0 +1,27 @@
+{
+    "id": "dungeon-delver",
+    "name": "Dungeon Delver",
+    "description": "Alert to the hidden traps and secret doors found in many dungeons, you gain the following benefits: Advantage on checks to find secret doors, advantage on saves against traps, resistance to trap damage, and no penalty to passive Perception when traveling at a fast pace.",
+    "prerequisites": [],
+    "effects": [
+        {
+            "type": "advantage",
+            "on": "check",
+            "skill": "Perception",
+            "condition": "to detect secret doors"
+        },
+        {
+            "type": "advantage",
+            "on": "saving_throw",
+            "condition": "to avoid or resist traps"
+        },
+        {
+            "type": "resistance",
+            "damageType": "from traps"
+        },
+        {
+            "type": "special_ability",
+            "name": "Fast Pace Perception"
+        }
+    ]
+}

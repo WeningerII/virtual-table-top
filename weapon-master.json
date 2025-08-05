@@ -1,0 +1,22 @@
+{
+    "id": "weapon-master",
+    "name": "Weapon Master",
+    "description": "You have practiced extensively with a variety of weapons, gaining the following benefits: Increase your Strength or Dexterity score by 1, to a maximum of 20. You gain proficiency with four weapons of your choice. Each one must be a simple or a martial weapon.",
+    "prerequisites": [],
+    "choiceOptions": [
+        {
+            "id": "weapon-master-ability-choice",
+            "label": "Increase Strength or Dexterity by 1",
+            "type": "ability",
+            "count": 1,
+            "from": ["STRENGTH", "DEXTERITY"]
+        },
+        {
+            "id": "weapon-master-weapon-choice",
+            "label": "Choose four simple or martial weapons",
+            "type": "weapon",
+            "count": 4,
+            "from": "any_simple_or_martial"
+        }
+    ]
+}
