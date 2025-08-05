@@ -1,5 +1,5 @@
 import React from 'react';
-import { Character, ActionItem, InitiativeEntry } from '../../../types';
+import { Character } from '../../../types';
 import Accordion from '../../shared/Accordion';
 import ActionsPanel from '../ActionsPanel';
 import SkillsPanel from '../SkillsPanel';
@@ -8,40 +8,37 @@ import ActiveEffectsPanel from '../ActiveEffectsPanel';
 import ConditionsPanel from '../ConditionsPanel';
 import InitiativeTracker from '../InitiativeTracker';
 import InteractionPanel from '../InteractionPanel';
+import InvocationsPanel from '../InvocationsPanel';
+import MetamagicPanel from '../MetamagicPanel';
+import { useAppSelector } from '../../../state/hooks';
+import { selectCalculatedActiveCharacterSheet } from '../../../state/selectors';
 
 interface CombatTabProps {
-    character: Character;
-    onRoll: (title: string, modifier: number) => void;
-    onAttack: (action: ActionItem, isReckless: boolean) => void;
-    isReckless: boolean;
-    onRecklessToggle: (isReckless: boolean) => void;
-    characterDispatch: React.Dispatch<any>;
     targetTokenId: string | null;
-    onAiTurn: (entry: InitiativeEntry) => void;
-    isAiThinking: boolean;
-    onLayOnHands: () => void;
 }
 
-const CombatTab: React.FC<CombatTabProps> = ({ 
-    character, 
-    onRoll, 
-    onAttack, 
-    isReckless, 
-    onRecklessToggle, 
-    characterDispatch, 
-    targetTokenId, 
-    onAiTurn, 
-    isAiThinking,
-    onLayOnHands
-}) => {
+const CombatTab: React.FC<CombatTabProps> = ({ targetTokenId }) => {
+    const character = useAppSelector(selectCalculatedActiveCharacterSheet);
+    
+    if (!character) return null;
+
+    const isSorcerer = character.classes.some(c => c.id === 'sorcerer');
+    const hasMetamagic = character.selectedMetamagic && character.selectedMetamagic.length > 0;
+    
     return (
         <div className="space-y-4">
-            <Accordion title="Initiative" startsOpen><InitiativeTracker onAiTurn={onAiTurn} isAiThinking={isAiThinking} /></Accordion>
-            <Accordion title="Actions"><ActionsPanel character={character} onAttack={onAttack} isReckless={isReckless} onRecklessToggle={onRecklessToggle} targetTokenId={targetTokenId} /></Accordion>
-            <Accordion title="Interactions"><InteractionPanel onInteraction={() => {}} onLayOnHands={onLayOnHands} onRoll={onRoll} /></Accordion>
-            <Accordion title="Saving Throws"><SavingThrowsPanel savingThrows={character.savingThrowItems || []} onRoll={onRoll} /></Accordion>
-            <Accordion title="Skills"><SkillsPanel skills={character.skillCheckItems || []} onRoll={onRoll} /></Accordion>
-            <ActiveEffectsPanel character={character} dispatch={characterDispatch} />
+            <Accordion title="Initiative" startsOpen><InitiativeTracker /></Accordion>
+            <Accordion title="Actions"><ActionsPanel targetTokenId={targetTokenId} /></Accordion>
+            <Accordion title="Interactions"><InteractionPanel targetTokenId={targetTokenId} /></Accordion>
+            {character.resolvedInvocations && character.resolvedInvocations.length > 0 && (
+                <Accordion title="Invocations"><InvocationsPanel /></Accordion>
+            )}
+            {isSorcerer && hasMetamagic && (
+                <Accordion title="Metamagic"><MetamagicPanel /></Accordion>
+            )}
+            <Accordion title="Saving Throws"><SavingThrowsPanel /></Accordion>
+            <Accordion title="Skills"><SkillsPanel /></Accordion>
+            <ActiveEffectsPanel />
             <ConditionsPanel />
         </div>
     );
