@@ -1,0 +1,75 @@
+import { configureStore, combineReducers, Middleware } from '@reduxjs/toolkit';
+import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import appReducer from './appSlice';
+import rosterReducer from './rosterSlice';
+import genesisReducer from './genesisSlice';
+import { characterDataReducer } from '../engine/characterReducer';
+import logReducer from './logSlice';
+import uiReducer from './uiSlice';
+import worldbuilderReducer from './worldbuilderSlice';
+import builderReducer from './builderSlice';
+import combatFlowReducer from './combatFlowSlice';
+
+// New decomposed reducers
+import entityReducer from './entitySlice';
+import eventReducer from './eventSlice';
+import animationReducer from './animationSlice';
+import aiReducer from './aiSlice';
+import { PERFORMANCE_WARNING_THRESHOLD_MS } from '../constants';
+
+const persistConfig = {
+  key: 'vtt-cathedral-root',
+  storage,
+  whitelist: ['app', 'roster', 'genesis', 'worldbuilder', 'builder'], // Persist core app state, not simulation state
+};
+
+const rootReducer = combineReducers({
+  app: appReducer,
+  roster: rosterReducer,
+  genesis: genesisReducer,
+  characterData: characterDataReducer,
+  log: logReducer,
+  ui: uiReducer,
+  worldbuilder: worldbuilderReducer,
+  builder: builderReducer,
+  // Decomposed slices for play mode
+  entity: entityReducer,
+  events: eventReducer,
+  animations: animationReducer,
+  ai: aiReducer,
+  combatFlow: combatFlowReducer,
+});
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+// Sprint 6: Performance Monitoring Middleware
+const performanceMiddleware: Middleware = store => next => (action: any) => {
+    const startTime = performance.now();
+    const result = next(action);
+    const endTime = performance.now();
+    const executionTime = endTime - startTime;
+
+    if (executionTime > PERFORMANCE_WARNING_THRESHOLD_MS && action.type) {
+        console.warn(`Slow Redux action: ${action.type} took ${executionTime.toFixed(2)}ms`);
+    }
+    
+    return result;
+};
+
+
+export const store = configureStore({
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializableCheck: {
+      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER, 'events/postGameEvent/fulfilled', 'events/resolvePlayerChoice/fulfilled', 'combatFlow/startCombat/fulfilled', 'combatFlow/advanceTurn/fulfilled', 'ai/triggerAiTurn/fulfilled', 'combatFlow/startCrucibleCombat/fulfilled'],
+      ignoredPaths: ['events.pendingChoice', 'events.eventQueue', 'combatFlow.currentState', 'entity.spatialIndex'],
+    },
+  }).concat(performanceMiddleware),
+  devTools: true, // Explicitly enable Redux DevTools
+});
+
+export const persistor = persistStore(store);
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
