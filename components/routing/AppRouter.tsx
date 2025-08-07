@@ -2,6 +2,7 @@ import React from 'react';
 import { useAppSelector, useAppDispatch } from '../../state/hooks';
 import { setActiveCharacterId } from '../../state/rosterSlice';
 import { setMode } from '../../state/appSlice';
+import BestiaryView from '../../BestiaryView';
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -40,7 +41,7 @@ const AppRouter: React.FC = () => {
     case 'worldbuilder':
       return <div className="p-6">Worldbuilder</div>;
     case 'bestiary':
-      return <div className="p-6">Bestiary</div>;
+      return <BestiaryView />;
     case 'crucible':
       return <div className="p-6">Crucible</div>;
     case 'play':

@@ -1,4 +1,4 @@
-import { Monster, MonsterType, Spell, Item, EquipmentPack, DndClass, Species, Background, Feat, ArtificerInfusion, FightingStyle, Maneuver, Invocation, Metamagic, CompanionBlueprint, EffectInstance, ActionCategory, Tool, StaticGameDataCache, Rune, ObjectBlueprint, AiArchetypeIndexEntry, AiArchetype } from '../types';
+import { Monster, MonsterType, Spell, Item, EquipmentPack, DndClass, Species, Background, Feat, ArtificerInfusion, FightingStyle, Maneuver, Invocation, Metamagic, CompanionBlueprint, EffectInstance, ActionCategory, Tool, StaticGameDataCache, Rune, ObjectBlueprint, AiArchetypeIndexEntry, AiArchetype } from './types';
 
 export interface MonsterIndexEntry {
     id: string;

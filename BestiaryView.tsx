@@ -1,12 +1,12 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { Monster, MonsterType } from '../../types';
+import { Monster, MonsterType } from './types';
 import MonsterStatBlock from './MonsterStatBlock';
-import { dataService, MonsterIndexEntry } from '../../services/dataService';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { queueMonsterSummon, setMode } from '../../state/appSlice';
-import { useToast } from '../../state/ToastContext';
-import MonsterTypeIconFactory from '../icons/MonsterTypeIconFactory';
+import { dataService, MonsterIndexEntry } from './dataService';
+import { useAppSelector, useAppDispatch } from './state/hooks';
+import { setMode } from './state/appSlice';
+import { useToast } from './state/ToastContext';
+import MonsterTypeIconFactory from './MonsterTypeIconFactory';
 
 const MONSTER_TYPES: MonsterType[] = ['Aberration', 'Beast', 'Celestial', 'Construct', 'Dragon', 'Elemental', 'Fey', 'Fiend', 'Giant', 'Humanoid', 'Monstrosity', 'Ooze', 'Plant', 'Undead'];
 const CHALLENGE_RATINGS = ["0", "1/8", "1/4", "1/2", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"];
@@ -73,9 +73,9 @@ const BestiaryView: React.FC = () => {
     }, [selectedMonsterId]);
     
     const handleSummon = (monsterId: string) => {
-        dispatch(queueMonsterSummon(monsterId));
+        // TODO: integrate summoning flow
         dispatch(setMode('play'));
-        addToast("Monster queued for summoning! Go to the 'Play' tab to place it.", "info");
+        addToast("Monster queued (demo). Navigate to Play to place it.", "info");
     };
 
     return (
