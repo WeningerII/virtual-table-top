@@ -1,7 +1,6 @@
 
 
 import React, { useEffect } from 'react';
-import { AppMode } from './types';
 import Header from './components/Header';
 import ToastContainer from './components/shared/ToastContainer';
 import { useAppSelector, useAppDispatch } from './state/hooks';
