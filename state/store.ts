@@ -5,6 +5,8 @@ import storage from 'redux-persist/lib/storage';
 import appReducer from './appSlice';
 import rosterReducer from './rosterSlice';
 import uiReducer from './uiSlice';
+import worldbuilderReducer from '../worldbuilderSlice';
+import genesisReducer from '../genesisSlice';
 
 const persistConfig = {
   key: 'vtt-cathedral-root',
@@ -16,6 +18,8 @@ const rootReducer = combineReducers({
   app: appReducer,
   roster: rosterReducer,
   ui: uiReducer,
+  worldbuilder: worldbuilderReducer,
+  genesis: genesisReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

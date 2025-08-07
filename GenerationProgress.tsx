@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useAppSelector } from '../../../state/hooks';
+import { useAppSelector } from './state/hooks';
 
 const GenerationProgress: React.FC = () => {
     const stage = useAppSelector(state => state.worldbuilder.generationStage);

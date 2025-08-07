@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import { useToast } from '../../state/ToastContext';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { addCharacter, loadCharacter } from '../../state/rosterSlice';
-import { setMode } from '../../state/appSlice';
-import { startOrResumeGeneration, clearGenesisState } from '../../state/genesisSlice';
-import { Character, PartialCharacter } from '../../types';
+import { useToast } from './state/ToastContext';
+import { useAppSelector, useAppDispatch } from './state/hooks';
+import { setActiveCharacterId } from './state/rosterSlice';
+import { setMode } from './state/appSlice';
+import { startOrResumeGeneration, clearGenesisState } from './genesisSlice';
+import { Character, PartialCharacter } from './types';
 import GenesisSummaryView from './GenesisSummaryView';
 
 const GenesisView: React.FC = () => {
@@ -44,8 +44,7 @@ const GenesisView: React.FC = () => {
             addToast("Cannot accept a character without an ID.", "error");
             return;
         }
-        dispatch(addCharacter(characterToAccept as Character)); 
-        dispatch(loadCharacter(characterToAccept.id));
+        dispatch(setActiveCharacterId(characterToAccept.id));
         dispatch(setMode('builder'));
         dispatch(clearGenesisState());
     };

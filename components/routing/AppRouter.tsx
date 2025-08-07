@@ -1,9 +1,10 @@
 import React from 'react';
 import { useAppSelector, useAppDispatch } from '../../state/hooks';
 import { setActiveCharacterId } from '../../state/rosterSlice';
-import { setMode } from '../../state/appSlice';
 import BestiaryView from '../../BestiaryView';
 import HomeView from '../../HomeView';
+import WorldbuilderView from '../../WorldbuilderView';
+import GenesisView from '../../GenesisView';
 
 const HomeAdapter: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -23,9 +24,9 @@ const AppRouter: React.FC = () => {
     case 'builder':
       return <div className="p-6">Builder</div>;
     case 'genesis':
-      return <div className="p-6">Genesis</div>;
+      return <GenesisView />;
     case 'worldbuilder':
-      return <div className="p-6">Worldbuilder</div>;
+      return <WorldbuilderView />;
     case 'bestiary':
       return <BestiaryView />;
     case 'crucible':

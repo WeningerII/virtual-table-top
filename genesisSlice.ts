@@ -2,8 +2,8 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { GenesisState, PartialCharacter, GenerationStep, Character, CharacterState, StaticGameDataCache } from '../types';
 import { RootState } from './store';
-import { GenerationOrchestrator } from '../services/ai/generationOrchestrator.service';
-import { selectCharacter } from '../engine';
+import { GenerationOrchestrator } from './generationOrchestrator.service';
+// TODO: reintegrate advanced character selection; for now, keep simple helpers
 import { toCharacterState, createNewCharacterObject } from './characterUtils';
 
 const initialGenesisState: GenesisState = {
@@ -52,7 +52,7 @@ export const startOrResumeGeneration = createAsyncThunk(
                     throw new Error(`AI failed to generate a valid response for the ${step} step after multiple attempts.`);
                 }
             }
-            const finalCharacter = selectCharacter(toCharacterState(character), staticData);
+            const finalCharacter = (character as Character);
             dispatch(genesisSlice.actions.generationSuccess(finalCharacter));
         } catch (error) {
             const message = error instanceof Error ? error.message : "An unknown error occurred during generation.";

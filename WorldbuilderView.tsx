@@ -1,33 +1,31 @@
 
 import React, { useMemo } from 'react';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { changeAppMode } from '../../state/appSlice';
-import { loadEncounter as loadEncounterAction } from '../../state/entitySlice';
-import { useEncounterGeneration } from './hooks/useEncounterGeneration';
-import EncounterForm from './components/EncounterForm';
-import ConceptDisplay from './components/ConceptDisplay';
-import GenerationProgress from './components/GenerationProgress';
+import { useAppSelector, useAppDispatch } from './state/hooks';
+import { changeAppMode } from './state/appSlice';
+import { useEncounterGeneration } from './useEncounterGeneration';
+import EncounterForm from './EncounterForm';
+import ConceptDisplay from './ConceptDisplay';
+import GenerationProgress from './GenerationProgress';
 
 const WorldbuilderView: React.FC = () => {
     const dispatch = useAppDispatch();
-    const staticDataCache = useAppSelector(state => state.app.staticDataCache);
+    const staticDataCache = useAppSelector(state => state.app.staticDataCache as any);
     const worldbuilderState = useAppSelector(state => state.worldbuilder);
 
     const { generate, isGenerating } = useEncounterGeneration();
 
     const themes = useMemo(() => {
-        if (!staticDataCache) return [];
-        const allTags = staticDataCache.objectBlueprints.flatMap(bp => bp.tags);
+        if (!staticDataCache) return [] as string[];
+        const allTags = (staticDataCache.objectBlueprints ?? []).flatMap((bp: any) => bp.tags ?? []);
         const uniqueTags = [...new Set(allTags)]
-            .filter(tag => tag !== 'common')
+            .filter((tag) => tag !== 'common')
             .map((tag: string) => tag.charAt(0).toUpperCase() + tag.slice(1));
         return ['Forest', ...uniqueTags.filter(t => t !== 'Forest').sort()];
     }, [staticDataCache]);
 
     const handleLoadEncounter = async () => {
         if (worldbuilderState.generatedConcept) {
-            const placeholderImageUrl = '/maps/default_forest.jpg';
-            dispatch(loadEncounterAction({ concept: worldbuilderState.generatedConcept, imageUrl: placeholderImageUrl }));
+            // TODO: once entity slice is wired, load the encounter here
             dispatch(changeAppMode('play'));
         }
     };

@@ -1,4 +1,4 @@
-import { Ability } from './types/enums';
+import { Ability } from './enums';
 
 export const DEBUG_MODE = true;
 export const PERFORMANCE_WARNING_THRESHOLD_MS = 5;
