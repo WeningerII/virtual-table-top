@@ -2,16 +2,17 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { WorldbuilderState, EncounterConcept } from '../types';
 
-const initialState: WorldbuilderState = {
+const initialState = {
     context: '',
     theme: 'Forest',
     partyLevel: 5,
     partySize: 4,
     difficulty: 'Medium',
-    generatedConcept: null,
-    generationStatus: 'idle',
-    generationStage: null,
-    generationError: null,
+    generatedConcept: null as EncounterConcept | null,
+    generatedMapImageUrl: null as string | null,
+    generationStatus: 'idle' as 'idle' | 'generating' | 'partial' | 'success' | 'error',
+    generationStage: null as string | null,
+    generationError: null as string | null,
 };
 
 const worldbuilderSlice = createSlice({
@@ -41,6 +42,7 @@ const worldbuilderSlice = createSlice({
             state.generationStage = 'Initializing...';
             state.generationError = null;
             state.generatedConcept = null;
+            state.generatedMapImageUrl = null;
         },
         generationStageUpdate: (state, action: PayloadAction<{ stage: string; concept: EncounterConcept | null }>) => {
             state.generationStage = action.payload.stage;
@@ -52,6 +54,9 @@ const worldbuilderSlice = createSlice({
             state.generationStatus = 'success';
             state.generatedConcept = action.payload;
             state.generationStage = 'Complete!';
+        },
+        setGeneratedMapImageUrl: (state, action: PayloadAction<string>) => {
+            state.generatedMapImageUrl = action.payload;
         },
         generationPartialSuccess: (state, action: PayloadAction<{ concept: EncounterConcept; error: string }>) => {
             state.generationStatus = 'partial';
@@ -75,6 +80,7 @@ export const {
     setPartySize,
     setDifficulty,
     setGeneratedConcept,
+    setGeneratedMapImageUrl,
     generationStart,
     generationStageUpdate,
     generationSuccess,

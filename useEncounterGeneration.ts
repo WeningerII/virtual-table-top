@@ -1,7 +1,7 @@
 
 import { useCallback, useState } from 'react';
 import { useAppDispatch } from './state/hooks';
-import { generationStart, generationStageUpdate, generationSuccess, generationFailed } from './worldbuilderSlice';
+import { generationStart, generationStageUpdate, generationSuccess, generationFailed, setGeneratedMapImageUrl } from './worldbuilderSlice';
 
 export function useEncounterGeneration() {
   const dispatch = useAppDispatch();
@@ -24,11 +24,14 @@ export function useEncounterGeneration() {
       const concept = {
         title: 'Ambush at the Whispering Pines',
         summary: 'A band of gnolls lays an ambush along a forest path as mist rolls in.',
-        monsters: [{ id: 'gnoll', count: 4 }],
+        monsters: [{ id: 'gnoll', count: 4, name: 'Gnoll' }],
         terrain: 'Forest path with light underbrush and low visibility',
         objectives: ['Survive the ambush', 'Protect the caravan'],
       } as any;
       dispatch(generationSuccess(concept));
+      // Simulated generated map image URL
+      const placeholder = 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop';
+      dispatch(setGeneratedMapImageUrl(placeholder));
     } catch (e) {
       dispatch(generationFailed('Generation failed'));
     } finally {

@@ -7,6 +7,7 @@ import rosterReducer from './rosterSlice';
 import uiReducer from './uiSlice';
 import worldbuilderReducer from '../worldbuilderSlice';
 import genesisReducer from '../genesisSlice';
+import playStateReducer from '../playStateSlice';
 
 const persistConfig = {
   key: 'vtt-cathedral-root',
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   ui: uiReducer,
   worldbuilder: worldbuilderReducer,
   genesis: genesisReducer,
+  playState: playStateReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

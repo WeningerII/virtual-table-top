@@ -15,6 +15,22 @@ const HomeAdapter: React.FC = () => {
   return <HomeView roster={roster as any} onCreate={onCreate} onLoad={onLoad} onDelete={onDelete} />;
 };
 
+const PlayAdapter: React.FC = () => {
+  const mapImageUrl = useAppSelector((s) => s.worldbuilder.generatedMapImageUrl) || useAppSelector((s) => (s as any).playState?.mapImageUrl);
+  return (
+    <div className="flex items-center justify-center h-[calc(100vh-8rem)]">
+      {mapImageUrl ? (
+        <div className="relative" style={{ width: 'min(95vh,95vw)', height: 'min(95vh,95vw)' }}>
+          <img src={mapImageUrl} alt="Map" className="absolute inset-0 w-full h-full object-cover rounded" />
+          <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+        </div>
+      ) : (
+        <div className="text-gray-400">No map yet. Generate one in Worldbuilder.</div>
+      )}
+    </div>
+  );
+};
+
 const AppRouter: React.FC = () => {
   const mode = useAppSelector((s) => s.app.mode);
 
@@ -32,7 +48,7 @@ const AppRouter: React.FC = () => {
     case 'crucible':
       return <div className="p-6">Crucible</div>;
     case 'play':
-      return <div className="p-6">Play</div>;
+      return <PlayAdapter />;
     default:
       return <div className="p-6">Unknown mode</div>;
   }
