@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useMemo, useRef, useState, useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../../state/hooks';
 import { setActiveCharacterId } from '../../state/rosterSlice';
 import BestiaryView from '../../BestiaryView';
@@ -22,6 +22,10 @@ import {
   setInitiative,
   nextTurn,
   loadTokensState,
+  removeToken,
+  healToken,
+  damageToken,
+  setSelectedToken,
 } from '../../state/tokensSlice';
 
 const HomeAdapter: React.FC = () => {
@@ -77,9 +81,20 @@ const InitiativeTracker: React.FC = () => {
 const PlayAdapter: React.FC = () => {
   const dispatch = useAppDispatch();
   const mapImageUrl = useAppSelector((s) => s.worldbuilder.generatedMapImageUrl) || useAppSelector((s) => (s as any).playState?.mapImageUrl);
-  const { tokens, toolMode, measure, fogEnabled, reveals, gridCellsAcross, unitsPerCell, snapToGrid } = useAppSelector((s: any) => s.tokens);
+  const { tokens, toolMode, measure, fogEnabled, reveals, gridCellsAcross, unitsPerCell, snapToGrid, selectedTokenId } = useAppSelector((s: any) => s.tokens);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [dragId, setDragId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (!selectedTokenId) return;
+      if (e.key === 'Delete') dispatch(removeToken(selectedTokenId));
+      if (e.key === '+' || e.key === '=') dispatch(healToken({ id: selectedTokenId, amount: 1 }));
+      if (e.key === '-' || e.key === '_') dispatch(damageToken({ id: selectedTokenId, amount: 1 }));
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [dispatch, selectedTokenId]);
 
   const handleCoords = (e: React.MouseEvent) => {
     const rect = containerRef.current!.getBoundingClientRect();
@@ -104,10 +119,15 @@ const PlayAdapter: React.FC = () => {
       const hit = tokens.find((t: any) => {
         const tx = t.x * rect.width;
         const ty = t.y * rect.height;
-        const r = 20 * t.size;
+        const r = (rect.width / gridCellsAcross) * t.size * 0.6;
         return Math.hypot(px - tx, py - ty) <= r;
       });
-      if (hit) setDragId(hit.id);
+      if (hit) {
+        setDragId(hit.id);
+        dispatch(setSelectedToken(hit.id));
+      } else {
+        dispatch(setSelectedToken(null));
+      }
     }
   };
 
@@ -205,8 +225,8 @@ const PlayAdapter: React.FC = () => {
               </svg>
             )}
             {tokens.map((t: any) => (
-              <div key={t.id} className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-black/50 shadow"
-                style={{ left: `${t.x*100}%`, top: `${t.y*100}%`, width: `${t.size*(100/gridCellsAcross)}%`, height: `${t.size*(100/gridCellsAcross)}%`, backgroundColor: t.color, backgroundImage: t.imageUrl?`url(${t.imageUrl})`:'none', backgroundSize: 'cover' }} />
+              <div key={t.id} className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-full border-2 shadow ${selectedTokenId===t.id?'ring-4 ring-yellow-400':''}`}
+                style={{ left: `${t.x*100}%`, top: `${t.y*100}%`, width: `${t.size*(100/gridCellsAcross)}%`, height: `${t.size*(100/gridCellsAcross)}%`, backgroundColor: t.color, backgroundImage: t.imageUrl?`url(${t.imageUrl})`:'none', backgroundSize: 'cover', borderColor: 'rgba(0,0,0,0.5)' }} />
             ))}
             {measure && (
               <svg className="absolute inset-0 pointer-events-none" width="100%" height="100%">

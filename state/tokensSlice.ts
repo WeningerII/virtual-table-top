@@ -10,6 +10,7 @@ export interface Token {
   size: number; // in grid cells
   color: string;
   imageUrl?: string;
+  hp?: { current: number; max: number };
 }
 
 export interface Point {
@@ -78,10 +79,10 @@ const tokensSlice = createSlice({
         size: action.payload.size ?? 1,
         color: action.payload.color || '#2563eb',
         imageUrl: action.payload.imageUrl,
+        hp: action.payload.hp || { current: 10, max: 10 },
       };
       state.tokens.push(token);
       state.selectedTokenId = token.id;
-      // If initiative is empty, append
       if (!state.initiativeOrder.includes(token.id)) state.initiativeOrder.push(token.id);
     },
     updateToken(state, action: PayloadAction<{ id: string; changes: Partial<Token> }>) {
@@ -104,7 +105,6 @@ const tokensSlice = createSlice({
     },
     setTokens(state, action: PayloadAction<TokensState['tokens']>) {
       state.tokens = action.payload;
-      // Reset initiative to these tokens if existing ids differ
       state.initiativeOrder = action.payload.map((t) => t.id);
       state.activeIndex = 0;
     },
@@ -145,10 +145,17 @@ const tokensSlice = createSlice({
     },
     loadTokensState(state, action: PayloadAction<Partial<TokensState>>) {
       Object.assign(state, action.payload);
-      // Sanity checks
       state.gridCellsAcross = Math.max(5, Math.min(200, Math.round(state.gridCellsAcross)));
       state.unitsPerCell = Math.max(1, Math.min(100, Math.round(state.unitsPerCell)));
       if (state.activeIndex >= state.initiativeOrder.length) state.activeIndex = 0;
+    },
+    damageToken(state, action: PayloadAction<{ id: string; amount: number }>) {
+      const t = state.tokens.find((tk) => tk.id === action.payload.id);
+      if (t && t.hp) t.hp.current = Math.max(0, t.hp.current - Math.abs(action.payload.amount));
+    },
+    healToken(state, action: PayloadAction<{ id: string; amount: number }>) {
+      const t = state.tokens.find((tk) => tk.id === action.payload.id);
+      if (t && t.hp) t.hp.current = Math.min(t.hp.max, t.hp.current + Math.abs(action.payload.amount));
     },
   },
 });
@@ -173,6 +180,8 @@ export const {
   setInitiative,
   nextTurn,
   loadTokensState,
+  damageToken,
+  healToken,
 } = tokensSlice.actions;
 
 export default tokensSlice.reducer;

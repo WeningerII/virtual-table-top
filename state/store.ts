@@ -13,7 +13,7 @@ import tokensReducer from '../state/tokensSlice';
 const persistConfig = {
   key: 'vtt-cathedral-root',
   storage,
-  whitelist: ['app', 'roster'],
+  whitelist: ['app', 'roster', 'tokens', 'playState', 'worldbuilder'],
 };
 
 const rootReducer = combineReducers({
