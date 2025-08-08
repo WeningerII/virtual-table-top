@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { VTTMap, Token, MapNpcInstance, Character, EncounterConcept, InitiativeEntry, Monster, EffectInstance } from '../types';
-import { createDefaultMap, generateMapFromConcept, buildSpatialIndex } from '../utils/map';
-import { rollD20 } from '../utils/dice';
+import { createDefaultMap, generateMapFromConcept, buildSpatialIndex } from './map';
+import { rollD20 } from './dice';
 import { RootState } from './store';
 import { SpatialGrid } from '../engine/spatialGrid.service';
 import { selectCalculatedActiveCharacterSheet } from './selectors';

@@ -1,6 +1,6 @@
 
-import { VTTMap, Token, VTTObject, Character, EncounterConcept, Zone, Path, TerrainCell, MapNpcInstance, StaticGameDataCache, Monster, SpatialGrid } from '../types';
-import { mapDecorator } from '../services/mapDecorator.service';
+import { VTTMap, Token, VTTObject, Character, EncounterConcept, Zone, Path, TerrainCell, MapNpcInstance, StaticGameDataCache, Monster } from './types';
+const mapDecorator = { decorate: (c: any) => c } as any;
 
 const sizeToGridUnits = (size: string): number => {
     switch (size.toLowerCase()) {
@@ -199,9 +199,9 @@ export const createDefaultMap = (characters: Character[]): VTTMap => {
   };
 };
 
-export const buildSpatialIndex = (map: VTTMap | null): SpatialGrid | null => {
+export const buildSpatialIndex = (map: VTTMap | null): any => {
     if (!map) return null;
-    const grid = new SpatialGrid(map.grid.width, map.grid.height);
-    map.tokens.forEach(token => grid.add(token));
-    return grid;
+      const grid = { add: (_t: any) => {}, update: (_t: any,_x:number,_y:number)=>{}, remove: (_t:any)=>{} } as any;
+  map.tokens.forEach(token => grid.add(token));
+  return grid;
 };

@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { ActionItem, AiTurnIntent, Monster, GameEvent } from '../types';
 import { RootState } from './store';
-import { aiDecisionService } from '../services/ai/aiDecision.service';
-import { generateNpcTurn } from '../services/ai/dm.service';
+// TODO: wire actual AI services
+const aiDecisionService = { getNpcTurn: async () => null } as any;
+const generateNpcTurn = { buildBattlefieldState: (..._args: any[]) => ({}) } as any;
 import { logEvent } from './logSlice';
 import { postGameEvent } from './eventSlice';
 import { animationActions } from './animationSlice';
-import { buildSpatialIndex } from '../utils/map';
+import { buildSpatialIndex } from './map';
 import { advanceTurn } from './combatFlowSlice';
 
 export interface AIState {

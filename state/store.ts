@@ -9,6 +9,11 @@ import worldbuilderReducer from '../worldbuilderSlice';
 import genesisReducer from '../genesisSlice';
 import playStateReducer from '../playStateSlice';
 import tokensReducer from '../state/tokensSlice';
+import entityReducer from '../entitySlice';
+import combatFlowReducer from '../combatFlowSlice';
+import aiReducer from '../aiSlice';
+import eventsReducer from '../eventSlice';
+import animationsReducer from '../animationSlice';
 
 const persistConfig = {
   key: 'vtt-cathedral-root',
@@ -24,6 +29,11 @@ const rootReducer = combineReducers({
   genesis: genesisReducer,
   playState: playStateReducer,
   tokens: tokensReducer,
+  entity: entityReducer,
+  combatFlow: combatFlowReducer,
+  ai: aiReducer,
+  events: eventsReducer,
+  animations: animationsReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

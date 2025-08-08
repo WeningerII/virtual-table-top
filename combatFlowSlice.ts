@@ -1,11 +1,10 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { CombatFlowState, CombatState, CombatResult } from '../types';
 import { RootState } from './store';
-import { rollInitiative, loadCrucibleEncounter } from './entitySlice';
+import { rollInitiative, loadCrucibleEncounter, entitySlice } from './entitySlice';
 import { triggerAiTurn } from './aiSlice';
 import { processEventQueue } from './eventSlice';
 import { logEvent, clearLog } from './logSlice';
-import { playStateActions } from '../engine/slices/playStateSlice';
 
 const initialState: CombatFlowState = {
     currentState: { phase: 'IDLE' },
@@ -38,7 +37,6 @@ export const startCombat = createAsyncThunk(
 
             // Handle the first turn directly without calling advanceTurn
             if (firstCombatant.characterId) {
-                dispatch(playStateActions.startNewTurn());
                 dispatch(logEvent({ type: 'system', message: `It's ${firstCombatant.name}'s turn.` }));
                 dispatch(combatFlowSlice.actions.transitionTo({
                     phase: 'AWAITING_PLAYER_ACTION',
@@ -91,7 +89,6 @@ export const advanceTurn = createAsyncThunk(
         }));
 
         if (nextCombatant.characterId) {
-            dispatch(playStateActions.startNewTurn());
             dispatch(logEvent({ type: 'system', message: `It's ${nextCombatant.name}'s turn.` }));
             dispatch(combatFlowSlice.actions.transitionTo({
                 phase: 'AWAITING_PLAYER_ACTION',
@@ -185,8 +182,7 @@ const combatFlowSlice = createSlice({
     }
 });
 
-// Need to import entitySlice for the circular dependency in advanceTurn
-import { entitySlice } from './entitySlice';
+// entitySlice imported above with rollInitiative to avoid circular import end-of-file hack
 
 export const { transitionTo } = combatFlowSlice.actions;
 export default combatFlowSlice.reducer;
