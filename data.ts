@@ -277,6 +277,15 @@ export interface Tool extends Item {
     tags: string[];
     category: "Artisan's Tools" | "Gaming Set" | "Musical Instrument" | "Tool" | "Kit";
 }
+
+export interface Language {
+    id: string;
+    name: string;
+    description: string;
+    script: string;
+    typicalSpeakers: string[];
+}
+
 export interface Armor extends Item {
     tags: string[];
     armorType: 'light' | 'medium' | 'heavy' | 'none';
@@ -318,6 +327,7 @@ export interface StaticGameDataCache {
     allCompanions: { [key: string]: CompanionBlueprint };
     allConditions: Omit<EffectInstance, 'id'>[];
     allTools: Tool[];
+    allLanguages: Language[];
     allRunes: Rune[];
     allSpells: Spell[];
     equipmentPacks: EquipmentPack[];

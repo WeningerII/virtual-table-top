@@ -80,7 +80,7 @@ const CharacterProfile: React.FC<CharacterProfileProps> = ({ character }) => {
                     type="text"
                     value={character.name}
                     onChange={(e) => handleChange({ name: e.target.value })}
-                    placeholder="Enter character name"
+                    placeholder="Enter your character's full name (e.g., 'Thorin Ironbeard', 'Lyra Moonwhisper')"
                     className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 />
                 <button

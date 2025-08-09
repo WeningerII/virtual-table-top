@@ -113,7 +113,7 @@ const NpcSheetPanel: React.FC<NpcSheetPanelProps> = ({ instance, onRemove }) => 
                             </div>
                             {isEditingStrategy ? (
                                 <div className="mt-2 space-y-2">
-                                    <textarea value={newStrategy} onChange={e => setNewStrategy(e.target.value)} placeholder="New objective, e.g., 'Focus fire on the cleric'" className="w-full bg-gray-900 text-sm p-2 rounded-md h-16" />
+                                    <textarea value={newStrategy} onChange={e => setNewStrategy(e.target.value)} placeholder="Enter specific tactical objective (e.g., 'Focus fire on the cleric to prevent healing', 'Use hit-and-run tactics from cover', 'Protect the spellcaster at all costs')" className="w-full bg-gray-900 text-sm p-2 rounded-md h-16" />
                                     <button onClick={handleStrategyChange} disabled={isGeneratingStrategy} className="w-full py-1 bg-purple-600 rounded-md text-sm font-semibold">{isGeneratingStrategy ? 'Generating...' : 'Update Strategy'}</button>
                                 </div>
                             ) : instance.strategy ? (

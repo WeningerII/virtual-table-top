@@ -20,7 +20,7 @@ const EncounterForm: React.FC<EncounterFormProps> = ({
             <textarea
                 value={context}
                 onChange={(e) => dispatch(setContext(e.target.value))}
-                placeholder="e.g., 'An ambush in a ruined temple', 'A tense negotiation in a king's throne room', 'A chase through a bustling city market'"
+                placeholder="Describe the encounter setting and situation. Examples: 'A band of goblins ambushes the party from the trees as they travel along the forest road', 'The party must negotiate with a suspicious merchant who claims to have information about the missing artifact', 'A chase sequence through the crowded streets of Waterdeep as the party pursues a pickpocket'"
                 className="w-full h-40 bg-gray-900 border-2 border-gray-600 rounded-md p-4 focus:ring-2 focus:ring-purple-500"
             />
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

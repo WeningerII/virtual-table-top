@@ -1,6 +1,6 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { PendingChoice, Tool, Character } from '../../types';
+import { PendingChoice, Tool, Character, Language } from '../../types';
 import { SKILLS } from '../../constants';
 import { dataService } from '../../services/dataService';
 import { useToast } from '../../state/ToastContext';
@@ -15,6 +15,7 @@ interface InlineProficiencySelectorProps {
 const InlineProficiencySelector: React.FC<InlineProficiencySelectorProps> = ({ choice }) => {
     const [selected, setSelected] = useState<string[]>([]);
     const [tools, setTools] = useState<Tool[]>([]);
+    const [languages, setLanguages] = useState<Language[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const { addToast } = useToast();
     const character = useAppSelector(selectCalculatedActiveCharacterSheet) as Character | null;
@@ -25,6 +26,12 @@ const InlineProficiencySelector: React.FC<InlineProficiencySelectorProps> = ({ c
             setIsLoading(true);
             dataService.getAllTools().then(data => {
                 setTools(data);
+                setIsLoading(false);
+            });
+        } else if (choice.proficiencyType === 'language') {
+            setIsLoading(true);
+            dataService.getAllLanguages().then(data => {
+                setLanguages(data);
                 setIsLoading(false);
             });
         }
@@ -45,9 +52,13 @@ const InlineProficiencySelector: React.FC<InlineProficiencySelectorProps> = ({ c
                 .filter(t => choice.options === 'any' || choice.options.includes(t.id))
                 .map(t => ({ id: t.id, name: t.name }));
         }
-        // TODO: Add logic for languages
+        if (choice.proficiencyType === 'language') {
+            return languages
+                .filter(l => choice.options === 'any' || choice.options.includes(l.id))
+                .map(l => ({ id: l.id, name: l.name }));
+        }
         return [];
-    }, [choice, tools]);
+    }, [choice, tools, languages]);
 
     const handleSelect = (optionId: string) => {
         setSelected(prev => {
