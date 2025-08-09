@@ -134,7 +134,7 @@ const generateTerrain = (zones: Zone[], paths: Path[] | undefined, width: number
     return terrain;
 };
 
-export const generateMapFromConcept = (concept: EncounterConcept, characters: Character[], staticDataCache: StaticGameDataCache): { map: VTTMap, npcInstances: MapNpcInstance[] } => {
+export const generateMapFromConcept = (concept: any, characters: any[] = [], staticDataCache?: any): { map: VTTMap, npcInstances: MapNpcInstance[] } => {
     const decoratedConcept = mapDecorator.decorate(concept);
     const mapWidth = 30, mapHeight = 30, cellSize = 50;
     
