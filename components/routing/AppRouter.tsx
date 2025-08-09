@@ -27,6 +27,7 @@ import {
   damageToken,
   setSelectedToken,
 } from '../../state/tokensSlice';
+import { postGameEvent } from '../../eventSlice';
 
 const HomeAdapter: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -197,6 +198,7 @@ const PlayAdapter: React.FC = () => {
           <label className="px-3 py-1 bg-gray-700 rounded cursor-pointer">Import<input type="file" className="hidden" accept="application/json" onChange={(e) => e.currentTarget.files && e.currentTarget.files[0] && importState(e.currentTarget.files[0])} /></label>
         </div>
       </div>
+      <DebugPanel />
       <div className="flex gap-3 flex-1 min-h-0">
         <div className="flex-grow flex items-center justify-center">
           <div
@@ -245,6 +247,40 @@ const PlayAdapter: React.FC = () => {
           <TokenInspector />
         </div>
       </div>
+    </div>
+  );
+};
+
+const DebugPanel: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const { tokens, selectedTokenId, gridCellsAcross } = useAppSelector((s: any) => s.tokens);
+  const entity = useAppSelector((s: any) => s.entity);
+  const startCombat = () => dispatch(postGameEvent({ type: 'START_COMBAT' } as any));
+  const selectTarget = () => {
+    const enemy = entity.activeMap?.tokens?.find((t: any) => !t.characterId && (!selectedTokenId || t.id !== selectedTokenId));
+    if (enemy) dispatch(postGameEvent({ type: 'TARGET_SELECT', tokenId: enemy.id } as any));
+  };
+  const attackTarget = () => {
+    const targetId = entity.selectedTargetTokenId;
+    if (!targetId || !selectedTokenId) return;
+    dispatch(postGameEvent({ type: 'DECLARE_ATTACK', sourceId: selectedTokenId, targetId, action: { attackBonus: 3, damage: [{ damageRoll: '1d6', damageType: 'slashing' }], damageBonus: 0 } } as any));
+  };
+  const moveForward = () => {
+    if (!selectedTokenId || !entity.activeMap) return;
+    const me = entity.activeMap.tokens.find((t: any) => t.id === selectedTokenId);
+    if (!me) return;
+    dispatch(postGameEvent({ type: 'MOVE_TOKEN', sourceId: selectedTokenId, path: [{ x: Math.max(0, Math.min(entity.activeMap.grid.width - 1, me.x + 1)), y: me.y }] } as any));
+  };
+  const summon = () => dispatch(postGameEvent({ type: 'SUMMON_CREATURE', monsterId: 'goblin', position: { x: 10, y: 10 } } as any));
+  const nextTurn = () => dispatch(postGameEvent({ type: 'NEXT_TURN' } as any));
+  return (
+    <div className="flex flex-wrap gap-2 text-xs bg-gray-900/60 p-2 rounded">
+      <button className="px-2 py-1 bg-gray-700 rounded" onClick={startCombat}>Start Combat</button>
+      <button className="px-2 py-1 bg-gray-700 rounded" onClick={selectTarget}>Select Target</button>
+      <button className="px-2 py-1 bg-gray-700 rounded" onClick={attackTarget}>Attack</button>
+      <button className="px-2 py-1 bg-gray-700 rounded" onClick={moveForward}>Move +X</button>
+      <button className="px-2 py-1 bg-gray-700 rounded" onClick={summon}>Summon Goblin</button>
+      <button className="px-2 py-1 bg-gray-700 rounded" onClick={nextTurn}>Next Turn</button>
     </div>
   );
 };

@@ -212,6 +212,28 @@ export const entitySlice = createSlice({
             const npc = state.mapNpcInstances.find(i => i.instanceId === action.payload.instanceId);
             if (npc) (npc as any).tempHp = Math.max((npc as any).tempHp || 0, action.payload.amount);
         },
+        setActiveMapFromTokens: (state, action: PayloadAction<{ width: number; height: number; tokens: Array<{ id: string; name: string; xNorm: number; yNorm: number; size?: number; color?: string }> }>) => {
+            const { width, height, tokens } = action.payload;
+            state.activeMap = {
+                id: `map-${crypto.randomUUID()}`,
+                name: 'Debug Map',
+                grid: { width, height, cellSize: 50 } as any,
+                terrain: Array(height).fill(0).map(() => Array(width).fill({ type: 'grass', elevation: 0 })),
+                features: [],
+                objects: [],
+                tokens: tokens.map(t => ({
+                    id: t.id,
+                    name: t.name,
+                    x: Math.max(0, Math.min(width - 1, Math.floor(t.xNorm * width))),
+                    y: Math.max(0, Math.min(height - 1, Math.floor(t.yNorm * height))),
+                    size: t.size || 1,
+                    color: t.color || '#64748b',
+                })) as any,
+                initiativeOrder: [],
+                activeInitiativeIndex: null,
+            } as any;
+            state.spatialIndex = buildSpatialIndex(state.activeMap) as any;
+        },
         applyProcessingResult: (state, action: PayloadAction<any>) => {
             const result = action.payload;
             state.mapNpcInstances = result.finalState.mapNpcInstances;
@@ -256,5 +278,5 @@ export const entitySlice = createSlice({
     }
 });
 
-export const { addMonsterToMap, setSquadStrategies, teleportToken, pushPullSlide, applyTempHp, despawnToken, setActiveTargetToken, setInitiativeOrder, setDisengaged } = entitySlice.actions;
+export const { addMonsterToMap, setSquadStrategies, teleportToken, pushPullSlide, applyTempHp, despawnToken, setActiveTargetToken, setInitiativeOrder, setDisengaged, setActiveMapFromTokens } = entitySlice.actions;
 export default entitySlice.reducer;
