@@ -10,6 +10,7 @@ import { endCombat, advanceTurn, startCombat } from './combatFlowSlice';
 import { rollDice, rollD20 } from './dice';
 import { logEvent } from './logSlice';
 import { loadEncounter } from './entitySlice';
+import { resetForToken, spendAction, spendBonus, spendReaction } from './state/actionEconomySlice';
 
 export interface EventState {
     eventQueue: GameEvent[];
@@ -54,6 +55,7 @@ const handleEvent = async (evt: any, getState: () => RootState, dispatch: any) =
             const d20 = rollD20();
             const isCrit = d20 === 20;
             const hit = d20 + (evt.action?.attackBonus || 0) >= (evt.ac || 12);
+            if (evt.sourceId) dispatch(spendAction(evt.sourceId));
             if (hit) {
                 const dmgStr = evt.action?.damage?.[0]?.damageRoll || '1d6';
                 const dmgRoll = isCrit ? dmgStr.replace(/(\d+)d(\d+)/, (m: string, a: string, b: string) => `${Number(a) * 2}d${b}`) : dmgStr;
@@ -132,15 +134,21 @@ const handleEvent = async (evt: any, getState: () => RootState, dispatch: any) =
             break;
         }
         case 'USE_REACTION': {
+            if (evt.tokenId) dispatch(spendReaction(evt.tokenId));
             dispatch(logEvent({ type: 'system', message: `Reaction used${evt.name ? ': ' + evt.name : ''}.` }));
             break;
         }
         case 'USE_BONUS_ACTION': {
+            if (evt.tokenId) dispatch(spendBonus(evt.tokenId));
             dispatch(logEvent({ type: 'system', message: `Bonus action used${evt.name ? ': ' + evt.name : ''}.` }));
             break;
         }
         case 'END_TURN': {
             await dispatch(advanceTurn());
+            break;
+        }
+        case 'TURN_START': {
+            if (evt.tokenId) dispatch(resetForToken(evt.tokenId));
             break;
         }
         // Movement/positioning

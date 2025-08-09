@@ -14,6 +14,7 @@ import combatFlowReducer from '../combatFlowSlice';
 import aiReducer from '../aiSlice';
 import eventsReducer from '../eventSlice';
 import animationsReducer from '../animationSlice';
+import actionEconomyReducer from '../state/actionEconomySlice';
 
 const persistConfig = {
   key: 'vtt-cathedral-root',
@@ -34,6 +35,7 @@ const rootReducer = combineReducers({
   ai: aiReducer,
   events: eventsReducer,
   animations: animationsReducer,
+  actionEconomy: actionEconomyReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
