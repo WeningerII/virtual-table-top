@@ -172,7 +172,7 @@ const EquipmentStep: React.FC<EquipmentStepProps> = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
                 <div className="lg:col-span-7 bg-gray-900/50 p-4 rounded-lg">
                     <h3 className="text-xl font-bold font-teko tracking-wide mb-3">Marketplace</h3>
-                    <input type="text" placeholder="Search items..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 mb-3"/>
+                    <input type="text" placeholder="Search by name, type, or tag (e.g., 'sword', 'armor', 'magical')" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 mb-3"/>
                     <div className="flex flex-wrap gap-2 mb-4">
                         {allTags.map(tag => (
                             <button key={tag} onClick={() => setSelectedTag(tag)} className={`capitalize px-3 py-1 text-xs font-semibold rounded-full transition-colors ${selectedTag === tag ? 'bg-blue-600 text-white' : 'bg-gray-700 hover:bg-gray-600'}`}>{tag}</button>

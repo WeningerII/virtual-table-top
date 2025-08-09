@@ -1,0 +1,128 @@
+[
+  {
+    "id": "common",
+    "name": "Common",
+    "description": "The most widely spoken language in the world, used for trade and diplomacy between different peoples.",
+    "script": "Common",
+    "typicalSpeakers": ["Humans", "Halflings", "Half-elves", "Half-orcs"]
+  },
+  {
+    "id": "dwarvish",
+    "name": "Dwarvish",
+    "description": "The language of the dwarves, characterized by its guttural sounds and complex grammar.",
+    "script": "Dwarvish",
+    "typicalSpeakers": ["Dwarves", "Gnomes"]
+  },
+  {
+    "id": "elvish",
+    "name": "Elvish",
+    "description": "A flowing, melodic language that sounds like music to those who don't speak it.",
+    "script": "Elvish",
+    "typicalSpeakers": ["Elves", "Half-elves"]
+  },
+  {
+    "id": "giant",
+    "name": "Giant",
+    "description": "A harsh, guttural language that sounds like thunder and crashing rocks.",
+    "script": "Dwarvish",
+    "typicalSpeakers": ["Giants", "Ogres", "Trolls"]
+  },
+  {
+    "id": "gnomish",
+    "name": "Gnomish",
+    "description": "A language full of technical terms and complex descriptions, reflecting the gnomes' love of invention.",
+    "script": "Dwarvish",
+    "typicalSpeakers": ["Gnomes"]
+  },
+  {
+    "id": "goblin",
+    "name": "Goblin",
+    "description": "A harsh, guttural language with many words for violence and few for peace.",
+    "script": "Dwarvish",
+    "typicalSpeakers": ["Goblins", "Hobgoblins", "Bugbears"]
+  },
+  {
+    "id": "halfling",
+    "name": "Halfling",
+    "description": "A warm, friendly language that sounds cheerful even when discussing serious matters.",
+    "script": "Common",
+    "typicalSpeakers": ["Halflings"]
+  },
+  {
+    "id": "orc",
+    "name": "Orc",
+    "description": "A guttural language with many words for battle and conquest.",
+    "script": "Dwarvish",
+    "typicalSpeakers": ["Orcs", "Half-orcs"]
+  },
+  {
+    "id": "abyssal",
+    "name": "Abyssal",
+    "description": "The language of demons and the Abyss, filled with words of corruption and evil.",
+    "script": "Infernal",
+    "typicalSpeakers": ["Demons", "Abyssal creatures"]
+  },
+  {
+    "id": "celestial",
+    "name": "Celestial",
+    "description": "The language of angels and the Upper Planes, beautiful and harmonious.",
+    "script": "Celestial",
+    "typicalSpeakers": ["Angels", "Celestial creatures"]
+  },
+  {
+    "id": "draconic",
+    "name": "Draconic",
+    "description": "The language of dragons, ancient and powerful, with words that can shape reality.",
+    "script": "Draconic",
+    "typicalSpeakers": ["Dragons", "Dragonborn", "Kobolds"]
+  },
+  {
+    "id": "deep-speech",
+    "name": "Deep Speech",
+    "description": "A language of the Far Realm, incomprehensible to most mortal minds.",
+    "script": "None",
+    "typicalSpeakers": ["Aboleths", "Mind flayers", "Beholders"]
+  },
+  {
+    "id": "infernal",
+    "name": "Infernal",
+    "description": "The language of devils and the Nine Hells, filled with legalistic terms and contracts.",
+    "script": "Infernal",
+    "typicalSpeakers": ["Devils", "Tieflings"]
+  },
+  {
+    "id": "primordial",
+    "name": "Primordial",
+    "description": "The ancient language of the elemental planes, with dialects for each element.",
+    "script": "Dwarvish",
+    "typicalSpeakers": ["Elementals", "Genasi"]
+  },
+  {
+    "id": "sylvan",
+    "name": "Sylvan",
+    "description": "The language of the Feywild, musical and enchanting.",
+    "script": "Elvish",
+    "typicalSpeakers": ["Fey", "Dryads", "Satyrs"]
+  },
+  {
+    "id": "undercommon",
+    "name": "Undercommon",
+    "description": "A trade language of the Underdark, combining elements of many other languages.",
+    "script": "Elvish",
+    "typicalSpeakers": ["Drow", "Duergar", "Svirfneblin"]
+  },
+  {
+    "id": "druidic",
+    "name": "Druidic",
+    "description": "A secret language known only to druids, used for their sacred rites and communication.",
+    "script": "Druidic",
+    "typicalSpeakers": ["Druids"]
+  },
+  {
+    "id": "thieves-cant",
+    "name": "Thieves' Cant",
+    "description": "A secret language of rogues and thieves, used to communicate without being understood by others.",
+    "script": "None",
+    "typicalSpeakers": ["Rogues", "Thieves", "Criminals"]
+  }
+]

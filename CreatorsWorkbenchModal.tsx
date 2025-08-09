@@ -284,7 +284,7 @@ const MinorConjurationUI: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     value={objectName}
                     onChange={(e) => setObjectName(e.target.value)}
                     className="w-full bg-gray-900 border border-gray-600 rounded-md p-2"
-                    placeholder="e.g., a silver key"
+                    placeholder="Describe the object you want to conjure (e.g., 'a silver key with intricate runes', 'a length of silk rope', 'a wooden chest with iron bindings')"
                 />
             </div>
             <div className="flex justify-end pt-4 border-t border-gray-700">
@@ -335,7 +335,7 @@ const PerformanceOfCreationUI: React.FC<{ onClose: () => void }> = ({ onClose })
                     value={itemName}
                     onChange={(e) => setItemName(e.target.value)}
                     className="w-full bg-gray-900 border border-gray-600 rounded-md p-2"
-                    placeholder="e.g., a sturdy rope"
+                    placeholder="Describe the item you want to create (e.g., 'a sturdy hemp rope 50 feet long', 'a leather satchel with brass buckles', 'a wooden ladder with iron rungs')"
                 />
             </div>
             <div className="flex justify-end pt-4 border-t border-gray-700">

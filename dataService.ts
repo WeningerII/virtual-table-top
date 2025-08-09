@@ -73,8 +73,10 @@ class DataService {
     
     async fetchAllStaticData(): Promise<StaticGameDataCache> {
         const [
-            allFeats, allFightingStyles, allManeuvers, allInvocations, allMetamagic, allInfusions,
-            allCompanions, allConditions, allTools, allRunes, allSpells, equipmentPacks,
+            allFeats, allFightingStyles, allManeuvers,
+            allInvocations, allMetamagic, allInfusions,
+            allCompanions, allConditions, allTools, allRunes,
+            allLanguages, allSpells, equipmentPacks,
             allClasses, allSpecies, allBackgrounds, allItems, allMonsters,
             multiclassingData, spellcastingTables, objectBlueprints, terrainTypes, allAiArchetypes,
             actionsAndConditions
@@ -82,7 +84,7 @@ class DataService {
             this.getAllFeats(), this.getAllFightingStyles(), this.getAllManeuvers(),
             this.getAllInvocations(), this.getAllMetamagic(), this.getAllInfusions(),
             this.getAllCompanions(), this.getAllConditions(), this.getAllTools(), this.getAllRunes(),
-            this.getAllSpells(), this.getEquipmentPacks(),
+            this.getAllLanguages(), this.getAllSpells(), this.getEquipmentPacks(),
             this.getAllClasses(), this.getAllSpecies(), this.getAllBackgrounds(), this.getAllItems(), this.getAllMonsters(),
             this.getMulticlassingData(), this.getMulticlassSpellcastingTable(),
             this.getObjectBlueprints(), this.getTerrainTypes(), this.getAllAiArchetypes(),
@@ -91,7 +93,7 @@ class DataService {
 
         return {
             allFeats, allFightingStyles, allManeuvers, allInvocations, allMetamagic, allInfusions,
-            allCompanions, allConditions, allTools, allRunes, allSpells, equipmentPacks,
+            allCompanions, allConditions, allTools, allRunes, allLanguages, allSpells, equipmentPacks,
             allClasses, allSpecies, allBackgrounds, allItems, allMonsters,
             multiclassingData, spellcastingTables, objectBlueprints, terrainTypes, allAiArchetypes,
             actionsAndConditions
@@ -129,6 +131,7 @@ class DataService {
     getAllMetamagic = () => this._fetchAndCache<Metamagic[]>('allMetamagic', '/data/metamagic.json');
     getAllInfusions = () => this._fetchAndCache<ArtificerInfusion[]>('allInfusions', '/data/infusions.json');
     getAllTools = () => this._fetchAndCache<Tool[]>('allTools', '/data/tools.json');
+    getAllLanguages = () => this._fetchAndCache<Language[]>('allLanguages', '/data/languages.json');
     getAllCompanions = () => this._fetchAndCache<{ [key: string]: CompanionBlueprint }>('allCompanions', '/data/companions.json');
     getAllConditions = () => this._fetchAndCache<Omit<EffectInstance, 'id'>[]>('allConditions', '/data/conditions.json');
     getAllRunes = () => this._fetchAndCache<Rune[]>('allRunes', '/data/runes.json');

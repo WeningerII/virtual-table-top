@@ -48,7 +48,7 @@ const AddConditionModal: React.FC<AddConditionModalProps> = ({ isOpen, onClose, 
         <Modal isOpen={isOpen} onClose={onClose} title="Add a Condition" maxWidth="max-w-lg">
             <input
                 type="text"
-                placeholder="Search conditions..."
+                placeholder="Search conditions by name or effect (e.g., 'poisoned', 'frightened', 'advantage')"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 mb-3 focus:ring-2 focus:ring-blue-500"
