@@ -1,11 +1,11 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { Monster, MonsterType } from '../../types';
+import { Monster, MonsterType } from './types';
 import MonsterStatBlock from './MonsterStatBlock';
-import { dataService, MonsterIndexEntry } from '../../services/dataService';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
+import { dataService, MonsterIndexEntry } from './services/data.service';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
 import { queueMonsterSummon, setMode } from '../../state/appSlice';
-import { useToast } from '../../state/ToastContext';
+import { useToast } from './state/ToastContext';
 import MonsterTypeIconFactory from '../icons/MonsterTypeIconFactory';
 
 const MONSTER_TYPES: MonsterType[] = ['Aberration', 'Beast', 'Celestial', 'Construct', 'Dragon', 'Elemental', 'Fey', 'Fiend', 'Giant', 'Humanoid', 'Monstrosity', 'Ooze', 'Plant', 'Undead'];

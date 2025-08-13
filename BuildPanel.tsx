@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { VTTObject, VTTTool, TerrainCell, StaticGameDataCache, ObjectBlueprint } from '../../types';
+import { VTTObject, VTTTool, TerrainCell, StaticGameDataCache, ObjectBlueprint } from './types';
 
 interface BuildPanelProps {
     activeTool: VTTTool;

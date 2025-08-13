@@ -1,11 +1,11 @@
 import React from 'react';
-import { Character } from '../../../types';
+import { Character } from './types';
 import CompanionSheet from '../CompanionSheet';
 import HordeSheet from '../HordeSheet';
 import ElixirsPanel from '../ElixirsPanel';
 import { groupCompanions } from '../../../utils/companions';
-import { useAppSelector, useAppDispatch } from '../../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../../state/selectors';
+import { useAppSelector, useAppDispatch } from '../.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { usePlayerActions } from '../../../hooks/usePlayerActions';
 import { uiActions } from '../../../state/uiSlice';
 import Accordion from '../../shared/Accordion';

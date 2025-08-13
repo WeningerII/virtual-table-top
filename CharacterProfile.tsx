@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Character } from '../types';
+import { Character } from './types';
 import { suggestCharacterNames, generateAvatar } from '../services/ai/character.service';
-import { useToast } from '../state/ToastContext';
+import { useToast } from './state/ToastContext';
 import { GeminiError } from '../services/geminiService';
 import { useCharacterActions } from '../hooks/useCharacterActions';
 

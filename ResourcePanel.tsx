@@ -1,10 +1,10 @@
 
 
 import React from 'react';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
-import { Character } from '../../types';
-import { playStateActions } from '../../engine/slices/playStateSlice';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { Character } from './types';
+import { playStateActions } from './engine/slices/playStateSlice';
 
 const ResourcePanel: React.FC = () => {
     const character = useAppSelector(selectCalculatedActiveCharacterSheet) as Character | null;

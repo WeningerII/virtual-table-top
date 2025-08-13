@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Character } from '../../types';
-import { dataService, ClassIndexEntry } from '../../services/dataService';
-import { useAppDispatch } from '../../state/hooks';
+import { Character } from './types';
+import { dataService, ClassIndexEntry } from './services/data.service';
+import { useAppDispatch } from '.././state/hooks';
 import { setMode } from '../../state/appSlice';
 
 interface HomeViewProps {

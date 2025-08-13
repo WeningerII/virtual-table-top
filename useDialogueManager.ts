@@ -1,12 +1,12 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { Chat } from "@google/genai";
-import { Token, Conversation, DialogueTurn } from '../types';
-import { useAppSelector, useAppDispatch } from '../state/hooks';
-import { useToast } from '../state/ToastContext';
-import { startConversation, continueConversation, summarizeConversation } from '../services/ai/dm.service';
-import { dataService } from '../services/dataService';
-import { GeminiError } from '../services/geminiService';
-import { selectCalculatedActiveCharacterSheet } from '../state/selectors';
+import { Token, Conversation, DialogueTurn } from './types';
+import { useAppSelector, useAppDispatch } from './hooks';
+import { useToast } from './state/ToastContext';
+import { startConversation, continueConversation, summarizeConversation } from './services/ai/dm.service';
+import { dataService } from './services/data.service';
+import { GeminiError } from './services/geminiService';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 // Note: Simulation actions will need to be imported from the new slice if dispatching is required.
 
 export const useDialogueManager = () => {

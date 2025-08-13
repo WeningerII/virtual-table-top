@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Character, Background, PhysicalCharacteristics, Trait, PendingChoice } from '../../types';
+import { Character, Background, PhysicalCharacteristics, Trait, PendingChoice } from './types';
 import { generateBackstory } from '../../services/ai/character.service';
-import { dataService, BackgroundIndexEntry } from '../../services/dataService';
+import { dataService, BackgroundIndexEntry } from './services/data.service';
 import InlineProficiencySelector from '../shared/InlineProficiencySelector';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { useCharacterActions } from '../../hooks/useCharacterActions';
 
 interface BackgroundStepProps {}

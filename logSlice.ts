@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { LogEntry, LogEntryType } from '../types';
+import { LogEntry, LogEntryType } from './types';
 
 interface LogState {
     log: LogEntry[];

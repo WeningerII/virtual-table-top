@@ -1,6 +1,6 @@
 
 import * as THREE from 'three';
-import { TerrainCell } from '../types';
+import { TerrainCell } from './types';
 
 const vertexShader = `
   varying vec4 vColor;

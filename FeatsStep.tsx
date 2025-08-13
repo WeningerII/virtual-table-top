@@ -1,11 +1,11 @@
 import React from 'react';
-import { Character, Feat, PendingChoice, Ability, SelectedFeat } from '../../types';
+import { Character, Feat, PendingChoice, Ability, SelectedFeat } from './types';
 import { ABILITIES, SKILLS } from '../../constants';
 import InlineProficiencySelector from '../shared/InlineProficiencySelector';
 import InlineMagicInitiateSelector from '../shared/InlineMagicInitiateSelector';
 import InlineFeatASISelector from '../shared/InlineFeatASISelector';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { useCharacterActions } from '../../hooks/useCharacterActions';
 
 interface FeatsStepProps {}

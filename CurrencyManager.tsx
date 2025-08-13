@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Currency } from '../../types';
+import { Currency } from './types';
 import { currencyToCopper, copperToCurrency } from '../../utils/currency';
 
 interface CurrencyManagerProps {

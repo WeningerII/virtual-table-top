@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
 import { entitySlice } from '../../state/entitySlice';
 
 interface SceneDisplayProps {

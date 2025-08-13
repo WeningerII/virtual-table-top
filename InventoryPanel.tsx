@@ -1,10 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Character, Item, ItemRarity, CharacterItemInstance, ArtificerInfusion } from '../../types';
+import { Character, Item, ItemRarity, CharacterItemInstance, ArtificerInfusion } from './types';
 import CurrencyManager from '../shared/CurrencyManager';
-import { dataService } from '../../services/dataService';
-import { useToast } from '../../state/ToastContext';
-import { inventoryActions } from '../../engine/slices/inventorySlice';
-import { useAppDispatch } from '../../state/hooks';
+import { dataService } from './services/data.service';
+import { useToast } from './state/ToastContext';
+import { inventoryActions } from './engine/slices/inventorySlice';
+import { useAppDispatch } from '.././state/hooks';
 
 interface InventoryPanelProps {
     character: Character;

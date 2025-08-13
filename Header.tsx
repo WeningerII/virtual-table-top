@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { AppMode } from '../types';
-import { useAppSelector, useAppDispatch } from '../state/hooks';
+import { AppMode } from './types';
+import { useAppSelector, useAppDispatch } from './hooks';
 import { setMode, toggleDmMode } from '../state/appSlice';
 
 interface HeaderProps {

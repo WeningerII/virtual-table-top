@@ -1,10 +1,10 @@
+import { characterDataReducer } from './characterReducer'
 import { configureStore, combineReducers, Middleware } from '@reduxjs/toolkit';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import appReducer from './appSlice';
 import rosterReducer from './rosterSlice';
 import genesisReducer from './genesisSlice';
-import { characterDataReducer } from '../engine/characterReducer';
 import logReducer from './logSlice';
 import uiReducer from './uiSlice';
 import worldbuilderReducer from './worldbuilderSlice';
@@ -16,7 +16,7 @@ import entityReducer from './entitySlice';
 import eventReducer from './eventSlice';
 import animationReducer from './animationSlice';
 import aiReducer from './aiSlice';
-import { PERFORMANCE_WARNING_THRESHOLD_MS } from '../constants';
+import { PERFORMANCE_WARNING_THRESHOLD_MS } from './constants.ts';
 
 const persistConfig = {
   key: 'vtt-cathedral-root',

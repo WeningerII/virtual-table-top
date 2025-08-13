@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { EncounterConcept } from '../../../types';
+import { EncounterConcept } from './types';
 import { useEncounterGeneration } from '../hooks/useEncounterGeneration';
 
 interface ConceptDisplayProps {

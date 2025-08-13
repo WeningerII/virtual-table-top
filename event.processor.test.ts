@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { EventProcessor } from '../event.processor';
 import { CommandFactory } from '../commands/command.factory';
-import { SimulationState, StaticGameDataCache, DeclareAttackEvent, GameEvent, Token, MapNpcInstance } from '../../types';
+import { SimulationState, StaticGameDataCache, DeclareAttackEvent, GameEvent, Token, MapNpcInstance } from './types';
 
 // Mock utilities
 vi.mock('../../utils/dice', () => ({

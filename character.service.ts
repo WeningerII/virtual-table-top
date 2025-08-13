@@ -1,4 +1,4 @@
-import { Character, BackstoryDetails, Species, Trait, Ability, AbilityScoreIncreaseEffect, StaticGameDataCache, CharacterConcept, GenerationProgress } from '../../types';
+import { Character, BackstoryDetails, Species, Trait, Ability, AbilityScoreIncreaseEffect, StaticGameDataCache, CharacterConcept, GenerationProgress } from './types';
 import { dataService } from "../dataService";
 import { generateAvatarImage } from './imagen.service';
 

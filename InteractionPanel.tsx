@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
-import { Character, ActionItem } from '../../types';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { Character, ActionItem } from './types';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
 
 interface InteractionPanelProps {

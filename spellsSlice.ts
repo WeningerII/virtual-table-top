@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { SpellsState } from '../../types';
+import { SpellsState } from './types';
 
 const initialState: SpellsState = {
     preparedSpells: [],

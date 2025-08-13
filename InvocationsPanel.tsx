@@ -1,9 +1,9 @@
 
 
 import React from 'react';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
-import { Character, InnateSpellcastingEffect, Invocation } from '../../types';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { Character, InnateSpellcastingEffect, Invocation } from './types';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
 
 const InvocationsPanel: React.FC = () => {

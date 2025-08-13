@@ -1,7 +1,7 @@
 import { Chat, Type } from "@google/genai";
-import { BattlefieldState, DialogueTurn, MapNpcInstance, Monster, NpcTurnResult, Token, TerrainCell, EncounterStrategy, VTTObject, StaticGameDataCache, TacticalObject, VTTMap } from '../../types';
+import { BattlefieldState, DialogueTurn, MapNpcInstance, Monster, NpcTurnResult, Token, TerrainCell, EncounterStrategy, VTTObject, StaticGameDataCache, TacticalObject, VTTMap } from './types';
 import { ai, textModel, GeminiError } from '../geminiService';
-import { SpatialGrid } from '../../engine/spatialGrid.service';
+import { SpatialGrid } from './engine/spatialGrid.service';
 
 const buildBattlefieldState = (
     activeToken: Token,

@@ -1,5 +1,5 @@
 
-import { BattlefieldState } from '../../../types';
+import { BattlefieldState } from './types';
 import { hasLineOfSight } from './lineOfSight';
 
 const getDistance = (a: { x: number, y: number }, b: { x: number, y: number }) => {

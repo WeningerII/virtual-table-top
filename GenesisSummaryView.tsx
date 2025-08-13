@@ -1,5 +1,5 @@
 import React from 'react';
-import { Character, Ability, PartialCharacter } from '../../types';
+import { Character, Ability, PartialCharacter } from './types';
 import { ABILITIES } from '../../constants';
 
 interface GenesisSummaryViewProps {

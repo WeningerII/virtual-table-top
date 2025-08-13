@@ -1,5 +1,5 @@
 import { GameCommand, CommandResult, ValidationResult, CommandContext } from './types';
-import { SimulationState, DealDamageEvent, GameEvent, MapNpcInstance, Character } from '../../types';
+import { SimulationState, DealDamageEvent, GameEvent, MapNpcInstance, Character } from './types';
 import { DamageCalculator } from '../rules/damage.calculator';
 import { produce } from 'immer';
 

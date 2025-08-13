@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { UIRollResult, CrucibleActionResult, ActionItem, Spell, ClassFeature } from '../types';
+import { UIRollResult, CrucibleActionResult, ActionItem, Spell, ClassFeature } from './types';
 
 interface UIState {
     lastRollResult: UIRollResult | null;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import ClassGrid from './class/ClassGrid';
 import ClassDetail from './class/ClassDetail';
 import { useCharacterActions } from '../../hooks/useCharacterActions';

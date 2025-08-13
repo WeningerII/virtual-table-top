@@ -1,9 +1,9 @@
 import React from 'react';
-import { PlayerChoicePrompt, SavingThrowChoice, ReactionChoice, Character } from '../../types';
+import { PlayerChoicePrompt, SavingThrowChoice, ReactionChoice, Character } from './types';
 import { rollD20 } from '../../utils/dice';
-import { useAppDispatch, useAppSelector } from '../../state/hooks';
+import { useAppDispatch, useAppSelector } from '.././state/hooks';
 import { resolvePlayerChoice, postGameEvent } from '../../state/eventSlice';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import Modal from '../shared/Modal';
 
 const SavingThrowUI: React.FC<{ prompt: SavingThrowChoice }> = ({ prompt }) => {

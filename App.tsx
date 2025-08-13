@@ -3,8 +3,8 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
 import ToastContainer from './components/shared/ToastContainer';
-import { useAppSelector, useAppDispatch } from './state/hooks';
-import { changeAppMode, initializeApp } from './state/appSlice';
+import { useAppSelector, useAppDispatch } from './hooks';
+import { changeAppMode, initializeApp } from './appSlice';
 import AppRouter from './components/routing/AppRouter';
 
 const App: React.FC = () => {

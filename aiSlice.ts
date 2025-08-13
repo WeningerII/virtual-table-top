@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import { ActionItem, AiTurnIntent, Monster, GameEvent } from '../types';
+import { ActionItem, AiTurnIntent, Monster, GameEvent } from './types';
 import { RootState } from './store';
-import { aiDecisionService } from '../services/ai/aiDecision.service';
-import { generateNpcTurn } from '../services/ai/dm.service';
+import { aiDecisionService } from './services/ai/aiDecision.service';
+import { generateNpcTurn } from './services/ai/dm.service';
 import { logEvent } from './logSlice';
 import { postGameEvent } from './eventSlice';
 import { animationActions } from './animationSlice';

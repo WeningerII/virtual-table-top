@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import { AppState, AppMode, Character, StaticGameDataCache, ObjectBlueprint, CharacterState, GenesisState, PartialCharacter, GenerationStep } from '../types';
-import { dataService } from '../services/dataService';
+import { AppState, AppMode, Character, StaticGameDataCache, ObjectBlueprint, CharacterState, GenesisState, PartialCharacter, GenerationStep } from './types';
+import { dataService } from './dataService';
 import { RootState } from './store';
 import { entitySlice } from './entitySlice';
 import { saveActiveCharacter, setActiveCharacterId as setActiveCharIdInRoster } from './rosterSlice';

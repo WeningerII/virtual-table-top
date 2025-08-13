@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Character, Ability, Feat, Trait, ResolvedProficiency } from '../../types';
+import { Character, Ability, Feat, Trait, ResolvedProficiency } from './types';
 import { ABILITIES, SKILLS } from '../../constants';
 import { usePrevious } from '../../hooks/usePrevious';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 
 interface SummaryStepProps {}
 

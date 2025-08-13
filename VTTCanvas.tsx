@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { VTTMap, Token, MapNpcInstance } from '../../types';
+import { VTTMap, Token, MapNpcInstance } from './types';
 import { useVttInteractions } from '../../hooks/useVttInteractions';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
 import { attackAfterAiMove } from '../../state/aiSlice';
 import { usePrevious } from '../../hooks/usePrevious';
 import { animationActions } from '../../state/animationSlice';

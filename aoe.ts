@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { SpellTemplate, Token } from '../types';
+import { SpellTemplate, Token } from './types';
 
 /**
  * Calculates which tokens are within a given spell template area.

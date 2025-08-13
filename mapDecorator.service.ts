@@ -1,4 +1,4 @@
-import { EncounterConcept } from '../types';
+import { EncounterConcept } from './types';
 
 type MapObjectConcept = EncounterConcept['mapObjects'][0];
 

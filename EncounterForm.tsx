@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../../state/hooks';
+import { useAppDispatch, useAppSelector } from '../.././state/hooks';
 import { setContext, setTheme, setPartyLevel, setPartySize, setDifficulty } from '../../../state/worldbuilderSlice';
 
 interface EncounterFormProps {

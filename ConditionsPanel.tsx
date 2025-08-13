@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ActionItem, ActionCategory } from '../../types';
-import { dataService } from '../../services/dataService';
+import { ActionItem, ActionCategory } from './types';
+import { dataService } from './services/data.service';
 
 const ConditionsPanel: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);

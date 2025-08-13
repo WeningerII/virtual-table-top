@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Conversation, DialogueTurn } from '../../types';
+import { Conversation, DialogueTurn } from './types';
 
 interface DialogueModalProps {
     isOpen: boolean;

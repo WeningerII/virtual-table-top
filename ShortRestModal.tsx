@@ -1,12 +1,12 @@
 import React, { useState, useMemo } from 'react';
-import { useToast } from '../../state/ToastContext';
+import { useToast } from './state/ToastContext';
 import { rollDice } from '../../utils/dice';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { logEvent } from '../../state/logSlice';
-import { Character, Ability } from '../../types';
-import { vitalsActions } from '../../engine/slices/vitalsSlice';
-import { playStateActions } from '../../engine/slices/playStateSlice';
+import { Character, Ability } from './types';
+import { vitalsActions } from './engine/slices/vitalsSlice';
+import { playStateActions } from './engine/slices/playStateSlice';
 import Modal from '../shared/Modal';
 
 interface ShortRestModalProps {

@@ -1,8 +1,8 @@
 import React from 'react';
-import { SkillCheckItem } from '../../types';
+import { SkillCheckItem } from './types';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 
 interface SkillsPanelProps {}
 

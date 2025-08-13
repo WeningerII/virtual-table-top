@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ActionCategory, ActionItem, Character } from '../../types';
+import { ActionCategory, ActionItem, Character } from './types';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 
 const ExpandableCard: React.FC<{ 
     category: ActionCategory, 

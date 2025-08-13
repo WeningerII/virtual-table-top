@@ -1,5 +1,5 @@
 
-import { BattlefieldState, EncounterStrategy } from '../../../types';
+import { BattlefieldState, EncounterStrategy } from './types';
 
 type Enemy = BattlefieldState['enemies'][0];
 

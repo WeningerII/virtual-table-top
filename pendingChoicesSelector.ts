@@ -1,5 +1,5 @@
 
-import { CharacterState, StaticGameDataCache, PendingChoice, ClassFeature } from '../types';
+import { CharacterState, StaticGameDataCache, PendingChoice, ClassFeature } from './types';
 
 export const calculatePendingChoices = (
     characterState: CharacterState,

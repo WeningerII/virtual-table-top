@@ -1,6 +1,6 @@
 
 
-import { Character, CharacterState, Ability, AbilityScores, BackstoryDetails, PhysicalCharacteristics, SelectedClass, Heritage, Background, SelectedFeat, SelectedProficiency, SelectedFightingStyle, CharacterItemInstance, EquippedItems, Currency, HitDicePool, WildShapeEquipmentOption, Resource, StateInstance, ExperimentalElixir, BardicInspiration, PaladinInfo, InteractionPrompt, SummonChoicePrompt, UncannyDodgePrompt, EffectInstance, Monster } from '../types';
+import { Character, CharacterState, Ability, AbilityScores, BackstoryDetails, PhysicalCharacteristics, SelectedClass, Heritage, Background, SelectedFeat, SelectedProficiency, SelectedFightingStyle, CharacterItemInstance, EquippedItems, Currency, HitDicePool, WildShapeEquipmentOption, Resource, StateInstance, ExperimentalElixir, BardicInspiration, PaladinInfo, InteractionPrompt, SummonChoicePrompt, UncannyDodgePrompt, EffectInstance, Monster } from './types';
 
 export const createNewCharacterObject = (): Character => {
     const ABILITIES_IDS = ['STRENGTH', 'DEXTERITY', 'CONSTITUTION', 'INTELLIGENCE', 'WISDOM', 'CHARISMA'];

@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { CombatState, VFXRequest } from '../../types';
-import LogPanel from '../play/LogPanel';
+import { CombatState, VFXRequest } from './types';
+import LogPanel from './Play/LogPanel';
 import InitiativeTracker from '../play/InitiativeTracker';
 import { useVttController } from '../../hooks/useVttController';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
 import { initializeApp } from '../../state/appSlice';
 import VTTCanvas from '../play/VTTCanvas';
 import { useVttInteractions } from '../../hooks/useVttInteractions';

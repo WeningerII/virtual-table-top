@@ -1,5 +1,5 @@
 import React from 'react';
-import { VTTMap } from '../../types';
+import { VTTMap } from './types';
 
 interface MapViewProps {
     mapImageUrl: string;

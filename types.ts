@@ -1,4 +1,4 @@
-import { SimulationState, GameEvent, PlayerChoicePrompt, StaticGameDataCache } from '../../types';
+import { SimulationState, GameEvent, PlayerChoicePrompt, StaticGameDataCache } from './types';
 
 export interface ValidationResult {
     valid: boolean;

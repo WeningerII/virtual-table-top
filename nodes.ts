@@ -1,4 +1,4 @@
-import { AIBlackboard, BTNode, BTNodeStatus, ActionItem, DamagePart, Token } from '../../types';
+import { AIBlackboard, BTNode, BTNodeStatus, ActionItem, DamagePart, Token } from './types';
 import { findBestTarget, findLastAttackerTarget, findMostWoundedEnemy } from './perception/threatAssessment';
 import { hasLineOfSight } from './perception/lineOfSight';
 import { findCover } from './perception/cover';

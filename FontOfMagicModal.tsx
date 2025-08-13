@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
-import { useToast } from '../../state/ToastContext';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useToast } from './state/ToastContext';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { logEvent } from '../../state/logSlice';
-import { Character } from '../../types';
-import { playStateActions } from '../../engine/slices/playStateSlice';
+import { Character } from './types';
+import { playStateActions } from './engine/slices/playStateSlice';
 import Modal from '../shared/Modal';
 
 interface FontOfMagicModalProps {

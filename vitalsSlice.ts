@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { VitalsState } from '../../types';
+import { VitalsState } from './types';
 
 const initialState: VitalsState = {
     hp: 10,

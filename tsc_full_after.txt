@@ -1,0 +1,1154 @@
+AbilitiesStep.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+AbilitiesStep.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Ability'.
+AbilitiesStep.tsx(2,30): error TS2305: Module '"./types"' has no exported member 'AbilityScores'.
+AbilitiesStep.tsx(3,43): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+AbilitiesStep.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+AbilitiesStep.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+AbilitiesStep.tsx(6,37): error TS2307: Cannot find module '../../hooks/useCharacterActions' or its corresponding type declarations.
+ActionIconButton.tsx(2,30): error TS2307: Cannot find module '../../../services/soundManager' or its corresponding type declarations.
+ActionResultToast.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'ActionRollResult'.
+ActionsPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'ActionCategory'.
+ActionsPanel.tsx(2,26): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+ActionsPanel.tsx(2,38): error TS2305: Module '"./types"' has no exported member 'Character'.
+ActionsPanel.tsx(3,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+ActionsPanel.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ActionsPanel.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+ActiveEffectsPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+ActiveEffectsPanel.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'EffectInstance'.
+ActiveEffectsPanel.tsx(4,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+ActiveEffectsPanel.tsx(5,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ActiveEffectsPanel.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+AddConditionModal.tsx(2,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+AddConditionModal.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'EffectInstance'.
+AddConditionModal.tsx(3,26): error TS2305: Module '"./types"' has no exported member 'Character'.
+AddConditionModal.tsx(4,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+AddConditionModal.tsx(5,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+AddConditionModal.tsx(6,29): error TS2307: Cannot find module '../../state/entitySlice' or its corresponding type declarations.
+AddConditionModal.tsx(7,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+AdjudicationPrompt.tsx(2,10): error TS2459: Module '"./types"' declares 'PlayerChoicePrompt' locally, but it is not exported.
+AdjudicationPrompt.tsx(2,30): error TS2305: Module '"./types"' has no exported member 'SavingThrowChoice'.
+AdjudicationPrompt.tsx(2,49): error TS2305: Module '"./types"' has no exported member 'ReactionChoice'.
+AdjudicationPrompt.tsx(2,65): error TS2305: Module '"./types"' has no exported member 'Character'.
+AdjudicationPrompt.tsx(3,25): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+AdjudicationPrompt.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+AdjudicationPrompt.tsx(5,52): error TS2307: Cannot find module '../../state/eventSlice' or its corresponding type declarations.
+AdjudicationPrompt.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+AdjudicationPrompt.tsx(7,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+ArcaneRecoveryModal.tsx(3,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ArcaneRecoveryModal.tsx(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+ArcaneRecoveryModal.tsx(5,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+ArcaneRecoveryModal.tsx(6,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+ArcaneRecoveryModal.tsx(7,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+ArcaneRecoveryModal.tsx(8,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+ArcaneRecoveryModal.tsx(29,51): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+BackgroundStep.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+BackgroundStep.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Background'.
+BackgroundStep.tsx(2,33): error TS2305: Module '"./types"' has no exported member 'PhysicalCharacteristics'.
+BackgroundStep.tsx(2,58): error TS2305: Module '"./types"' has no exported member 'Trait'.
+BackgroundStep.tsx(2,65): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+BackgroundStep.tsx(3,35): error TS2307: Cannot find module '../../services/ai/character.service' or its corresponding type declarations.
+BackgroundStep.tsx(4,51): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+BackgroundStep.tsx(5,39): error TS2307: Cannot find module '../shared/InlineProficiencySelector' or its corresponding type declarations.
+BackgroundStep.tsx(6,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+BackgroundStep.tsx(7,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+BackgroundStep.tsx(8,37): error TS2307: Cannot find module '../../hooks/useCharacterActions' or its corresponding type declarations.
+BestiaryView.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'Monster'.
+BestiaryView.tsx(3,19): error TS2305: Module '"./types"' has no exported member 'MonsterType'.
+BestiaryView.tsx(5,48): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+BestiaryView.tsx(6,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+BestiaryView.tsx(7,45): error TS2307: Cannot find module '../../state/appSlice' or its corresponding type declarations.
+BestiaryView.tsx(9,36): error TS2307: Cannot find module '../icons/MonsterTypeIconFactory' or its corresponding type declarations.
+BuildPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'VTTObject'.
+BuildPanel.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'VTTTool'.
+BuildPanel.tsx(2,30): error TS2305: Module '"./types"' has no exported member 'TerrainCell'.
+BuildPanel.tsx(2,43): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+BuildPanel.tsx(2,64): error TS2305: Module '"./types"' has no exported member 'ObjectBlueprint'.
+BuilderView.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+BuilderView.tsx(16,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+BuilderView.tsx(17,32): error TS2307: Cannot find module '../state/builderSlice' or its corresponding type declarations.
+CastSpellModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Spell'.
+CastSpellModal.tsx(2,17): error TS2305: Module '"./types"' has no exported member 'Character'.
+CastSpellModal.tsx(2,28): error TS2305: Module '"./types"' has no exported member 'Metamagic'.
+CastSpellModal.tsx(3,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+CastSpellModal.tsx(5,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+CastSpellModal.tsx(6,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+CastSpellModal.tsx(7,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+CharacterProfile.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+CharacterProfile.tsx(3,55): error TS2307: Cannot find module '../services/ai/character.service' or its corresponding type declarations.
+CharacterProfile.tsx(5,29): error TS2307: Cannot find module '../services/geminiService' or its corresponding type declarations.
+CharacterProfile.tsx(6,37): error TS2307: Cannot find module '../hooks/useCharacterActions' or its corresponding type declarations.
+CharacterTab.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+CharacterTab.tsx(3,23): error TS2307: Cannot find module '../../shared/Accordion' or its corresponding type declarations.
+CharacterTab.tsx(4,20): error TS2307: Cannot find module '../Vitals' or its corresponding type declarations.
+CharacterTab.tsx(5,27): error TS2307: Cannot find module '../FeaturesPanel' or its corresponding type declarations.
+CharacterTab.tsx(6,27): error TS2307: Cannot find module '../ResourcePanel' or its corresponding type declarations.
+CharacterTab.tsx(7,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+CharacterTab.tsx(8,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+CharacterTab.tsx(9,34): error TS2307: Cannot find module '../../../hooks/usePlayerActions' or its corresponding type declarations.
+ChoiceSelector.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+ChoiceSelector.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+ChoiceSelector.tsx(2,36): error TS2305: Module '"./types"' has no exported member 'Maneuver'.
+ChoiceSelector.tsx(2,46): error TS2305: Module '"./types"' has no exported member 'Invocation'.
+ChoiceSelector.tsx(2,58): error TS2305: Module '"./types"' has no exported member 'Metamagic'.
+ChoiceSelector.tsx(2,69): error TS2305: Module '"./types"' has no exported member 'Spell'.
+ChoiceSelector.tsx(2,76): error TS2305: Module '"./types"' has no exported member 'Rune'.
+ChoiceSelector.tsx(3,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ChoiceSelector.tsx(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+ClassDetail.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+ClassDetail.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+ClassDetail.tsx(2,31): error TS2305: Module '"./types"' has no exported member 'SelectedClass'.
+ClassDetail.tsx(2,46): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+ClassDetail.tsx(2,61): error TS2305: Module '"./types"' has no exported member 'Invocation'.
+ClassDetail.tsx(2,73): error TS2305: Module '"./types"' has no exported member 'Prerequisite'.
+ClassDetail.tsx(2,87): error TS2305: Module '"./types"' has no exported member 'ClassFeature'.
+ClassDetail.tsx(4,28): error TS2307: Cannot find module '../../shared/ChoiceSelector' or its corresponding type declarations.
+ClassDetail.tsx(5,41): error TS2307: Cannot find module '../../shared/InlineFightingStyleSelector' or its corresponding type declarations.
+ClassDetail.tsx(6,39): error TS2307: Cannot find module '../../shared/InlineProficiencySelector' or its corresponding type declarations.
+ClassDetail.tsx(7,35): error TS2307: Cannot find module '../../shared/InlineFeatASISelector' or its corresponding type declarations.
+ClassDetail.tsx(8,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+ClassDetail.tsx(9,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+ClassDetail.tsx(10,37): error TS2307: Cannot find module '../../../hooks/useCharacterActions' or its corresponding type declarations.
+ClassGrid.tsx(2,30): error TS2307: Cannot find module '../../icons/ClassIconFactory' or its corresponding type declarations.
+ClassGrid.tsx(3,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+ClassStep.tsx(2,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ClassStep.tsx(3,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+ClassStep.tsx(4,23): error TS2307: Cannot find module './class/ClassGrid' or its corresponding type declarations.
+ClassStep.tsx(5,25): error TS2307: Cannot find module './class/ClassDetail' or its corresponding type declarations.
+ClassStep.tsx(6,37): error TS2307: Cannot find module '../../hooks/useCharacterActions' or its corresponding type declarations.
+CombatTab.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+CombatTab.tsx(3,23): error TS2307: Cannot find module '../../shared/Accordion' or its corresponding type declarations.
+CombatTab.tsx(4,26): error TS2307: Cannot find module '../ActionsPanel' or its corresponding type declarations.
+CombatTab.tsx(5,25): error TS2307: Cannot find module '../SkillsPanel' or its corresponding type declarations.
+CombatTab.tsx(6,31): error TS2307: Cannot find module '../SavingThrowsPanel' or its corresponding type declarations.
+CombatTab.tsx(7,32): error TS2307: Cannot find module '../ActiveEffectsPanel' or its corresponding type declarations.
+CombatTab.tsx(8,29): error TS2307: Cannot find module '../ConditionsPanel' or its corresponding type declarations.
+CombatTab.tsx(9,31): error TS2307: Cannot find module '../InitiativeTracker' or its corresponding type declarations.
+CombatTab.tsx(10,30): error TS2307: Cannot find module '../InteractionPanel' or its corresponding type declarations.
+CombatTab.tsx(11,30): error TS2307: Cannot find module '../InvocationsPanel' or its corresponding type declarations.
+CombatTab.tsx(12,28): error TS2307: Cannot find module '../MetamagicPanel' or its corresponding type declarations.
+CombatTab.tsx(13,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+CombatTab.tsx(14,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+CompanionSheet.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Companion'.
+CompanionSheet.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+CompanionSheet.tsx(2,33): error TS2305: Module '"./types"' has no exported member 'Movement'.
+CompanionSheet.tsx(2,43): error TS2305: Module '"./types"' has no exported member 'Character'.
+CompanionSheet.tsx(3,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+CompanionSheet.tsx(4,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+CompanionSheet.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+CompanionSheet.tsx(6,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+CompanionsTab.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+CompanionsTab.tsx(3,28): error TS2307: Cannot find module '../CompanionSheet' or its corresponding type declarations.
+CompanionsTab.tsx(4,24): error TS2307: Cannot find module '../HordeSheet' or its corresponding type declarations.
+CompanionsTab.tsx(5,26): error TS2307: Cannot find module '../ElixirsPanel' or its corresponding type declarations.
+CompanionsTab.tsx(6,33): error TS2307: Cannot find module '../../../utils/companions' or its corresponding type declarations.
+CompanionsTab.tsx(7,48): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+CompanionsTab.tsx(8,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+CompanionsTab.tsx(9,34): error TS2307: Cannot find module '../../../hooks/usePlayerActions' or its corresponding type declarations.
+CompanionsTab.tsx(10,27): error TS2307: Cannot find module '../../../state/uiSlice' or its corresponding type declarations.
+CompanionsTab.tsx(11,23): error TS2307: Cannot find module '../../shared/Accordion' or its corresponding type declarations.
+ConceptDisplay.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+ConceptDisplay.tsx(4,40): error TS2307: Cannot find module '../hooks/useEncounterGeneration' or its corresponding type declarations.
+ConditionsPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+ConditionsPanel.tsx(2,22): error TS2305: Module '"./types"' has no exported member 'ActionCategory'.
+ConditionsPanel.tsx(3,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+CreatorsWorkbenchModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+CreatorsWorkbenchModal.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'ClassFeature'.
+CreatorsWorkbenchModal.tsx(2,35): error TS2305: Module '"./types"' has no exported member 'Item'.
+CreatorsWorkbenchModal.tsx(2,41): error TS2305: Module '"./types"' has no exported member 'CharacterItemInstance'.
+CreatorsWorkbenchModal.tsx(2,64): error TS2305: Module '"./types"' has no exported member 'Rune'.
+CreatorsWorkbenchModal.tsx(2,70): error TS2305: Module '"./types"' has no exported member 'Weapon'.
+CreatorsWorkbenchModal.tsx(2,78): error TS2305: Module '"./types"' has no exported member 'Tool'.
+CreatorsWorkbenchModal.tsx(2,84): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+CreatorsWorkbenchModal.tsx(2,94): error TS2305: Module '"./types"' has no exported member 'Spell'.
+CreatorsWorkbenchModal.tsx(4,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+CreatorsWorkbenchModal.tsx(5,52): error TS2307: Cannot find module '../../utils/currency' or its corresponding type declarations.
+CreatorsWorkbenchModal.tsx(6,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+CreatorsWorkbenchModal.tsx(7,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+CreatorsWorkbenchModal.tsx(8,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+CreatorsWorkbenchModal.tsx(9,34): error TS2307: Cannot find module './engine/slices/inventorySlice' or its corresponding type declarations.
+CreatorsWorkbenchModal.tsx(10,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+CrucibleView.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'CombatState'.
+CrucibleView.tsx(3,23): error TS2305: Module '"./types"' has no exported member 'VFXRequest'.
+CrucibleView.tsx(4,22): error TS2307: Cannot find module './Play/LogPanel' or its corresponding type declarations.
+CrucibleView.tsx(5,31): error TS2307: Cannot find module '../play/InitiativeTracker' or its corresponding type declarations.
+CrucibleView.tsx(6,34): error TS2307: Cannot find module '../../hooks/useVttController' or its corresponding type declarations.
+CrucibleView.tsx(7,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+CrucibleView.tsx(8,31): error TS2307: Cannot find module '../../state/appSlice' or its corresponding type declarations.
+CrucibleView.tsx(9,23): error TS2307: Cannot find module '../play/VTTCanvas' or its corresponding type declarations.
+CrucibleView.tsx(10,36): error TS2307: Cannot find module '../../hooks/useVttInteractions' or its corresponding type declarations.
+CrucibleView.tsx(11,83): error TS2307: Cannot find module '../../state/combatFlowSlice' or its corresponding type declarations.
+CurrencyManager.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Currency'.
+CurrencyManager.tsx(3,52): error TS2307: Cannot find module '../../utils/currency' or its corresponding type declarations.
+DeathSavesTracker.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+DeathSavesTracker.tsx(4,31): error TS2307: Cannot find module './engine/slices/vitalsSlice' or its corresponding type declarations.
+DeathSavesTracker.tsx(5,25): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+DeathSavesTracker.tsx(6,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+DialogueModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Conversation'.
+DialogueModal.tsx(2,24): error TS2305: Module '"./types"' has no exported member 'DialogueTurn'.
+DivineSmiteModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+DivineSmiteModal.tsx(2,22): error TS2305: Module '"./types"' has no exported member 'Character'.
+DivineSmiteModal.tsx(4,26): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+DivineSmiteModal.tsx(5,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+DivineSmiteModal.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+DivineSmiteModal.tsx(7,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+DivineSmiteModal.tsx(8,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+DmPanel.tsx(3,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+DmPanel.tsx(4,48): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+DmPanel.tsx(5,10): error TS2305: Module '"./types"' has no exported member 'Monster'.
+DmPanel.tsx(5,19): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+DmPanel.tsx(7,34): error TS2307: Cannot find module '../../hooks/useVttController' or its corresponding type declarations.
+DmPanel.tsx(8,56): error TS2307: Cannot find module '../../state/appSlice' or its corresponding type declarations.
+ElixirsPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+ElixirsPanel.tsx(3,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+ElixirsPanel.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ElixirsPanel.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+EncounterForm.tsx(3,48): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+EncounterForm.tsx(4,82): error TS2307: Cannot find module '../../../state/worldbuilderSlice' or its corresponding type declarations.
+EquipmentStep.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+EquipmentStep.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'CharacterItemInstance'.
+EquipmentStep.tsx(2,44): error TS2305: Module '"./types"' has no exported member 'Item'.
+EquipmentStep.tsx(2,50): error TS2305: Module '"./types"' has no exported member 'EquipmentPack'.
+EquipmentStep.tsx(2,65): error TS2305: Module '"./types"' has no exported member 'Armor'.
+EquipmentStep.tsx(2,72): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+EquipmentStep.tsx(3,52): error TS2307: Cannot find module '../../utils/currency' or its corresponding type declarations.
+EquipmentStep.tsx(4,29): error TS2307: Cannot find module '../shared/CurrencyManager' or its corresponding type declarations.
+EquipmentStep.tsx(6,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+EquipmentStep.tsx(7,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+EquipmentStep.tsx(8,37): error TS2307: Cannot find module '../../hooks/useCharacterActions' or its corresponding type declarations.
+FeatsStep.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+FeatsStep.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Feat'.
+FeatsStep.tsx(2,27): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+FeatsStep.tsx(2,42): error TS2305: Module '"./types"' has no exported member 'Ability'.
+FeatsStep.tsx(2,51): error TS2305: Module '"./types"' has no exported member 'SelectedFeat'.
+FeatsStep.tsx(3,35): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+FeatsStep.tsx(4,39): error TS2307: Cannot find module '../shared/InlineProficiencySelector' or its corresponding type declarations.
+FeatsStep.tsx(5,41): error TS2307: Cannot find module '../shared/InlineMagicInitiateSelector' or its corresponding type declarations.
+FeatsStep.tsx(6,35): error TS2307: Cannot find module '../shared/InlineFeatASISelector' or its corresponding type declarations.
+FeatsStep.tsx(7,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+FeatsStep.tsx(8,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+FeatsStep.tsx(9,37): error TS2307: Cannot find module '../../hooks/useCharacterActions' or its corresponding type declarations.
+FeaturesPanel.tsx(4,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+FeaturesPanel.tsx(4,21): error TS2305: Module '"./types"' has no exported member 'Maneuver'.
+FeaturesPanel.tsx(4,31): error TS2305: Module '"./types"' has no exported member 'ClassFeature'.
+FeaturesPanel.tsx(5,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+FeaturesPanel.tsx(7,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+FeaturesPanel.tsx(8,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+FeaturesPanel.tsx(9,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+FeaturesPanel.tsx(97,37): error TS2698: Spread types may only be created from object types.
+FontOfMagicModal.tsx(3,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+FontOfMagicModal.tsx(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+FontOfMagicModal.tsx(5,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+FontOfMagicModal.tsx(6,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+FontOfMagicModal.tsx(7,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+FontOfMagicModal.tsx(8,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+GenerationProgress.tsx(3,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+GenesisSummaryView.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+GenesisSummaryView.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Ability'.
+GenesisSummaryView.tsx(2,30): error TS2305: Module '"./types"' has no exported member 'PartialCharacter'.
+GenesisSummaryView.tsx(3,27): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+GenesisView.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+GenesisView.tsx(5,45): error TS2307: Cannot find module '../../state/rosterSlice' or its corresponding type declarations.
+GenesisView.tsx(6,25): error TS2307: Cannot find module '../../state/appSlice' or its corresponding type declarations.
+GenesisView.tsx(7,60): error TS2307: Cannot find module '../../state/genesisSlice' or its corresponding type declarations.
+GenesisView.tsx(8,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+GenesisView.tsx(8,21): error TS2305: Module '"./types"' has no exported member 'PartialCharacter'.
+Header.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'AppMode'.
+Header.tsx(5,39): error TS2307: Cannot find module '../state/appSlice' or its corresponding type declarations.
+HomeView.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+HomeView.tsx(4,46): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+HomeView.tsx(5,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+HomeView.tsx(6,25): error TS2307: Cannot find module '../../state/appSlice' or its corresponding type declarations.
+HordeSheet.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Companion'.
+HordeSheet.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+HordeSheet.tsx(2,33): error TS2305: Module '"./types"' has no exported member 'Movement'.
+HordeSheet.tsx(2,43): error TS2305: Module '"./types"' has no exported member 'Character'.
+HordeSheet.tsx(3,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+HordeSheet.tsx(4,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+HordeSheet.tsx(5,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+InfusionsStep.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+InfusionsStep.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'ArtificerInfusion'.
+InfusionsStep.tsx(2,40): error TS2305: Module '"./types"' has no exported member 'Item'.
+InfusionsStep.tsx(2,46): error TS2305: Module '"./types"' has no exported member 'Weapon'.
+InfusionsStep.tsx(2,54): error TS2305: Module '"./types"' has no exported member 'Armor'.
+InfusionsStep.tsx(2,61): error TS2305: Module '"./types"' has no exported member 'Shield'.
+InfusionsStep.tsx(3,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InfusionsStep.tsx(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InfusionsStep.tsx(5,37): error TS2307: Cannot find module '../../hooks/useCharacterActions' or its corresponding type declarations.
+InitiativeTracker.tsx(2,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InitiativeTracker.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'InitiativeEntry'.
+InitiativeTracker.tsx(3,27): error TS2305: Module '"./types"' has no exported member 'Monster'.
+InitiativeTracker.tsx(3,36): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+InitiativeTracker.tsx(4,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+InitiativeTracker.tsx(5,29): error TS2307: Cannot find module '../../state/entitySlice' or its corresponding type declarations.
+InitiativeTracker.tsx(6,34): error TS2307: Cannot find module '../../hooks/useVttController' or its corresponding type declarations.
+InitiativeTracker.tsx(7,40): error TS2307: Cannot find module '../../state/combatFlowSlice' or its corresponding type declarations.
+InlineFeatASISelector.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+InlineFeatASISelector.tsx(3,21): error TS2305: Module '"./types"' has no exported member 'Feat'.
+InlineFeatASISelector.tsx(3,27): error TS2305: Module '"./types"' has no exported member 'Prerequisite'.
+InlineFeatASISelector.tsx(3,41): error TS2305: Module '"./types"' has no exported member 'Ability'.
+InlineFeatASISelector.tsx(3,50): error TS2305: Module '"./types"' has no exported member 'SelectedFeat'.
+InlineFeatASISelector.tsx(3,64): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+InlineFeatASISelector.tsx(4,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+InlineFeatASISelector.tsx(5,27): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+InlineFeatASISelector.tsx(6,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InlineFeatASISelector.tsx(7,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InlineFeatASISelector.tsx(9,38): error TS2307: Cannot find module './engine/slices/proficienciesSlice' or its corresponding type declarations.
+InlineFightingStyleSelector.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'FightingStyle'.
+InlineFightingStyleSelector.tsx(3,25): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+InlineFightingStyleSelector.tsx(3,40): error TS2305: Module '"./types"' has no exported member 'Character'.
+InlineFightingStyleSelector.tsx(4,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+InlineFightingStyleSelector.tsx(6,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InlineFightingStyleSelector.tsx(7,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InlineFightingStyleSelector.tsx(8,38): error TS2307: Cannot find module './engine/slices/proficienciesSlice' or its corresponding type declarations.
+InlineMagicInitiateSelector.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+InlineMagicInitiateSelector.tsx(3,25): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+InlineMagicInitiateSelector.tsx(3,35): error TS2305: Module '"./types"' has no exported member 'Spell'.
+InlineMagicInitiateSelector.tsx(3,42): error TS2305: Module '"./types"' has no exported member 'SelectedFeat'.
+InlineMagicInitiateSelector.tsx(3,56): error TS2305: Module '"./types"' has no exported member 'Character'.
+InlineMagicInitiateSelector.tsx(4,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+InlineMagicInitiateSelector.tsx(5,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InlineMagicInitiateSelector.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InlineMagicInitiateSelector.tsx(8,38): error TS2307: Cannot find module './engine/slices/proficienciesSlice' or its corresponding type declarations.
+InlineProficiencySelector.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+InlineProficiencySelector.tsx(3,25): error TS2305: Module '"./types"' has no exported member 'Tool'.
+InlineProficiencySelector.tsx(3,31): error TS2305: Module '"./types"' has no exported member 'Character'.
+InlineProficiencySelector.tsx(3,42): error TS2305: Module '"./types"' has no exported member 'Language'.
+InlineProficiencySelector.tsx(4,24): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+InlineProficiencySelector.tsx(5,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+InlineProficiencySelector.tsx(7,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InlineProficiencySelector.tsx(8,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InlineProficiencySelector.tsx(9,38): error TS2307: Cannot find module './engine/slices/proficienciesSlice' or its corresponding type declarations.
+InlineStartingEquipmentSelector.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+InlineStartingEquipmentSelector.tsx(3,20): error TS2305: Module '"./types"' has no exported member 'StartingEquipmentOption'.
+InlineStartingEquipmentSelector.tsx(3,45): error TS2305: Module '"./types"' has no exported member 'Currency'.
+InlineStartingEquipmentSelector.tsx(3,55): error TS2305: Module '"./types"' has no exported member 'Item'.
+InlineStartingEquipmentSelector.tsx(3,61): error TS2305: Module '"./types"' has no exported member 'EquipmentPack'.
+InlineStartingEquipmentSelector.tsx(3,76): error TS2305: Module '"./types"' has no exported member 'Character'.
+InlineStartingEquipmentSelector.tsx(4,26): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+InlineStartingEquipmentSelector.tsx(5,52): error TS2307: Cannot find module '../../utils/currency' or its corresponding type declarations.
+InlineStartingEquipmentSelector.tsx(6,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+InlineStartingEquipmentSelector.tsx(8,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InlineStartingEquipmentSelector.tsx(9,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InlineStartingEquipmentSelector.tsx(10,34): error TS2307: Cannot find module './engine/slices/inventorySlice' or its corresponding type declarations.
+InlineStartingEquipmentSelector.tsx(124,58): error TS2339: Property 'split' does not exist on type 'unknown'.
+InteractionModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'InteractionPrompt'.
+InteractionModal.tsx(2,29): error TS2305: Module '"./types"' has no exported member 'Character'.
+InteractionModal.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InteractionModal.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InteractionModal.tsx(6,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+InteractionModal.tsx(7,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+InteractionModal.tsx(8,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+InteractionPanel.tsx(3,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InteractionPanel.tsx(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InteractionPanel.tsx(5,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+InteractionPanel.tsx(5,21): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+InteractionPanel.tsx(6,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+InventoryModal.tsx(2,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+InventoryModal.tsx(3,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InventoryModal.tsx(4,28): error TS2307: Cannot find module '../InventoryPanel' or its corresponding type declarations.
+InventoryModal.tsx(5,24): error TS2307: Cannot find module '../ToolsPanel' or its corresponding type declarations.
+InventoryModal.tsx(6,34): error TS2307: Cannot find module '../../../hooks/usePlayerActions' or its corresponding type declarations.
+InventoryModal.tsx(7,19): error TS2307: Cannot find module '../../shared/Modal' or its corresponding type declarations.
+InventoryPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+InventoryPanel.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Item'.
+InventoryPanel.tsx(2,27): error TS2305: Module '"./types"' has no exported member 'ItemRarity'.
+InventoryPanel.tsx(2,39): error TS2305: Module '"./types"' has no exported member 'CharacterItemInstance'.
+InventoryPanel.tsx(2,62): error TS2305: Module '"./types"' has no exported member 'ArtificerInfusion'.
+InventoryPanel.tsx(3,29): error TS2307: Cannot find module '../shared/CurrencyManager' or its corresponding type declarations.
+InventoryPanel.tsx(4,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+InventoryPanel.tsx(6,34): error TS2307: Cannot find module './engine/slices/inventorySlice' or its corresponding type declarations.
+InventoryPanel.tsx(7,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InventoryTab.tsx(4,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+InventoryTab.tsx(5,23): error TS2307: Cannot find module '../../shared/Accordion' or its corresponding type declarations.
+InventoryTab.tsx(6,28): error TS2307: Cannot find module '../InventoryPanel' or its corresponding type declarations.
+InventoryTab.tsx(7,24): error TS2307: Cannot find module '../ToolsPanel' or its corresponding type declarations.
+InventoryTab.tsx(8,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+InventoryTab.tsx(9,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InventoryTab.tsx(10,34): error TS2307: Cannot find module '../../../hooks/usePlayerActions' or its corresponding type declarations.
+InvocationsPanel.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+InvocationsPanel.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+InvocationsPanel.tsx(6,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+InvocationsPanel.tsx(6,21): error TS2305: Module '"./types"' has no exported member 'InnateSpellcastingEffect'.
+InvocationsPanel.tsx(6,47): error TS2305: Module '"./types"' has no exported member 'Invocation'.
+InvocationsPanel.tsx(7,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+KnownSpellsManager.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+KnownSpellsManager.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+KnownSpellsManager.tsx(2,31): error TS2305: Module '"./types"' has no exported member 'Spell'.
+KnownSpellsManager.tsx(2,38): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+KnownSpellsManager.tsx(4,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+KnownSpellsManager.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+KnownSpellsManager.tsx(6,37): error TS2307: Cannot find module '../../../hooks/useCharacterActions' or its corresponding type declarations.
+LayOnHandsModal.tsx(3,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+LayOnHandsModal.tsx(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+LayOnHandsModal.tsx(5,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+LayOnHandsModal.tsx(6,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+LayOnHandsModal.tsx(7,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+LayOnHandsModal.tsx(8,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+LearnSpellsModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+LearnSpellsModal.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+LearnSpellsModal.tsx(2,31): error TS2305: Module '"./types"' has no exported member 'Spell'.
+LearnSpellsModal.tsx(3,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+LearnSpellsModal.tsx(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+LogPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'LogEntry'.
+LogPanel.tsx(2,20): error TS2305: Module '"./types"' has no exported member 'LogEntryType'.
+LogPanel.tsx(3,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+LogPanel.tsx(4,40): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+MapView.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'VTTMap'.
+MetamagicPanel.tsx(2,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+MetamagicPanel.tsx(3,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+MetamagicPanel.tsx(4,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+MetamagicPanel.tsx(4,21): error TS2305: Module '"./types"' has no exported member 'Metamagic'.
+MetamagicPanel.tsx(5,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+Modal.tsx(2,30): error TS2307: Cannot find module '../../services/soundManager' or its corresponding type declarations.
+ModalContainer.tsx(2,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ModalContainer.tsx(3,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+ModalContainer.tsx(15,28): error TS2307: Cannot find module './modals/InventoryModal' or its corresponding type declarations.
+ModalContainer.tsx(16,25): error TS2307: Cannot find module './modals/SpellsModal' or its corresponding type declarations.
+ModalContainer.tsx(19,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+ModalContainer.tsx(20,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+ModalContainer.tsx(20,21): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+ModalContainer.tsx(21,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+ModalContainer.tsx(22,36): error TS2307: Cannot find module '../../hooks/useDialogueManager' or its corresponding type declarations.
+ModalContainer.tsx(23,27): error TS2307: Cannot find module '../../state/uiSlice' or its corresponding type declarations.
+ModalContainer.tsx(24,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+MonsterStatBlock.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Monster'.
+MonsterStatBlock.tsx(2,19): error TS2305: Module '"./types"' has no exported member 'MonsterAbilityScores'.
+MonsterStatBlock.tsx(2,41): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+MonsterStatBlock.tsx(2,53): error TS2305: Module '"./types"' has no exported member 'SpecialTrait'.
+MonsterStatBlock.tsx(2,67): error TS2305: Module '"./types"' has no exported member 'LegendaryAction'.
+MonsterStatBlock.tsx(2,84): error TS2305: Module '"./types"' has no exported member 'LairAction'.
+MonsterStatBlockCard.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Monster'.
+MysticArcanumSelector.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+MysticArcanumSelector.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+MysticArcanumSelector.tsx(2,31): error TS2305: Module '"./types"' has no exported member 'Spell'.
+MysticArcanumSelector.tsx(3,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+MysticArcanumSelector.tsx(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+MysticArcanumSelector.tsx(5,37): error TS2307: Cannot find module '../../../hooks/useCharacterActions' or its corresponding type declarations.
+NpcSheetPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+NpcSheetPanel.tsx(2,26): error TS2305: Module '"./types"' has no exported member 'Monster'.
+NpcSheetPanel.tsx(2,35): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+NpcSheetPanel.tsx(2,47): error TS2305: Module '"./types"' has no exported member 'EffectInstance'.
+NpcSheetPanel.tsx(3,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+NpcSheetPanel.tsx(5,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+NpcSheetPanel.tsx(6,34): error TS2307: Cannot find module '../../services/ai/commander.service' or its corresponding type declarations.
+NpcSheetPanel.tsx(7,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+NpcSheetPanel.tsx(8,29): error TS2307: Cannot find module '../../state/entitySlice' or its corresponding type declarations.
+ObjectInteractionPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'VTTObject'.
+ObjectInteractionPanel.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'ObjectBlueprint'.
+ObjectInteractionPanel.tsx(3,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+PlayView.tsx(4,25): error TS2307: Cannot find module './hud/TacticalHUD' or its corresponding type declarations.
+PlayView.tsx(7,29): error TS2307: Cannot find module '../shared/RollResultToast' or its corresponding type declarations.
+PlayView.tsx(9,34): error TS2307: Cannot find module '../../hooks/useVttController' or its corresponding type declarations.
+PlayView.tsx(10,36): error TS2307: Cannot find module '../../hooks/useVttInteractions' or its corresponding type declarations.
+PlayView.tsx(11,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+PlayView.tsx(12,52): error TS2307: Cannot find module '../../state/uiSlice' or its corresponding type declarations.
+PlayView.tsx(13,36): error TS2307: Cannot find module '../../engine/combatSelectors' or its corresponding type declarations.
+PreparedSpellsManager.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+PreparedSpellsManager.tsx(2,20): error TS2305: Module '"./types"' has no exported member 'Spell'.
+PreparedSpellsManager.tsx(3,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+PreparedSpellsManager.tsx(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+PreparedSpellsManager.tsx(5,37): error TS2307: Cannot find module '../../../hooks/useCharacterActions' or its corresponding type declarations.
+ResourcePanel.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ResourcePanel.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+ResourcePanel.tsx(6,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+ResourcePanel.tsx(7,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+SavingThrowsPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'SavingThrowItem'.
+SavingThrowsPanel.tsx(3,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+SavingThrowsPanel.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+SavingThrowsPanel.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+SceneDisplay.tsx(2,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+SceneDisplay.tsx(3,29): error TS2307: Cannot find module '../../state/entitySlice' or its corresponding type declarations.
+ShortRestModal.tsx(3,26): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+ShortRestModal.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ShortRestModal.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+ShortRestModal.tsx(6,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+ShortRestModal.tsx(7,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+ShortRestModal.tsx(7,21): error TS2305: Module '"./types"' has no exported member 'Ability'.
+ShortRestModal.tsx(8,31): error TS2307: Cannot find module './engine/slices/vitalsSlice' or its corresponding type declarations.
+ShortRestModal.tsx(9,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+ShortRestModal.tsx(10,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+ShortRestModal.tsx(44,17): error TS2365: Operator '>' cannot be applied to types 'unknown' and 'number'.
+ShortRestModal.tsx(48,17): error TS2365: Operator '+=' cannot be applied to types 'number' and 'unknown'.
+ShortRestModal.tsx(69,88): error TS2339: Property 'max' does not exist on type 'unknown'.
+ShortRestModal.tsx(70,62): error TS2365: Operator '>' cannot be applied to types 'unknown' and 'number'.
+ShortRestModal.tsx(84,65): error TS2339: Property 'current' does not exist on type 'unknown'.
+ShortRestModal.tsx(84,82): error TS2339: Property 'max' does not exist on type 'unknown'.
+ShortRestModal.tsx(89,130): error TS2339: Property 'current' does not exist on type 'unknown'.
+SidebarContainer.tsx(2,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+SidebarContainer.tsx(3,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+SidebarContainer.tsx(4,34): error TS2307: Cannot find module '../../../hooks/usePlayerActions' or its corresponding type declarations.
+SidebarContainer.tsx(5,20): error TS2307: Cannot find module '../Vitals' or its corresponding type declarations.
+SidebarContainer.tsx(6,27): error TS2307: Cannot find module '../ResourcePanel' or its corresponding type declarations.
+SidebarContainer.tsx(7,27): error TS2307: Cannot find module '../FeaturesPanel' or its corresponding type declarations.
+SidebarContainer.tsx(8,32): error TS2307: Cannot find module '../ActiveEffectsPanel' or its corresponding type declarations.
+SidebarContainer.tsx(9,29): error TS2307: Cannot find module '../tabs/CompanionsTab' or its corresponding type declarations.
+SidebarContainer.tsx(11,31): error TS2307: Cannot find module '../InitiativeTracker' or its corresponding type declarations.
+SidebarContainer.tsx(12,21): error TS2307: Cannot find module '../DmPanel' or its corresponding type declarations.
+SidebarContainer.tsx(13,36): error TS2307: Cannot find module '../ObjectInteractionPanel' or its corresponding type declarations.
+SidebarContainer.tsx(14,27): error TS2307: Cannot find module '../NpcSheetPanel' or its corresponding type declarations.
+SidebarContainer.tsx(15,36): error TS2307: Cannot find module '../../../hooks/useVttInteractions' or its corresponding type declarations.
+SidebarContainer.tsx(16,34): error TS2307: Cannot find module '../../../hooks/useVttController' or its corresponding type declarations.
+SidebarContainer.tsx(17,29): error TS2307: Cannot find module '../../../state/entitySlice' or its corresponding type declarations.
+SidebarContainer.tsx(18,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+SkillsPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'SkillCheckItem'.
+SkillsPanel.tsx(3,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+SkillsPanel.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+SkillsPanel.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+SpeciesStep.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+SpeciesStep.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Species'.
+SpeciesStep.tsx(2,30): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+SpeciesStep.tsx(3,40): error TS2307: Cannot find module '../../services/ai/character.service' or its corresponding type declarations.
+SpeciesStep.tsx(4,39): error TS2307: Cannot find module '../shared/InlineProficiencySelector' or its corresponding type declarations.
+SpeciesStep.tsx(6,35): error TS2307: Cannot find module '../shared/InlineFeatASISelector' or its corresponding type declarations.
+SpeciesStep.tsx(7,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+SpeciesStep.tsx(8,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+SpeciesStep.tsx(9,37): error TS2307: Cannot find module '../../hooks/useCharacterActions' or its corresponding type declarations.
+SpellCard.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Spell'.
+SpellDetailModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Spell'.
+SpellTargetingUI.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Spell'.
+SpellsModal.tsx(2,48): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+SpellsModal.tsx(3,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+SpellsModal.tsx(4,29): error TS2307: Cannot find module '../SpellsPanel' or its corresponding type declarations.
+SpellsModal.tsx(5,36): error TS2307: Cannot find module '../../../hooks/useVttInteractions' or its corresponding type declarations.
+SpellsModal.tsx(6,19): error TS2307: Cannot find module '../../shared/Modal' or its corresponding type declarations.
+SpellsModal.tsx(7,34): error TS2307: Cannot find module '../../../state/animationSlice' or its corresponding type declarations.
+SpellsModal.tsx(8,10): error TS2305: Module '"./types"' has no exported member 'VFXRequest'.
+SpellsPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+SpellsPanel.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Spell'.
+SpellsPanel.tsx(2,28): error TS2305: Module '"./types"' has no exported member 'InnateSpell'.
+SpellsPanel.tsx(2,41): error TS2305: Module '"./types"' has no exported member 'VTTTool'.
+SpellsPanel.tsx(2,50): error TS2305: Module '"./types"' has no exported member 'SpellTargetingState'.
+SpellsPanel.tsx(2,71): error TS2305: Module '"./types"' has no exported member 'SummonChoiceEffect'.
+SpellsPanel.tsx(2,91): error TS2305: Module '"./types"' has no exported member 'SummonCreatureEffect'.
+SpellsPanel.tsx(2,113): error TS2305: Module '"./types"' has no exported member 'CastSpellEvent'.
+SpellsPanel.tsx(2,129): error TS2305: Module '"./types"' has no exported member 'VFXRequest'.
+SpellsPanel.tsx(3,30): error TS2307: Cannot find module '../shared/SpellDetailModal' or its corresponding type declarations.
+SpellsPanel.tsx(6,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+SpellsPanel.tsx(7,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+SpellsPanel.tsx(8,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+SpellsPanel.tsx(9,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+SpellsPanel.tsx(10,27): error TS2307: Cannot find module '../../state/uiSlice' or its corresponding type declarations.
+SpellsPanel.tsx(11,31): error TS2307: Cannot find module '../../state/eventSlice' or its corresponding type declarations.
+SpellsPanel.tsx(12,30): error TS2307: Cannot find module '../../services/soundManager' or its corresponding type declarations.
+SpellsStep.tsx(2,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+SpellsStep.tsx(3,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+SpellsStep.tsx(4,32): error TS2307: Cannot find module './spells/KnownSpellsManager' or its corresponding type declarations.
+SpellsStep.tsx(5,35): error TS2307: Cannot find module './spells/PreparedSpellsManager' or its corresponding type declarations.
+SpellsStep.tsx(6,36): error TS2307: Cannot find module './spells/WizardSpellbookManager' or its corresponding type declarations.
+SummaryStep.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+SummaryStep.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Ability'.
+SummaryStep.tsx(2,30): error TS2305: Module '"./types"' has no exported member 'Feat'.
+SummaryStep.tsx(2,36): error TS2305: Module '"./types"' has no exported member 'Trait'.
+SummaryStep.tsx(2,43): error TS2305: Module '"./types"' has no exported member 'ResolvedProficiency'.
+SummaryStep.tsx(3,35): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+SummaryStep.tsx(4,29): error TS2307: Cannot find module '../../hooks/usePrevious' or its corresponding type declarations.
+SummaryStep.tsx(5,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+SummaryStep.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+SummoningChoiceModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+SummoningChoiceModal.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'SummonChoicePrompt'.
+SummoningChoiceModal.tsx(2,41): error TS2305: Module '"./types"' has no exported member 'Monster'.
+SummoningChoiceModal.tsx(3,48): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+SummoningChoiceModal.tsx(4,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+SummoningModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+SummoningModal.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Movement'.
+SummoningModal.tsx(2,31): error TS2305: Module '"./types"' has no exported member 'CompanionBlueprint'.
+SummoningModal.tsx(2,51): error TS2305: Module '"./types"' has no exported member 'Spell'.
+SummoningModal.tsx(3,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+SummoningModal.tsx(4,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+TacticalHUD.tsx(2,48): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+TacticalHUD.tsx(3,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+TacticalHUD.tsx(4,34): error TS2307: Cannot find module '../../../hooks/usePlayerActions' or its corresponding type declarations.
+TacticalHUD.tsx(5,27): error TS2307: Cannot find module '../../../state/uiSlice' or its corresponding type declarations.
+TacticalHUD.tsx(7,95): error TS2307: Cannot find module '../../icons/ActionIcons' or its corresponding type declarations.
+ToolsPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+ToolsPanel.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'Ability'.
+ToolsPanel.tsx(2,30): error TS2305: Module '"./types"' has no exported member 'ToolCheckItem'.
+ToolsPanel.tsx(3,27): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+ToolsPanel.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+ToolsPanel.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+UncannyDodgeModal.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'UncannyDodgePrompt'.
+UncannyDodgeModal.tsx(2,30): error TS2305: Module '"./types"' has no exported member 'Character'.
+UncannyDodgeModal.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+UncannyDodgeModal.tsx(5,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+UncannyDodgeModal.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+UncannyDodgeModal.tsx(7,31): error TS2307: Cannot find module './engine/slices/vitalsSlice' or its corresponding type declarations.
+UncannyDodgeModal.tsx(8,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+VTTCanvas.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'VTTMap'.
+VTTCanvas.tsx(2,18): error TS2305: Module '"./types"' has no exported member 'Token'.
+VTTCanvas.tsx(2,25): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+VTTCanvas.tsx(3,36): error TS2307: Cannot find module '../../hooks/useVttInteractions' or its corresponding type declarations.
+VTTCanvas.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+VTTCanvas.tsx(5,35): error TS2307: Cannot find module '../../state/aiSlice' or its corresponding type declarations.
+VTTCanvas.tsx(6,29): error TS2307: Cannot find module '../../hooks/usePrevious' or its corresponding type declarations.
+VTTCanvas.tsx(7,34): error TS2307: Cannot find module '../../state/animationSlice' or its corresponding type declarations.
+VTTContextMenu.tsx(2,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+VTTContextMenu.tsx(3,36): error TS2307: Cannot find module '../../hooks/useVttInteractions' or its corresponding type declarations.
+VTTRenderer.ts(3,10): error TS2305: Module '"./types"' has no exported member 'VTTMap'.
+VTTRenderer.ts(3,18): error TS2305: Module '"./types"' has no exported member 'Token'.
+VTTRenderer.ts(3,25): error TS2305: Module '"./types"' has no exported member 'VTTObject'.
+VTTRenderer.ts(3,36): error TS2305: Module '"./types"' has no exported member 'TerrainCell'.
+VTTRenderer.ts(3,49): error TS2305: Module '"./types"' has no exported member 'VFXRequest'.
+VTTRenderer.ts(3,61): error TS2305: Module '"./types"' has no exported member 'NpcAnimationState'.
+VTTRenderer.ts(3,80): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+VTTRenderer.ts(3,101): error TS2305: Module '"./types"' has no exported member 'ObjectBlueprint'.
+VTTRenderer.ts(3,118): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+VTTRenderer.ts(3,134): error TS2305: Module '"./types"' has no exported member 'Viewport'.
+VTTRenderer.ts(3,144): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+VTTRenderer.ts(3,162): error TS2305: Module '"./types"' has no exported member 'SpellTargetingState'.
+VTTRenderer.ts(4,30): error TS2307: Cannot find module './services/assetManager' or its corresponding type declarations.
+VTTRenderer.ts(5,37): error TS2307: Cannot find module '../utils/terrain' or its corresponding type declarations.
+VTTToolbar.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'VTTTool'.
+VTTToolbar.tsx(2,19): error TS2305: Module '"./types"' has no exported member 'Viewport'.
+Vitals.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+Vitals.tsx(2,21): error TS2305: Module '"./types"' has no exported member 'HitDicePool'.
+Vitals.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+Vitals.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+Vitals.tsx(6,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+Vitals.tsx(7,31): error TS2307: Cannot find module './engine/slices/vitalsSlice' or its corresponding type declarations.
+Vitals.tsx(8,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+Vitals.tsx(40,56): error TS2339: Property 'current' does not exist on type '{}'.
+Vitals.tsx(40,65): error TS2339: Property 'max' does not exist on type '{}'.
+WizardSpellbookManager.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+WizardSpellbookManager.tsx(2,20): error TS2305: Module '"./types"' has no exported member 'Spell'.
+WizardSpellbookManager.tsx(4,52): error TS2307: Cannot find module '../../../utils/currency' or its corresponding type declarations.
+WizardSpellbookManager.tsx(5,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+WizardSpellbookManager.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+WizardSpellbookManager.tsx(7,37): error TS2307: Cannot find module '../../../hooks/useCharacterActions' or its corresponding type declarations.
+WorldbuilderView.tsx(3,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+WorldbuilderView.tsx(4,31): error TS2307: Cannot find module '../../state/appSlice' or its corresponding type declarations.
+WorldbuilderView.tsx(5,54): error TS2307: Cannot find module '../../state/entitySlice' or its corresponding type declarations.
+WorldbuilderView.tsx(6,40): error TS2307: Cannot find module './hooks/useEncounterGeneration' or its corresponding type declarations.
+WorldbuilderView.tsx(7,27): error TS2307: Cannot find module './components/EncounterForm' or its corresponding type declarations.
+WorldbuilderView.tsx(8,28): error TS2307: Cannot find module './components/ConceptDisplay' or its corresponding type declarations.
+WorldbuilderView.tsx(9,32): error TS2307: Cannot find module './components/GenerationProgress' or its corresponding type declarations.
+abilitiesSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'AbilitiesState'.
+abilitiesSlice.ts(2,26): error TS2305: Module '"./types"' has no exported member 'Ability'.
+abilitiesSlice.ts(2,35): error TS2305: Module '"./types"' has no exported member 'AbilityScores'.
+aiDecision.service.ts(1,10): error TS2305: Module '"./types"' has no exported member 'BattlefieldState'.
+aiDecision.service.ts(1,28): error TS2305: Module '"./types"' has no exported member 'Monster'.
+aiDecision.service.ts(1,37): error TS2305: Module '"./types"' has no exported member 'AiTurnIntent'.
+aiDecision.service.ts(1,51): error TS2305: Module '"./types"' has no exported member 'NpcTurnResult'.
+aiDecision.service.ts(3,32): error TS2307: Cannot find module './engine/ai/localAiService' or its corresponding type declarations.
+aiSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+aiSlice.ts(2,22): error TS2305: Module '"./types"' has no exported member 'AiTurnIntent'.
+aiSlice.ts(2,36): error TS2305: Module '"./types"' has no exported member 'Monster'.
+aiSlice.ts(2,45): error TS2459: Module '"./types"' declares 'GameEvent' locally, but it is not exported.
+aiSlice.ts(4,35): error TS2307: Cannot find module './services/ai/aiDecision.service' or its corresponding type declarations.
+aiSlice.ts(5,33): error TS2307: Cannot find module './services/ai/dm.service' or its corresponding type declarations.
+aiSlice.ts(9,35): error TS2307: Cannot find module '../utils/map' or its corresponding type declarations.
+animationSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'NpcAnimationState'.
+animationSlice.ts(2,29): error TS2305: Module '"./types"' has no exported member 'VFXRequest'.
+aoe.ts(2,10): error TS2305: Module '"./types"' has no exported member 'SpellTemplate'.
+aoe.ts(2,25): error TS2305: Module '"./types"' has no exported member 'Token'.
+appSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'AppState'.
+appSlice.ts(2,20): error TS2305: Module '"./types"' has no exported member 'AppMode'.
+appSlice.ts(2,29): error TS2305: Module '"./types"' has no exported member 'Character'.
+appSlice.ts(2,40): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+appSlice.ts(2,61): error TS2305: Module '"./types"' has no exported member 'ObjectBlueprint'.
+appSlice.ts(2,78): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+appSlice.ts(2,94): error TS2305: Module '"./types"' has no exported member 'GenesisState'.
+appSlice.ts(2,108): error TS2305: Module '"./types"' has no exported member 'PartialCharacter'.
+appSlice.ts(2,126): error TS2305: Module '"./types"' has no exported member 'GenerationStep'.
+assetManager.ts(3,10): error TS2305: Module '"./types"' has no exported member 'ObjectBlueprint'.
+attack.command.ts(2,10): error TS2459: Module '"./types"' declares 'SimulationState' locally, but it is not exported.
+attack.command.ts(2,27): error TS2305: Module '"./types"' has no exported member 'DeclareAttackEvent'.
+attack.command.ts(2,47): error TS2459: Module '"./types"' declares 'GameEvent' locally, but it is not exported.
+attack.command.ts(2,58): error TS2305: Module '"./types"' has no exported member 'DealDamageEvent'.
+attack.command.ts(2,75): error TS2305: Module '"./types"' has no exported member 'Monster'.
+attack.command.ts(2,84): error TS2305: Module '"./types"' has no exported member 'Character'.
+attack.command.ts(3,25): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+attack.command.ts(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+attack.command.ts(5,34): error TS2307: Cannot find module '../../state/characterUtils' or its corresponding type declarations.
+attack.command.ts(6,33): error TS2307: Cannot find module '..' or its corresponding type declarations.
+behaviorTree.ts(1,10): error TS2305: Module '"./types"' has no exported member 'AIBlackboard'.
+behaviorTree.ts(1,24): error TS2305: Module '"./types"' has no exported member 'BTNode'.
+behaviorTree.ts(1,32): error TS2305: Module '"./types"' has no exported member 'BTNodeStatus'.
+behaviorTree.ts(1,46): error TS2305: Module '"./types"' has no exported member 'NodeMetadata'.
+behaviorTree.ts(1,60): error TS2305: Module '"./types"' has no exported member 'ParallelPolicy'.
+builderSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'BuilderState'.
+character.service.ts(1,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+character.service.ts(1,21): error TS2305: Module '"./types"' has no exported member 'BackstoryDetails'.
+character.service.ts(1,39): error TS2305: Module '"./types"' has no exported member 'Species'.
+character.service.ts(1,48): error TS2305: Module '"./types"' has no exported member 'Trait'.
+character.service.ts(1,55): error TS2305: Module '"./types"' has no exported member 'Ability'.
+character.service.ts(1,64): error TS2305: Module '"./types"' has no exported member 'AbilityScoreIncreaseEffect'.
+character.service.ts(1,92): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+character.service.ts(1,113): error TS2305: Module '"./types"' has no exported member 'CharacterConcept'.
+character.service.ts(1,131): error TS2305: Module '"./types"' has no exported member 'GenerationProgress'.
+character.service.ts(2,29): error TS2307: Cannot find module '../dataService' or its corresponding type declarations.
+characterActions.ts(2,29): error TS2307: Cannot find module './engine/slices/metaSlice' or its corresponding type declarations.
+characterActions.ts(3,34): error TS2307: Cannot find module './engine/slices/abilitiesSlice' or its corresponding type declarations.
+characterActions.ts(4,38): error TS2307: Cannot find module './engine/slices/proficienciesSlice' or its corresponding type declarations.
+characterActions.ts(5,34): error TS2307: Cannot find module './engine/slices/inventorySlice' or its corresponding type declarations.
+characterActions.ts(6,31): error TS2307: Cannot find module './engine/slices/spellsSlice' or its corresponding type declarations.
+characterActions.ts(7,31): error TS2307: Cannot find module './engine/slices/vitalsSlice' or its corresponding type declarations.
+characterActions.ts(8,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+characterSelectors.ts(2,5): error TS2305: Module '"./types"' has no exported member 'Character'.
+characterSelectors.ts(2,16): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+characterSelectors.ts(2,32): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+characterSelectors.ts(2,53): error TS2305: Module '"./types"' has no exported member 'Trait'.
+characterSelectors.ts(2,60): error TS2305: Module '"./types"' has no exported member 'ClassFeature'.
+characterSelectors.ts(2,74): error TS2305: Module '"./types"' has no exported member 'Feat'.
+characterSelectors.ts(3,5): error TS2305: Module '"./types"' has no exported member 'Ability'.
+characterSelectors.ts(3,14): error TS2305: Module '"./types"' has no exported member 'SelectedClass'.
+characterSelectors.ts(3,29): error TS2305: Module '"./types"' has no exported member 'AbilityScores'.
+characterSelectors.ts(3,44): error TS2305: Module '"./types"' has no exported member 'CharacterProficiencies'.
+characterSelectors.ts(3,68): error TS2305: Module '"./types"' has no exported member 'ResolvedProficiency'.
+characterSelectors.ts(4,5): error TS2305: Module '"./types"' has no exported member 'SavingThrowItem'.
+characterSelectors.ts(4,22): error TS2305: Module '"./types"' has no exported member 'SkillCheckItem'.
+characterSelectors.ts(4,38): error TS2305: Module '"./types"' has no exported member 'Armor'.
+characterSelectors.ts(4,45): error TS2305: Module '"./types"' has no exported member 'Shield'.
+characterSelectors.ts(4,53): error TS2305: Module '"./types"' has no exported member 'Weapon'.
+characterSelectors.ts(4,61): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+characterSelectors.ts(4,71): error TS2305: Module '"./types"' has no exported member 'CasterType'.
+characterSelectors.ts(5,5): error TS2305: Module '"./types"' has no exported member 'SpellcastingInfo'.
+characterSelectors.ts(5,23): error TS2305: Module '"./types"' has no exported member 'Spell'.
+characterSelectors.ts(5,30): error TS2305: Module '"./types"' has no exported member 'InnateSpell'.
+characterSelectors.ts(5,43): error TS2305: Module '"./types"' has no exported member 'Resource'.
+characterSelectors.ts(5,53): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+characterSelectors.ts(5,68): error TS2305: Module '"./types"' has no exported member 'EffectType'.
+characterSelectors.ts(6,5): error TS2305: Module '"./types"' has no exported member 'AbilityScoreIncreaseEffect'.
+characterSelectors.ts(6,33): error TS2305: Module '"./types"' has no exported member 'ProficiencyEffect'.
+characterSelectors.ts(6,52): error TS2305: Module '"./types"' has no exported member 'BonusEffect'.
+characterSelectors.ts(6,65): error TS2305: Module '"./types"' has no exported member 'AdvantageEffect'.
+characterSelectors.ts(7,5): error TS2305: Module '"./types"' has no exported member 'SelectedFeat'.
+characterSelectors.ts(7,19): error TS2305: Module '"./types"' has no exported member 'SelectedFightingStyle'.
+characterSelectors.ts(7,42): error TS2305: Module '"./types"' has no exported member 'SelectedProficiency'.
+characterSelectors.ts(7,63): error TS2305: Module '"./types"' has no exported member 'UnarmoredDefenseEffect'.
+characterSelectors.ts(8,5): error TS2305: Module '"./types"' has no exported member 'Item'.
+characterSelectors.ts(8,11): error TS2305: Module '"./types"' has no exported member 'CharacterItemInstance'.
+characterSelectors.ts(8,34): error TS2305: Module '"./types"' has no exported member 'HitDicePool'.
+characterSelectors.ts(8,47): error TS2305: Module '"./types"' has no exported member 'FeatEffect'.
+characterSelectors.ts(8,59): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+characterSelectors.ts(8,71): error TS2305: Module '"./types"' has no exported member 'WeaponProperty'.
+characterSelectors.ts(8,87): error TS2305: Module '"./types"' has no exported member 'EncumbranceStatus'.
+characterSelectors.ts(8,106): error TS2305: Module '"./types"' has no exported member 'HalfProficiencyBonusEffect'.
+characterSelectors.ts(8,134): error TS2305: Module '"./types"' has no exported member 'Effect'.
+characterSelectors.ts(10,35): error TS2307: Cannot find module '../constants' or its corresponding type declarations.
+characterSheetSelectors.ts(3,5): error TS2305: Module '"./types"' has no exported member 'Character'.
+characterSheetSelectors.ts(3,16): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+characterSheetSelectors.ts(3,32): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+characterSheetSelectors.ts(3,53): error TS2305: Module '"./types"' has no exported member 'Trait'.
+characterSheetSelectors.ts(3,60): error TS2305: Module '"./types"' has no exported member 'ClassFeature'.
+characterSheetSelectors.ts(3,74): error TS2305: Module '"./types"' has no exported member 'Feat'.
+characterSheetSelectors.ts(4,5): error TS2305: Module '"./types"' has no exported member 'Ability'.
+characterSheetSelectors.ts(4,14): error TS2305: Module '"./types"' has no exported member 'SelectedClass'.
+characterSheetSelectors.ts(4,29): error TS2305: Module '"./types"' has no exported member 'AbilityScores'.
+characterSheetSelectors.ts(4,44): error TS2305: Module '"./types"' has no exported member 'CharacterProficiencies'.
+characterSheetSelectors.ts(4,68): error TS2305: Module '"./types"' has no exported member 'ResolvedProficiency'.
+characterSheetSelectors.ts(5,5): error TS2305: Module '"./types"' has no exported member 'SavingThrowItem'.
+characterSheetSelectors.ts(5,22): error TS2305: Module '"./types"' has no exported member 'SkillCheckItem'.
+characterSheetSelectors.ts(5,38): error TS2305: Module '"./types"' has no exported member 'Armor'.
+characterSheetSelectors.ts(5,45): error TS2305: Module '"./types"' has no exported member 'Shield'.
+characterSheetSelectors.ts(5,53): error TS2305: Module '"./types"' has no exported member 'Weapon'.
+characterSheetSelectors.ts(5,61): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+characterSheetSelectors.ts(5,71): error TS2305: Module '"./types"' has no exported member 'CasterType'.
+characterSheetSelectors.ts(6,5): error TS2305: Module '"./types"' has no exported member 'SpellcastingInfo'.
+characterSheetSelectors.ts(6,23): error TS2305: Module '"./types"' has no exported member 'Spell'.
+characterSheetSelectors.ts(6,30): error TS2305: Module '"./types"' has no exported member 'InnateSpell'.
+characterSheetSelectors.ts(6,43): error TS2305: Module '"./types"' has no exported member 'Resource'.
+characterSheetSelectors.ts(6,53): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+characterSheetSelectors.ts(6,68): error TS2305: Module '"./types"' has no exported member 'EffectType'.
+characterSheetSelectors.ts(7,5): error TS2305: Module '"./types"' has no exported member 'AbilityScoreIncreaseEffect'.
+characterSheetSelectors.ts(7,33): error TS2305: Module '"./types"' has no exported member 'ProficiencyEffect'.
+characterSheetSelectors.ts(7,52): error TS2305: Module '"./types"' has no exported member 'BonusEffect'.
+characterSheetSelectors.ts(7,65): error TS2305: Module '"./types"' has no exported member 'AdvantageEffect'.
+characterSheetSelectors.ts(8,5): error TS2305: Module '"./types"' has no exported member 'SelectedFeat'.
+characterSheetSelectors.ts(8,19): error TS2305: Module '"./types"' has no exported member 'SelectedFightingStyle'.
+characterSheetSelectors.ts(8,42): error TS2305: Module '"./types"' has no exported member 'SelectedProficiency'.
+characterSheetSelectors.ts(8,63): error TS2305: Module '"./types"' has no exported member 'UnarmoredDefenseEffect'.
+characterSheetSelectors.ts(9,5): error TS2305: Module '"./types"' has no exported member 'Item'.
+characterSheetSelectors.ts(9,11): error TS2305: Module '"./types"' has no exported member 'CharacterItemInstance'.
+characterSheetSelectors.ts(9,34): error TS2305: Module '"./types"' has no exported member 'HitDicePool'.
+characterSheetSelectors.ts(9,47): error TS2305: Module '"./types"' has no exported member 'FeatEffect'.
+characterSheetSelectors.ts(9,59): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+characterSheetSelectors.ts(9,71): error TS2305: Module '"./types"' has no exported member 'WeaponProperty'.
+characterSheetSelectors.ts(9,87): error TS2305: Module '"./types"' has no exported member 'EncumbranceStatus'.
+characterSheetSelectors.ts(9,106): error TS2305: Module '"./types"' has no exported member 'HalfProficiencyBonusEffect'.
+characterSheetSelectors.ts(11,35): error TS2307: Cannot find module '../constants' or its corresponding type declarations.
+characterSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+characterUtils.ts(3,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+characterUtils.ts(3,21): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+characterUtils.ts(3,37): error TS2305: Module '"./types"' has no exported member 'Ability'.
+characterUtils.ts(3,46): error TS2305: Module '"./types"' has no exported member 'AbilityScores'.
+characterUtils.ts(3,61): error TS2305: Module '"./types"' has no exported member 'BackstoryDetails'.
+characterUtils.ts(3,79): error TS2305: Module '"./types"' has no exported member 'PhysicalCharacteristics'.
+characterUtils.ts(3,104): error TS2305: Module '"./types"' has no exported member 'SelectedClass'.
+characterUtils.ts(3,119): error TS2305: Module '"./types"' has no exported member 'Heritage'.
+characterUtils.ts(3,129): error TS2305: Module '"./types"' has no exported member 'Background'.
+characterUtils.ts(3,141): error TS2305: Module '"./types"' has no exported member 'SelectedFeat'.
+characterUtils.ts(3,155): error TS2305: Module '"./types"' has no exported member 'SelectedProficiency'.
+characterUtils.ts(3,176): error TS2305: Module '"./types"' has no exported member 'SelectedFightingStyle'.
+characterUtils.ts(3,199): error TS2305: Module '"./types"' has no exported member 'CharacterItemInstance'.
+characterUtils.ts(3,222): error TS2305: Module '"./types"' has no exported member 'EquippedItems'.
+characterUtils.ts(3,237): error TS2305: Module '"./types"' has no exported member 'Currency'.
+characterUtils.ts(3,247): error TS2305: Module '"./types"' has no exported member 'HitDicePool'.
+characterUtils.ts(3,260): error TS2305: Module '"./types"' has no exported member 'WildShapeEquipmentOption'.
+characterUtils.ts(3,286): error TS2305: Module '"./types"' has no exported member 'Resource'.
+characterUtils.ts(3,296): error TS2305: Module '"./types"' has no exported member 'StateInstance'.
+characterUtils.ts(3,311): error TS2305: Module '"./types"' has no exported member 'ExperimentalElixir'.
+characterUtils.ts(3,331): error TS2305: Module '"./types"' has no exported member 'BardicInspiration'.
+characterUtils.ts(3,350): error TS2305: Module '"./types"' has no exported member 'PaladinInfo'.
+characterUtils.ts(3,363): error TS2305: Module '"./types"' has no exported member 'InteractionPrompt'.
+characterUtils.ts(3,382): error TS2305: Module '"./types"' has no exported member 'SummonChoicePrompt'.
+characterUtils.ts(3,402): error TS2305: Module '"./types"' has no exported member 'UncannyDodgePrompt'.
+characterUtils.ts(3,422): error TS2305: Module '"./types"' has no exported member 'EffectInstance'.
+characterUtils.ts(3,438): error TS2305: Module '"./types"' has no exported member 'Monster'.
+characterValidator.service.ts(4,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+characterValidator.service.ts(4,21): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+characterValidator.service.ts(4,42): error TS2305: Module '"./types"' has no exported member 'ValidationError'.
+characterValidator.service.ts(4,59): error TS2305: Module '"./types"' has no exported member 'GenerationStep'.
+characterValidator.service.ts(4,75): error TS2305: Module '"./types"' has no exported member 'Ability'.
+characterValidator.service.ts(4,84): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+characterValidator.service.ts(5,41): error TS2307: Cannot find module './engine/pendingChoicesSelector' or its corresponding type declarations.
+characterValidator.service.ts(6,33): error TS2307: Cannot find module './engine' or its corresponding type declarations.
+characterValidator.service.ts(7,34): error TS2307: Cannot find module '../../state/characterUtils' or its corresponding type declarations.
+combatFlowSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'CombatFlowState'.
+combatFlowSlice.ts(2,27): error TS2305: Module '"./types"' has no exported member 'CombatState'.
+combatFlowSlice.ts(2,40): error TS2305: Module '"./types"' has no exported member 'CombatResult'.
+combatFlowSlice.ts(8,34): error TS2307: Cannot find module '.././playStateSlice' or its corresponding type declarations.
+combatSelectors.perf.ts(2,36): error TS2307: Cannot find module '../combatSelectors' or its corresponding type declarations.
+combatSelectors.perf.ts(3,27): error TS2307: Cannot find module '../../state/store' or its corresponding type declarations.
+combatSelectors.ts(2,27): error TS2307: Cannot find module '../state/store' or its corresponding type declarations.
+combatSelectors.ts(3,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+combatSelectors.ts(3,21): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+combatSelectors.ts(3,37): error TS2305: Module '"./types"' has no exported member 'Token'.
+combatSelectors.ts(3,44): error TS2305: Module '"./types"' has no exported member 'VTTMap'.
+combatSelectors.ts(4,32): error TS2307: Cannot find module './ai/perception/lineOfSight' or its corresponding type declarations.
+command.factory.ts(1,10): error TS2459: Module '"./types"' declares 'GameEvent' locally, but it is not exported.
+command.factory.ts(1,21): error TS2459: Module '"./types"' declares 'SimulationState' locally, but it is not exported.
+command.factory.ts(1,38): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+command.factory.ts(1,59): error TS2305: Module '"./types"' has no exported member 'DeclareAttackEvent'.
+command.factory.ts(1,79): error TS2305: Module '"./types"' has no exported member 'DealDamageEvent'.
+commander.service.ts(2,53): error TS2307: Cannot find module '../../types' or its corresponding type declarations.
+commander.service.ts(3,44): error TS2307: Cannot find module '../geminiService' or its corresponding type declarations.
+companions.ts(1,10): error TS2305: Module '"./types"' has no exported member 'Companion'.
+components.ts(3,10): error TS1205: Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'.
+components/routing/AppRouter.tsx(2,48): error TS2307: Cannot find module './state/hooks' or its corresponding type declarations.
+components/routing/AppRouter.tsx(10,10): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'rosterSelectors'. Did you mean to use 'import rosterSelectors from "../../state/rosterSlice"' instead?
+components/routing/AppRouter.tsx(10,27): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'createCharacter'. Did you mean to use 'import createCharacter from "../../state/rosterSlice"' instead?
+components/routing/AppRouter.tsx(10,44): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'loadCharacter'. Did you mean to use 'import loadCharacter from "../../state/rosterSlice"' instead?
+components/routing/AppRouter.tsx(10,59): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'deleteCharacter'. Did you mean to use 'import deleteCharacter from "../../state/rosterSlice"' instead?
+constants.ts(1,25): error TS2307: Cannot find module './types/enums' or its corresponding type declarations.
+cover.ts(2,10): error TS2305: Module '"./types"' has no exported member 'BattlefieldState'.
+crucibleActions.ts(1,195): error TS2307: Cannot find module '../types' or its corresponding type declarations.
+crucibleReducer.ts(1,10): error TS2305: Module '"./types"' has no exported member 'CrucibleActionResult'.
+crucibleReducer.ts(1,32): error TS2305: Module '"./types"' has no exported member 'NpcAnimationState'.
+crucibleReducer.ts(1,51): error TS2305: Module '"./types"' has no exported member 'SimState'.
+crucibleReducer.ts(1,61): error TS2305: Module '"./types"' has no exported member 'VTTMap'.
+crucibleReducer.ts(1,69): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+crucibleReducer.ts(1,85): error TS2305: Module '"./types"' has no exported member 'Token'.
+crucibleReducer.ts(1,92): error TS2305: Module '"./types"' has no exported member 'InitiativeEntry'.
+crucibleReducer.ts(1,109): error TS2305: Module '"./types"' has no exported member 'Monster'.
+crucibleReducer.ts(1,118): error TS2305: Module '"./types"' has no exported member 'TerrainCell'.
+crucibleReducer.ts(1,131): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+crucibleReducer.ts(1,149): error TS2305: Module '"./types"' has no exported member 'VTTObject'.
+crucibleReducer.ts(1,160): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+crucibleReducer.ts(3,25): error TS2307: Cannot find module '../utils/dice' or its corresponding type declarations.
+crucibleReducer.ts(4,40): error TS2307: Cannot find module '../utils/map' or its corresponding type declarations.
+currency.ts(1,10): error TS2305: Module '"./types"' has no exported member 'Currency'.
+damage.calculator.test.ts(2,34): error TS2307: Cannot find module '../rules/damage.calculator' or its corresponding type declarations.
+damage.calculator.test.ts(3,10): error TS2305: Module '"./types"' has no exported member 'DamagePart'.
+damage.calculator.test.ts(3,22): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+damage.calculator.ts(1,10): error TS2305: Module '"./types"' has no exported member 'DamagePart'.
+damage.calculator.ts(1,22): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+damage.calculator.ts(1,43): error TS2305: Module '"./types"' has no exported member 'Monster'.
+damage.calculator.ts(1,52): error TS2305: Module '"./types"' has no exported member 'Character'.
+damage.calculator.ts(2,26): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+dataService.ts(1,10): error TS2305: Module '"./types"' has no exported member 'Monster'.
+dataService.ts(1,19): error TS2305: Module '"./types"' has no exported member 'MonsterType'.
+dataService.ts(1,32): error TS2305: Module '"./types"' has no exported member 'Spell'.
+dataService.ts(1,39): error TS2305: Module '"./types"' has no exported member 'Item'.
+dataService.ts(1,45): error TS2305: Module '"./types"' has no exported member 'EquipmentPack'.
+dataService.ts(1,60): error TS2305: Module '"./types"' has no exported member 'DndClass'.
+dataService.ts(1,70): error TS2305: Module '"./types"' has no exported member 'Species'.
+dataService.ts(1,79): error TS2305: Module '"./types"' has no exported member 'Background'.
+dataService.ts(1,91): error TS2305: Module '"./types"' has no exported member 'Feat'.
+dataService.ts(1,97): error TS2305: Module '"./types"' has no exported member 'ArtificerInfusion'.
+dataService.ts(1,116): error TS2305: Module '"./types"' has no exported member 'FightingStyle'.
+dataService.ts(1,131): error TS2305: Module '"./types"' has no exported member 'Maneuver'.
+dataService.ts(1,141): error TS2305: Module '"./types"' has no exported member 'Invocation'.
+dataService.ts(1,153): error TS2305: Module '"./types"' has no exported member 'Metamagic'.
+dataService.ts(1,164): error TS2305: Module '"./types"' has no exported member 'CompanionBlueprint'.
+dataService.ts(1,184): error TS2305: Module '"./types"' has no exported member 'EffectInstance'.
+dataService.ts(1,200): error TS2305: Module '"./types"' has no exported member 'ActionCategory'.
+dataService.ts(1,216): error TS2305: Module '"./types"' has no exported member 'Tool'.
+dataService.ts(1,222): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+dataService.ts(1,243): error TS2305: Module '"./types"' has no exported member 'Rune'.
+dataService.ts(1,249): error TS2305: Module '"./types"' has no exported member 'ObjectBlueprint'.
+dataService.ts(1,266): error TS2305: Module '"./types"' has no exported member 'AiArchetypeIndexEntry'.
+dataService.ts(1,289): error TS2305: Module '"./types"' has no exported member 'AiArchetype'.
+dataService.ts(134,49): error TS2304: Cannot find name 'Language'.
+dealDamage.command.ts(2,10): error TS2459: Module '"./types"' declares 'SimulationState' locally, but it is not exported.
+dealDamage.command.ts(2,27): error TS2305: Module '"./types"' has no exported member 'DealDamageEvent'.
+dealDamage.command.ts(2,44): error TS2459: Module '"./types"' declares 'GameEvent' locally, but it is not exported.
+dealDamage.command.ts(2,55): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+dealDamage.command.ts(2,71): error TS2305: Module '"./types"' has no exported member 'Character'.
+dealDamage.command.ts(3,34): error TS2307: Cannot find module '../rules/damage.calculator' or its corresponding type declarations.
+dm.service.ts(2,10): error TS2305: Module '"./types"' has no exported member 'BattlefieldState'.
+dm.service.ts(2,28): error TS2305: Module '"./types"' has no exported member 'DialogueTurn'.
+dm.service.ts(2,42): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+dm.service.ts(2,58): error TS2305: Module '"./types"' has no exported member 'Monster'.
+dm.service.ts(2,67): error TS2305: Module '"./types"' has no exported member 'NpcTurnResult'.
+dm.service.ts(2,82): error TS2305: Module '"./types"' has no exported member 'Token'.
+dm.service.ts(2,89): error TS2305: Module '"./types"' has no exported member 'TerrainCell'.
+dm.service.ts(2,102): error TS2305: Module '"./types"' has no exported member 'EncounterStrategy'.
+dm.service.ts(2,121): error TS2305: Module '"./types"' has no exported member 'VTTObject'.
+dm.service.ts(2,132): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+dm.service.ts(2,153): error TS2305: Module '"./types"' has no exported member 'TacticalObject'.
+dm.service.ts(2,169): error TS2305: Module '"./types"' has no exported member 'VTTMap'.
+dm.service.ts(3,44): error TS2307: Cannot find module '../geminiService' or its corresponding type declarations.
+dm.service.ts(4,29): error TS2307: Cannot find module './engine/spatialGrid.service' or its corresponding type declarations.
+entitySlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'VTTMap'.
+entitySlice.ts(2,18): error TS2305: Module '"./types"' has no exported member 'Token'.
+entitySlice.ts(2,25): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+entitySlice.ts(2,41): error TS2305: Module '"./types"' has no exported member 'Character'.
+entitySlice.ts(2,52): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+entitySlice.ts(2,70): error TS2305: Module '"./types"' has no exported member 'InitiativeEntry'.
+entitySlice.ts(2,87): error TS2305: Module '"./types"' has no exported member 'Monster'.
+entitySlice.ts(2,96): error TS2305: Module '"./types"' has no exported member 'EffectInstance'.
+entitySlice.ts(3,77): error TS2307: Cannot find module '../utils/map' or its corresponding type declarations.
+entitySlice.ts(4,25): error TS2307: Cannot find module '../utils/dice' or its corresponding type declarations.
+entitySlice.ts(6,29): error TS2307: Cannot find module './engine/spatialGrid.service' or its corresponding type declarations.
+event.processor.test.ts(2,32): error TS2307: Cannot find module '../event.processor' or its corresponding type declarations.
+event.processor.test.ts(3,32): error TS2307: Cannot find module '../commands/command.factory' or its corresponding type declarations.
+event.processor.test.ts(4,10): error TS2459: Module '"./types"' declares 'SimulationState' locally, but it is not exported.
+event.processor.test.ts(4,27): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+event.processor.test.ts(4,48): error TS2305: Module '"./types"' has no exported member 'DeclareAttackEvent'.
+event.processor.test.ts(4,68): error TS2459: Module '"./types"' declares 'GameEvent' locally, but it is not exported.
+event.processor.test.ts(4,79): error TS2305: Module '"./types"' has no exported member 'Token'.
+event.processor.test.ts(4,86): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+event.processor.ts(1,10): error TS2459: Module '"./types"' declares 'GameEvent' locally, but it is not exported.
+event.processor.ts(1,21): error TS2459: Module '"./types"' declares 'SimulationState' locally, but it is not exported.
+event.processor.ts(1,38): error TS2459: Module '"./types"' declares 'PlayerChoicePrompt' locally, but it is not exported.
+event.processor.ts(1,58): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+event.processor.ts(1,79): error TS2305: Module '"./types"' has no exported member 'GameEventType'.
+event.processor.ts(2,32): error TS2307: Cannot find module './commands/command.factory' or its corresponding type declarations.
+event.processor.ts(3,44): error TS2307: Cannot find module './commands/types' or its corresponding type declarations.
+eventSlice.ts(2,10): error TS2459: Module '"./types"' declares 'GameEvent' locally, but it is not exported.
+eventSlice.ts(2,21): error TS2459: Module '"./types"' declares 'PlayerChoicePrompt' locally, but it is not exported.
+eventSlice.ts(2,41): error TS2459: Module '"./types"' declares 'SimulationState' locally, but it is not exported.
+eventSlice.ts(5,32): error TS2307: Cannot find module './engine/commands/command.factory' or its corresponding type declarations.
+generationOrchestrator.service.ts(4,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+generationOrchestrator.service.ts(4,21): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+generationOrchestrator.service.ts(4,42): error TS2305: Module '"./types"' has no exported member 'GenerationStep'.
+generationOrchestrator.service.ts(4,58): error TS2305: Module '"./types"' has no exported member 'ValidationError'.
+generationOrchestrator.service.ts(4,75): error TS2305: Module '"./types"' has no exported member 'GenerationProgress'.
+generationOrchestrator.service.ts(4,95): error TS2305: Module '"./types"' has no exported member 'SelectedFeat'.
+generationOrchestrator.service.ts(4,109): error TS2305: Module '"./types"' has no exported member 'SelectedProficiency'.
+generationOrchestrator.service.ts(4,130): error TS2305: Module '"./types"' has no exported member 'Currency'.
+generationOrchestrator.service.ts(4,140): error TS2305: Module '"./types"' has no exported member 'StartingEquipmentOption'.
+generationOrchestrator.service.ts(4,165): error TS2305: Module '"./types"' has no exported member 'Item'.
+generationOrchestrator.service.ts(4,171): error TS2305: Module '"./types"' has no exported member 'EquipmentPack'.
+generationOrchestrator.service.ts(4,186): error TS2305: Module '"./types"' has no exported member 'PartialCharacter'.
+generationOrchestrator.service.ts(4,204): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+generationOrchestrator.service.ts(4,220): error TS2305: Module '"./types"' has no exported member 'Ability'.
+generationOrchestrator.service.ts(4,229): error TS2305: Module '"./types"' has no exported member 'SelectedClass'.
+generationOrchestrator.service.ts(5,36): error TS2307: Cannot find module '../validation/characterValidator.service' or its corresponding type declarations.
+generationOrchestrator.service.ts(8,33): error TS2307: Cannot find module './engine' or its corresponding type declarations.
+generationOrchestrator.service.ts(9,41): error TS2307: Cannot find module './engine/pendingChoicesSelector' or its corresponding type declarations.
+generationOrchestrator.service.ts(10,26): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+generationOrchestrator.service.ts(11,34): error TS2307: Cannot find module './engine/slices/inventorySlice' or its corresponding type declarations.
+generationOrchestrator.service.ts(12,60): error TS2307: Cannot find module '../../state/characterUtils' or its corresponding type declarations.
+generationOrchestrator.service.ts(160,42): error TS2322: Type 'unknown' is not assignable to type 'string'.
+generationOrchestrator.service.ts(172,42): error TS2322: Type 'unknown' is not assignable to type 'string'.
+genesisSlice.ts(3,10): error TS2305: Module '"./types"' has no exported member 'GenesisState'.
+genesisSlice.ts(3,24): error TS2305: Module '"./types"' has no exported member 'PartialCharacter'.
+genesisSlice.ts(3,42): error TS2305: Module '"./types"' has no exported member 'GenerationStep'.
+genesisSlice.ts(3,58): error TS2305: Module '"./types"' has no exported member 'Character'.
+genesisSlice.ts(3,69): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+genesisSlice.ts(3,85): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+genesisSlice.ts(6,33): error TS2307: Cannot find module './engine' or its corresponding type declarations.
+imagen.service.ts(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+imagen.service.ts(2,21): error TS2305: Module '"./types"' has no exported member 'EnvironmentalData'.
+imagen.service.ts(3,45): error TS2307: Cannot find module '../geminiService' or its corresponding type declarations.
+imagen.service.ts(4,29): error TS2307: Cannot find module '../dataService' or its corresponding type declarations.
+inventorySlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'InventoryState'.
+inventorySlice.ts(2,26): error TS2305: Module '"./types"' has no exported member 'CharacterItemInstance'.
+inventorySlice.ts(2,49): error TS2305: Module '"./types"' has no exported member 'EquippedItems'.
+inventorySlice.ts(2,64): error TS2305: Module '"./types"' has no exported member 'Currency'.
+lineOfSight.ts(2,10): error TS2305: Module '"./types"' has no exported member 'TerrainCell'.
+localAiService.ts(1,10): error TS2305: Module '"./types"' has no exported member 'AIBlackboard'.
+localAiService.ts(1,24): error TS2305: Module '"./types"' has no exported member 'BTNode'.
+localAiService.ts(1,32): error TS2305: Module '"./types"' has no exported member 'BTNodeStatus'.
+localAiService.ts(1,46): error TS2305: Module '"./types"' has no exported member 'NodeMetadata'.
+localAiService.ts(1,60): error TS2305: Module '"./types"' has no exported member 'ParallelPolicy'.
+localAiService.ts(1,76): error TS2305: Module '"./types"' has no exported member 'AiArchetype'.
+localAiService.ts(1,89): error TS2305: Module '"./types"' has no exported member 'BehaviorTreeNodeDefinition'.
+localAiService.ts(1,117): error TS2305: Module '"./types"' has no exported member 'NodeTypeName'.
+localAiService.ts(1,131): error TS2305: Module '"./types"' has no exported member 'BattlefieldState'.
+localAiService.ts(1,149): error TS2305: Module '"./types"' has no exported member 'AiTurnIntent'.
+localAiService.ts(4,26): error TS2307: Cannot find module '../pathfinding' or its corresponding type declarations.
+localAiService.ts(5,29): error TS2307: Cannot find module '.././services/dataService' or its corresponding type declarations.
+logSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'LogEntry'.
+logSlice.ts(2,20): error TS2305: Module '"./types"' has no exported member 'LogEntryType'.
+map.service.ts(3,10): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+map.service.ts(3,31): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+map.service.ts(3,49): error TS2305: Module '"./types"' has no exported member 'ObjectBlueprint'.
+map.service.ts(4,44): error TS2307: Cannot find module '../geminiService' or its corresponding type declarations.
+map.ts(2,10): error TS2305: Module '"./types"' has no exported member 'VTTMap'.
+map.ts(2,18): error TS2305: Module '"./types"' has no exported member 'Token'.
+map.ts(2,25): error TS2305: Module '"./types"' has no exported member 'VTTObject'.
+map.ts(2,36): error TS2305: Module '"./types"' has no exported member 'Character'.
+map.ts(2,47): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+map.ts(2,65): error TS2305: Module '"./types"' has no exported member 'Zone'.
+map.ts(2,71): error TS2305: Module '"./types"' has no exported member 'Path'.
+map.ts(2,77): error TS2305: Module '"./types"' has no exported member 'TerrainCell'.
+map.ts(2,90): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+map.ts(2,106): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+map.ts(2,127): error TS2305: Module '"./types"' has no exported member 'Monster'.
+map.ts(2,136): error TS2305: Module '"./types"' has no exported member 'SpatialGrid'.
+map.ts(3,30): error TS2307: Cannot find module './services/mapDecorator.service' or its corresponding type declarations.
+mapDecorator.service.ts(1,10): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+metaSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'MetaState'.
+metaSlice.ts(2,21): error TS2305: Module '"./types"' has no exported member 'SelectedClass'.
+metaSlice.ts(2,36): error TS2305: Module '"./types"' has no exported member 'Heritage'.
+metaSlice.ts(2,46): error TS2305: Module '"./types"' has no exported member 'Background'.
+metaSlice.ts(2,58): error TS2305: Module '"./types"' has no exported member 'BackstoryDetails'.
+metaSlice.ts(2,76): error TS2305: Module '"./types"' has no exported member 'PhysicalCharacteristics'.
+nodes.ts(1,10): error TS2305: Module '"./types"' has no exported member 'AIBlackboard'.
+nodes.ts(1,24): error TS2305: Module '"./types"' has no exported member 'BTNode'.
+nodes.ts(1,32): error TS2305: Module '"./types"' has no exported member 'BTNodeStatus'.
+nodes.ts(1,46): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+nodes.ts(1,58): error TS2305: Module '"./types"' has no exported member 'DamagePart'.
+nodes.ts(1,70): error TS2305: Module '"./types"' has no exported member 'Token'.
+nodes.ts(2,78): error TS2307: Cannot find module './perception/threatAssessment' or its corresponding type declarations.
+nodes.ts(3,32): error TS2307: Cannot find module './perception/lineOfSight' or its corresponding type declarations.
+nodes.ts(4,27): error TS2307: Cannot find module './perception/cover' or its corresponding type declarations.
+nodes.ts(5,26): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+pathfinding.ts(2,10): error TS2305: Module '"./types"' has no exported member 'TerrainCell'.
+pendingChoicesSelector.ts(2,10): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+pendingChoicesSelector.ts(2,26): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+pendingChoicesSelector.ts(2,47): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+pendingChoicesSelector.ts(2,62): error TS2305: Module '"./types"' has no exported member 'ClassFeature'.
+playStateSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'PlayState'.
+playStateSlice.ts(2,21): error TS2305: Module '"./types"' has no exported member 'Character'.
+playStateSlice.ts(2,32): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+playStateSlice.ts(2,53): error TS2305: Module '"./types"' has no exported member 'EffectInstance'.
+playStateSlice.ts(2,69): error TS2305: Module '"./types"' has no exported member 'UncannyDodgePrompt'.
+playStateSlice.ts(2,89): error TS2305: Module '"./types"' has no exported member 'InteractionPrompt'.
+playStateSlice.ts(2,108): error TS2305: Module '"./types"' has no exported member 'SummonChoicePrompt'.
+playStateSlice.ts(2,128): error TS2305: Module '"./types"' has no exported member 'Companion'.
+playStateSlice.ts(2,139): error TS2305: Module '"./types"' has no exported member 'ExperimentalElixir'.
+playStateSlice.ts(2,159): error TS2305: Module '"./types"' has no exported member 'InnateSpell'.
+playStateSlice.ts(2,172): error TS2305: Module '"./types"' has no exported member 'Spell'.
+playStateSlice.ts(2,179): error TS2305: Module '"./types"' has no exported member 'StateInstance'.
+proficienciesSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'ProficienciesState'.
+proficienciesSlice.ts(2,30): error TS2305: Module '"./types"' has no exported member 'SelectedFeat'.
+proficienciesSlice.ts(2,44): error TS2305: Module '"./types"' has no exported member 'SelectedProficiency'.
+proficienciesSlice.ts(2,65): error TS2305: Module '"./types"' has no exported member 'SelectedFightingStyle'.
+rosterSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+rosterSlice.ts(2,21): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+rosterSlice.ts(8,29): error TS2307: Cannot find module './engine/slices/metaSlice' or its corresponding type declarations.
+rosterSlice.ts(9,34): error TS2307: Cannot find module './engine/slices/abilitiesSlice' or its corresponding type declarations.
+rosterSlice.ts(10,38): error TS2307: Cannot find module './engine/slices/proficienciesSlice' or its corresponding type declarations.
+rosterSlice.ts(11,34): error TS2307: Cannot find module './engine/slices/inventorySlice' or its corresponding type declarations.
+rosterSlice.ts(12,31): error TS2307: Cannot find module './engine/slices/spellsSlice' or its corresponding type declarations.
+rosterSlice.ts(13,31): error TS2307: Cannot find module './engine/slices/vitalsSlice' or its corresponding type declarations.
+rosterSlice.ts(14,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+selectors.ts(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+selectors.ts(2,21): error TS2305: Module '"./types"' has no exported member 'CharacterState'.
+selectors.ts(3,33): error TS2307: Cannot find module './engine/characterSelectors' or its corresponding type declarations.
+spatialGrid.service.ts(2,15): error TS2305: Module '"./types"' has no exported member 'Token'.
+spellsSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'SpellsState'.
+terrain.ts(3,10): error TS2305: Module '"./types"' has no exported member 'TerrainCell'.
+testDummies.ts(1,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+texture.service.ts(3,10): error TS2305: Module '"./types"' has no exported member 'EnvironmentalData'.
+threatAssessment.ts(2,10): error TS2305: Module '"./types"' has no exported member 'BattlefieldState'.
+threatAssessment.ts(2,28): error TS2305: Module '"./types"' has no exported member 'EncounterStrategy'.
+types.ts(1,10): error TS2303: Circular definition of import alias 'SimulationState'.
+types.ts(1,10): error TS2459: Module '"./types"' declares 'SimulationState' locally, but it is not exported.
+types.ts(1,27): error TS2303: Circular definition of import alias 'GameEvent'.
+types.ts(1,27): error TS2459: Module '"./types"' declares 'GameEvent' locally, but it is not exported.
+types.ts(1,38): error TS2303: Circular definition of import alias 'PlayerChoicePrompt'.
+types.ts(1,38): error TS2459: Module '"./types"' declares 'PlayerChoicePrompt' locally, but it is not exported.
+types.ts(1,58): error TS2303: Circular definition of import alias 'StaticGameDataCache'.
+types.ts(1,58): error TS2459: Module '"./types"' declares 'StaticGameDataCache' locally, but it is not exported.
+uiSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'UIRollResult'.
+uiSlice.ts(2,24): error TS2305: Module '"./types"' has no exported member 'CrucibleActionResult'.
+uiSlice.ts(2,46): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+uiSlice.ts(2,58): error TS2305: Module '"./types"' has no exported member 'Spell'.
+uiSlice.ts(2,65): error TS2305: Module '"./types"' has no exported member 'ClassFeature'.
+useCharacterActions.ts(3,29): error TS2307: Cannot find module './engine/slices/metaSlice' or its corresponding type declarations.
+useCharacterActions.ts(4,34): error TS2307: Cannot find module './engine/slices/abilitiesSlice' or its corresponding type declarations.
+useCharacterActions.ts(5,38): error TS2307: Cannot find module './engine/slices/proficienciesSlice' or its corresponding type declarations.
+useCharacterActions.ts(6,34): error TS2307: Cannot find module './engine/slices/inventorySlice' or its corresponding type declarations.
+useCharacterActions.ts(7,31): error TS2307: Cannot find module './engine/slices/spellsSlice' or its corresponding type declarations.
+useCharacterActions.ts(8,24): error TS2307: Cannot find module './engine/characterActions' or its corresponding type declarations.
+useDialogueManager.ts(3,10): error TS2305: Module '"./types"' has no exported member 'Token'.
+useDialogueManager.ts(3,17): error TS2305: Module '"./types"' has no exported member 'Conversation'.
+useDialogueManager.ts(3,31): error TS2305: Module '"./types"' has no exported member 'DialogueTurn'.
+useDialogueManager.ts(6,80): error TS2307: Cannot find module './services/ai/dm.service' or its corresponding type declarations.
+useDialogueManager.ts(7,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+useDialogueManager.ts(8,29): error TS2307: Cannot find module './services/geminiService' or its corresponding type declarations.
+useDialogueManager.ts(9,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+useDialogueManager.ts(33,62): error TS2339: Property 'name' does not exist on type 'unknown'.
+useEncounterGeneration.ts(2,48): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+useEncounterGeneration.ts(4,34): error TS2307: Cannot find module '../../../hooks/useVttController' or its corresponding type declarations.
+useEncounterGeneration.ts(5,29): error TS2307: Cannot find module '../.././services/geminiService' or its corresponding type declarations.
+useEncounterGeneration.ts(6,119): error TS2307: Cannot find module '../../../state/worldbuilderSlice' or its corresponding type declarations.
+useEncounterGeneration.ts(7,10): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+useEncounterGeneration.ts(8,34): error TS2307: Cannot find module '../.././services/ai/world.service' or its corresponding type declarations.
+usePlayerActions.ts(4,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+usePlayerActions.ts(5,26): error TS2307: Cannot find module '../state/logSlice' or its corresponding type declarations.
+usePlayerActions.ts(6,34): error TS2307: Cannot find module './engine/slices/playStateSlice' or its corresponding type declarations.
+usePlayerActions.ts(7,31): error TS2307: Cannot find module './engine/slices/vitalsSlice' or its corresponding type declarations.
+usePlayerActions.ts(8,10): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+usePlayerActions.ts(8,22): error TS2305: Module '"./types"' has no exported member 'Companion'.
+usePlayerActions.ts(8,33): error TS2305: Module '"./types"' has no exported member 'InitiativeEntry'.
+usePlayerActions.ts(8,50): error TS2305: Module '"./types"' has no exported member 'Spell'.
+usePlayerActions.ts(8,57): error TS2305: Module '"./types"' has no exported member 'CompanionBlueprint'.
+usePlayerActions.ts(8,77): error TS2305: Module '"./types"' has no exported member 'SummonChoiceEffect'.
+usePlayerActions.ts(8,97): error TS2305: Module '"./types"' has no exported member 'ClassFeature'.
+usePlayerActions.ts(8,111): error TS2305: Module '"./types"' has no exported member 'Character'.
+usePlayerActions.ts(8,122): error TS2305: Module '"./types"' has no exported member 'Token'.
+usePlayerActions.ts(8,129): error TS2305: Module '"./types"' has no exported member 'DeclareAttackEvent'.
+usePlayerActions.ts(8,149): error TS2305: Module '"./types"' has no exported member 'CastSpellEvent'.
+usePlayerActions.ts(8,165): error TS2305: Module '"./types"' has no exported member 'HealEvent'.
+usePlayerActions.ts(8,176): error TS2305: Module '"./types"' has no exported member 'DodgeActionEvent'.
+usePlayerActions.ts(8,194): error TS2305: Module '"./types"' has no exported member 'MoveTokenEvent'.
+usePlayerActions.ts(8,210): error TS2305: Module '"./types"' has no exported member 'HelpActionEvent'.
+usePlayerActions.ts(8,227): error TS2305: Module '"./types"' has no exported member 'HideActionEvent'.
+usePlayerActions.ts(8,244): error TS2305: Module '"./types"' has no exported member 'SearchActionEvent'.
+usePlayerActions.ts(8,263): error TS2305: Module '"./types"' has no exported member 'DealDamageToObjectEvent'.
+usePlayerActions.ts(8,288): error TS2459: Module '"./types"' declares 'GameEvent' locally, but it is not exported.
+usePlayerActions.ts(8,299): error TS2305: Module '"./types"' has no exported member 'UseFeatureEvent'.
+usePlayerActions.ts(9,35): error TS2307: Cannot find module '../utils/dice' or its corresponding type declarations.
+usePlayerActions.ts(10,46): error TS2307: Cannot find module '../state/uiSlice' or its corresponding type declarations.
+usePlayerActions.ts(11,31): error TS2307: Cannot find module '../state/eventSlice' or its corresponding type declarations.
+usePlayerActions.ts(12,30): error TS2307: Cannot find module './services/soundManager' or its corresponding type declarations.
+useVttController.ts(2,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+useVttController.ts(3,42): error TS2307: Cannot find module '../state/combatFlowSlice' or its corresponding type declarations.
+useVttController.ts(4,42): error TS2307: Cannot find module './services/ai/map.service' or its corresponding type declarations.
+useVttController.ts(5,10): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+useVttController.ts(5,28): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+useVttController.ts(5,44): error TS2305: Module '"./types"' has no exported member 'Token'.
+useVttController.ts(6,77): error TS2307: Cannot find module '../state/entitySlice' or its corresponding type declarations.
+useVttController.ts(8,29): error TS2307: Cannot find module './services/geminiService' or its corresponding type declarations.
+useVttInteractions.ts(3,10): error TS2305: Module '"./types"' has no exported member 'Token'.
+useVttInteractions.ts(3,17): error TS2305: Module '"./types"' has no exported member 'Viewport'.
+useVttInteractions.ts(3,27): error TS2305: Module '"./types"' has no exported member 'Character'.
+useVttInteractions.ts(3,38): error TS2305: Module '"./types"' has no exported member 'VTTTool'.
+useVttInteractions.ts(3,47): error TS2305: Module '"./types"' has no exported member 'SpellTargetingState'.
+useVttInteractions.ts(3,68): error TS2305: Module '"./types"' has no exported member 'MapNpcInstance'.
+useVttInteractions.ts(4,36): error TS2307: Cannot find module '../state/appSlice' or its corresponding type declarations.
+useVttInteractions.ts(5,46): error TS2307: Cannot find module '../state/entitySlice' or its corresponding type declarations.
+useVttInteractions.ts(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+useVttInteractions.ts(8,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+useVttInteractions.ts(74,84): error TS2339: Property 'id' does not exist on type 'unknown'.
+useVttInteractions.ts(81,42): error TS2339: Property 'id' does not exist on type 'unknown'.
+useVttInteractions.ts(132,70): error TS2339: Property 'id' does not exist on type 'unknown'.
+utils.ts(1,10): error TS2305: Module '"./types"' has no exported member 'ActionItem'.
+utils.ts(1,22): error TS2305: Module '"./types"' has no exported member 'FeatEffect'.
+utils.ts(1,34): error TS2305: Module '"./types"' has no exported member 'CritRangeEffect'.
+utils.ts(1,51): error TS2305: Module '"./types"' has no exported member 'Ability'.
+utils.ts(1,60): error TS2305: Module '"./types"' has no exported member 'MonsterAbilityScores'.
+vfx.ts(3,10): error TS2305: Module '"./types"' has no exported member 'Spell'.
+vfx.ts(3,17): error TS2305: Module '"./types"' has no exported member 'VFXRequest'.
+vitalsSlice.ts(2,10): error TS2305: Module '"./types"' has no exported member 'VitalsState'.
+vtt.ts(6,28): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+vtt.ts(7,29): error TS2307: Cannot find module './engine/spatialGrid.service' or its corresponding type declarations.
+vtt.ts(10,29): error TS2307: Cannot find module './engine/spatialGrid.service' or its corresponding type declarations.
+world.service.ts(5,10): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.
+worldbuilderSlice.ts(3,10): error TS2305: Module '"./types"' has no exported member 'WorldbuilderState'.
+worldbuilderSlice.ts(3,29): error TS2305: Module '"./types"' has no exported member 'EncounterConcept'.

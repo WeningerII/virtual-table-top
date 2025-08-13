@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { NpcAnimationState, VFXRequest } from '../types';
+import { NpcAnimationState, VFXRequest } from './types';
 
 export interface AnimationState {
     animationState: NpcAnimationState | null;

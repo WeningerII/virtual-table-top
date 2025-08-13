@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { InitiativeEntry, Monster, ActionItem } from '../../types';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { InitiativeEntry, Monster, ActionItem } from './types';
 import { logEvent } from '../../state/logSlice';
 import { entitySlice } from '../../state/entitySlice';
 import { useVttController } from '../../hooks/useVttController';

@@ -1,11 +1,11 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { useAppSelector, useAppDispatch } from '../state/hooks';
-import { Token, Viewport, Character, VTTTool, SpellTargetingState, MapNpcInstance } from '../types';
+import { useAppSelector, useAppDispatch } from './hooks';
+import { Token, Viewport, Character, VTTTool, SpellTargetingState, MapNpcInstance } from './types';
 import { clearMonsterSummon } from '../state/appSlice';
 import { entitySlice, addMonsterToMap } from '../state/entitySlice';
-import { selectCalculatedActiveCharacterSheet } from '../state/selectors';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { usePlayerActions } from './usePlayerActions';
-import { dataService } from '../services/dataService';
+import { dataService } from './services/data.service';
 import { useDialogueManager } from './useDialogueManager';
 
 export const useVttInteractions = () => {

@@ -1,6 +1,6 @@
 
 import * as THREE from 'three';
-import { Spell, VFXRequest } from '../types';
+import { Spell, VFXRequest } from './types';
 
 // A simple VFX manager to create and manage spell effects
 export const vfxManager = {

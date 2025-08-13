@@ -1,6 +1,6 @@
 import React from 'react';
 import ClassIconFactory from '../../icons/ClassIconFactory';
-import { useAppSelector } from '../../../state/hooks';
+import { useAppSelector } from '../.././state/hooks';
 
 interface ClassGridProps {
     onSelect: (classId: string) => void;

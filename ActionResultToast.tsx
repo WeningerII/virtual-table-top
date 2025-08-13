@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ActionRollResult } from '../../types';
+import { ActionRollResult } from './types';
 
 interface ActionResultToastProps {
     result: ActionRollResult & { attackerName: string, actionName: string };

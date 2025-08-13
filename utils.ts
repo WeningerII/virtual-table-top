@@ -1,4 +1,4 @@
-import { ActionItem, FeatEffect, CritRangeEffect, Ability, MonsterAbilityScores } from '../types';
+import { ActionItem, FeatEffect, CritRangeEffect, Ability, MonsterAbilityScores } from './types';
 
 export const selectCriticalHitRange = (allEffects: FeatEffect[]): number => {
     const critRangeEffects = allEffects.filter(e => e.type === 'crit_range') as CritRangeEffect[];

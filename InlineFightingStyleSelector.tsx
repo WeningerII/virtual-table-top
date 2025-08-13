@@ -1,11 +1,11 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { FightingStyle, PendingChoice, Character } from '../../types';
-import { dataService } from '../../services/dataService';
-import { useToast } from '../../state/ToastContext';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
-import { proficienciesActions } from '../../engine/slices/proficienciesSlice';
+import { FightingStyle, PendingChoice, Character } from './types';
+import { dataService } from './services/data.service';
+import { useToast } from './state/ToastContext';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { proficienciesActions } from './engine/slices/proficienciesSlice';
 
 interface InlineFightingStyleSelectorProps {
     choice: Extract<PendingChoice, { type: 'fighting_style' }>;

@@ -1,5 +1,5 @@
 
-import { TerrainCell } from '../../../types';
+import { TerrainCell } from './types';
 
 /**
  * Checks for line of sight between two points on a grid using Bresenham's line algorithm.

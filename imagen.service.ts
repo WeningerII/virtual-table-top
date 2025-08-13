@@ -1,5 +1,5 @@
 
-import { Character, EnvironmentalData } from '../../types';
+import { Character, EnvironmentalData } from './types';
 import { ai, imageModel, GeminiError } from '../geminiService';
 import { dataService } from '../dataService';
 

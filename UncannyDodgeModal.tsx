@@ -1,11 +1,11 @@
 import React from 'react';
-import { UncannyDodgePrompt, Character } from '../../types';
-import { useToast } from '../../state/ToastContext';
-import { useAppDispatch, useAppSelector } from '../../state/hooks';
+import { UncannyDodgePrompt, Character } from './types';
+import { useToast } from './state/ToastContext';
+import { useAppDispatch, useAppSelector } from '.././state/hooks';
 import { logEvent } from '../../state/logSlice';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
-import { vitalsActions } from '../../engine/slices/vitalsSlice';
-import { playStateActions } from '../../engine/slices/playStateSlice';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { vitalsActions } from './engine/slices/vitalsSlice';
+import { playStateActions } from './engine/slices/playStateSlice';
 
 interface UncannyDodgeModalProps {
     isOpen: boolean;

@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import { GameEvent, PlayerChoicePrompt, SimulationState } from '../types';
+import { GameEvent, PlayerChoicePrompt, SimulationState } from './types';
 import { RootState } from './store';
-import { EventProcessor } from '../engine/event.processor';
-import { CommandFactory } from '../engine/commands/command.factory';
+import { EventProcessor } from './event.processor';
+import { CommandFactory } from './engine/commands/command.factory';
 import { animationActions } from './animationSlice';
 import { entitySlice } from './entitySlice';
 import { endCombat, advanceTurn } from './combatFlowSlice';

@@ -6,7 +6,7 @@ import {
     AbilityScoreIncreaseEffect, ProficiencyEffect, BonusEffect, AdvantageEffect,
     SelectedFeat, SelectedFightingStyle, SelectedProficiency, UnarmoredDefenseEffect,
     Item, CharacterItemInstance, HitDicePool, FeatEffect, ActionItem, WeaponProperty, EncumbranceStatus, HalfProficiencyBonusEffect, Effect
-} from '../types';
+} from './types';
 import { ABILITIES, SKILLS } from '../constants';
 import { createSelector } from './createSelector';
 import { calculatePendingChoices } from './pendingChoicesSelector';

@@ -1,10 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Character, CharacterItemInstance, Item, EquipmentPack, Armor, DndClass } from '../../types';
+import { Character, CharacterItemInstance, Item, EquipmentPack, Armor, DndClass } from './types';
 import { currencyToCopper, copperToCurrency } from '../../utils/currency';
 import CurrencyManager from '../shared/CurrencyManager';
 import InlineStartingEquipmentSelector from './InlineStartingEquipmentSelector';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { useCharacterActions } from '../../hooks/useCharacterActions';
 
 interface EquipmentStepProps {}

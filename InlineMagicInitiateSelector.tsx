@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { PendingChoice, DndClass, Spell, SelectedFeat, Character } from '../../types';
-import { dataService } from '../../services/dataService';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
-import { useToast } from '../../state/ToastContext';
-import { proficienciesActions } from '../../engine/slices/proficienciesSlice';
+import { PendingChoice, DndClass, Spell, SelectedFeat, Character } from './types';
+import { dataService } from './services/data.service';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useToast } from './state/ToastContext';
+import { proficienciesActions } from './engine/slices/proficienciesSlice';
 
 interface InlineMagicInitiateSelectorProps {
     choice: Extract<PendingChoice, { type: 'magic_initiate' }>;

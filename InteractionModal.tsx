@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { InteractionPrompt, Character } from '../../types';
-import { useToast } from '../../state/ToastContext';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { InteractionPrompt, Character } from './types';
+import { useToast } from './state/ToastContext';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { logEvent } from '../../state/logSlice';
-import { playStateActions } from '../../engine/slices/playStateSlice';
+import { playStateActions } from './engine/slices/playStateSlice';
 import Modal from '../shared/Modal';
 
 interface InteractionModalProps {

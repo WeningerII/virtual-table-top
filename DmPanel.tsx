@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { dataService, MonsterIndexEntry } from '../../services/dataService';
-import { Monster, EncounterConcept } from '../../types';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { dataService, MonsterIndexEntry } from './services/data.service';
+import { Monster, EncounterConcept } from './types';
 import MonsterStatBlockCard from './MonsterStatBlockCard';
 import { useVttController } from '../../hooks/useVttController';
 import { queueMonsterSummon, clearMonsterSummon } from '../../state/appSlice';

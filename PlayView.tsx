@@ -1,6 +1,6 @@
 import React from 'react';
 import VTTCanvas from './VTTCanvas';
-import SidebarContainer from './sidebar/SidebarContainer';
+import SidebarContainer from './SidebarContainer';
 import TacticalHUD from './hud/TacticalHUD';
 import SceneDisplay from './SceneDisplay';
 import ModalContainer from './ModalContainer';
@@ -8,7 +8,7 @@ import RollResultToast from '../shared/RollResultToast';
 import ActionResultToast from './ActionResultToast';
 import { useVttController } from '../../hooks/useVttController';
 import { useVttInteractions } from '../../hooks/useVttInteractions';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
 import { setLastRollResult, setActionResult } from '../../state/uiSlice';
 import { selectCombatUIData } from '../../engine/combatSelectors';
 import VTTContextMenu from './VTTContextMenu';

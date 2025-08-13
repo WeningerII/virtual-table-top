@@ -1,6 +1,6 @@
-import { BattlefieldState, Monster, AiTurnIntent, NpcTurnResult } from '../../types';
+import { BattlefieldState, Monster, AiTurnIntent, NpcTurnResult } from './types';
 import { generateNpcTurn } from './dm.service';
-import { getLocalAiTurn } from '../../engine/ai/localAiService';
+import { getLocalAiTurn } from './engine/ai/localAiService';
 
 /**
  * Determines the AI's turn action.

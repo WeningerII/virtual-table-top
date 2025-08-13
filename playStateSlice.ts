@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { PlayState, Character, StaticGameDataCache, EffectInstance, UncannyDodgePrompt, InteractionPrompt, SummonChoicePrompt, Companion, ExperimentalElixir, InnateSpell, Spell, StateInstance } from '../../types';
+import { PlayState, Character, StaticGameDataCache, EffectInstance, UncannyDodgePrompt, InteractionPrompt, SummonChoicePrompt, Companion, ExperimentalElixir, InnateSpell, Spell, StateInstance } from './types';
 
 const initialState: PlayState = {
     activeConcentration: undefined,

@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { Character, PendingChoice, Maneuver, Invocation, Metamagic, Spell, Rune } from '../../types';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { Character, PendingChoice, Maneuver, Invocation, Metamagic, Spell, Rune } from './types';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 
 interface ChoiceSelectorProps {
     title: string;

@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from 'react';
-import { Character, Species, PendingChoice } from '../../types';
+import { Character, Species, PendingChoice } from './types';
 import { generateCustomHeritage } from '../../services/ai/character.service';
 import InlineProficiencySelector from '../shared/InlineProficiencySelector';
-import { useToast } from '../../state/ToastContext';
+import { useToast } from './state/ToastContext';
 import InlineFeatASISelector from '../shared/InlineFeatASISelector';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { useCharacterActions } from '../../hooks/useCharacterActions';
 
 interface SpeciesStepProps {}

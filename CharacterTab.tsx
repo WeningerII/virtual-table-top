@@ -1,11 +1,11 @@
 import React from 'react';
-import { Character } from '../../../types';
+import { Character } from './types';
 import Accordion from '../../shared/Accordion';
 import Vitals from '../Vitals';
 import FeaturesPanel from '../FeaturesPanel';
 import ResourcePanel from '../ResourcePanel';
-import { useAppSelector } from '../../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../../state/selectors';
+import { useAppSelector } from '../.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { usePlayerActions } from '../../../hooks/usePlayerActions';
 
 const CharacterTab: React.FC = () => {

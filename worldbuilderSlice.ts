@@ -1,6 +1,6 @@
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { WorldbuilderState, EncounterConcept } from '../types';
+import { WorldbuilderState, EncounterConcept } from './types';
 
 const initialState: WorldbuilderState = {
     context: '',

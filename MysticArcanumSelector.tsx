@@ -1,7 +1,7 @@
 import React from 'react';
-import { Character, DndClass, Spell } from '../../../types';
-import { useAppSelector } from '../../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../../state/selectors';
+import { Character, DndClass, Spell } from './types';
+import { useAppSelector } from '../.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { useCharacterActions } from '../../../hooks/useCharacterActions';
 
 interface MysticArcanumSelectorProps {

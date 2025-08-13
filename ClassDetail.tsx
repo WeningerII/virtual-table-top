@@ -1,12 +1,12 @@
 import React, { useMemo, useEffect, useRef } from 'react';
-import { Character, DndClass, SelectedClass, PendingChoice, Invocation, Prerequisite, ClassFeature } from '../../../types';
-import { useToast } from '../../../state/ToastContext';
+import { Character, DndClass, SelectedClass, PendingChoice, Invocation, Prerequisite, ClassFeature } from './types';
+import { useToast } from './state/ToastContext';
 import ChoiceSelector from '../../shared/ChoiceSelector';
 import InlineFightingStyleSelector from '../../shared/InlineFightingStyleSelector';
 import InlineProficiencySelector from '../../shared/InlineProficiencySelector';
 import InlineFeatASISelector from '../../shared/InlineFeatASISelector';
-import { useAppSelector } from '../../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../../state/selectors';
+import { useAppSelector } from '../.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { useCharacterActions } from '../../../hooks/useCharacterActions';
 
 const checkInvocationPrerequisites = (character: Character, option: { prerequisites: Prerequisite[] }): boolean => {

@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { Character, DndClass, Spell } from '../../../types';
-import { useAppSelector } from '../../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../../state/selectors';
+import { Character, DndClass, Spell } from './types';
+import { useAppSelector } from '../.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 
 interface LearnSpellsModalProps {
     isOpen: boolean;

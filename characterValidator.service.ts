@@ -1,9 +1,9 @@
 
 
 
-import { Character, StaticGameDataCache, ValidationError, GenerationStep, Ability, CharacterState } from '../../types';
-import { calculatePendingChoices } from '../../engine/pendingChoicesSelector';
-import { selectCharacter } from '../../engine';
+import { Character, StaticGameDataCache, ValidationError, GenerationStep, Ability, CharacterState } from './types';
+import { calculatePendingChoices } from './engine/pendingChoicesSelector';
+import { selectCharacter } from './engine';
 import { toCharacterState } from '../../state/characterUtils';
 
 const POINT_BUY_COST: { [key: number]: number } = { 8: 0, 9: 1, 10: 2, 11: 3, 12: 4, 13: 5, 14: 7, 15: 9 };

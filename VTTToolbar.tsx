@@ -1,5 +1,5 @@
 import React from 'react';
-import { VTTTool, Viewport } from '../../types';
+import { VTTTool, Viewport } from './types';
 
 interface ToolButtonProps {
     title: string;

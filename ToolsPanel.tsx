@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
-import { Character, Ability, ToolCheckItem } from '../../types';
+import { Character, Ability, ToolCheckItem } from './types';
 import { ABILITIES } from '../../constants';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 
 interface ToolCheckModalProps {
     isOpen: boolean;

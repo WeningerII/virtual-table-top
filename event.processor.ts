@@ -1,4 +1,4 @@
-import { GameEvent, SimulationState, PlayerChoicePrompt, StaticGameDataCache, GameEventType } from '../types';
+import { GameEvent, SimulationState, PlayerChoicePrompt, StaticGameDataCache, GameEventType } from './types';
 import { CommandFactory } from './commands/command.factory';
 import { CommandResult, GameCommand } from './commands/types';
 

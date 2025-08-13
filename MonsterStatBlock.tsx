@@ -1,5 +1,5 @@
 import React from 'react';
-import { Monster, MonsterAbilityScores, ActionItem, SpecialTrait, LegendaryAction, LairAction } from '../../types';
+import { Monster, MonsterAbilityScores, ActionItem, SpecialTrait, LegendaryAction, LairAction } from './types';
 
 interface MonsterStatBlockProps {
     monster: Monster;

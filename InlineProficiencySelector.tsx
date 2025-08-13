@@ -1,12 +1,12 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { PendingChoice, Tool, Character, Language } from '../../types';
+import { PendingChoice, Tool, Character, Language } from './types';
 import { SKILLS } from '../../constants';
-import { dataService } from '../../services/dataService';
-import { useToast } from '../../state/ToastContext';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
-import { proficienciesActions } from '../../engine/slices/proficienciesSlice';
+import { dataService } from './services/data.service';
+import { useToast } from './state/ToastContext';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { proficienciesActions } from './engine/slices/proficienciesSlice';
 
 interface InlineProficiencySelectorProps {
     choice: Extract<PendingChoice, { type: 'proficiency' }>;

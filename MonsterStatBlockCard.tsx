@@ -1,5 +1,5 @@
 import React from 'react';
-import { Monster } from '../../types';
+import { Monster } from './types';
 
 interface MonsterStatBlockCardProps {
     monster: Monster;

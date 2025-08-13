@@ -1,4 +1,4 @@
-import { DamagePart, StaticGameDataCache, Monster, Character } from '../../types';
+import { DamagePart, StaticGameDataCache, Monster, Character } from './types';
 import { rollDice } from '../../utils/dice';
 
 export interface DamageResult {

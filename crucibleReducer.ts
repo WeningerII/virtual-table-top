@@ -1,4 +1,4 @@
-import { CrucibleActionResult, NpcAnimationState, SimState, VTTMap, MapNpcInstance, Token, InitiativeEntry, Monster, TerrainCell, EncounterConcept, VTTObject, StaticGameDataCache } from '../types';
+import { CrucibleActionResult, NpcAnimationState, SimState, VTTMap, MapNpcInstance, Token, InitiativeEntry, Monster, TerrainCell, EncounterConcept, VTTObject, StaticGameDataCache } from './types';
 import { CrucibleAction } from './crucibleActions';
 import { rollD20 } from '../utils/dice';
 import { generateMapFromConcept } from '../utils/map';

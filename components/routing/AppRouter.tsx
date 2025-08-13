@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
+import { useAppSelector, useAppDispatch } from './state/hooks';
 import HomeView from '../../HomeView';
 import BuilderView from '../../BuilderView';
 import GenesisView from '../../GenesisView';

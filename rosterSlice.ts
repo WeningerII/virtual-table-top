@@ -1,17 +1,17 @@
 import { createSlice, PayloadAction, createEntityAdapter, createAsyncThunk } from '@reduxjs/toolkit';
-import { Character, CharacterState } from '../types';
+import { Character, CharacterState } from './types';
 import { RootState } from './store';
 import { setSheet as setCalculatedSheet } from './characterSlice';
 import { fromCharacterState, toCharacterState, createNewCharacterObject } from './characterUtils';
 import { testDummies } from './testDummies';
 import { setMode } from './appSlice';
-import { metaActions } from '../engine/slices/metaSlice';
-import { abilitiesActions } from '../engine/slices/abilitiesSlice';
-import { proficienciesActions } from '../engine/slices/proficienciesSlice';
-import { inventoryActions } from '../engine/slices/inventorySlice';
-import { spellsActions } from '../engine/slices/spellsSlice';
-import { vitalsActions } from '../engine/slices/vitalsSlice';
-import { playStateActions } from '../engine/slices/playStateSlice';
+import { metaActions } from './engine/slices/metaSlice';
+import { abilitiesActions } from './engine/slices/abilitiesSlice';
+import { proficienciesActions } from './engine/slices/proficienciesSlice';
+import { inventoryActions } from './engine/slices/inventorySlice';
+import { spellsActions } from './engine/slices/spellsSlice';
+import { vitalsActions } from './engine/slices/vitalsSlice';
+import { playStateActions } from './engine/slices/playStateSlice';
 
 const charactersAdapter = createEntityAdapter<Character>();
 

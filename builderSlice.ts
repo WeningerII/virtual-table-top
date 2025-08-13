@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { BuilderState } from '../types';
+import { BuilderState } from './types';
 
 const initialState: BuilderState = {
     currentStep: 0,

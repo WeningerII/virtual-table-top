@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AbilitiesState, Ability, AbilityScores } from '../../types';
+import { AbilitiesState, Ability, AbilityScores } from './types';
 
 const ABILITIES_IDS: Ability[] = [Ability.Strength, Ability.Dexterity, Ability.Constitution, Ability.Intelligence, Ability.Wisdom, Ability.Charisma];
 

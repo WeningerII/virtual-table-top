@@ -4,10 +4,10 @@ import * as THREE from 'three';
 import { MapNpcInstance } from './character';
 export type { MapNpcInstance };
 import { DEBUG_MODE } from '../../constants';
-import { SpatialGrid } from '../../engine/spatialGrid.service';
+import { SpatialGrid } from './engine/spatialGrid.service';
 
 // Re-export for use in other modules
-export { SpatialGrid } from '../../engine/spatialGrid.service';
+export { SpatialGrid } from './engine/spatialGrid.service';
 
 // Reconstructing types based on usage in the app
 

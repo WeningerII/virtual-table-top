@@ -1,5 +1,5 @@
 import React from 'react';
-import { Character } from '../../../types';
+import { Character } from './types';
 import Accordion from '../../shared/Accordion';
 import ActionsPanel from '../ActionsPanel';
 import SkillsPanel from '../SkillsPanel';
@@ -10,8 +10,8 @@ import InitiativeTracker from '../InitiativeTracker';
 import InteractionPanel from '../InteractionPanel';
 import InvocationsPanel from '../InvocationsPanel';
 import MetamagicPanel from '../MetamagicPanel';
-import { useAppSelector } from '../../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../../state/selectors';
+import { useAppSelector } from '../.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 
 interface CombatTabProps {
     targetTokenId: string | null;

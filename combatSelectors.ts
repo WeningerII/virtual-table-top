@@ -1,6 +1,6 @@
 import { createSelector } from './createSelector';
 import { RootState } from '../state/store';
-import { Character, MapNpcInstance, Token, VTTMap } from '../types';
+import { Character, MapNpcInstance, Token, VTTMap } from './types';
 import { hasLineOfSight } from './ai/perception/lineOfSight';
 
 const selectAllTokens = (state: RootState) => state.entity.activeMap?.tokens || [];

@@ -2,7 +2,7 @@
 
 import { generateEncounterConcept } from './map.service';
 import { generateScene, generateImage } from './imagen.service';
-import { EncounterConcept } from '../../types';
+import { EncounterConcept } from './types';
 
 export const generateEncounter = generateEncounterConcept;
 export const generateSceneImage = generateScene;

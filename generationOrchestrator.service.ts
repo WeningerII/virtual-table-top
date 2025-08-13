@@ -1,14 +1,14 @@
 
 
 
-import { Character, StaticGameDataCache, GenerationStep, ValidationError, GenerationProgress, SelectedFeat, SelectedProficiency, Currency, StartingEquipmentOption, Item, EquipmentPack, PartialCharacter, CharacterState, Ability, SelectedClass } from '../../types';
+import { Character, StaticGameDataCache, GenerationStep, ValidationError, GenerationProgress, SelectedFeat, SelectedProficiency, Currency, StartingEquipmentOption, Item, EquipmentPack, PartialCharacter, CharacterState, Ability, SelectedClass } from './types';
 import { CharacterValidator } from '../validation/characterValidator.service';
 import { ai, textModel } from './client';
 import { prompts, schemas } from './prompts';
-import { selectCharacter } from '../../engine';
-import { calculatePendingChoices } from '../../engine/pendingChoicesSelector';
+import { selectCharacter } from './engine';
+import { calculatePendingChoices } from './engine/pendingChoicesSelector';
 import { rollGold } from '../../utils/dice';
-import { inventoryActions } from '../../engine/slices/inventorySlice';
+import { inventoryActions } from './engine/slices/inventorySlice';
 import { createNewCharacterObject, toCharacterState } from '../../state/characterUtils';
 
 // Helper to call Gemini API with a structured schema

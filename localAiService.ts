@@ -1,8 +1,8 @@
-import { AIBlackboard, BTNode, BTNodeStatus, NodeMetadata, ParallelPolicy, AiArchetype, BehaviorTreeNodeDefinition, NodeTypeName, BattlefieldState, AiTurnIntent } from '../../types';
+import { AIBlackboard, BTNode, BTNodeStatus, NodeMetadata, ParallelPolicy, AiArchetype, BehaviorTreeNodeDefinition, NodeTypeName, BattlefieldState, AiTurnIntent } from './types';
 import { SequenceNode, SelectorNode, ParallelNode } from './behaviorTree';
 import * as Nodes from './nodes';
 import { findPath } from '../pathfinding';
-import { dataService } from '../../services/dataService';
+import { dataService } from '.././services/dataService';
 
 // Type-safe node registry as per spec
 const nodeRegistry = {

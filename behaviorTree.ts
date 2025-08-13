@@ -1,4 +1,4 @@
-import { AIBlackboard, BTNode, BTNodeStatus, NodeMetadata, ParallelPolicy } from '../../types';
+import { AIBlackboard, BTNode, BTNodeStatus, NodeMetadata, ParallelPolicy } from './types';
 
 export abstract class CompositeNode extends BTNode {
     constructor(protected children: BTNode[], metadata?: NodeMetadata) {

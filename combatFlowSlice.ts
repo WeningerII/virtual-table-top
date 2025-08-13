@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import { CombatFlowState, CombatState, CombatResult } from '../types';
+import { CombatFlowState, CombatState, CombatResult } from './types';
 import { RootState } from './store';
 import { rollInitiative, loadCrucibleEncounter } from './entitySlice';
 import { triggerAiTurn } from './aiSlice';
 import { processEventQueue } from './eventSlice';
 import { logEvent, clearLog } from './logSlice';
-import { playStateActions } from '../engine/slices/playStateSlice';
+import { playStateActions } from '.././playStateSlice';
 
 const initialState: CombatFlowState = {
     currentState: { phase: 'IDLE' },

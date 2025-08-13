@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { Character, ArtificerInfusion, Item, Weapon, Armor, Shield } from '../../types';
-import { useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { Character, ArtificerInfusion, Item, Weapon, Armor, Shield } from './types';
+import { useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { useCharacterActions } from '../../hooks/useCharacterActions';
 
 interface InfusionsStepProps {}

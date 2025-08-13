@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { dataService } from '../../services/dataService';
-import { EffectInstance, Character } from '../../types';
-import { playStateActions } from '../../engine/slices/playStateSlice';
-import { useAppDispatch } from '../../state/hooks';
+import { dataService } from './services/data.service';
+import { EffectInstance, Character } from './types';
+import { playStateActions } from './engine/slices/playStateSlice';
+import { useAppDispatch } from '.././state/hooks';
 import { entitySlice } from '../../state/entitySlice';
 import Modal from '../shared/Modal';
 

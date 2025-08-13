@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { MapNpcInstance, Monster, ActionItem, EffectInstance } from '../../types';
-import { dataService } from '../../services/dataService';
-import { useToast } from '../../state/ToastContext';
+import { MapNpcInstance, Monster, ActionItem, EffectInstance } from './types';
+import { dataService } from './services/data.service';
+import { useToast } from './state/ToastContext';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
 import { commanderService } from '../../services/ai/commander.service';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
 import { entitySlice } from '../../state/entitySlice';
 import AddConditionModal from './AddConditionModal';
 

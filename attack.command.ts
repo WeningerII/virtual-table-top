@@ -1,7 +1,7 @@
 import { GameCommand, CommandResult, ValidationResult, CommandContext } from './types';
-import { SimulationState, DeclareAttackEvent, GameEvent, DealDamageEvent, Monster, Character } from '../../types';
+import { SimulationState, DeclareAttackEvent, GameEvent, DealDamageEvent, Monster, Character } from './types';
 import { rollD20 } from '../../utils/dice';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { toCharacterState } from '../../state/characterUtils';
 import { selectCharacter } from '..';
 

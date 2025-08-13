@@ -1,5 +1,5 @@
 
-import type { Token } from '../types';
+import type { Token } from './types';
 
 export class SpatialGrid {
     private grid: Map<string, Token[]>;

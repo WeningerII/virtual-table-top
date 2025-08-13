@@ -1,6 +1,6 @@
 
 import { Type } from "@google/genai";
-import { StaticGameDataCache, EncounterConcept, ObjectBlueprint } from '../../types';
+import { StaticGameDataCache, EncounterConcept, ObjectBlueprint } from './types';
 import { ai, textModel, GeminiError } from '../geminiService';
 
 export const generateEncounterConcept = async (

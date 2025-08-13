@@ -1,4 +1,4 @@
-import { GameEvent, SimulationState, StaticGameDataCache, DeclareAttackEvent, DealDamageEvent } from '../../types';
+import { GameEvent, SimulationState, StaticGameDataCache, DeclareAttackEvent, DealDamageEvent } from './types';
 import { GameCommand } from './types';
 import { AttackCommand } from './attack.command';
 import { DealDamageCommand } from './dealDamage.command';

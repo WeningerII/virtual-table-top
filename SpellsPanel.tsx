@@ -1,12 +1,12 @@
 import React, { useState, useMemo, useCallback } from 'react';
-import { Character, Spell, InnateSpell, VTTTool, SpellTargetingState, SummonChoiceEffect, SummonCreatureEffect, CastSpellEvent, VFXRequest } from '../../types';
+import { Character, Spell, InnateSpell, VTTTool, SpellTargetingState, SummonChoiceEffect, SummonCreatureEffect, CastSpellEvent, VFXRequest } from './types';
 import SpellDetailModal from '../shared/SpellDetailModal';
 import CastSpellModal from './CastSpellModal';
-import { useToast } from '../../state/ToastContext';
-import { playStateActions } from '../../engine/slices/playStateSlice';
+import { useToast } from './state/ToastContext';
+import { playStateActions } from './engine/slices/playStateSlice';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
-import { useAppSelector, useAppDispatch } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { uiActions } from '../../state/uiSlice';
 import { postGameEvent } from '../../state/eventSlice';
 import { soundManager } from '../../services/soundManager';

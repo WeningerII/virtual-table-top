@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { DamageCalculator } from '../rules/damage.calculator';
-import { DamagePart, StaticGameDataCache } from '../../types';
+import { DamagePart, StaticGameDataCache } from './types';
 
 // Mock static data cache - not needed for basic damage calculation, but required by constructor
 const mockStaticData: StaticGameDataCache = {} as any;

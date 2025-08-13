@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ProficienciesState, SelectedFeat, SelectedProficiency, SelectedFightingStyle } from '../../types';
+import { ProficienciesState, SelectedFeat, SelectedProficiency, SelectedFightingStyle } from './types';
 
 const initialState: ProficienciesState = {
     feats: [],

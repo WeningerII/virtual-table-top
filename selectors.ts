@@ -1,6 +1,6 @@
 import { RootState } from './store';
-import { Character, CharacterState } from '../types';
-import { selectCharacter } from '../engine/characterSelectors';
+import { Character, CharacterState } from './types';
+import { selectCharacter } from './engine/characterSelectors';
 
 /**
  * ADAPTER SELECTOR: This selector now points directly to the main calculation engine's

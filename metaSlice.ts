@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { MetaState, SelectedClass, Heritage, Background, BackstoryDetails, PhysicalCharacteristics } from '../../types';
+import { MetaState, SelectedClass, Heritage, Background, BackstoryDetails, PhysicalCharacteristics } from './types';
 
 const initialState: MetaState = {
     id: '',

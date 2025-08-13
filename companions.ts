@@ -1,4 +1,4 @@
-import { Companion } from '../types';
+import { Companion } from './types';
 
 interface CompanionGroups {
     single: Companion[];

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Character, EffectInstance } from '../../types';
+import { Character, EffectInstance } from './types';
 import AddConditionModal from './AddConditionModal';
-import { playStateActions } from '../../engine/slices/playStateSlice';
-import { useAppDispatch, useAppSelector } from '../../state/hooks';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { playStateActions } from './engine/slices/playStateSlice';
+import { useAppDispatch, useAppSelector } from '.././state/hooks';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 
 interface ActiveEffectsPanelProps {}
 

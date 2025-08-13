@@ -1,13 +1,13 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
 // Import all slice reducers
-import metaSlice from './slices/metaSlice';
-import abilitiesSlice from './slices/abilitiesSlice';
-import proficienciesSlice from './slices/proficienciesSlice';
-import inventorySlice from './slices/inventorySlice';
-import spellsSlice from './slices/spellsSlice';
-import vitalsSlice from './slices/vitalsSlice';
-import playStateSlice from './slices/playStateSlice';
+import metaSlice from './metaSlice';
+import abilitiesSlice from './abilitiesSlice';
+import proficienciesSlice from './proficienciesSlice';
+import inventorySlice from './inventorySlice';
+import spellsSlice from './spellsSlice';
+import vitalsSlice from './vitalsSlice';
+import playStateSlice from './playStateSlice';
 
 // This reducer now combines only the raw character data slices.
 export const characterDataReducer = combineReducers({

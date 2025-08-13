@@ -1,5 +1,5 @@
 
-import { TerrainCell } from '../types';
+import { TerrainCell } from './types';
 
 interface Node {
     x: number;

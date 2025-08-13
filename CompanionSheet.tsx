@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Companion, ActionItem, Movement, Character } from '../../types';
-import { useAppDispatch, useAppSelector } from '../../state/hooks';
-import { playStateActions } from '../../engine/slices/playStateSlice';
-import { selectCalculatedActiveCharacterSheet } from '../../state/selectors';
+import { Companion, ActionItem, Movement, Character } from './types';
+import { useAppDispatch, useAppSelector } from '.././state/hooks';
+import { playStateActions } from './engine/slices/playStateSlice';
+import { selectCalculatedActiveCharacterSheet } from './state/selectors';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
 
 interface CompanionSheetProps {
