@@ -1,26 +1,43 @@
 import React from 'react';
-import { useAppSelector } from '../../state/hooks';
+import { useAppSelector, useAppDispatch } from '../../state/hooks';
+import HomeView from '../../HomeView';
+import BuilderView from '../../BuilderView';
+import GenesisView from '../../GenesisView';
+import WorldbuilderView from '../../WorldbuilderView';
+import BestiaryView from '../../BestiaryView';
+import CrucibleView from '../../CrucibleView';
+import { PlayView } from '../../PlayView';
+import { rosterSelectors, createCharacter, loadCharacter, deleteCharacter } from '../../state/rosterSlice';
 
 const AppRouter: React.FC = () => {
+  const dispatch = useAppDispatch();
   const mode = useAppSelector((s) => s.app.mode);
+  const roster = useAppSelector(rosterSelectors.selectAll);
 
   switch (mode) {
     case 'home':
-      return <div className="p-6">Home</div>;
+      return (
+        <HomeView
+          roster={roster}
+          onCreate={() => dispatch(createCharacter())}
+          onLoad={(id) => dispatch(loadCharacter(id))}
+          onDelete={(id) => dispatch(deleteCharacter(id))}
+        />
+      );
     case 'builder':
-      return <div className="p-6">Builder</div>;
+      return <BuilderView />;
     case 'genesis':
-      return <div className="p-6">Genesis</div>;
+      return <GenesisView />;
     case 'worldbuilder':
-      return <div className="p-6">Worldbuilder</div>;
+      return <WorldbuilderView />;
     case 'bestiary':
-      return <div className="p-6">Bestiary</div>;
+      return <BestiaryView />;
     case 'crucible':
-      return <div className="p-6">Crucible</div>;
+      return <CrucibleView />;
     case 'play':
-      return <div className="p-6">Play</div>;
+      return <PlayView />;
     default:
-      return <div className="p-6">Unknown mode</div>;
+      return <div className="p-6">Unknown mode: {mode}</div>;
   }
 };
 
