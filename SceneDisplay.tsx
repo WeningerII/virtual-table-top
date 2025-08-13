@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { entitySlice } from '../../state/entitySlice';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { entitySlice } from 'state/entitySlice';
 
 interface SceneDisplayProps {
     imageUrl: string;

@@ -1,12 +1,12 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { Character, Feat, Prerequisite, Ability, SelectedFeat, PendingChoice } from './types';
-import { dataService } from './services/data.service';
+import { dataService } from 'services./data.service';
 import { ABILITIES } from '../../constants';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
-import { useToast } from './state/ToastContext';
-import { proficienciesActions } from './engine/slices/proficienciesSlice';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
+import { useToast } from 'state/ToastContext';
+import { proficienciesActions } from './proficienciesSlice';
 
 const checkPrerequisites = (character: Character, prerequisites: Prerequisite[]): { met: boolean; reasons: string[] } => {
     if (prerequisites.length === 0) return { met: true, reasons: [] };

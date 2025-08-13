@@ -1,8 +1,8 @@
 
 import React, { useMemo } from 'react';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { changeAppMode } from '../../state/appSlice';
-import { loadEncounter as loadEncounterAction } from '../../state/entitySlice';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { changeAppMode } from 'state/appSlice';
+import { loadEncounter as loadEncounterAction } from 'state/entitySlice';
 import { useEncounterGeneration } from './hooks/useEncounterGeneration';
 import EncounterForm from './components/EncounterForm';
 import ConceptDisplay from './components/ConceptDisplay';

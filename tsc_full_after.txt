@@ -825,10 +825,10 @@ commander.service.ts(3,44): error TS2307: Cannot find module '../geminiService' 
 companions.ts(1,10): error TS2305: Module '"./types"' has no exported member 'Companion'.
 components.ts(3,10): error TS1205: Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'.
 components/routing/AppRouter.tsx(2,48): error TS2307: Cannot find module './state/hooks' or its corresponding type declarations.
-components/routing/AppRouter.tsx(10,10): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'rosterSelectors'. Did you mean to use 'import rosterSelectors from "../../state/rosterSlice"' instead?
-components/routing/AppRouter.tsx(10,27): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'createCharacter'. Did you mean to use 'import createCharacter from "../../state/rosterSlice"' instead?
-components/routing/AppRouter.tsx(10,44): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'loadCharacter'. Did you mean to use 'import loadCharacter from "../../state/rosterSlice"' instead?
-components/routing/AppRouter.tsx(10,59): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'deleteCharacter'. Did you mean to use 'import deleteCharacter from "../../state/rosterSlice"' instead?
+components/routing/AppRouter.tsx(10,10): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'rosterSelectors'. Did you mean to use 'import rosterSelectors from 'state/rosterSlice"' instead?
+components/routing/AppRouter.tsx(10,27): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'createCharacter'. Did you mean to use 'import createCharacter from 'state/rosterSlice"' instead?
+components/routing/AppRouter.tsx(10,44): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'loadCharacter'. Did you mean to use 'import loadCharacter from 'state/rosterSlice"' instead?
+components/routing/AppRouter.tsx(10,59): error TS2614: Module '"../../state/rosterSlice"' has no exported member 'deleteCharacter'. Did you mean to use 'import deleteCharacter from 'state/rosterSlice"' instead?
 constants.ts(1,25): error TS2307: Cannot find module './types/enums' or its corresponding type declarations.
 cover.ts(2,10): error TS2305: Module '"./types"' has no exported member 'BattlefieldState'.
 crucibleActions.ts(1,195): error TS2307: Cannot find module '../types' or its corresponding type declarations.

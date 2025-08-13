@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from './state/hooks';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
 import HomeView from '../../HomeView';
 import BuilderView from '../../BuilderView';
 import GenesisView from '../../GenesisView';
@@ -7,7 +7,7 @@ import WorldbuilderView from '../../WorldbuilderView';
 import BestiaryView from '../../BestiaryView';
 import CrucibleView from '../../CrucibleView';
 import { PlayView } from '../../PlayView';
-import { rosterSelectors, createCharacter, loadCharacter, deleteCharacter } from '../../state/rosterSlice';
+import { rosterSelectors, createCharacter, loadCharacter, deleteCharacter } from 'state/rosterSlice';
 
 const AppRouter: React.FC = () => {
   const dispatch = useAppDispatch();

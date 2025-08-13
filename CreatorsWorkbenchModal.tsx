@@ -1,12 +1,12 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Character, ClassFeature, Item, CharacterItemInstance, Rune, Weapon, Tool, DndClass, Spell } from './types';
-import { useToast } from './state/ToastContext';
-import { dataService } from './services/data.service';
+import { useToast } from 'state/ToastContext';
+import { dataService } from 'services./data.service';
 import { copperToCurrency, currencyToCopper } from '../../utils/currency';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
-import { logEvent } from '../../state/logSlice';
-import { inventoryActions } from './engine/slices/inventorySlice';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
+import { logEvent } from 'state/logSlice';
+import { inventoryActions } from './inventorySlice';
 import Modal from '../shared/Modal';
 
 interface CreatorsWorkbenchModalProps {

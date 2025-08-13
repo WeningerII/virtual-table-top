@@ -1,9 +1,9 @@
 
 import React from 'react';
 import { Character } from './types';
-import { vitalsActions } from './engine/slices/vitalsSlice';
+import { vitalsActions } from './vitalsSlice';
 import { rollD20 } from '../../utils/dice';
-import { useAppDispatch } from '.././state/hooks';
+import { useAppDispatch } from 'state/hooks';
 
 interface DeathSavesTrackerProps {
     character: Character;

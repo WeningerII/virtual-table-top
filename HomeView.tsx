@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { Character } from './types';
-import { dataService, ClassIndexEntry } from './services/data.service';
-import { useAppDispatch } from '.././state/hooks';
-import { setMode } from '../../state/appSlice';
+import { dataService, ClassIndexEntry } from 'services./data.service';
+import { useAppDispatch } from 'state/hooks';
+import { setMode } from 'state/appSlice';
 
 interface HomeViewProps {
     roster: Character[];

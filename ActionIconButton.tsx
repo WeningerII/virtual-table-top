@@ -1,5 +1,5 @@
 import React from 'react';
-import { soundManager } from '../../../services/soundManager';
+import { soundManager } from 'services../soundManager';
 
 interface ActionIconButtonProps {
     label: string;

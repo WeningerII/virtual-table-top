@@ -1,11 +1,11 @@
 
-import { useAppSelector, useAppDispatch } from '../.././state/hooks';
-import { useToast } from './state/ToastContext';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { useToast } from 'state/ToastContext';
 import { useVttController } from '../../../hooks/useVttController';
-import { GeminiError } from '../.././services/geminiService';
-import { generationStart, generationStageUpdate, generationSuccess, generationPartialSuccess, generationFailed } from '../../../state/worldbuilderSlice';
+import { GeminiError } from 'services./geminiService';
+import { generationStart, generationStageUpdate, generationSuccess, generationPartialSuccess, generationFailed } from 'state/worldbuilderSlice';
 import { EncounterConcept } from './types';
-import { generateMapImage } from '../.././services/ai/world.service';
+import { generateMapImage } from 'services./ai/world.service';
 
 
 export const useEncounterGeneration = () => {

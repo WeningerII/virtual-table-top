@@ -2,10 +2,10 @@
 
 import React, { useMemo, useState, useEffect } from 'react';
 import { Character, Maneuver, ClassFeature } from './types';
-import { dataService } from './services/data.service';
-import { useToast } from './state/ToastContext';
-import { useAppDispatch } from '.././state/hooks';
-import { playStateActions } from './engine/slices/playStateSlice';
+import { dataService } from 'services./data.service';
+import { useToast } from 'state/ToastContext';
+import { useAppDispatch } from 'state/hooks';
+import { playStateActions } from './playStateSlice';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
 
 interface FeaturesPanelProps {

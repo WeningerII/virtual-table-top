@@ -1,5 +1,5 @@
 import React from 'react';
-import type { AppMode } from '../state/appSlice';
+import type { AppMode } from 'state/appSlice';
 
 interface HeaderProps {
   mode: AppMode;

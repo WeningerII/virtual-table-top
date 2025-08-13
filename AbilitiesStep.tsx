@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { Character, Ability, AbilityScores } from './types';
 import { ABILITIES, STANDARD_ARRAY } from '../../constants';
-import { useAppSelector } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import { useCharacterActions } from '../../hooks/useCharacterActions';
 
 interface AbilitiesStepProps {}

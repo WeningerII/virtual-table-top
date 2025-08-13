@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import appReducer from './appSlice';
 import rosterReducer from './rosterSlice';
 import genesisReducer from './genesisSlice';
-import { characterDataReducer } from '.././engine/characterReducer';
+import { characterDataReducer } from 'engine/characterReducer';
 import logReducer from './logSlice';
 import uiReducer from './uiSlice';
 import worldbuilderReducer from './worldbuilderSlice';

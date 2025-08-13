@@ -1,0 +1,144 @@
+---- ./state/selectors  (count: 58) ----
+6:AbilitiesStep.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+7-AbilitiesStep.tsx(6,37): error TS2307: Cannot find module '../../hooks/useCharacterActions' or its corresponding type declarations.
+--
+15:ActionsPanel.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+16-ActiveEffectsPanel.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+--
+20:ActiveEffectsPanel.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+21-AddConditionModal.tsx(2,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+--
+35:AdjudicationPrompt.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+
+---- .././state/hooks  (count: 58) ----
+5:AbilitiesStep.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+6-AbilitiesStep.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+--
+14:ActionsPanel.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+15-ActionsPanel.tsx(5,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+--
+19:ActiveEffectsPanel.tsx(5,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+20-ActiveEffectsPanel.tsx(6,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+--
+25:AddConditionModal.tsx(5,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+
+---- ./services/data.service  (count: 22) ----
+21:AddConditionModal.tsx(2,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+22-AddConditionModal.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'EffectInstance'.
+--
+50:BackgroundStep.tsx(4,51): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+51-BackgroundStep.tsx(5,39): error TS2307: Cannot find module '../shared/InlineProficiencySelector' or its corresponding type declarations.
+--
+57:BestiaryView.tsx(5,48): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+58-BestiaryView.tsx(6,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+72:CastSpellModal.tsx(3,29): error TS2307: Cannot find module './services/data.service' or its corresponding type declarations.
+
+---- ./slices/playStateSlice  (count: 21) ----
+18:ActiveEffectsPanel.tsx(4,34): error TS2307: Cannot find module './slices/playStateSlice' or its corresponding type declarations.
+19-ActiveEffectsPanel.tsx(5,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+24:AddConditionModal.tsx(4,34): error TS2307: Cannot find module './slices/playStateSlice' or its corresponding type declarations.
+25-AddConditionModal.tsx(5,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+41:ArcaneRecoveryModal.tsx(7,34): error TS2307: Cannot find module './slices/playStateSlice' or its corresponding type declarations.
+42-ArcaneRecoveryModal.tsx(8,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+--
+74:CastSpellModal.tsx(6,34): error TS2307: Cannot find module './slices/playStateSlice' or its corresponding type declarations.
+
+---- ../.././state/hooks  (count: 19) ----
+85:CharacterTab.tsx(7,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+86-CharacterTab.tsx(8,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+--
+108:ClassDetail.tsx(8,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+109-ClassDetail.tsx(9,54): error TS2307: Cannot find module './state/selectors' or its corresponding type declarations.
+--
+112:ClassGrid.tsx(3,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+113-ClassStep.tsx(2,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+129:CombatTab.tsx(13,32): error TS2307: Cannot find module '../.././state/hooks' or its corresponding type declarations.
+
+---- ../shared/Modal  (count: 13) ----
+27:AddConditionModal.tsx(7,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+28-AdjudicationPrompt.tsx(2,10): error TS2459: Module '"./types"' declares 'PlayerChoicePrompt' locally, but it is not exported.
+--
+36:AdjudicationPrompt.tsx(7,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+37-ArcaneRecoveryModal.tsx(3,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+42:ArcaneRecoveryModal.tsx(8,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+43-ArcaneRecoveryModal.tsx(29,51): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+--
+75:CastSpellModal.tsx(7,19): error TS2307: Cannot find module '../shared/Modal' or its corresponding type declarations.
+
+---- ../../hooks/usePlayerActions  (count: 12) ----
+13:ActionsPanel.tsx(3,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+14-ActionsPanel.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+138:CompanionSheet.tsx(6,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+139-CompanionsTab.tsx(2,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+--
+236:FeaturesPanel.tsx(9,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+237-FeaturesPanel.tsx(97,37): error TS2698: Spread types may only be created from object types.
+--
+267:HordeSheet.tsx(5,34): error TS2307: Cannot find module '../../hooks/usePlayerActions' or its corresponding type declarations.
+
+---- ../../utils/dice  (count: 9) ----
+32:AdjudicationPrompt.tsx(3,25): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+33-AdjudicationPrompt.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+184:DeathSavesTracker.tsx(5,25): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+185-DeathSavesTracker.tsx(6,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+190:DivineSmiteModal.tsx(4,26): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+191-DivineSmiteModal.tsx(5,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+327:InlineStartingEquipmentSelector.tsx(4,26): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+
+---- ../../state/logSlice  (count: 9) ----
+39:ArcaneRecoveryModal.tsx(5,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+40-ArcaneRecoveryModal.tsx(6,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+--
+167:CreatorsWorkbenchModal.tsx(8,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+168-CreatorsWorkbenchModal.tsx(9,34): error TS2307: Cannot find module './slices/inventorySlice' or its corresponding type declarations.
+--
+240:FontOfMagicModal.tsx(5,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+241-FontOfMagicModal.tsx(6,10): error TS2305: Module '"./types"' has no exported member 'Character'.
+--
+281:InitiativeTracker.tsx(4,26): error TS2307: Cannot find module '../../state/logSlice' or its corresponding type declarations.
+
+---- ../../constants  (count: 8) ----
+4:AbilitiesStep.tsx(3,43): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+5-AbilitiesStep.tsx(4,32): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+223:FeatsStep.tsx(3,35): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+224-FeatsStep.tsx(4,39): error TS2307: Cannot find module '../shared/InlineProficiencySelector' or its corresponding type declarations.
+--
+248:GenesisSummaryView.tsx(3,27): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+249-GenesisView.tsx(4,48): error TS2307: Cannot find module '.././state/hooks' or its corresponding type declarations.
+--
+292:InlineFeatASISelector.tsx(5,27): error TS2307: Cannot find module '../../constants' or its corresponding type declarations.
+
+---- ./slices/vitalsSlice  (count: 7) ----
+183:DeathSavesTracker.tsx(4,31): error TS2307: Cannot find module './slices/vitalsSlice' or its corresponding type declarations.
+184-DeathSavesTracker.tsx(5,25): error TS2307: Cannot find module '../../utils/dice' or its corresponding type declarations.
+--
+467:ShortRestModal.tsx(8,31): error TS2307: Cannot find module './slices/vitalsSlice' or its corresponding type declarations.
+468-ShortRestModal.tsx(9,34): error TS2307: Cannot find module './slices/playStateSlice' or its corresponding type declarations.
+--
+574:UncannyDodgeModal.tsx(7,31): error TS2307: Cannot find module './slices/vitalsSlice' or its corresponding type declarations.
+575-UncannyDodgeModal.tsx(8,34): error TS2307: Cannot find module './slices/playStateSlice' or its corresponding type declarations.
+--
+607:Vitals.tsx(7,31): error TS2307: Cannot find module './slices/vitalsSlice' or its corresponding type declarations.
+
+---- ./slices/proficienciesSlice  (count: 7) ----
+295:InlineFeatASISelector.tsx(9,38): error TS2307: Cannot find module './slices/proficienciesSlice' or its corresponding type declarations.
+296-InlineFightingStyleSelector.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'FightingStyle'.
+--
+302:InlineFightingStyleSelector.tsx(8,38): error TS2307: Cannot find module './slices/proficienciesSlice' or its corresponding type declarations.
+303-InlineMagicInitiateSelector.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+--
+311:InlineMagicInitiateSelector.tsx(8,38): error TS2307: Cannot find module './slices/proficienciesSlice' or its corresponding type declarations.
+312-InlineProficiencySelector.tsx(3,10): error TS2305: Module '"./types"' has no exported member 'PendingChoice'.
+--
+320:InlineProficiencySelector.tsx(9,38): error TS2307: Cannot find module './slices/proficienciesSlice' or its corresponding type declarations.
+

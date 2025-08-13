@@ -5,8 +5,8 @@ import { Character } from './types';
 import Accordion from '../../shared/Accordion';
 import InventoryPanel from '../InventoryPanel';
 import ToolsPanel from '../ToolsPanel';
-import { useAppSelector } from '../.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import { usePlayerActions } from '../../../hooks/usePlayerActions';
 
 const InventoryTab: React.FC = () => {

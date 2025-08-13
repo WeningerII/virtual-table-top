@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { dataService, MonsterIndexEntry } from './services/data.service';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { dataService, MonsterIndexEntry } from 'services./data.service';
 import { Monster, EncounterConcept } from './types';
 import MonsterStatBlockCard from './MonsterStatBlockCard';
 import { useVttController } from '../../hooks/useVttController';
-import { queueMonsterSummon, clearMonsterSummon } from '../../state/appSlice';
+import { queueMonsterSummon, clearMonsterSummon } from 'state/appSlice';
 
 interface DmPanelProps {
     onSelectMonsterToPlace: (monsterId: string | null) => void;

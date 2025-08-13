@@ -1,8 +1,8 @@
 import React from 'react';
 import { Character } from './types';
-import { playStateActions } from './engine/slices/playStateSlice';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { playStateActions } from './playStateSlice';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 
 interface ElixirsPanelProps {
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from '../.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import { usePlayerActions } from '../../../hooks/usePlayerActions';
-import { uiActions } from '../../../state/uiSlice';
+import { uiActions } from 'state/uiSlice';
 import ActionIconButton from './ActionIconButton';
 import { ActionIcon, BonusActionIcon, ReactionIcon, MoveIcon, SpellIcon, InventoryIcon } from '../../icons/ActionIcons';
 

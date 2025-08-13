@@ -8,9 +8,9 @@ import RollResultToast from '../shared/RollResultToast';
 import ActionResultToast from './ActionResultToast';
 import { useVttController } from '../../hooks/useVttController';
 import { useVttInteractions } from '../../hooks/useVttInteractions';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { setLastRollResult, setActionResult } from '../../state/uiSlice';
-import { selectCombatUIData } from '../../engine/combatSelectors';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { setLastRollResult, setActionResult } from 'state/uiSlice';
+import { selectCombatUIData } from 'engine../combatSelectors';
 import VTTContextMenu from './VTTContextMenu';
 
 export const PlayView: React.FC = () => {

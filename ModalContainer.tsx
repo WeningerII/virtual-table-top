@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import ShortRestModal from './ShortRestModal';
 import DivineSmiteModal from './DivineSmiteModal';
 import LayOnHandsModal from './LayOnHandsModal';
@@ -20,8 +20,8 @@ import Modal from '../shared/Modal';
 import { Character, MapNpcInstance } from './types';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
 import { useDialogueManager } from '../../hooks/useDialogueManager';
-import { uiActions } from '../../state/uiSlice';
-import { playStateActions } from './engine/slices/playStateSlice';
+import { uiActions } from 'state/uiSlice';
+import { playStateActions } from './playStateSlice';
 
 // NEW MODAL COMPONENT
 const ActionsModal: React.FC<{

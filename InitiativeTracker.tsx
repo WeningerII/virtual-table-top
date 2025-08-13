@@ -1,10 +1,10 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
 import { InitiativeEntry, Monster, ActionItem } from './types';
-import { logEvent } from '../../state/logSlice';
-import { entitySlice } from '../../state/entitySlice';
+import { logEvent } from 'state/logSlice';
+import { entitySlice } from 'state/entitySlice';
 import { useVttController } from '../../hooks/useVttController';
-import { startCombat, endCombat } from '../../state/combatFlowSlice';
+import { startCombat, endCombat } from 'state/combatFlowSlice';
 
 interface InitiativeTrackerProps {}
 

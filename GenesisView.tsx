@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { useToast } from './state/ToastContext';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { addCharacter, loadCharacter } from '../../state/rosterSlice';
-import { setMode } from '../../state/appSlice';
-import { startOrResumeGeneration, clearGenesisState } from '../../state/genesisSlice';
+import { useToast } from 'state/ToastContext';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { addCharacter, loadCharacter } from 'state/rosterSlice';
+import { setMode } from 'state/appSlice';
+import { startOrResumeGeneration, clearGenesisState } from 'state/genesisSlice';
 import { Character, PartialCharacter } from './types';
 import GenesisSummaryView from './GenesisSummaryView';
 

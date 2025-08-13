@@ -1,6 +1,6 @@
 import React from 'react';
 import { VTTObject, ObjectBlueprint } from './types';
-import { useAppSelector } from '.././state/hooks';
+import { useAppSelector } from 'state/hooks';
 
 interface ObjectInteractionPanelProps {
     object: VTTObject;

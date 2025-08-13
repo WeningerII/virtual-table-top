@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppSelector } from '.././state/hooks';
+import { useAppSelector } from 'state/hooks';
 import { useVttInteractions } from '../../hooks/useVttInteractions';
 
 interface VTTContextMenuProps {

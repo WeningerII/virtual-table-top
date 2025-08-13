@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppSelector } from '../.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import InventoryPanel from '../InventoryPanel';
 import ToolsPanel from '../ToolsPanel';
 import { usePlayerActions } from '../../../hooks/usePlayerActions';

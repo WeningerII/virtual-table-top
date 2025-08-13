@@ -1,5 +1,5 @@
 import { createSelector } from './createSelector';
-import { RootState } from '../state/store';
+import { RootState } from 'state/store';
 import { Character, MapNpcInstance, Token, VTTMap } from './types';
 import { hasLineOfSight } from './ai/perception/lineOfSight';
 

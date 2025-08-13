@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Character, HitDicePool } from './types';
 import DeathSavesTracker from './DeathSavesTracker';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
-import { playStateActions } from './engine/slices/playStateSlice';
-import { vitalsActions } from './engine/slices/vitalsSlice';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
+import { playStateActions } from './playStateSlice';
+import { vitalsActions } from './vitalsSlice';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
 
 interface VitalsProps {

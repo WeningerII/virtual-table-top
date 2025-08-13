@@ -1,15 +1,15 @@
 import { useCallback, useState } from 'react';
 import { useAppSelector, useAppDispatch } from './hooks';
-import { useToast } from './state/ToastContext';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
-import { logEvent } from '../state/logSlice';
-import { playStateActions } from './engine/slices/playStateSlice';
-import { vitalsActions } from './engine/slices/vitalsSlice';
+import { useToast } from 'state/ToastContext';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
+import { logEvent } from 'state/logSlice';
+import { playStateActions } from './playStateSlice';
+import { vitalsActions } from './vitalsSlice';
 import { ActionItem, Companion, InitiativeEntry, Spell, CompanionBlueprint, SummonChoiceEffect, ClassFeature, Character, Token, DeclareAttackEvent, CastSpellEvent, HealEvent, DodgeActionEvent, MoveTokenEvent, HelpActionEvent, HideActionEvent, SearchActionEvent, DealDamageToObjectEvent, GameEvent, UseFeatureEvent } from './types';
 import { rollDice, rollD20 } from '../utils/dice';
-import { setLastRollResult, uiActions } from '../state/uiSlice';
-import { postGameEvent } from '../state/eventSlice';
-import { soundManager } from './services/soundManager';
+import { setLastRollResult, uiActions } from 'state/uiSlice';
+import { postGameEvent } from 'state/eventSlice';
+import { soundManager } from 'services./soundManager';
 
 
 export const usePlayerActions = () => {

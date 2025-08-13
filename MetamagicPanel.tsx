@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useAppSelector } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import { Character, Metamagic } from './types';
-import { dataService } from './services/data.service';
+import { dataService } from 'services./data.service';
 
 const MetamagicPanel: React.FC = () => {
     const character = useAppSelector(selectCalculatedActiveCharacterSheet) as Character | null;

@@ -3,11 +3,11 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { DndClass, StartingEquipmentOption, Currency, Item, EquipmentPack, Character } from './types';
 import { rollGold } from '../../utils/dice';
 import { copperToCurrency, currencyToCopper } from '../../utils/currency';
-import { dataService } from './services/data.service';
-import { useToast } from './state/ToastContext';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
-import { inventoryActions } from './engine/slices/inventorySlice';
+import { dataService } from 'services./data.service';
+import { useToast } from 'state/ToastContext';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
+import { inventoryActions } from './inventorySlice';
 
 interface InlineStartingEquipmentSelectorProps {
     startingClass: DndClass;

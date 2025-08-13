@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Companion, ActionItem, Movement, Character } from './types';
-import { useAppDispatch } from '.././state/hooks';
-import { playStateActions } from './engine/slices/playStateSlice';
+import { useAppDispatch } from 'state/hooks';
+import { playStateActions } from './playStateSlice';
 import { usePlayerActions } from '../../hooks/usePlayerActions';
 
 interface HordeSheetProps {

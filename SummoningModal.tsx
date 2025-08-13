@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Character, Movement, CompanionBlueprint, Spell } from './types';
-import { dataService } from './services/data.service';
+import { dataService } from 'services./data.service';
 import Modal from '../shared/Modal';
 
 interface SummoningModalProps {

@@ -3,7 +3,7 @@ import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { GenesisState, PartialCharacter, GenerationStep, Character, CharacterState, StaticGameDataCache } from './types';
 import { RootState } from './store';
 import { GenerationOrchestrator } from './generationOrchestrator.service';
-import { selectCharacter } from './engine';
+import { selectCharacter } from './';
 import { toCharacterState, createNewCharacterObject } from './characterUtils';
 
 const initialGenesisState: GenesisState = {

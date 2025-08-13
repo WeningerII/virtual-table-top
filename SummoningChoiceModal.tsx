@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Character, SummonChoicePrompt, Monster } from './types';
-import { dataService, MonsterIndexEntry } from './services/data.service';
+import { dataService, MonsterIndexEntry } from 'services./data.service';
 import Modal from '../shared/Modal';
 
 interface SummoningChoiceModalProps {

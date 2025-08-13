@@ -3,7 +3,7 @@ import { VTTMap, Token, MapNpcInstance, Character, EncounterConcept, InitiativeE
 import { createDefaultMap, generateMapFromConcept, buildSpatialIndex } from '../utils/map';
 import { rollD20 } from '../utils/dice';
 import { RootState } from './store';
-import { SpatialGrid } from './engine/spatialGrid.service';
+import { SpatialGrid } from 'engine/spatialGrid.service';
 import { selectCalculatedActiveCharacterSheet } from './selectors';
 
 export interface EntityState {

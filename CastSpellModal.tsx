@@ -1,9 +1,9 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { Spell, Character, Metamagic } from './types';
-import { dataService } from './services/data.service';
-import { useToast } from './state/ToastContext';
-import { useAppDispatch } from '.././state/hooks';
-import { playStateActions } from './engine/slices/playStateSlice';
+import { dataService } from 'services./data.service';
+import { useToast } from 'state/ToastContext';
+import { useAppDispatch } from 'state/hooks';
+import { playStateActions } from './playStateSlice';
 import Modal from '../shared/Modal';
 
 interface CastSpellModalProps {

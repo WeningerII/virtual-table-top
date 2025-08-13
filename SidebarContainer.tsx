@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useAppSelector } from '../.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import { usePlayerActions } from '../../../hooks/usePlayerActions';
 import Vitals from '../Vitals';
 import ResourcePanel from '../ResourcePanel';
@@ -14,8 +14,8 @@ import ObjectInteractionPanel from '../ObjectInteractionPanel';
 import NpcSheetPanel from '../NpcSheetPanel';
 import { useVttInteractions } from '../../../hooks/useVttInteractions';
 import { useVttController } from '../../../hooks/useVttController';
-import { entitySlice } from '../../../state/entitySlice';
-import { useAppDispatch } from '../.././state/hooks';
+import { entitySlice } from 'state/entitySlice';
+import { useAppDispatch } from 'state/hooks';
 
 interface SidebarContainerProps {
     selectedObjectId: string | null;

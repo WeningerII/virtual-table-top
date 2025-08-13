@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 import { useAppDispatch } from './hooks';
-import { metaActions } from './engine/slices/metaSlice';
-import { abilitiesActions } from './engine/slices/abilitiesSlice';
-import { proficienciesActions } from './engine/slices/proficienciesSlice';
-import { inventoryActions } from './engine/slices/inventorySlice';
-import { spellsActions } from './engine/slices/spellsSlice';
-import { Action } from './engine/characterActions';
+import { metaActions } from './metaSlice';
+import { abilitiesActions } from './abilitiesSlice';
+import { proficienciesActions } from './proficienciesSlice';
+import { inventoryActions } from './inventorySlice';
+import { spellsActions } from './spellsSlice';
+import { Action } from 'engine/characterActions';
 
 // A hook that returns a memoized object of dispatchable actions.
 // This is the primary way components should interact with the character state.

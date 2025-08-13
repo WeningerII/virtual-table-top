@@ -13,8 +13,8 @@ import EquipmentStep from './EquipmentStep';
 import SpellsStep from './SpellsStep';
 import InfusionsStep from './InfusionsStep';
 import { useAppSelector, useAppDispatch } from './hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
-import { setCurrentStep } from '../state/builderSlice';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
+import { setCurrentStep } from 'state/builderSlice';
 
 export const STEPS = ['CLASS', 'BACKGROUND', 'SPECIES', 'ABILITIES', 'EQUIPMENT', 'INFUSIONS', 'FEATS', 'SPELLS', 'SUMMARY'];
 

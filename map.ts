@@ -1,6 +1,6 @@
 
 import { VTTMap, Token, VTTObject, Character, EncounterConcept, Zone, Path, TerrainCell, MapNpcInstance, StaticGameDataCache, Monster, SpatialGrid } from './types';
-import { mapDecorator } from './services/mapDecorator.service';
+import { mapDecorator } from 'services./mapDecorator.service';
 
 const sizeToGridUnits = (size: string): number => {
     switch (size.toLowerCase()) {

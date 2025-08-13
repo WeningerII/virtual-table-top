@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import { DndClass, Spell } from './types';
-import { useAppSelector } from '../.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import { useCharacterActions } from '../../../hooks/useCharacterActions';
-import { useToast } from './state/ToastContext';
+import { useToast } from 'state/ToastContext';
 import SpellCard from './SpellCard';
 
 interface PreparedSpellsManagerProps {

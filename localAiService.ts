@@ -2,7 +2,7 @@ import { AIBlackboard, BTNode, BTNodeStatus, NodeMetadata, ParallelPolicy, AiArc
 import { SequenceNode, SelectorNode, ParallelNode } from './behaviorTree';
 import * as Nodes from './nodes';
 import { findPath } from '../pathfinding';
-import { dataService } from '.././services/dataService';
+import { dataService } from 'services./data.service';
 
 // Type-safe node registry as per spec
 const nodeRegistry = {

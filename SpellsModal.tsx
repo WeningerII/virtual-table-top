@@ -1,10 +1,10 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from '../.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import { SpellsPanel } from '../SpellsPanel';
 import { useVttInteractions } from '../../../hooks/useVttInteractions';
 import Modal from '../../shared/Modal';
-import { animationActions } from '../../../state/animationSlice';
+import { animationActions } from 'state/animationSlice';
 import { VFXRequest } from './types';
 
 interface SpellsModalProps {

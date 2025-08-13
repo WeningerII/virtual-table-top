@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useMemo } from 'react';
 import { LogEntry, LogEntryType } from './types';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { clearLog, setLogFilter } from '../../state/logSlice';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { clearLog, setLogFilter } from 'state/logSlice';
 
 const LOG_TYPE_CONFIG: { [key in LogEntryType | 'all']: { icon: string; color: string; label: string } } = {
     'all': { icon: '📜', color: 'text-gray-300', label: 'All' },

@@ -4,11 +4,11 @@ import { CombatState, VFXRequest } from './types';
 import LogPanel from './Play/LogPanel';
 import InitiativeTracker from '../play/InitiativeTracker';
 import { useVttController } from '../../hooks/useVttController';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { initializeApp } from '../../state/appSlice';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { initializeApp } from 'state/appSlice';
 import VTTCanvas from '../play/VTTCanvas';
 import { useVttInteractions } from '../../hooks/useVttInteractions';
-import { startCrucibleCombat, pauseCrucible, resumeCrucible, resetCrucible } from '../../state/combatFlowSlice';
+import { startCrucibleCombat, pauseCrucible, resumeCrucible, resetCrucible } from 'state/combatFlowSlice';
 
 
 const CrucibleControls: React.FC<{

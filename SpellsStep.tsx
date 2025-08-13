@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppSelector } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
+import { useAppSelector } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
 import KnownSpellsManager from './spells/KnownSpellsManager';
 import PreparedSpellsManager from './spells/PreparedSpellsManager';
 import WizardSpellbookManager from './spells/WizardSpellbookManager';

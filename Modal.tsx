@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { soundManager } from '../../services/soundManager';
+import { soundManager } from 'services../soundManager';
 
 interface ModalProps {
     isOpen: boolean;

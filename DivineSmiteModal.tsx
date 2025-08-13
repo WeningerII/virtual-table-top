@@ -1,10 +1,10 @@
 import React from 'react';
 import { ActionItem, Character } from './types';
-import { useToast } from './state/ToastContext';
+import { useToast } from 'state/ToastContext';
 import { rollDice } from '../../utils/dice';
-import { useAppSelector, useAppDispatch } from '.././state/hooks';
-import { selectCalculatedActiveCharacterSheet } from './state/selectors';
-import { playStateActions } from './engine/slices/playStateSlice';
+import { useAppSelector, useAppDispatch } from 'state/hooks';
+import { selectCalculatedActiveCharacterSheet } from 'state/selectors';
+import { playStateActions } from './playStateSlice';
 import Modal from '../shared/Modal';
 
 interface DivineSmiteModalProps {

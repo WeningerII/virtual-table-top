@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 import { VTTMap, Token, VTTObject, TerrainCell, VFXRequest, NpcAnimationState, StaticGameDataCache, ObjectBlueprint, MapNpcInstance, Viewport, EncounterConcept, SpellTargetingState } from './types';
-import { assetManager } from './services/assetManager';
+import { assetManager } from 'services./assetManager';
 import { generateTerrainMesh } from '../utils/terrain';
 import { vfxManager } from './vfx';
 

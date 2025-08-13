@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { selectCombatUIData } from '../combatSelectors';
-import { RootState } from '../../state/store';
+import { RootState } from 'state/store';
 import { PersistPartial } from 'redux-persist/es/persistReducer';
 
 // Create a representative mock state
