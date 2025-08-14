@@ -35,7 +35,13 @@ export const processEventQueue = createAsyncThunk(
         if (eventQueue.length === 0) return;
 
         const { staticDataCache } = state.app;
-        const simulationState: SimulationState = { ...state.entity, ...state.events, ...state.animations, ...state.ai } as any;
+const simulationState: SimulationState = {
+  entity: state.entity,
+  events: state.events,
+  animations: state.animations,
+  ai: state.ai,
+};
+
         
         if (!staticDataCache) return;
         

@@ -23,7 +23,7 @@
       "hooks/*": ["./*"],
       "shared/*": ["./shared/*"],
       "utils/*": ["./utils/*"],
-      "types": ["./types"],
+      "types": ["./types.ts"],
       "types/*": ["./types/*"]
     },
 

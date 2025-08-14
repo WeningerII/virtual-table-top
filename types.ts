@@ -1,4 +1,4 @@
-import { SimulationState, GameEvent, PlayerChoicePrompt, StaticGameDataCache } from './types';
+
 
 export interface ValidationResult {
     valid: boolean;
@@ -22,4 +22,10 @@ export interface CommandContext {
 export interface GameCommand {
     canExecute(state: SimulationState, context: CommandContext): ValidationResult;
     execute(state: SimulationState, context: CommandContext): CommandResult;
+}
+export interface SimulationState {
+  entity: any;
+  events: any;
+  animations: any;
+  ai: any;
 }
